@@ -13,7 +13,7 @@ Outputs:
   universe_fractional.csv  — FINAL: IBKR-fractional-tradable only (the investable universe)
 """
 import json, csv
-ROOT='/home/john/repos/leaps'
+import os as _os; ROOT=_os.path.dirname(_os.path.abspath(__file__))
 con=json.load(open(f'{ROOT}/_constituents.json')); fund=json.load(open(f'{ROOT}/_fundamentals.json'))
 val=json.load(open(f'{ROOT}/_valuation_result.json'))
 raw={x['Symbol']:x for x in json.load(open(f'{ROOT}/_global_raw.json'))}

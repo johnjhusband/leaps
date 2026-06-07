@@ -12,7 +12,7 @@ Companies with no positive TTM earnings can't be valued this way -> forced to th
 side, flagged 'no_earnings', per Brandon's rule 'if you can't value it conservatively, skip it'.
 """
 import json, math
-ROOT='/home/john/repos/leaps'
+import os as _os; ROOT=_os.path.dirname(_os.path.abspath(__file__))
 FAIR_PE=20.0; DISCOUNT=0.10; HAIRCUT=0.6; GCAP=0.30
 con=json.load(open(f'{ROOT}/_constituents.json'))
 fund=json.load(open(f'{ROOT}/_fundamentals.json'))

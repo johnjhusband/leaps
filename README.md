@@ -7,9 +7,10 @@ channel's videos, structured so an LLM can query and **implement** it.
 - **`INDEX_PLAN.md`** — OUR "index with an edge" construction plan & buy rule (read this for what we invest in).
 - **`wiki/strategy/STRATEGY_SPEC.md`** — the canonical Brandon strategy (read this for the source method).
 
-> **Buy rule vs analysis split:** the 50/50 bullish/bearish split in the per-index screens is an *analysis
-> ranking only*. The actual buy rule is **undervalued names only** — we never buy an overvalued stock even
-> if it's in the better half. See `INDEX_PLAN.md`. The current buy list is `buy_list.csv`.
+> **Buy rule vs analysis split:** the 50/50 bullish/bearish split in the per-index screens (the
+> `QQQ_SPY_*` report) is an *analysis ranking only* and uses an OLD proxy formula. The **actual buy
+> decision** — exact thresholds, the moat gate, the allocation formula, and the current reconciled
+> counts — is in **`BUY_DECISION.md`** (ground truth). The current buy list is `buy_list.csv` (328 names).
 
 - `wiki/README.md` — how the wiki is organized and why (5-layer design for LLM utility).
 - `wiki/_meta/BUILD_STATUS.md` — what was built, classification stats, how to rebuild.
@@ -37,8 +38,9 @@ strike depth, duration, profit-taking, assignment sizing) now corrected in the w
 EPS growth vs price growth, with his P/E apples-to-apples validity check. `universe_fractional.csv` now
 leads with `golden_verdict`/`golden_pct`/`golden_valid` (the faithful method); the old proxy columns are
 kept for comparison. The **>20% market deploy gate** (golden line on the S&P, valid names only) writes to
-`MARKET_DIRECTION.md`. **Clean buy list = golden_verdict=bullish AND golden_valid=Y (~332 names: 269 valid + 63 forward-confirmed skewed e.g. NVDA).**
-Still not computed: the full company scorecard's qualitative inputs (sentiment, execution risk) → can't hit ">75".
+`MARKET_DIRECTION.md`. **Buy list = `BUY_DECISION.md` rule (golden-bullish + reliable + passes moat gate) = 328 names** (266 valid
++ 62 forward-confirmed; 4 removed by the moat gate). Still not computed: the scorecard's qualitative inputs
+(sentiment, execution risk) → can't hit ">75"; the moat gate is being filled in by per-company research (`wiki/moats/`).
 
 ## Data layer: `leaps.db` (SQLite) + rebalance history
 Decision (2026-06-07): **narrative strategy pages stay markdown** (prose to reason from); **the data layer
@@ -47,40 +49,17 @@ query the screen with SQL and track how it changes across rebalances (Brandon's 
 signal). Tables: `companies`, `snapshots`, `market_gate`, `videos`, `claims`. `sqlite3 leaps.db` to query.
 
 ## Rebuilding the investable universe (periodic task)
-**`bash rebuild_universe.sh`** regenerates everything end-to-end; see **`REPRODUCE.md`** for the runbook.
-Final output: **`universe_fractional.csv`** — 1,150 IBKR-fractional-tradable companies (448 undervalued),
-the buy-list source for the "synthetic index with an edge." OTC/pink ADRs and non-fractional listings
-are filtered out.
+**`bash rebuild_universe.sh`** regenerates everything end-to-end; see **`REPRODUCE.md`** for the runbook
+and **`BUY_DECISION.md`** for the exact buy/allocation rules and current counts. Primary outputs:
+- **`universe_fractional.csv`** — the 1,150 IBKR-fractional-tradable companies (910 scoreable), every column.
+- **`buy_list.csv`** — the 328 buy-eligible names (the investable "index with an edge").
+- **`MARKET_DIRECTION.md`** — the deploy gate + the stock/bond allocation (currently 72/28).
 
-## Valuation screen (applies the strategy to live holdings)
-`QQQ_SPY_valuation_bullish_bearish.md` — every SPY (503) and QQQ (101) holding scored with Brandon's
-valuation method and split into bullish (undervalued) vs bearish (overvalued) halves: 250/250 for SPY,
-50/50 for QQQ. Rebuild:
-```bash
-python3 -c "..."              # _constituents.json  (SPY+QQQ from Wikipedia)
-python3 _fetch_fundamentals.py # _fundamentals.json (yfinance: price, TTM/fwd EPS) — slow, cached/resumable
-python3 _valuate.py            # _valuation_result.json (Brandon intrinsic value + rank split)
-python3 _write_report.py       # QQQ_SPY_valuation_bullish_bearish.md
-```
-Score is P/E-driven so it's robust to per-ticker feed scale glitches. Data is a point-in-time snapshot
-(2026-06-07); re-run to refresh. Covers four baskets: SPY (250/250), QQQ (50/50), Russell 1000 proxy
-(500/500), and a Global top-1000 basket (companiesmarketcap.com, ~496/496). Growth input = median of
-analyst current-yr, next-yr, and TTM YoY earnings growth (capped 30%) — the forward-EPS-only proxy
-mislabeled compounders like GOOGL and was fixed.
-
-`master_company_list.csv` — the unified de-duplicated universe across all four baskets: 1,431 publicly
-traded companies (after dropping 58 with no usable price/EPS data → `dropped_no_data.csv`), each tagged
-with index membership, market cap, and bullish/bearish verdict. Includes all ~1,000 largest public
-companies worldwide that have data, plus 459 smaller US names ($6–24B, below the global top-1000 floor,
-sourced from SPY/Russell — note: the sub-$24B tier is US-only, no foreign mid-caps).
-
-`tradable_master_list.csv` — the master list filtered to IBKR-fractional-tradable only (US + Canada +
-Europe + ADRs; drops 269 Asian/Gulf local listings + sanctioned). **1,162 tradable companies → 455
-undervalued (the investable "index-with-an-edge" universe), 597 overvalued, 110 no-earnings.** 65% US.
-
-`global_100k_holdings_answer.md` — answers "how many securities can $100k hold" using IBKR fractional
-rules (min = greater of 0.0001 shares or ~$1; US/Canada/Europe eligible, Asian local listings not):
-~332 IBKR-eligible bullish global names (~281 if strictly undervalued).
+### Other / historical artifacts (superseded by the above — kept for reference)
+- `QQQ_SPY_valuation_bullish_bearish.md`, `master_company_list.csv`, `tradable_master_list.csv`,
+  `global_100k_holdings_answer.md` — earlier per-index screens built on the **old proxy formula** and a
+  50/50 median split. Their counts (332/448/455/281 etc.) predate the golden-line + moat-gate buy rule;
+  trust `BUY_DECISION.md` for current numbers, not these.
 
 ## Rebuild from scratch
 ```bash

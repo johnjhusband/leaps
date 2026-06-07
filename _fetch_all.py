@@ -1,9 +1,9 @@
 import yfinance as yf, json, os, time
-ROOT='/home/john/repos/leaps'
+import os as _os; ROOT=_os.path.dirname(_os.path.abspath(__file__))
 con=json.load(open(f'{ROOT}/_constituents.json'))
 tickers=sorted(set(con['SPY'])|set(con['QQQ'])|set(con.get('RUSSELL1000',[]))|set(con.get('GLOBAL1000',[])))
 fp=f'{ROOT}/_fundamentals.json'; gp=f'{ROOT}/_growth.json'
-fund=json.load(open(fp)); growth=json.load(open(gp))
+fund=json.load(open(fp)) if os.path.exists(fp) else {}; growth=json.load(open(gp)) if os.path.exists(gp) else {}
 done=0; fail=0; todo=[t for t in tickers if not (fund.get(t,{}).get('price') and growth.get(t,{}).get('have'))]
 print(f'tickers={len(tickers)} need_fetch={len(todo)}', flush=True)
 for i,tk in enumerate(todo):

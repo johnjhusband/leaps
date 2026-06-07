@@ -19,10 +19,11 @@ procedure: take a **2-year window**, get start vs current **EPS** from the repor
 growth**, draw a line rising by exactly that %, and compare to the **actual price % move** — the gap =
 over/under-valuation. **Validity check:** start P/E ≈ end P/E (apples-to-apples); if the multiple
 re-rated, the line is "skewed." His intrinsic value also folds in **P/S, revenue growth, margin expansion,
-guidance, interest rates, macro** — not EPS alone. **Our `universe` screen does NOT use this** — it uses a
-growth-adjusted proxy (`intrinsic = TTM_EPS×(1+g)^5×20÷1.10^5`); the multiple/discount/15%/5-yr were
-reconstruction choices, not Brandon's stated numbers. The proxy ranks in the same spirit but is not the
-golden line; rebuilding on the golden line is the recommended fix (see AUDIT_REPORT.md).
+guidance, interest rates, macro** — not EPS alone. **Our screen now implements this golden line** as the
+PRIMARY verdict (`golden_verdict`/`golden_pct`/`golden_valid`, via `goldenline.py`); the exact buy logic and
+thresholds are in **`BUY_DECISION.md`**. (An older proxy formula `intrinsic = TTM_EPS×(1+g)^5×20÷1.10^5`
+still appears as the secondary `proxy_*`/`intrinsic_value` columns for comparison only — its multiple,
+discount, 15%, and 5-yr were reconstruction choices, NOT Brandon's stated numbers, and it does not drive `buy`.)
 
 ## Core idea: the EPS-growth line / reversion to the mean
 - Plot a line of where price *should* be based on the underlying companies' actual earnings-per-share

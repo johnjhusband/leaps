@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import json, re, os
-ROOT='/home/john/repos/leaps'; S=f'{ROOT}/wiki/strategy'
+import os as _os; ROOT=_os.path.dirname(_os.path.abspath(__file__)); S=f'{ROOT}/wiki/strategy'
 RULES={
 'instrument-selection':("Instrument Selection",
  "**Resolved rule:** Sell puts only on high-quality companies and the major indexes (S&P 500, "

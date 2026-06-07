@@ -22,7 +22,7 @@ anchoring to a bubble starting multiple (104). The `golden_valid='skewed'` flag 
 is the blunt guard: when the multiple moved too much, we can't trust the magnitude, so we sit the name out.
 """
 import json, statistics
-ROOT='/home/john/repos/leaps'
+import os as _os; ROOT=_os.path.dirname(_os.path.abspath(__file__))
 
 def _eps_pair(series):
     """eps_now = most recent FY; eps_2y = 2 fiscal years earlier (fall back to oldest available)."""

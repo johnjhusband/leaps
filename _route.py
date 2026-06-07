@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Route extracted claims to strategy decision-dimensions; emit digests for synthesis."""
 import json, re, os, collections
-ROOT='/home/john/repos/leaps'
+import os as _os; ROOT=_os.path.dirname(_os.path.abspath(__file__))
 claims=[json.loads(l) for l in open(f'{ROOT}/wiki/_meta/claims.jsonl')]
 DIM={
  'instrument-selection': r'\b(nasdaq|qqq|s&amp;p|s&p|spy|nvidia|company|companies|ticker|underlying|index|etf|valuation|blue chip|quality|which stock)\b',

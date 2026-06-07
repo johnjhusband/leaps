@@ -15,7 +15,7 @@ Tables:
 Usage: python3 build_db.py [YYYY-MM-DD]   (date defaults to argv or env LEAPS_SNAPSHOT_DATE)
 """
 import sqlite3, csv, json, os, sys
-ROOT='/home/john/repos/leaps'
+import os as _os; ROOT=_os.path.dirname(_os.path.abspath(__file__))
 DATE = (sys.argv[1] if len(sys.argv)>1 else os.environ.get('LEAPS_SNAPSHOT_DATE','')).strip()
 if not DATE:
     print('ERROR: pass a snapshot date YYYY-MM-DD (so rebalance history is stamped).'); sys.exit(1)

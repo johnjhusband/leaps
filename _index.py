@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import json, os, glob, re
-ROOT='/home/john/repos/leaps'
+import os as _os; ROOT=_os.path.dirname(_os.path.abspath(__file__))
 cats=json.load(open(f'{ROOT}/wiki/_meta/video_categories.json'))
 claims=[json.loads(l) for l in open(f'{ROOT}/wiki/_meta/claims.jsonl')]
 from collections import Counter

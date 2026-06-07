@@ -9,7 +9,7 @@ Sources (all free, no API key):
 """
 import urllib.request, csv, io, json, sys
 from io import StringIO
-ROOT='/home/john/repos/leaps'
+import os as _os; ROOT=_os.path.dirname(_os.path.abspath(__file__))
 UA={'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36'}
 def get(url, accept='text/html'):
     req=urllib.request.Request(url, headers={**UA,'Accept':accept})

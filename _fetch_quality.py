@@ -1,5 +1,5 @@
 import yfinance as yf, json, os, time
-ROOT='/home/john/repos/leaps'
+import os as _os; ROOT=_os.path.dirname(_os.path.abspath(__file__))
 con=json.load(open(f'{ROOT}/_constituents.json'))
 tickers=sorted(set(con['SPY'])|set(con['QQQ'])|set(con.get('RUSSELL1000',[]))|set(con.get('GLOBAL1000',[])))
 path=f'{ROOT}/_quality.json'

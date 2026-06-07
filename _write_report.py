@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Render _valuation_result.json into the deliverable markdown file."""
 import json
-ROOT='/home/john/repos/leaps'
+import os as _os; ROOT=_os.path.dirname(_os.path.abspath(__file__))
 r=json.load(open(f'{ROOT}/_valuation_result.json'))
 p=r['params']
 

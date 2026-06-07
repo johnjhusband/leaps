@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build per-video wiki pages + machine-readable claim corpus from cleaned transcripts."""
 import re, os, glob, json
-ROOT='/home/john/repos/leaps'
+import os as _os; ROOT=_os.path.dirname(_os.path.abspath(__file__))
 TX=f'{ROOT}/transcripts'
 VID=f'{ROOT}/wiki/videos'
 META=f'{ROOT}/wiki/_meta'
