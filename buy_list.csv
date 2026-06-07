@@ -8,326 +8,322 @@ rank,ticker,name,country,mktcap_B,golden_pct,golden_valid,fwd_pe,reason
 7,MA,Mastercard,United States,433.9,24,Y,21.6,valid
 8,COST,Costco,United States,431.0,11,Y,43.0,valid
 9,ARM,Arm Holdings,United Kingdom,366.3,40,Y,112.0,valid
-10,NFLX,Netflix,United States,346.0,73,Y,21.4,valid
-11,PG,Procter & Gamble,United States,341.2,18,Y,20.7,valid
-12,PLTR,Palantir,United States,324.9,31,Y,65.3,valid
-13,MRK,Merck,United States,298.3,4895,skewed,12.6,fwd-confirmed
-14,AZN,AstraZeneca,United Kingdom,288.4,39,Y,23.2,valid
-15,RTX,RTX,United States,243.7,19,Y,23.9,valid
-16,OR.PA,L'Oréal,France,231.0,4,Y,25.4,valid
-17,TM,Toyota,Japan,230.9,2,Y,11.2,valid
-18,PANW,Palo Alto Networks,United States,221.7,56,Y,66.2,valid
-19,SAP,SAP,Germany,217.8,25,Y,18.7,valid
-20,AXP,American Express,United States,212.0,0,Y,15.4,valid
-21,PRX.AS,Prosus,Netherlands,202.2,16,Y,10.3,valid
-22,TMUS,T-Mobile US,United States,192.7,34,Y,12.7,valid
-23,VZ,Verizon,United States,189.4,18,Y,8.6,valid
-24,APP,AppLovin,United States,187.2,49,Y,25.4,valid
-25,TMO,Thermo Fisher Scientific,United States,175.7,33,Y,17.3,valid
-26,DIS,Walt Disney,United States,173.1,418,skewed,13.3,fwd-confirmed
-27,APH,Amphenol,United States,170.8,3,Y,24.5,valid
-28,ABT,Abbott Laboratories,United States,158.6,25,Y,15.0,valid
-29,T,AT&T,United States,158.1,18,Y,8.9,valid
-30,SCHW,Charles Schwab,United States,154.5,48,Y,12.3,valid
-31,ETN,Eaton,Ireland,153.7,1,Y,25.2,valid
-32,CRM,Salesforce,United States,152.1,154,skewed,11.9,fwd-confirmed
-33,ISRG,Intuitive Surgical,United States,149.5,65,Y,35.8,valid
-34,PFE,Pfizer,United States,148.4,246,skewed,9.2,fwd-confirmed
-35,WELL,Welltower,United States,146.1,2,Y,61.6,valid
-36,UBER,Uber,United States,143.9,459,skewed,16.2,fwd-confirmed
-37,DHR,Danaher,United States,130.4,6,Y,20.2,valid
-38,BKNG,Booking Holdings (Booking.com),United States,128.5,32,Y,13.5,valid
-39,SPGI,S&P Global,United States,125.6,84,Y,19.1,valid
-40,UL,Unilever,United Kingdom,122.8,53,Y,14.7,valid
-41,CFR.SW,Compagnie Financière Richemont,Switzerland,121.5,18,Y,22.5,valid
-42,PDD,PDD Holdings (Pinduoduo),China,121.1,155,skewed,6.9,fwd-confirmed
-43,HDB,HDFC Bank,India,120.1,36,Y,15.9,valid
-44,SYK,Stryker Corporation,United States,117.2,11,Y,18.3,valid
-45,NOW,ServiceNow,United States,116.0,39,Y,22.4,valid
-46,VRTX,Vertex Pharmaceuticals,United States,113.4,16,Y,20.8,valid
-47,ACN,Accenture,Ireland,109.7,86,Y,12.0,valid
-48,SNY,Sanofi,France,107.8,45,Y,8.5,valid
-49,MDT,Medtronic,Ireland,104.9,16,Y,12.7,valid
-50,ZURN.SW,Zurich Insurance Group,Switzerland,103.2,24,Y,12.8,valid
-51,ADBE,Adobe,United States,101.6,212,skewed,9.5,fwd-confirmed
-52,TT,Trane Technologies,Ireland,101.0,5,Y,26.8,valid
-53,DUK,Duke Energy,United States,96.8,34,Y,17.3,valid
-54,CNQ,Canadian Natural Resources,Canada,95.3,0,Y,12.5,valid
-55,GD,General Dynamics,United States,93.7,4,Y,19.1,valid
-56,MCK,McKesson,United States,93.2,28,Y,15.4,valid
-57,CDI.PA,Dior,France,93.1,2,Y,,valid
-58,IBN,ICICI Bank,India,93.0,32,Y,13.6,valid
-59,ADP,Automatic Data Processing,United States,92.7,19,Y,19.0,valid
-60,EL.PA,EssilorLuxottica,France,92.1,9,Y,20.7,valid
-61,CEG,Constellation Energy,United States,91.0,15,Y,18.7,valid
-62,AMT,American Tower,United States,90.4,59,Y,28.1,valid
-63,ELV,Elevance Health,United States,90.2,26,Y,14.2,valid
-64,CMI,Cummins,United States,89.9,63,Y,19.4,valid
-65,SNPS,Synopsys,United States,89.0,30,Y,27.0,valid
-66,WM,Waste Management,United States,88.5,11,Y,23.8,valid
-67,CMCSA,Comcast,United States,85.1,107,skewed,6.3,fwd-confirmed
-68,DDOG,Datadog,United States,83.3,23,Y,82.3,valid
-69,HCA,HCA Healthcare,United States,82.6,27,Y,11.2,valid
-70,INTU,Intuit,United States,81.2,254,skewed,10.9,fwd-confirmed
-71,ICE,Intercontinental Exchange,United States,80.0,30,Y,16.0,valid
-72,SPG,Simon Property Group,United States,79.9,33,Y,31.4,valid
-73,MRSH,Marsh & McLennan Companies,United States,79.7,38,Y,14.6,valid
-74,MCO,Moody's,United States,78.8,44,Y,24.3,valid
-75,NOC,Northrop Grumman,United States,77.3,67,Y,18.1,valid
-76,CI,The Cigna Group,United States,76.6,39,Y,8.6,valid
-77,SHW,Sherwin-Williams,United States,75.3,7,Y,23.1,valid
-78,RCL,Royal Caribbean Group,United States,75.1,37,Y,14.0,valid
-79,BAM,Brookfield Asset Management,Canada,73.7,4,Y,21.2,valid
-80,ECL,Ecolab,United States,72.6,37,Y,26.8,valid
-81,BSX,Boston Scientific,United States,72.2,188,skewed,13.0,fwd-confirmed
-82,CTAS,Cintas,United States,72.0,30,Y,33.1,valid
-83,NSC,Norfolk Southern,United States,70.4,5,Y,23.1,valid
-84,AON,Aon,United Kingdom,70.2,20,Y,15.3,valid
-85,TDG,TransDigm Group,United States,69.3,33,Y,26.4,valid
-86,MRK.DE,Merck KGaA,Germany,68.6,1,Y,15.7,valid
-87,MSI,Motorola Solutions,United States,68.1,18,Y,22.2,valid
-88,REGN,Regeneron Pharmaceuticals,United States,66.6,96,Y,11.8,valid
-89,B,Barrick Gold,Canada,66.3,65,Y,8.6,valid
-90,MUV2.DE,Munich RE (Münchener Rück),Germany,66.1,34,Y,8.5,valid
-91,RSG,Republic Services,United States,64.6,13,Y,26.1,valid
-92,TRV,The Travelers Companies,United States,64.5,39,Y,10.6,valid
-93,NKE,Nike,United States,63.6,11,Y,23.6,valid
-94,RELX,RELX,United Kingdom,61.9,50,Y,16.1,valid
-95,LSEG.L,London Stock Exchange,United Kingdom,61.1,72,Y,1750.7,valid
-96,RACE,Ferrari,Italy,61.1,50,Y,28.1,valid
-97,NU,Nu Holdings,Brazil,58.2,197,skewed,10.5,fwd-confirmed
-98,ACA.PA,Crédit Agricole,France,57.6,0,Y,6.8,valid
-99,TRGP,Targa Resources,United States,56.7,10,Y,21.5,valid
-100,TGT,Target,United States,55.7,2,Y,13.8,valid
-101,AJG,Arthur J. Gallagher & Co.,United States,55.5,52,Y,14.5,valid
-102,EOAN.DE,E.ON,Germany,55.0,107,skewed,14.7,fwd-confirmed
-103,HO.PA,Thales,France,55.0,3,Y,18.9,valid
-104,MET,MetLife,United States,54.4,110,skewed,7.7,fwd-confirmed
-105,SE,Sea Limited,Singapore,53.0,732,skewed,16.3,fwd-confirmed
-106,WPM,Wheaton Precious Metals,Canada,52.8,22,Y,20.6,valid
-107,BAS.DE,BASF,Germany,52.0,484,skewed,17.3,fwd-confirmed
-108,HOLN.SW,Holcim Group,Switzerland,51.7,350,skewed,17.7,fwd-confirmed
-109,CTVA,Corteva,United States,51.5,6,Y,18.8,valid
-110,MT,ArcelorMittal,Luxembourg,51.1,25,Y,9.6,valid
-111,AZO,AutoZone,United States,51.0,4,Y,17.8,valid
-112,ADSK,Autodesk,United States,48.6,34,Y,16.1,valid
-113,FER.MC,Ferrovial,Spain,48.2,61,Y,49.3,valid
-114,BN.PA,Danone,France,47.6,73,Y,15.4,valid
-115,HEI,HEICO,United States,46.3,13,Y,48.6,valid
-116,RWE.DE,RWE,Germany,46.1,14,Y,17.6,valid
-117,CSU.TO,Constellation Software,Canada,45.1,20,Y,15.8,valid
-118,IDXX,IDEXX Laboratories,United States,44.3,13,Y,34.0,valid
-119,SREN.SW,Swiss Re,Switzerland,43.7,31,Y,9.2,valid
-120,ELE.MC,Endesa,Spain,43.5,30,Y,15.8,valid
-121,HEIA.AS,Heineken,Netherlands,42.9,8,Y,11.9,valid
-122,BDX,Becton Dickinson,United States,41.7,38,Y,11.3,valid
-123,KDP,Keurig Dr Pepper,United States,41.5,2,Y,12.1,valid
-124,AMP,Ameriprise Financial,United States,40.9,40,Y,9.5,valid
-125,XYZ,Block,United States,40.6,9836,skewed,13.7,fwd-confirmed
-126,WDS,Woodside Energy,Australia,40.6,30,Y,,valid
-127,HLN,Haleon,United Kingdom,40.3,43,Y,14.9,valid
-128,COIN,Coinbase,United States,40.2,1654,skewed,30.7,fwd-confirmed
-129,AIG,American International Group,United States,40.0,3,Y,8.5,valid
-130,WCN,Waste Connections,United States,39.4,58,Y,25.1,valid
-131,BSBR,Banco Santander Brasil,Brazil,39.2,15,Y,5.5,valid
-132,UMG.AS,Universal Music Group,Netherlands,38.4,79,Y,15.9,valid
-133,A,Agilent Technologies,United States,38.3,3,Y,20.5,valid
-134,TSCO.L,Tesco,United Kingdom,38.1,10,Y,1357.8,valid
-135,PCG,PG&amp;E Corporation,United States,37.7,13,Y,9.5,valid
-136,TRI,Thomson Reuters,Canada,37.6,7,Y,17.0,valid
-137,VMC,Vulcan Materials,United States,36.5,1,Y,26.1,valid
-138,PYPL,PayPal,United States,36.4,96,Y,7.2,valid
-139,PRU,Prudential Financial,United States,36.3,50,Y,7.2,valid
-140,HIG,The Hartford,United States,36.2,22,Y,9.3,valid
-141,PAYX,Paychex,United States,36.0,17,Y,17.0,valid
-142,SDZ.SW,Sandoz Group,Switzerland,35.0,469,skewed,17.1,fwd-confirmed
-143,ROP,Roper Technologies,United States,33.5,84,Y,13.9,valid
-144,PKO.WA,PKO Bank Polski,Poland,33.4,10,Y,11.3,valid
-145,ZTS,Zoetis,United States,33.3,152,skewed,10.7,fwd-confirmed
-146,LVS,Las Vegas Sands,United States,33.3,23,Y,13.7,valid
-147,KMB,Kimberly-Clark,United States,32.9,48,Y,13.1,valid
-148,GFI,Gold Fields,South Africa,32.8,96,Y,6.8,valid
-149,ALC,Alcon,Switzerland,32.6,34,Y,16.8,valid
-150,NTR,Nutrien,Canada,32.3,31,Y,12.4,valid
-151,PUK,Prudential,United Kingdom,31.9,71,Y,15.2,valid
-152,ACGL,Arch Capital,Bermuda,31.9,5,Y,9.2,valid
-153,HNR1.DE,Hannover Rück,Germany,31.6,39,Y,9.8,valid
-154,HEN3.DE,Henkel,Germany,31.5,82,Y,11.5,valid
-155,KGC,Kinross Gold,Canada,31.3,79,Y,7.6,valid
-156,IQV,IQVIA,United States,30.6,24,Y,12.9,valid
-157,BIP,Brookfield Infrastructure Partners,Bermuda,30.6,317,skewed,27.1,fwd-confirmed
-158,TCOM,Trip.com,China,30.0,216,skewed,10.1,fwd-confirmed
-159,FSLR,First Solar,United States,30.0,48,Y,11.9,valid
-160,DSY.PA,Dassault Systèmes,France,29.8,100,Y,14.0,valid
-161,ZM,Zoom,United States,29.8,74,Y,16.1,valid
-162,ADYEN.AS,Adyen,Netherlands,29.7,104,skewed,17.3,fwd-confirmed
-163,AMRZ,Amrize,Switzerland,29.7,17,Y,16.8,valid
-164,RJF,Raymond James Financial,United States,29.5,3,Y,11.3,valid
-165,GEHC,GE HealthCare Technologies,United States,29.4,80,Y,12.0,valid
-166,TLX.DE,Talanx,Germany,29.4,10,Y,8.9,valid
-167,KOG.OL,Kongsberg Gruppen,Norway,29.0,16,Y,28.7,valid
-168,BIIB,Biogen,United States,28.8,31,Y,11.8,valid
-169,EIX,Edison International,United States,28.2,228,skewed,11.3,fwd-confirmed
-170,VEEV,Veeva Systems,United States,28.2,79,Y,17.2,valid
-171,DXCM,DexCom,United States,28.1,150,skewed,23.7,fwd-confirmed
-172,EXPE,Expedia Group,United States,27.5,0,Y,9.9,valid
-173,SAMPO.HE,Sampo,Finland,27.1,18,Y,14.5,valid
-174,OTIS,Otis Worldwide,United States,27.0,36,Y,14.9,valid
-175,AVB,AvalonBay Communities,United States,26.9,15,Y,38.9,valid
-176,PPL,PPL,United States,26.9,15,Y,16.9,valid
-177,LISP.SW,Chocoladefabriken Lindt &amp; Sprüngli,Switzerland,26.8,21,Y,26.9,valid
-178,AMS.MC,Amadeus IT Group,Spain,26.7,38,Y,13.9,valid
-179,FTI,TechnipFMC,United Kingdom,26.6,642,skewed,19.3,fwd-confirmed
-180,FICO,Fair Isaac (FICO),United States,26.4,105,skewed,21.0,fwd-confirmed
-181,EQR,Equity Residential,United States,26.3,25,Y,42.0,valid
-182,VWS.CO,Vestas Wind Systems,Denmark,26.3,786,skewed,16.2,fwd-confirmed
-183,XYL,Xylem,United States,26.1,69,Y,18.0,valid
-184,PPG,PPG Industries,United States,25.4,37,Y,13.1,valid
-185,CTSH,Cognizant Technology Solutions,United States,25.2,34,Y,8.6,valid
-186,FOX,Fox Corporation,United States,25.2,10,Y,11.4,valid
-187,SMCI,Supermicro,United States,25.0,189,skewed,12.8,fwd-confirmed
-188,PUB.PA,Publicis Groupe,France,25.0,33,Y,10.2,valid
-189,WTW,Willis Towers Watson,United Kingdom,24.9,59,Y,11.9,valid
-190,AWK,American Water,United States,24.3,15,Y,19.0,valid
-191,STZ,Constellation Brands,United States,24.3,78,Y,11.3,valid
-192,HEXA-B.ST,Hexagon AB,Sweden,24.2,1,Y,16.0,valid
-193,WRT1V.HE,Wärtsilä,Finland,24.2,16,Y,27.6,valid
-194,NHY.OL,Norsk Hydro,Norway,24.1,3,Y,11.7,valid
-195,CRS,Carpenter Technology,United States,24.0,46,Y,38.3,valid
-196,SYF,Synchrony Financial,United States,23.8,15,Y,6.8,valid
-197,KEY,KeyCorp (KeyBank),United States,23.6,3,Y,10.1,valid
-198,HPQ,HP,United States,23.4,2,Y,8.5,valid
-199,MTD,Mettler Toledo,United States,23.3,42,Y,22.5,valid
-200,CHD,Church & Dwight,United States,22.9,4,Y,24.1,valid
-201,DG,Dollar General,United States,22.9,11,Y,13.0,valid
-202,PFG,Principal Financial Group,United States,22.7,42,Y,10.3,valid
-203,TROW,T. Rowe Price,United States,22.7,17,Y,11.0,valid
-204,ROL,Rollins,United States,22.7,24,Y,33.8,valid
-205,TW,Tradeweb,United States,22.4,127,skewed,22.4,fwd-confirmed
-206,SBAC,SBA Communications,United States,22.1,92,Y,25.7,valid
-207,WIT,Wipro,India,22.0,68,Y,13.3,valid
-208,LH,LabCorp,United States,21.7,65,Y,13.6,valid
-209,AER,AerCap,Ireland,21.6,3,Y,8.0,valid
-210,VLTO,Veralto,United States,21.1,22,Y,18.5,valid
-211,EFX,Equifax,United States,20.8,67,Y,16.8,valid
-212,CHTR,Charter Communications,United States,20.7,173,skewed,3.0,fwd-confirmed
-213,INCY,Incyte,United States,20.5,43,Y,11.3,valid
-214,RCI,Rogers Communications,Canada,20.3,618,skewed,10.4,fwd-confirmed
-215,BRO,Brown &amp; Brown,United States,20.0,55,Y,12.1,valid
-216,BURL,Burlington Stores,United States,19.9,38,Y,23.0,valid
-217,ESS,Essex Property Trust,United States,19.7,46,Y,48.2,valid
-218,RBA,RB Global,Canada,19.5,41,Y,21.4,valid
-219,TU,Telus,Canada,19.2,37,Y,17.0,valid
-220,ENTG,Entegris,United States,19.1,38,Y,27.1,valid
-221,SBS,Sabesp,Brazil,18.8,16,Y,9.7,valid
-222,GPN,Global Payments,United States,18.1,119,skewed,4.1,fwd-confirmed
-223,CX,Cemex,Mexico,18.0,167,skewed,14.0,fwd-confirmed
-224,INVH,Invitation Homes,United States,17.8,25,Y,45.2,valid
-225,LII,Lennox,United States,17.7,42,Y,19.0,valid
-226,GIS,General Mills,United States,17.7,65,Y,10.5,valid
-227,BR,Broadridge Financial Solutions,United States,17.5,69,Y,14.5,valid
-228,RGLD,Royal Gold,United States,17.5,10,Y,15.4,valid
-229,NWS,News Corp,United States,17.0,615,skewed,24.2,fwd-confirmed
-230,CDW,CDW Corporation,United States,17.0,63,Y,11.4,valid
-231,SN,SharkNinja,United States,17.0,158,skewed,17.1,fwd-confirmed
-232,SSNC,SS&C Technologies,United States,16.8,15,Y,9.3,valid
-233,NVR,NVR,United States,16.7,16,Y,14.7,valid
-234,NBIX,Neurocrine Biosciences,United States,16.5,59,Y,12.9,valid
-235,LOGI,Logitech,Switzerland,16.2,3,Y,18.2,valid
-236,TXT,Textron,United States,15.8,5,Y,12.5,valid
-237,LDOS,Leidos,United States,15.7,789,skewed,9.5,fwd-confirmed
-238,TSCO,Tractor Supply,United States,15.6,78,Y,12.9,valid
-239,GMAB,Genmab,Denmark,15.4,60,Y,13.7,valid
-240,OWL,Blue Owl Capital,United States,15.3,63,Y,10.0,valid
-241,WSO,Watsco,United States,15.1,7,Y,26.7,valid
-242,AGI,Alamos Gold,Canada,14.9,74,Y,10.4,valid
-243,TME,Tencent Music Entertainment,China,14.9,242,skewed,8.6,fwd-confirmed
-244,REG,Regency Centers,United States,14.5,2,Y,30.7,valid
-245,LTM,LATAM Airlines,Chile,14.1,31,Y,7.1,valid
-246,BSAC,Banco Santander-Chile,Chile,14.1,20,Y,9.6,valid
-247,CHKP,Check Point Software,Israel,14.1,65,Y,11.9,valid
-248,GIB,CGI,Canada,14.1,58,Y,9.7,valid
-249,BALL,Ball Corporation,United States,14.1,63,Y,11.7,valid
-250,CSL,Carlisle Companies,United States,14.0,29,Y,14.8,valid
-251,THC,Tenet Healthcare,United States,14.0,123,skewed,9.1,fwd-confirmed
-252,OHI,Omega Healthcare Investors,United States,13.9,31,Y,21.8,valid
-253,TIGO,Millicom,Luxembourg,13.8,309,skewed,12.6,fwd-confirmed
-254,JLL,Jones Lang LaSalle,United States,13.7,144,skewed,11.3,fwd-confirmed
-255,AMH,AMH (American Homes 4 Rent),United States,13.7,22,Y,48.6,valid
-256,LULU,lululemon athletica,Canada,13.7,184,skewed,9.6,fwd-confirmed
-257,RPM,RPM International,United States,13.4,42,Y,17.8,valid
-258,RGA,Reinsurance Group of America,United States,13.4,27,Y,7.1,valid
-259,EXEL,Exelixis,United States,13.2,82,Y,13.0,valid
-260,COO,Cooper Companies,United States,13.1,64,Y,13.5,valid
-261,EVR,Evercore,United States,13.1,32,Y,14.8,valid
-262,SNN,Smith & Nephew,United Kingdom,13.0,83,Y,14.0,valid
-263,MEDP,Medpace,United States,13.0,56,Y,24.5,valid
-264,FUTU,Futu Holdings,Hong Kong,12.9,79,Y,7.5,valid
-265,GFL,GFL Environmental,Canada,12.8,8307,skewed,40.1,fwd-confirmed
-266,FNF,Fidelity National Financial,United States,12.8,8,Y,7.9,valid
-267,MKC,McCormick & Company,United States,12.7,66,Y,14.2,valid
-268,TRMB,Trimble,United States,12.6,45,Y,13.3,valid
-269,PEN,Penumbra,United States,12.6,9,Y,50.9,valid
-270,ELS,Equity LifeStyle Properties,United States,12.5,16,Y,28.8,valid
-271,ONON,On Holding,Switzerland,12.4,155,skewed,17.2,fwd-confirmed
-272,GGG,Graco,United States,12.3,9,Y,22.0,valid
-273,DT,Dynatrace,United States,12.3,10,Y,18.7,valid
-274,ALGN,Align Technology,United States,12.0,40,Y,13.6,valid
-275,ERIE,Erie Indemnity,United States,11.9,94,Y,16.2,valid
-276,AVY,Avery Dennison,United States,11.9,91,Y,13.9,valid
-277,FMS,Fresenius Medical Care,Germany,11.8,60,Y,5.6,valid
-278,PNR,Pentair,United Kingdom,11.8,8,Y,12.6,valid
-279,AEIS,Advanced Energy,United States,11.8,64,Y,25.1,valid
-280,CACI,CACI International Inc,United States,11.7,10,Y,17.1,valid
-281,AGNC,AGNC Investment,United States,11.7,1967,skewed,6.8,fwd-confirmed
-282,SPXC,SPX Technologies,United States,11.4,63,Y,25.2,valid
-283,BJ,BJ's Wholesale Club,United States,11.4,11,Y,18.3,valid
-284,JEF,Jefferies Financial Group,United States,11.4,118,skewed,12.6,fwd-confirmed
-285,TXRH,Texas Roadhouse,United States,11.2,31,Y,22.3,valid
-286,ALLE,Allegion,Ireland,11.2,8,Y,13.7,valid
-287,GDDY,GoDaddy,United States,11.2,12,Y,7.8,valid
-288,BXP,"BXP, Inc.",United States,11.1,28,Y,29.3,valid
-289,ZBRA,Zebra Technologies,United States,11.1,90,Y,11.2,valid
-290,AR,Antero Resources,United States,11.0,191,skewed,7.6,fwd-confirmed
-291,IT,Gartner,United States,11.0,138,skewed,10.7,fwd-confirmed
-292,BMRN,BioMarin Pharmaceutical,United States,11.0,200,skewed,8.8,fwd-confirmed
-293,CR,Crane Company,United States,10.9,7,Y,24.9,valid
-294,GMED,Globus Medical,United States,10.9,214,skewed,15.5,fwd-confirmed
-295,SF,Stifel,United States,10.8,5,Y,10.1,valid
-296,SEIC,SEI Investments,United States,10.8,15,Y,13.5,valid
-297,FRT,Federal Realty Investment Trust,United States,10.7,26,Y,39.6,valid
-298,PODD,Insulet,United States,10.6,56,Y,18.9,valid
-299,WTRG,Essential Utilities,United States,10.6,10,Y,15.6,valid
-300,SFD,Smithfield Foods,United States,10.6,4104,skewed,10.4,fwd-confirmed
-301,AES,AES,United States,10.5,289,skewed,6.1,fwd-confirmed
-302,DPZ,Domino's Pizza,United States,10.4,91,Y,15.0,valid
-303,CCK,Crown Holdings,United States,10.4,32,Y,10.6,valid
-304,VMI,Valmont Industries,United States,10.4,25,Y,21.0,valid
-305,EHC,Encompass Health,United States,10.3,30,Y,15.9,valid
-306,HBM,Hudbay Minerals,Canada,10.2,130,skewed,12.4,fwd-confirmed
-307,CNM,Core &amp; Main,United States,10.1,1,Y,17.4,valid
-308,SUZ,Suzano,Brazil,10.1,22,Y,5.5,valid
-309,BSY,Bentley Systems,United States,10.0,26,Y,20.8,valid
-310,WMS,Advanced Drainage Systems,United States,10.0,3,Y,17.9,valid
-311,ENSG,The Ensign Group,United States,10.0,16,Y,20.4,valid
-312,GME,GameStop,United States,9.8,4260,skewed,18.0,fwd-confirmed
-313,ESI,Element Solutions,United States,9.7,7,Y,19.4,valid
-314,HLI,Houlihan Lokey,United States,9.6,42,Y,14.7,valid
-315,SCI,Service Corporation International,United States,9.6,6,Y,15.3,valid
-316,ALV,Autoliv,Sweden,9.5,33,Y,10.7,valid
-317,BAH,Booz Allen Hamilton,United States,9.5,180,skewed,11.6,fwd-confirmed
-318,TTD,The Trade Desk,United States,9.4,1124,skewed,9.3,fwd-confirmed
-319,JKHY,Jack Henry &amp; Associates,United States,9.2,54,Y,18.4,valid
-320,UHS,Universal Health Services,United States,8.8,185,skewed,5.7,fwd-confirmed
-321,NCLH,Norwegian Cruise Line,United States,8.6,136,skewed,9.3,fwd-confirmed
-322,AOS,A. O. Smith,United States,7.9,44,Y,13.7,valid
-323,POOL,POOLCORP,United States,6.8,30,Y,15.4,valid
-324,CPB,Campbell's,United States,6.5,34,Y,10.4,valid
-325,CAG,Conagra Brands,United States,6.2,223,skewed,8.0,fwd-confirmed
-326,BBDO,Banco Bradesco Sa,United States,,3,Y,,valid
-327,BF-B,Brown Forman Inc,United States,,12,Y,15.2,valid
-328,FER,Ferrovial N.V.,United States,,51,Y,44.6,valid
-329,FOXA,Fox Corporation,United States,,6,Y,11.8,valid
-330,KSPI,Joint Stock Company Kaspi.kz - ,United States,,93,Y,0.0,valid
-331,NWSA,News Corporation,United States,,693,skewed,21.1,fwd-confirmed
-332,P,"Everpure, Inc.",United States,,158,skewed,24.0,fwd-confirmed
+10,PG,Procter & Gamble,United States,341.2,18,Y,20.7,valid
+11,PLTR,Palantir,United States,324.9,31,Y,65.3,valid
+12,MRK,Merck,United States,298.3,4895,skewed,12.6,fwd-confirmed
+13,AZN,AstraZeneca,United Kingdom,288.4,39,Y,23.2,valid
+14,RTX,RTX,United States,243.7,19,Y,23.9,valid
+15,OR.PA,L'Oréal,France,231.0,4,Y,25.4,valid
+16,TM,Toyota,Japan,230.9,2,Y,11.2,valid
+17,PANW,Palo Alto Networks,United States,221.7,56,Y,66.2,valid
+18,SAP,SAP,Germany,217.8,25,Y,18.7,valid
+19,AXP,American Express,United States,212.0,0,Y,15.4,valid
+20,PRX.AS,Prosus,Netherlands,202.2,16,Y,10.3,valid
+21,TMUS,T-Mobile US,United States,192.7,34,Y,12.7,valid
+22,VZ,Verizon,United States,189.4,18,Y,8.6,valid
+23,APP,AppLovin,United States,187.2,49,Y,25.4,valid
+24,TMO,Thermo Fisher Scientific,United States,175.7,33,Y,17.3,valid
+25,DIS,Walt Disney,United States,173.1,418,skewed,13.3,fwd-confirmed
+26,APH,Amphenol,United States,170.8,3,Y,24.5,valid
+27,ABT,Abbott Laboratories,United States,158.6,25,Y,15.0,valid
+28,T,AT&T,United States,158.1,18,Y,8.9,valid
+29,SCHW,Charles Schwab,United States,154.5,48,Y,12.3,valid
+30,ETN,Eaton,Ireland,153.7,1,Y,25.2,valid
+31,ISRG,Intuitive Surgical,United States,149.5,65,Y,35.8,valid
+32,PFE,Pfizer,United States,148.4,246,skewed,9.2,fwd-confirmed
+33,WELL,Welltower,United States,146.1,2,Y,61.6,valid
+34,UBER,Uber,United States,143.9,459,skewed,16.2,fwd-confirmed
+35,DHR,Danaher,United States,130.4,6,Y,20.2,valid
+36,BKNG,Booking Holdings (Booking.com),United States,128.5,32,Y,13.5,valid
+37,SPGI,S&P Global,United States,125.6,84,Y,19.1,valid
+38,UL,Unilever,United Kingdom,122.8,53,Y,14.7,valid
+39,CFR.SW,Compagnie Financière Richemont,Switzerland,121.5,18,Y,22.5,valid
+40,PDD,PDD Holdings (Pinduoduo),China,121.1,155,skewed,6.9,fwd-confirmed
+41,HDB,HDFC Bank,India,120.1,36,Y,15.9,valid
+42,SYK,Stryker Corporation,United States,117.2,11,Y,18.3,valid
+43,NOW,ServiceNow,United States,116.0,39,Y,22.4,valid
+44,VRTX,Vertex Pharmaceuticals,United States,113.4,16,Y,20.8,valid
+45,ACN,Accenture,Ireland,109.7,86,Y,12.0,valid
+46,SNY,Sanofi,France,107.8,45,Y,8.5,valid
+47,MDT,Medtronic,Ireland,104.9,16,Y,12.7,valid
+48,ZURN.SW,Zurich Insurance Group,Switzerland,103.2,24,Y,12.8,valid
+49,ADBE,Adobe,United States,101.6,212,skewed,9.5,fwd-confirmed
+50,TT,Trane Technologies,Ireland,101.0,5,Y,26.8,valid
+51,DUK,Duke Energy,United States,96.8,34,Y,17.3,valid
+52,CNQ,Canadian Natural Resources,Canada,95.3,0,Y,12.5,valid
+53,GD,General Dynamics,United States,93.7,4,Y,19.1,valid
+54,MCK,McKesson,United States,93.2,28,Y,15.4,valid
+55,CDI.PA,Dior,France,93.1,2,Y,,valid
+56,IBN,ICICI Bank,India,93.0,32,Y,13.6,valid
+57,ADP,Automatic Data Processing,United States,92.7,19,Y,19.0,valid
+58,EL.PA,EssilorLuxottica,France,92.1,9,Y,20.7,valid
+59,CEG,Constellation Energy,United States,91.0,15,Y,18.7,valid
+60,AMT,American Tower,United States,90.4,59,Y,28.1,valid
+61,ELV,Elevance Health,United States,90.2,26,Y,14.2,valid
+62,CMI,Cummins,United States,89.9,63,Y,19.4,valid
+63,SNPS,Synopsys,United States,89.0,30,Y,27.0,valid
+64,WM,Waste Management,United States,88.5,11,Y,23.8,valid
+65,CMCSA,Comcast,United States,85.1,107,skewed,6.3,fwd-confirmed
+66,DDOG,Datadog,United States,83.3,23,Y,82.3,valid
+67,HCA,HCA Healthcare,United States,82.6,27,Y,11.2,valid
+68,INTU,Intuit,United States,81.2,254,skewed,10.9,fwd-confirmed
+69,ICE,Intercontinental Exchange,United States,80.0,30,Y,16.0,valid
+70,SPG,Simon Property Group,United States,79.9,33,Y,31.4,valid
+71,MRSH,Marsh & McLennan Companies,United States,79.7,38,Y,14.6,valid
+72,MCO,Moody's,United States,78.8,44,Y,24.3,valid
+73,NOC,Northrop Grumman,United States,77.3,67,Y,18.1,valid
+74,CI,The Cigna Group,United States,76.6,39,Y,8.6,valid
+75,SHW,Sherwin-Williams,United States,75.3,7,Y,23.1,valid
+76,RCL,Royal Caribbean Group,United States,75.1,37,Y,14.0,valid
+77,BAM,Brookfield Asset Management,Canada,73.7,4,Y,21.2,valid
+78,ECL,Ecolab,United States,72.6,37,Y,26.8,valid
+79,BSX,Boston Scientific,United States,72.2,188,skewed,13.0,fwd-confirmed
+80,CTAS,Cintas,United States,72.0,30,Y,33.1,valid
+81,NSC,Norfolk Southern,United States,70.4,5,Y,23.1,valid
+82,AON,Aon,United Kingdom,70.2,20,Y,15.3,valid
+83,TDG,TransDigm Group,United States,69.3,33,Y,26.4,valid
+84,MRK.DE,Merck KGaA,Germany,68.6,1,Y,15.7,valid
+85,MSI,Motorola Solutions,United States,68.1,18,Y,22.2,valid
+86,REGN,Regeneron Pharmaceuticals,United States,66.6,96,Y,11.8,valid
+87,B,Barrick Gold,Canada,66.3,65,Y,8.6,valid
+88,MUV2.DE,Munich RE (Münchener Rück),Germany,66.1,34,Y,8.5,valid
+89,RSG,Republic Services,United States,64.6,13,Y,26.1,valid
+90,TRV,The Travelers Companies,United States,64.5,39,Y,10.6,valid
+91,RELX,RELX,United Kingdom,61.9,50,Y,16.1,valid
+92,LSEG.L,London Stock Exchange,United Kingdom,61.1,72,Y,1750.7,valid
+93,RACE,Ferrari,Italy,61.1,50,Y,28.1,valid
+94,NU,Nu Holdings,Brazil,58.2,197,skewed,10.5,fwd-confirmed
+95,ACA.PA,Crédit Agricole,France,57.6,0,Y,6.8,valid
+96,TRGP,Targa Resources,United States,56.7,10,Y,21.5,valid
+97,TGT,Target,United States,55.7,2,Y,13.8,valid
+98,AJG,Arthur J. Gallagher & Co.,United States,55.5,52,Y,14.5,valid
+99,EOAN.DE,E.ON,Germany,55.0,107,skewed,14.7,fwd-confirmed
+100,HO.PA,Thales,France,55.0,3,Y,18.9,valid
+101,MET,MetLife,United States,54.4,110,skewed,7.7,fwd-confirmed
+102,SE,Sea Limited,Singapore,53.0,732,skewed,16.3,fwd-confirmed
+103,WPM,Wheaton Precious Metals,Canada,52.8,22,Y,20.6,valid
+104,BAS.DE,BASF,Germany,52.0,484,skewed,17.3,fwd-confirmed
+105,HOLN.SW,Holcim Group,Switzerland,51.7,350,skewed,17.7,fwd-confirmed
+106,CTVA,Corteva,United States,51.5,6,Y,18.8,valid
+107,MT,ArcelorMittal,Luxembourg,51.1,25,Y,9.6,valid
+108,AZO,AutoZone,United States,51.0,4,Y,17.8,valid
+109,ADSK,Autodesk,United States,48.6,34,Y,16.1,valid
+110,FER.MC,Ferrovial,Spain,48.2,61,Y,49.3,valid
+111,BN.PA,Danone,France,47.6,73,Y,15.4,valid
+112,HEI,HEICO,United States,46.3,13,Y,48.6,valid
+113,RWE.DE,RWE,Germany,46.1,14,Y,17.6,valid
+114,CSU.TO,Constellation Software,Canada,45.1,20,Y,15.8,valid
+115,IDXX,IDEXX Laboratories,United States,44.3,13,Y,34.0,valid
+116,SREN.SW,Swiss Re,Switzerland,43.7,31,Y,9.2,valid
+117,ELE.MC,Endesa,Spain,43.5,30,Y,15.8,valid
+118,HEIA.AS,Heineken,Netherlands,42.9,8,Y,11.9,valid
+119,BDX,Becton Dickinson,United States,41.7,38,Y,11.3,valid
+120,KDP,Keurig Dr Pepper,United States,41.5,2,Y,12.1,valid
+121,AMP,Ameriprise Financial,United States,40.9,40,Y,9.5,valid
+122,XYZ,Block,United States,40.6,9836,skewed,13.7,fwd-confirmed
+123,WDS,Woodside Energy,Australia,40.6,30,Y,,valid
+124,HLN,Haleon,United Kingdom,40.3,43,Y,14.9,valid
+125,COIN,Coinbase,United States,40.2,1654,skewed,30.7,fwd-confirmed
+126,AIG,American International Group,United States,40.0,3,Y,8.5,valid
+127,WCN,Waste Connections,United States,39.4,58,Y,25.1,valid
+128,BSBR,Banco Santander Brasil,Brazil,39.2,15,Y,5.5,valid
+129,UMG.AS,Universal Music Group,Netherlands,38.4,79,Y,15.9,valid
+130,A,Agilent Technologies,United States,38.3,3,Y,20.5,valid
+131,TSCO.L,Tesco,United Kingdom,38.1,10,Y,1357.8,valid
+132,PCG,PG&amp;E Corporation,United States,37.7,13,Y,9.5,valid
+133,TRI,Thomson Reuters,Canada,37.6,7,Y,17.0,valid
+134,VMC,Vulcan Materials,United States,36.5,1,Y,26.1,valid
+135,PRU,Prudential Financial,United States,36.3,50,Y,7.2,valid
+136,HIG,The Hartford,United States,36.2,22,Y,9.3,valid
+137,PAYX,Paychex,United States,36.0,17,Y,17.0,valid
+138,SDZ.SW,Sandoz Group,Switzerland,35.0,469,skewed,17.1,fwd-confirmed
+139,ROP,Roper Technologies,United States,33.5,84,Y,13.9,valid
+140,PKO.WA,PKO Bank Polski,Poland,33.4,10,Y,11.3,valid
+141,ZTS,Zoetis,United States,33.3,152,skewed,10.7,fwd-confirmed
+142,LVS,Las Vegas Sands,United States,33.3,23,Y,13.7,valid
+143,KMB,Kimberly-Clark,United States,32.9,48,Y,13.1,valid
+144,GFI,Gold Fields,South Africa,32.8,96,Y,6.8,valid
+145,ALC,Alcon,Switzerland,32.6,34,Y,16.8,valid
+146,NTR,Nutrien,Canada,32.3,31,Y,12.4,valid
+147,PUK,Prudential,United Kingdom,31.9,71,Y,15.2,valid
+148,ACGL,Arch Capital,Bermuda,31.9,5,Y,9.2,valid
+149,HNR1.DE,Hannover Rück,Germany,31.6,39,Y,9.8,valid
+150,HEN3.DE,Henkel,Germany,31.5,82,Y,11.5,valid
+151,KGC,Kinross Gold,Canada,31.3,79,Y,7.6,valid
+152,IQV,IQVIA,United States,30.6,24,Y,12.9,valid
+153,BIP,Brookfield Infrastructure Partners,Bermuda,30.6,317,skewed,27.1,fwd-confirmed
+154,TCOM,Trip.com,China,30.0,216,skewed,10.1,fwd-confirmed
+155,FSLR,First Solar,United States,30.0,48,Y,11.9,valid
+156,DSY.PA,Dassault Systèmes,France,29.8,100,Y,14.0,valid
+157,ZM,Zoom,United States,29.8,74,Y,16.1,valid
+158,ADYEN.AS,Adyen,Netherlands,29.7,104,skewed,17.3,fwd-confirmed
+159,AMRZ,Amrize,Switzerland,29.7,17,Y,16.8,valid
+160,RJF,Raymond James Financial,United States,29.5,3,Y,11.3,valid
+161,GEHC,GE HealthCare Technologies,United States,29.4,80,Y,12.0,valid
+162,TLX.DE,Talanx,Germany,29.4,10,Y,8.9,valid
+163,KOG.OL,Kongsberg Gruppen,Norway,29.0,16,Y,28.7,valid
+164,BIIB,Biogen,United States,28.8,31,Y,11.8,valid
+165,EIX,Edison International,United States,28.2,228,skewed,11.3,fwd-confirmed
+166,VEEV,Veeva Systems,United States,28.2,79,Y,17.2,valid
+167,DXCM,DexCom,United States,28.1,150,skewed,23.7,fwd-confirmed
+168,EXPE,Expedia Group,United States,27.5,0,Y,9.9,valid
+169,SAMPO.HE,Sampo,Finland,27.1,18,Y,14.5,valid
+170,OTIS,Otis Worldwide,United States,27.0,36,Y,14.9,valid
+171,AVB,AvalonBay Communities,United States,26.9,15,Y,38.9,valid
+172,PPL,PPL,United States,26.9,15,Y,16.9,valid
+173,LISP.SW,Chocoladefabriken Lindt &amp; Sprüngli,Switzerland,26.8,21,Y,26.9,valid
+174,AMS.MC,Amadeus IT Group,Spain,26.7,38,Y,13.9,valid
+175,FTI,TechnipFMC,United Kingdom,26.6,642,skewed,19.3,fwd-confirmed
+176,FICO,Fair Isaac (FICO),United States,26.4,105,skewed,21.0,fwd-confirmed
+177,EQR,Equity Residential,United States,26.3,25,Y,42.0,valid
+178,VWS.CO,Vestas Wind Systems,Denmark,26.3,786,skewed,16.2,fwd-confirmed
+179,XYL,Xylem,United States,26.1,69,Y,18.0,valid
+180,PPG,PPG Industries,United States,25.4,37,Y,13.1,valid
+181,CTSH,Cognizant Technology Solutions,United States,25.2,34,Y,8.6,valid
+182,FOX,Fox Corporation,United States,25.2,10,Y,11.4,valid
+183,SMCI,Supermicro,United States,25.0,189,skewed,12.8,fwd-confirmed
+184,PUB.PA,Publicis Groupe,France,25.0,33,Y,10.2,valid
+185,WTW,Willis Towers Watson,United Kingdom,24.9,59,Y,11.9,valid
+186,AWK,American Water,United States,24.3,15,Y,19.0,valid
+187,STZ,Constellation Brands,United States,24.3,78,Y,11.3,valid
+188,HEXA-B.ST,Hexagon AB,Sweden,24.2,1,Y,16.0,valid
+189,WRT1V.HE,Wärtsilä,Finland,24.2,16,Y,27.6,valid
+190,NHY.OL,Norsk Hydro,Norway,24.1,3,Y,11.7,valid
+191,CRS,Carpenter Technology,United States,24.0,46,Y,38.3,valid
+192,SYF,Synchrony Financial,United States,23.8,15,Y,6.8,valid
+193,KEY,KeyCorp (KeyBank),United States,23.6,3,Y,10.1,valid
+194,HPQ,HP,United States,23.4,2,Y,8.5,valid
+195,MTD,Mettler Toledo,United States,23.3,42,Y,22.5,valid
+196,CHD,Church & Dwight,United States,22.9,4,Y,24.1,valid
+197,DG,Dollar General,United States,22.9,11,Y,13.0,valid
+198,PFG,Principal Financial Group,United States,22.7,42,Y,10.3,valid
+199,TROW,T. Rowe Price,United States,22.7,17,Y,11.0,valid
+200,ROL,Rollins,United States,22.7,24,Y,33.8,valid
+201,TW,Tradeweb,United States,22.4,127,skewed,22.4,fwd-confirmed
+202,SBAC,SBA Communications,United States,22.1,92,Y,25.7,valid
+203,WIT,Wipro,India,22.0,68,Y,13.3,valid
+204,LH,LabCorp,United States,21.7,65,Y,13.6,valid
+205,AER,AerCap,Ireland,21.6,3,Y,8.0,valid
+206,VLTO,Veralto,United States,21.1,22,Y,18.5,valid
+207,EFX,Equifax,United States,20.8,67,Y,16.8,valid
+208,CHTR,Charter Communications,United States,20.7,173,skewed,3.0,fwd-confirmed
+209,INCY,Incyte,United States,20.5,43,Y,11.3,valid
+210,RCI,Rogers Communications,Canada,20.3,618,skewed,10.4,fwd-confirmed
+211,BRO,Brown &amp; Brown,United States,20.0,55,Y,12.1,valid
+212,BURL,Burlington Stores,United States,19.9,38,Y,23.0,valid
+213,ESS,Essex Property Trust,United States,19.7,46,Y,48.2,valid
+214,RBA,RB Global,Canada,19.5,41,Y,21.4,valid
+215,TU,Telus,Canada,19.2,37,Y,17.0,valid
+216,ENTG,Entegris,United States,19.1,38,Y,27.1,valid
+217,SBS,Sabesp,Brazil,18.8,16,Y,9.7,valid
+218,GPN,Global Payments,United States,18.1,119,skewed,4.1,fwd-confirmed
+219,CX,Cemex,Mexico,18.0,167,skewed,14.0,fwd-confirmed
+220,INVH,Invitation Homes,United States,17.8,25,Y,45.2,valid
+221,LII,Lennox,United States,17.7,42,Y,19.0,valid
+222,GIS,General Mills,United States,17.7,65,Y,10.5,valid
+223,BR,Broadridge Financial Solutions,United States,17.5,69,Y,14.5,valid
+224,RGLD,Royal Gold,United States,17.5,10,Y,15.4,valid
+225,NWS,News Corp,United States,17.0,615,skewed,24.2,fwd-confirmed
+226,CDW,CDW Corporation,United States,17.0,63,Y,11.4,valid
+227,SN,SharkNinja,United States,17.0,158,skewed,17.1,fwd-confirmed
+228,SSNC,SS&C Technologies,United States,16.8,15,Y,9.3,valid
+229,NVR,NVR,United States,16.7,16,Y,14.7,valid
+230,NBIX,Neurocrine Biosciences,United States,16.5,59,Y,12.9,valid
+231,LOGI,Logitech,Switzerland,16.2,3,Y,18.2,valid
+232,TXT,Textron,United States,15.8,5,Y,12.5,valid
+233,LDOS,Leidos,United States,15.7,789,skewed,9.5,fwd-confirmed
+234,TSCO,Tractor Supply,United States,15.6,78,Y,12.9,valid
+235,GMAB,Genmab,Denmark,15.4,60,Y,13.7,valid
+236,OWL,Blue Owl Capital,United States,15.3,63,Y,10.0,valid
+237,WSO,Watsco,United States,15.1,7,Y,26.7,valid
+238,AGI,Alamos Gold,Canada,14.9,74,Y,10.4,valid
+239,TME,Tencent Music Entertainment,China,14.9,242,skewed,8.6,fwd-confirmed
+240,REG,Regency Centers,United States,14.5,2,Y,30.7,valid
+241,LTM,LATAM Airlines,Chile,14.1,31,Y,7.1,valid
+242,BSAC,Banco Santander-Chile,Chile,14.1,20,Y,9.6,valid
+243,CHKP,Check Point Software,Israel,14.1,65,Y,11.9,valid
+244,GIB,CGI,Canada,14.1,58,Y,9.7,valid
+245,BALL,Ball Corporation,United States,14.1,63,Y,11.7,valid
+246,CSL,Carlisle Companies,United States,14.0,29,Y,14.8,valid
+247,THC,Tenet Healthcare,United States,14.0,123,skewed,9.1,fwd-confirmed
+248,OHI,Omega Healthcare Investors,United States,13.9,31,Y,21.8,valid
+249,TIGO,Millicom,Luxembourg,13.8,309,skewed,12.6,fwd-confirmed
+250,JLL,Jones Lang LaSalle,United States,13.7,144,skewed,11.3,fwd-confirmed
+251,AMH,AMH (American Homes 4 Rent),United States,13.7,22,Y,48.6,valid
+252,LULU,lululemon athletica,Canada,13.7,184,skewed,9.6,fwd-confirmed
+253,RPM,RPM International,United States,13.4,42,Y,17.8,valid
+254,RGA,Reinsurance Group of America,United States,13.4,27,Y,7.1,valid
+255,EXEL,Exelixis,United States,13.2,82,Y,13.0,valid
+256,COO,Cooper Companies,United States,13.1,64,Y,13.5,valid
+257,EVR,Evercore,United States,13.1,32,Y,14.8,valid
+258,SNN,Smith & Nephew,United Kingdom,13.0,83,Y,14.0,valid
+259,MEDP,Medpace,United States,13.0,56,Y,24.5,valid
+260,FUTU,Futu Holdings,Hong Kong,12.9,79,Y,7.5,valid
+261,GFL,GFL Environmental,Canada,12.8,8307,skewed,40.1,fwd-confirmed
+262,FNF,Fidelity National Financial,United States,12.8,8,Y,7.9,valid
+263,MKC,McCormick & Company,United States,12.7,66,Y,14.2,valid
+264,TRMB,Trimble,United States,12.6,45,Y,13.3,valid
+265,PEN,Penumbra,United States,12.6,9,Y,50.9,valid
+266,ELS,Equity LifeStyle Properties,United States,12.5,16,Y,28.8,valid
+267,ONON,On Holding,Switzerland,12.4,155,skewed,17.2,fwd-confirmed
+268,GGG,Graco,United States,12.3,9,Y,22.0,valid
+269,DT,Dynatrace,United States,12.3,10,Y,18.7,valid
+270,ALGN,Align Technology,United States,12.0,40,Y,13.6,valid
+271,ERIE,Erie Indemnity,United States,11.9,94,Y,16.2,valid
+272,AVY,Avery Dennison,United States,11.9,91,Y,13.9,valid
+273,FMS,Fresenius Medical Care,Germany,11.8,60,Y,5.6,valid
+274,PNR,Pentair,United Kingdom,11.8,8,Y,12.6,valid
+275,AEIS,Advanced Energy,United States,11.8,64,Y,25.1,valid
+276,CACI,CACI International Inc,United States,11.7,10,Y,17.1,valid
+277,AGNC,AGNC Investment,United States,11.7,1967,skewed,6.8,fwd-confirmed
+278,SPXC,SPX Technologies,United States,11.4,63,Y,25.2,valid
+279,BJ,BJ's Wholesale Club,United States,11.4,11,Y,18.3,valid
+280,JEF,Jefferies Financial Group,United States,11.4,118,skewed,12.6,fwd-confirmed
+281,TXRH,Texas Roadhouse,United States,11.2,31,Y,22.3,valid
+282,ALLE,Allegion,Ireland,11.2,8,Y,13.7,valid
+283,GDDY,GoDaddy,United States,11.2,12,Y,7.8,valid
+284,BXP,"BXP, Inc.",United States,11.1,28,Y,29.3,valid
+285,ZBRA,Zebra Technologies,United States,11.1,90,Y,11.2,valid
+286,AR,Antero Resources,United States,11.0,191,skewed,7.6,fwd-confirmed
+287,IT,Gartner,United States,11.0,138,skewed,10.7,fwd-confirmed
+288,BMRN,BioMarin Pharmaceutical,United States,11.0,200,skewed,8.8,fwd-confirmed
+289,CR,Crane Company,United States,10.9,7,Y,24.9,valid
+290,GMED,Globus Medical,United States,10.9,214,skewed,15.5,fwd-confirmed
+291,SF,Stifel,United States,10.8,5,Y,10.1,valid
+292,SEIC,SEI Investments,United States,10.8,15,Y,13.5,valid
+293,FRT,Federal Realty Investment Trust,United States,10.7,26,Y,39.6,valid
+294,PODD,Insulet,United States,10.6,56,Y,18.9,valid
+295,WTRG,Essential Utilities,United States,10.6,10,Y,15.6,valid
+296,SFD,Smithfield Foods,United States,10.6,4104,skewed,10.4,fwd-confirmed
+297,AES,AES,United States,10.5,289,skewed,6.1,fwd-confirmed
+298,DPZ,Domino's Pizza,United States,10.4,91,Y,15.0,valid
+299,CCK,Crown Holdings,United States,10.4,32,Y,10.6,valid
+300,VMI,Valmont Industries,United States,10.4,25,Y,21.0,valid
+301,EHC,Encompass Health,United States,10.3,30,Y,15.9,valid
+302,HBM,Hudbay Minerals,Canada,10.2,130,skewed,12.4,fwd-confirmed
+303,CNM,Core &amp; Main,United States,10.1,1,Y,17.4,valid
+304,SUZ,Suzano,Brazil,10.1,22,Y,5.5,valid
+305,BSY,Bentley Systems,United States,10.0,26,Y,20.8,valid
+306,WMS,Advanced Drainage Systems,United States,10.0,3,Y,17.9,valid
+307,ENSG,The Ensign Group,United States,10.0,16,Y,20.4,valid
+308,GME,GameStop,United States,9.8,4260,skewed,18.0,fwd-confirmed
+309,ESI,Element Solutions,United States,9.7,7,Y,19.4,valid
+310,HLI,Houlihan Lokey,United States,9.6,42,Y,14.7,valid
+311,SCI,Service Corporation International,United States,9.6,6,Y,15.3,valid
+312,ALV,Autoliv,Sweden,9.5,33,Y,10.7,valid
+313,BAH,Booz Allen Hamilton,United States,9.5,180,skewed,11.6,fwd-confirmed
+314,TTD,The Trade Desk,United States,9.4,1124,skewed,9.3,fwd-confirmed
+315,JKHY,Jack Henry &amp; Associates,United States,9.2,54,Y,18.4,valid
+316,UHS,Universal Health Services,United States,8.8,185,skewed,5.7,fwd-confirmed
+317,NCLH,Norwegian Cruise Line,United States,8.6,136,skewed,9.3,fwd-confirmed
+318,AOS,A. O. Smith,United States,7.9,44,Y,13.7,valid
+319,POOL,POOLCORP,United States,6.8,30,Y,15.4,valid
+320,CPB,Campbell's,United States,6.5,34,Y,10.4,valid
+321,CAG,Conagra Brands,United States,6.2,223,skewed,8.0,fwd-confirmed
+322,BBDO,Banco Bradesco Sa,United States,,3,Y,,valid
+323,BF-B,Brown Forman Inc,United States,,12,Y,15.2,valid
+324,FER,Ferrovial N.V.,United States,,51,Y,44.6,valid
+325,FOXA,Fox Corporation,United States,,6,Y,11.8,valid
+326,KSPI,Joint Stock Company Kaspi.kz - ,United States,,93,Y,0.0,valid
+327,NWSA,News Corporation,United States,,693,skewed,21.1,fwd-confirmed
+328,P,"Everpure, Inc.",United States,,158,skewed,24.0,fwd-confirmed

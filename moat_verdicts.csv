@@ -1,0 +1,14 @@
+ticker,moat,basis,source
+PYPL,no,"No moat, no pricing power — competition can replicate payments",Brandon ("PayPal has no moat... a no")
+NFLX,no,"No durable moat / pricing power vs streaming competition",Brandon ("Netflix is a no")
+NKE,no,"Declining brand power, no durable moat",Brandon ("Nike is going to be out")
+HIMS,no,"Ad-dependent; business collapses when ads dry up",Brandon ("an obvious no")
+CRM,weak,"Moat in doubt from AI disruption",Brandon ("question mark next to its moat")
+NVDA,yes,"Best chip, best margins, best pricing power",Brandon ("best moat")
+META,yes,"Network effects — who is the competition?",Brandon ("good moat, good pricing power")
+TSM,yes,"~90% of advanced chip fabrication",Brandon ("has a moat")
+MSFT,yes,"Enterprise lock-in / switching costs",well-known + Brandon scorecard
+GOOGL,yes,"Search/ads dominance, distribution",well-known
+GOOG,yes,"Search/ads dominance, distribution",well-known
+AVGO,yes,"Custom-silicon + IP moat (rejected on PRICE not moat)",Brandon (good company, bad price)
+COST,yes,"Membership model + scale (rejected on PRICE not moat)",well-known

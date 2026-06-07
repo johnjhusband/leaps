@@ -47,12 +47,19 @@ def fwd_pe(t):
     p=fund.get(t,{}).get('price'); fe=fund.get(t,{}).get('forwardEps')
     return round(p/fe,1) if (p and fe and fe>0) else ''
 
+try:
+    import csv as _csv
+    MOAT={r['ticker']:r['moat'].strip().lower() for r in _csv.DictReader(open(f'{ROOT}/moat_verdicts.csv'))}
+except Exception: MOAT={}
+
 def buy_eligible(t):
-    """Brandon's actual screen: golden-bullish AND a reliable read.
+    """Brandon's actual screen: golden-bullish AND a reliable read AND not a confirmed no-moat name.
     Reliable = valid (apples-to-apples) OR — when the trailing golden line is SKEWED by a multiple
-    re-rating — forward-confirmed: forward P/E justified by growth (PEG-fwd <= 1.5). This is why
-    quality growers like NVDA (trailing line skewed, but forward P/E ~16) stay on the list, exactly
-    as Brandon holds them. Tesla stays out — it's golden-BEARISH, never eligible."""
+    re-rating — forward-confirmed: forward P/E justified by growth (PEG-fwd <= 1.5). Quality growers
+    like NVDA (skewed but fwd P/E ~16) stay; Tesla (golden-BEARISH) stays out.
+    MOAT GATE: a name with a researched verdict of 'no' or 'weak' is removed (cheap-no-moat = value trap,
+    e.g. PayPal/Netflix per Brandon). Names not yet researched stay (verdict pending) — see wiki/moats/."""
+    if MOAT.get(t) in ('no','weak'): return False          # moat veto
     g=golden.get(t,{})
     if g.get('golden_verdict')!='bullish': return False
     if g.get('golden_valid')=='Y': return True
