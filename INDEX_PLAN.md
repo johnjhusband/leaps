@@ -19,8 +19,8 @@ ranking.** Being the least-overvalued of a rich bunch is still overvalued; it do
 
 **Consequence — the holdings count floats with the market:**
 - It is NOT fixed at 50%. If 75% of the market is overvalued, only ~25% qualifies and we hold ~25%.
-- Right now (2026-06-07): of 910 valued tradable names, **269 (~30%) are genuinely undervalued** — that
-  is the entire stock buy list. The other ~70% are simply not bought.
+- Right now (2026-06-07): of 910 valued tradable names, **328 make the buy list** — that is the entire
+  stock buy list. The other names are not bought. (See `BUY_DECISION.md` for the exact rule + reconciled counts.)
 
 **Where the rest of the money goes:** the capital we do NOT put into undervalued stocks goes into
 **bonds / short-term securities (e.g. SGOV)** — exactly as Brandon parks in bonds when the market is rich.
@@ -45,8 +45,8 @@ where `undervalued_share = (# genuinely undervalued) ÷ (# valued tradable names
 This is essentially **capital allocation**: the richer the market, the fewer names qualify, the more of
 the portfolio sits in bonds/short-term — automatic de-risking (mirrors Brandon's bond rotation).
 
-**Current reading (2026-06-07):** 332 buy-eligible ÷ 910 valued = **36% undervalued → ≈73% stocks /
-≈27% bonds.** (Computed by `build_universe.py`, written to `MARKET_DIRECTION.md` each rebuild.)
+**Current reading (2026-06-07):** 328 buy-eligible ÷ 910 valued = **36% → 72% stocks / 28% bonds.**
+(Computed by `build_universe.py`, written to `MARKET_DIRECTION.md` each rebuild. Ground truth: `BUY_DECISION.md`.)
 
 **Invariant that never changes:** no money in overvalued names — bonds, never least-bad stocks.
 
