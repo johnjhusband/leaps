@@ -59,7 +59,8 @@ A name is **buy-eligible** if it is **golden-bullish AND a reliable read**, wher
 exclude was *stricter than Brandon* — it threw out NVDA, which **Brandon actually holds**. NVDA's trailing
 line is skewed (P/E compressed 104→42 as earnings 4x'd), but its **forward P/E is ~16** — cheap for the
 growth — so Brandon buys it and so do we. Tesla stays out: it's golden-*bearish* (forward P/E 156), never
-eligible. This recovered 63 quality growers (incl. NVDA, LLY) that the blunt skewed-exclude wrongly dropped.
+eligible. This recovered 63 quality growers (incl. NVDA, LLY) that the blunt skewed-exclude wrongly dropped
+— **62 remain on the buy list after the moat gate** removes one. (Counts: `BUY_DECISION.md`.)
 
 ## Within the stock sleeve
 - Hold the buy-eligible names (`buy_list.csv`), broadly diversified (index-like). Each row tags the
