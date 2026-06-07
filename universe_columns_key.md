@@ -14,13 +14,11 @@ Each row is one company. Columns explain *why* it got its rating.
 | `eps_growth_2y` | EPS growth over 2yr | (eps_now/eps_2y − 1). |
 | `price_growth_2y` | Price growth over 2yr | (price_now/price_2y − 1). Undervalued when eps_growth_2y > price_growth_2y. |
 | `pe_then` / `pe_now` | P/E 2yr ago / now | Used for the validity check. |
-| `proxy_verdict` / `proxy_pct` | My earlier proxy method | Kept for comparison; superseded by golden_*. |
+| `proxy_verdict` / `proxy_pct` | OLD proxy verdict + under/over % | The earlier formula's call (`bullish`/`bearish`/`no_earnings`) and how far its intrinsic estimate sat above/below price. **Kept for comparison only — superseded by `golden_*`; NOT used in the buy decision.** (These were once called `verdict`/`under_over_pct`; that naming is retired.) |
 | `ticker` | Ticker symbol | The trading symbol (e.g. `NVDA`; foreign suffixes like `.TO` = Toronto, `.L` = London). |
 | `name` | Company name | The company's name. |
 | `country` | Country of domicile | Where the company is headquartered/domiciled (not where it's listed). |
 | `mktcap_B` | Market capitalization (USD billions) | Total value of the company's shares, in billions of US dollars. |
-| `verdict` | Valuation verdict | `bullish` = undervalued (buy candidate); `bearish` = overvalued; `no_earnings` = no positive earnings, can't be valued this way. |
-| `under_over_pct` | Under/over-valuation percent | How far intrinsic value sits above (+) or below (−) the current price. +50 means intrinsic is 50% above price (cheap). |
 | `price` | Current share price | Latest market price per share (local currency for foreign listings). |
 | `intrinsic_value` | Intrinsic value per share | What the share is "worth" by Brandon's method: `ttm_eps × (1 + g_used)^5 × 20 ÷ 1.10^5`. |
 | `ttm_eps` | Trailing-twelve-month earnings per share | Actual reported profit per share over the last 12 months. |
@@ -38,12 +36,15 @@ Each row is one company. Columns explain *why* it got its rating.
 | `fractional` | IBKR fractional-tradable (full file only) | `Y` = can be bought as a fraction at Interactive Brokers; `N` = cannot. (`universe_fractional.csv` contains only `Y`.) |
 | `exchange` | Listing exchange (full file only) | Exchange code for US-listed names (`NYQ` = NYSE, `NMS` = Nasdaq, `PNK`/`OQX` = OTC/pink) or the foreign-suffix code. |
 
-## How to read a rating in one line
-`verdict` follows from `intrinsic_value` vs `price`: if intrinsic ≥ price → **bullish**. Intrinsic is
-driven by earnings (`ttm_eps`) times growth (`g_used`) — so a high `trailing_pe` only stays bullish if
-`g_used` is high enough to justify it.
+## How to read a rating in one line (the LIVE method)
+`buy=Y` ⇐ `golden_verdict=bullish` (EPS outgrew price over 2yr, so `golden_pct ≥ 0`) **AND** reliable
+(`golden_valid=Y`, or `skewed` but forward-confirmed at `fwd_pe ≤ 1.5×max(growth%,8)`) **AND** the moat gate
+doesn't reject it. Full rule + every threshold: **`BUY_DECISION.md`**.
 
 **Examples:**
-- AAPL **bearish**: `trailing_pe` 37, `g_used` 0.17 → intrinsic $228 < price $307.
-- NVDA **bullish**: `g_used` capped at 0.30 on `ttm_eps` $6.52 → intrinsic $301 > price $205.
-- KO **bearish**: `g_used` 0.09 can't justify `trailing_pe` 25 → intrinsic $60 < price $79.
+- **NVDA buy=Y** — golden bullish but `skewed` (P/E 104→42); `fwd_pe` ~16 forward-confirms it.
+- **Tesla buy=N** — golden **bearish** (`golden_pct` −87%).
+- **PayPal buy=N** — golden-bullish + cheap, but the **moat gate** removes it (no moat = value trap).
+
+> The `proxy_*`/`intrinsic_value`/`ttm_eps×g_used` columns are the retired proxy method — informational
+> only, not part of `buy`.
