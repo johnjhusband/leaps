@@ -38,10 +38,20 @@ bullish + valid, but moat=`no` → **rejected by gate 1**.
   (Brandon's >20% rule). Else OK to deploy. (This median-of-constituents is a documented *proxy* for the
   index's own EPS line — see `ASSUMPTIONS_LEDGER.md` #3.)
 
-## C. Stock / bond allocation (John's capital rule)
-- `undervalued_share = (# buy-eligible names) ÷ (# names with a golden verdict)`, over the fractional-tradable set.
-- `stock_weight = min(1.0, undervalued_share / 0.50)`;  `bond_weight = 1 − stock_weight`.
-  (50% of the universe undervalued = 100% stocks; 25% = 50/50; 0% = all bonds.) Bonds = SGOV/short-term.
+## C. Stock / bond allocation — TWO separate data points (do not conflate)
+The moat challenge changes *which* stocks we hold, NOT *how hot the market is*. So sizing and selection
+use different numbers:
+
+1. **SIZING the stock/bond split = PRE-moat "undervalued" count** (market hotness):
+   - `undervalued_share = (# names passing §A.2+§A.3, i.e. golden-bullish + reliable, BEFORE the moat gate) ÷ (# names with a golden verdict)`, over the fractional set.
+   - `stock_weight = min(1.0, undervalued_share / 0.50)`;  `bond_weight = 1 − stock_weight`.
+   - (50% undervalued = 100% stocks; 25% = 50/50; 0% = all bonds.) The moat gate does not move this.
+2. **SELECTING the holdings = POST-moat buy list** (`buy=Y`, §A in full incl. the moat gate):
+   - The `stock_weight` is spread across these moat-quality names. Bonds = SGOV/short-term.
+
+> Why split them: the moat gate removing value traps shouldn't fool the portfolio into thinking the market
+> got more expensive and piling into bonds. The market is exactly as hot as the *valuation* says (pre-moat);
+> we just hold that stock allocation in a smaller, higher-quality set.
 
 ## D. Current snapshot (2026-06-07) — the numbers, reconciled
 | Quantity | Value |
@@ -50,11 +60,13 @@ bullish + valid, but moat=`no` → **rejected by gate 1**.
 | With usable data (price + EPS) | 1,431 |
 | IBKR-fractional **tradable** | **1,150** |
 | Tradable **with a golden verdict** (the allocation denominator) | **910** |
-| **Buy list** (`buy=Y`: golden-bullish + reliable + passes moat gate) | **185** |
+| **Undervalued (PRE-moat — sizes the split)** | **332** (332/910 = 36%) |
+| **Allocation sizing:** `min(100%, 36%/50%)` | **73% stocks / 27% bonds** |
+| **Buy list / holdings (POST-moat: + moat gate)** | **185** |
 | └ of which `golden_valid='Y'` | 164 |
 | └ of which skewed-but-forward-confirmed | 21 |
-| Removed by the **moat gate** (moat=`no`/`weak`, now ~324 names researched) | 143 |
-| Allocation: 185/910 = 20% → `min(100%, 20%/50%)` | **41% stocks / 59% bonds** |
+| Removed by the **moat gate** (moat=`no`/`weak`, ~324 researched) | 147 |
+| → the **73% stock sleeve is spread across the 185** moat-quality names | ~$73k/185 ≈ $395 each on $100k |
 
 > The moat gate is now backed by per-company research (`moat_verdicts.csv` + `wiki/moats/`): 189 `yes`,
 > 118 `weak`, 30 `no`. Removing the no/weak names cut the buy list 328 → 185 and the stock weight 72% → 41%

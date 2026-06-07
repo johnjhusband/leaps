@@ -52,14 +52,10 @@ try:
     MOAT={r['ticker']:r['moat'].strip().lower() for r in _csv.DictReader(open(f'{ROOT}/moat_verdicts.csv'))}
 except Exception: MOAT={}
 
-def buy_eligible(t):
-    """Brandon's actual screen: golden-bullish AND a reliable read AND not a confirmed no-moat name.
-    Reliable = valid (apples-to-apples) OR — when the trailing golden line is SKEWED by a multiple
-    re-rating — forward-confirmed: forward P/E justified by growth (PEG-fwd <= 1.5). Quality growers
-    like NVDA (skewed but fwd P/E ~16) stay; Tesla (golden-BEARISH) stays out.
-    MOAT GATE: a name with a researched verdict of 'no' or 'weak' is removed (cheap-no-moat = value trap,
-    e.g. PayPal/Netflix per Brandon). Names not yet researched stay (verdict pending) — see wiki/moats/."""
-    if MOAT.get(t) in ('no','weak'): return False          # moat veto
+def undervalued(t):
+    """UNDERVALUED = golden-bullish AND a reliable read (valid, OR skewed-but-forward-confirmed at
+    PEG-fwd <= 1.5). NO moat gate. This count measures how HOT the market is and SIZES the stock/bond
+    split — the moat challenge does not change market hotness, only which names we hold."""
     g=golden.get(t,{})
     if g.get('golden_verdict')!='bullish': return False
     if g.get('golden_valid')=='Y': return True
@@ -67,6 +63,12 @@ def buy_eligible(t):
     if fp=='' : return False
     grow=(vrec.get(t,{}).get('g') or 0)*100
     return fp <= 1.5*max(grow, 8)
+
+def buy_eligible(t):
+    """The actual HOLDINGS = undervalued AND passes the moat gate (moat verdict not 'no'/'weak').
+    The moat gate only PICKS which undervalued names we hold (quality); it does NOT change the
+    stock/bond % (that comes from undervalued()). PayPal/Netflix etc. = cheap but no moat = value traps."""
+    return undervalued(t) and MOAT.get(t) not in ('no','weak')
 
 def moat_proxy(t):
     """Approximate Brandon's qualitative Moat (/20) from profitability/quality metrics:
@@ -180,18 +182,23 @@ with open(f'{ROOT}/MARKET_DIRECTION.md','w') as f:
                 f"**{gate['median_golden_pct']:+d}%** (breadth {gate['breadth_pct']}% undervalued).\n")
         f.write(f"- **{gate['deploy']}.** (Gate trips when the market is >20% overvalued, i.e. price ran "
                 f">20% ahead of earnings. Uses apples-to-apples valid names only — skewed mega-caps excluded.)\n")
-    # Capital allocation (INDEX_PLAN.md): 50% of universe undervalued = 100% stocks.
+    # Capital allocation (INDEX_PLAN.md): TWO separate data points —
+    #   (1) PRE-moat 'undervalued' count = market hotness  -> SIZES stock vs bond %.
+    #   (2) POST-moat buy list             = which names    -> the stock % is spread across these.
+    # The moat challenge changes (2), NOT (1): it doesn't make the market hotter or cooler.
     fr=[t for t in frac]
     valued_n=sum(1 for t in fr if golden.get(t,{}).get('golden_verdict'))
-    buy_n=sum(1 for t in fr if buy_eligible(t))
+    uv_n=sum(1 for t in fr if undervalued(t))       # pre-moat — sizes the split
+    buy_n=sum(1 for t in fr if buy_eligible(t))      # post-moat — the actual holdings
     if valued_n:
-        uv=buy_n/valued_n
+        uv=uv_n/valued_n
         stock=min(1.0, uv/0.50)
         f.write(f"\n## Capital allocation (stocks vs bonds)\n")
-        f.write(f"- Genuinely undervalued: **{buy_n}/{valued_n} = {uv*100:.0f}%** of the valued tradable universe.\n")
-        f.write(f"- Rule `stock = min(100%, undervalued% ÷ 50%)` -> **{stock*100:.0f}% stocks (the {buy_n} buy-list "
-                f"names) / {(1-stock)*100:.0f}% bonds-short-term.**\n")
-        print(f'  ALLOCATION: {uv*100:.0f}% undervalued -> {stock*100:.0f}% stocks / {(1-stock)*100:.0f}% bonds')
+        f.write(f"- **Sizing (market hotness, PRE-moat):** {uv_n}/{valued_n} = **{uv*100:.0f}%** undervalued → "
+                f"rule `stock = min(100%, undervalued% ÷ 50%)` → **{stock*100:.0f}% stocks / {(1-stock)*100:.0f}% bonds.**\n")
+        f.write(f"- **Holdings (POST-moat):** that {stock*100:.0f}% stock sleeve is spread across the **{buy_n}** "
+                f"moat-quality names in `buy_list.csv` (the moat gate removed {uv_n-buy_n} undervalued-but-no/weak-moat names).\n")
+        print(f'  ALLOCATION (pre-moat): {uv*100:.0f}% undervalued -> {stock*100:.0f}% stocks / {(1-stock)*100:.0f}% bonds  |  holdings (post-moat): {buy_n}')
 # buy_list.csv = the fractional, buy-eligible names (valid OR forward-confirmed skewed)
 buy=sorted([t for t in frac if buy_eligible(t)], key=lambda t:-mc(t))
 with open(f'{ROOT}/buy_list.csv','w',newline='') as f:

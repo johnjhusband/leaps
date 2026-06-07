@@ -45,8 +45,13 @@ where `undervalued_share = (# genuinely undervalued) ÷ (# valued tradable names
 This is essentially **capital allocation**: the richer the market, the fewer names qualify, the more of
 the portfolio sits in bonds/short-term — automatic de-risking (mirrors Brandon's bond rotation).
 
-**Current reading (2026-06-07):** 328 buy-eligible ÷ 910 valued = **36% → 72% stocks / 28% bonds.**
-(Computed by `build_universe.py`, written to `MARKET_DIRECTION.md` each rebuild. Ground truth: `BUY_DECISION.md`.)
+**Two data points (do not conflate):** the `undervalued_share` that SIZES the stock/bond split is the
+**PRE-moat** count (golden-bullish + reliable) — it measures *market hotness*, which the moat challenge
+does not change. The **POST-moat** buy list is *which* stocks we hold; the stock sleeve is spread across them.
+
+**Current reading (2026-06-07):** sizing = 332 undervalued ÷ 910 = **36% → 73% stocks / 27% bonds**;
+holdings = **185** moat-quality names (the moat gate removed 147 undervalued-but-no/weak-moat). So 73% of
+the portfolio sits in 185 issues, 27% in bonds. (Computed by `build_universe.py` → `MARKET_DIRECTION.md`. Ground truth: `BUY_DECISION.md`.)
 
 **Invariant that never changes:** no money in overvalued names — bonds, never least-bad stocks.
 
