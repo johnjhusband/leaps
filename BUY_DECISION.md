@@ -50,12 +50,15 @@ bullish + valid, but moat=`no` → **rejected by gate 1**.
 | With usable data (price + EPS) | 1,431 |
 | IBKR-fractional **tradable** | **1,150** |
 | Tradable **with a golden verdict** (the allocation denominator) | **910** |
-| **Buy list** (`buy=Y`: golden-bullish + reliable + passes moat gate) | **328** |
-| └ of which `golden_valid='Y'` | 266 |
-| └ of which skewed-but-forward-confirmed | 62 |
-| Removed by the moat gate (PYPL, NFLX, NKE, CRM) | 4 |
-| Allocation: 328/910 = 36% → `min(100%, 36%/50%)` | **72% stocks / 28% bonds** |
+| **Buy list** (`buy=Y`: golden-bullish + reliable + passes moat gate) | **185** |
+| └ of which `golden_valid='Y'` | 164 |
+| └ of which skewed-but-forward-confirmed | 21 |
+| Removed by the **moat gate** (moat=`no`/`weak`, now ~324 names researched) | 143 |
+| Allocation: 185/910 = 20% → `min(100%, 20%/50%)` | **41% stocks / 59% bonds** |
 
-> Note on older counts: earlier docs cited 269 (valid-only, pre-forward-confirm) and 332 (pre-moat-gate).
-> The current, correct buy-list count is **328**. `build_universe.py` prints these every run and writes the
-> allocation to `MARKET_DIRECTION.md`.
+> The moat gate is now backed by per-company research (`moat_verdicts.csv` + `wiki/moats/`): 189 `yes`,
+> 118 `weak`, 30 `no`. Removing the no/weak names cut the buy list 328 → 185 and the stock weight 72% → 41%
+> (more bonds — Brandon-level selectivity). Earlier counts (269/328/332) predate full moat research.
+> `build_universe.py` prints these every run and writes the allocation to `MARKET_DIRECTION.md`.
+> Remaining back-test gap: ~4 names Brandon avoids on PRICE (WM, PANW, AMZN, COST) — they have moats but
+> are expensive; that's the still-open absolute-valuation-ceiling gate, not a moat issue.

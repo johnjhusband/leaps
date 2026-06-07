@@ -1,14 +1,338 @@
-ticker,moat,basis,source
-PYPL,no,"No moat, no pricing power — competition can replicate payments",Brandon ("PayPal has no moat... a no")
-NFLX,no,"No durable moat / pricing power vs streaming competition",Brandon ("Netflix is a no")
-NKE,no,"Declining brand power, no durable moat",Brandon ("Nike is going to be out")
-HIMS,no,"Ad-dependent; business collapses when ads dry up",Brandon ("an obvious no")
-CRM,weak,"Moat in doubt from AI disruption",Brandon ("question mark next to its moat")
-NVDA,yes,"Best chip, best margins, best pricing power",Brandon ("best moat")
-META,yes,"Network effects — who is the competition?",Brandon ("good moat, good pricing power")
-TSM,yes,"~90% of advanced chip fabrication",Brandon ("has a moat")
-MSFT,yes,"Enterprise lock-in / switching costs",well-known + Brandon scorecard
-GOOGL,yes,"Search/ads dominance, distribution",well-known
+ticker,moat,moat_description,source
+A,yes,"High-end analytical instruments, recurring consumables, switching costs",moat-research agent 2026-06-07
+ABT,yes,"diversified med-device brands, diagnostics scale",moat-research agent 2026-06-07
+ACA.PA,no,"Retail/cooperative bank; commodity banking, little pricing power",moat-research agent 2026-06-07
+ACGL,yes,"Disciplined specialty insurer/reinsurer, underwriting edge",moat-research agent 2026-06-07
+ACN,weak,"scale consulting but labor-based, no structural pricing power",moat-research agent 2026-06-07
+ADBE,yes,"Creative software standard, switching costs, subscription lock-in",moat-research agent 2026-06-07
+ADP,yes,"Payroll scale, switching costs, sticky recurring revenue",moat-research agent 2026-06-07
+ADSK,yes,"Design software; AutoCAD lock-in, high switching costs, subscriptions",moat-research agent 2026-06-07
+ADYEN.AS,yes,"Single-platform payments scale, sticky enterprise merchants",moat-research agent 2026-06-07
+AEIS,weak,"Power-conversion supplier, cyclical, concentration",moat-research agent 2026-06-07
+AER,weak,"Aircraft leasing scale but capital-intensive, cyclical",moat-research agent 2026-06-07
+AES,weak,"Capital-intensive power generation, limited pricing power",moat-research agent 2026-06-07
+AGI,no,"Gold miner, commodity price taker",moat-research agent 2026-06-07
+AGNC,no,"Leveraged mortgage REIT, commodity, no pricing power",moat-research agent 2026-06-07
+AIG,no,"Diversified insurer; commodity P&C/life, no durable pricing power",moat-research agent 2026-06-07
+AJG,yes,"Insurance broker; sticky relationships, recurring fees, scale",moat-research agent 2026-06-07
+ALC,yes,"Eye-care duopoly, surgical/contact-lens switching costs",moat-research agent 2026-06-07
+ALGN,yes,"Invisalign brand and scale, clear-aligner leader, IP",moat-research agent 2026-06-07
+ALLE,yes,"Security locks/hardware, spec-in, codes, brand",moat-research agent 2026-06-07
+ALV,weak,Airbag/seatbelt leader but auto-supplier price pressure,moat-research agent 2026-06-07
+AMD,weak,"strong chips but fierce Nvidia/Intel competition, no lasting edge",moat-research agent 2026-06-07
+AMH,weak,"Single-family rentals, easily replicated, no pricing power",moat-research agent 2026-06-07
+AMP,weak,Wealth mgmt/asset mgr; sticky advisors but fee-pressure competition,moat-research agent 2026-06-07
+AMRZ,yes,"North America cement/aggregates leader, local pricing power",moat-research agent 2026-06-07
+AMS.MC,yes,"Amadeus GDS/PSS duopoly, airline integration, switching costs",moat-research agent 2026-06-07
+AMT,yes,"Tower REIT, irreplaceable sites, long leases, network effects",moat-research agent 2026-06-07
+AMZN,yes,retail/logistics scale plus AWS cloud switching costs,moat-research agent 2026-06-07
+AON,yes,"Insurance brokerage scale, advisory, data, relationships",moat-research agent 2026-06-07
+AOS,weak,"Water heater brand and distribution, replaceable",moat-research agent 2026-06-07
+APH,yes,"connector breadth, design-in switching costs, scale",moat-research agent 2026-06-07
+APP,weak,"strong ad-tech now but platform-dependent, fast-moving space",moat-research agent 2026-06-07
+AR,no,"Natural gas E&P, pure commodity, price taker",moat-research agent 2026-06-07
+ARM,yes,"CPU architecture standard, ubiquitous licensing IP, ecosystem lock-in",moat-research agent 2026-06-07
+AVB,weak,"Apartment REIT, quality coastal portfolio but commodity housing",moat-research agent 2026-06-07
+AVGO,yes,Custom-silicon + IP moat (rejected on PRICE not moat),Brandon (good company
+AVY,weak,Labels/materials leader but commodity-leaning,moat-research agent 2026-06-07
+AWK,yes,"Regulated water monopoly, scale, essential service",moat-research agent 2026-06-07
+AXP,yes,"premium card brand, affluent network, closed-loop data",moat-research agent 2026-06-07
+AZN,yes,"patented oncology portfolio, global R&D scale",moat-research agent 2026-06-07
+AZO,yes,"Auto parts; dense distribution, hard-to-find SKUs, brand loyalty",moat-research agent 2026-06-07
+B,weak,"Gold miner; commodity price-taker, no pricing power despite scale",moat-research agent 2026-06-07
+BAH,yes,"Entrenched government consulting, security clearances",moat-research agent 2026-06-07
+BALL,weak,"Aluminum cans oligopoly but commodity, low margin",moat-research agent 2026-06-07
+BAM,yes,"Alt-asset manager, scale, sticky long-term capital",moat-research agent 2026-06-07
+BAS.DE,no,"Diversified chemicals; cyclical commodity, energy-cost exposed",moat-research agent 2026-06-07
+BBDO,weak,"Brazilian banking scale, competitive and macro-exposed",moat-research agent 2026-06-07
+BDX,yes,"Med-tech consumables; installed base, regulatory, switching costs",moat-research agent 2026-06-07
+BF-B,yes,"Jack Daniels brand, distribution, aged-inventory barriers",moat-research agent 2026-06-07
+BIIB,weak,"Biotech, patent cliffs, pipeline-dependent",moat-research agent 2026-06-07
+BIP,yes,"Irreplaceable infrastructure assets, regulated cash flows",moat-research agent 2026-06-07
+BJ,weak,"Warehouse club regional scale, trails Costco",moat-research agent 2026-06-07
+BKNG,yes,"travel network effects, supply/demand scale, brand",moat-research agent 2026-06-07
+BMRN,yes,"Rare-disease orphan drugs, regulatory exclusivity",moat-research agent 2026-06-07
+BN.PA,weak,"Packaged food/dairy; brands but private-label, low pricing power",moat-research agent 2026-06-07
+BR,yes,"Proxy/investor communications near-monopoly, switching costs",moat-research agent 2026-06-07
+BRO,yes,"Insurance brokerage, sticky relationships, recurring commissions",moat-research agent 2026-06-07
+BSAC,weak,"Chile bank, EM/rate/regulatory cyclical risk",moat-research agent 2026-06-07
+BSBR,yes,"Top-3 Brazilian bank, scale and deposit franchise",moat-research agent 2026-06-07
+BSX,yes,"Medical device portfolio, switching costs, innovation",moat-research agent 2026-06-07
+BSY,yes,"Sticky infrastructure-engineering software, switching costs",moat-research agent 2026-06-07
+BURL,weak,"Off-price retail trails TJX/Ross, limited moat",moat-research agent 2026-06-07
+BXP,weak,"Premium office REIT, office demand headwinds",moat-research agent 2026-06-07
+CACI,weak,"Gov IT services, bid-driven",moat-research agent 2026-06-07
+CAG,weak,"Commodity packaged foods, eroding brand pricing",moat-research agent 2026-06-07
+CCK,weak,"Metal can oligopoly but commodity, concentration",moat-research agent 2026-06-07
+CDI.PA,yes,"LVMH-controlled luxury brand, pricing power, heritage",moat-research agent 2026-06-07
+CDW,weak,"IT reseller, low-margin distribution",moat-research agent 2026-06-07
+CEG,weak,Largest nuclear fleet but power is commodity-priced,moat-research agent 2026-06-07
+CFR.SW,yes,"Cartier/luxury brands, heritage, strong pricing power",moat-research agent 2026-06-07
+CHD,yes,"Diverse consumer brands (Arm and Hammer), pricing power",moat-research agent 2026-06-07
+CHKP,weak,"Cybersecurity, losing share to Palo Alto/CrowdStrike",moat-research agent 2026-06-07
+CHTR,weak,Cable broadband quasi-monopoly but fiber/wireless eroding,moat-research agent 2026-06-07
+CI,yes,"Health insurer/PBM scale (Evernorth), regulatory",moat-research agent 2026-06-07
+CMCSA,weak,Broadband moat real but cord-cutting/competition erode,moat-research agent 2026-06-07
+CMI,yes,"Engine brand, installed base, emissions tech leadership",moat-research agent 2026-06-07
+CNM,yes,"Largest US waterworks distribution network, scale",moat-research agent 2026-06-07
+CNQ,weak,Low-cost long-life reserves but commodity price taker,moat-research agent 2026-06-07
+COIN,weak,"Crypto exchange; scale/brand but fee-pressure, regulatory, volatile",moat-research agent 2026-06-07
+COO,yes,"Contact lens duopoly, fertility devices, switching costs",moat-research agent 2026-06-07
+COST,yes,Membership model + scale (rejected on PRICE not moat),well-known
+CPB,weak,"Legacy packaged-food brands, private-label pressure",moat-research agent 2026-06-07
+CR,weak,"Diversified industrials, no broad moat",moat-research agent 2026-06-07
+CRM,weak,Moat in doubt from AI disruption,"Brandon (""question mark next to its moat"")"
+CRS,weak,"Specialty alloys, aerospace qualification but cyclical",moat-research agent 2026-06-07
+CSL,yes,"Roofing/building products, brand, distribution, pricing",moat-research agent 2026-06-07
+CSU.TO,yes,"Vertical-market software roll-up; sticky niche apps, high switching",moat-research agent 2026-06-07
+CTAS,yes,"Uniform rental route density, switching costs, scale",moat-research agent 2026-06-07
+CTSH,no,"IT services, commoditized, offshore labor arbitrage",moat-research agent 2026-06-07
+CTVA,weak,"Seeds/crop chem; patents/IP but cyclical, ag-input competition",moat-research agent 2026-06-07
+CX,no,"Cement commodity, cyclical, no pricing power",moat-research agent 2026-06-07
+DDOG,weak,"Strong product but crowded observability, big-cloud competition",moat-research agent 2026-06-07
+DG,weak,Dollar retail scale and rural footprint but thin margins,moat-research agent 2026-06-07
+DHR,yes,"bioprocessing consumables, razor-blade switching costs, scale",moat-research agent 2026-06-07
+DIS,yes,"irreplaceable IP/franchises, parks, brand pricing power",moat-research agent 2026-06-07
+DPZ,yes,"Dominant brand, scale, delivery logistics, franchise",moat-research agent 2026-06-07
+DSY.PA,yes,"Mission-critical CAD/PLM software, high switching costs",moat-research agent 2026-06-07
+DT,yes,"Observability platform, sticky enterprise, switching costs",moat-research agent 2026-06-07
+DUK,yes,"Regulated utility monopoly, irreplaceable grid assets",moat-research agent 2026-06-07
+DXCM,yes,"CGM duopoly, sticky users, R&D and brand",moat-research agent 2026-06-07
+ECL,yes,"Water/hygiene services, switching costs, embedded systems",moat-research agent 2026-06-07
+EFX,yes,"Credit bureau oligopoly, irreplaceable data, pricing power",moat-research agent 2026-06-07
+EHC,yes,"Largest inpatient rehab network, scale, referral density",moat-research agent 2026-06-07
+EIX,weak,Regulated utility but wildfire liability risk,moat-research agent 2026-06-07
+EL.PA,yes,"Eyewear vertical monopoly, brand portfolio, pricing power",moat-research agent 2026-06-07
+ELE.MC,weak,"Spanish regulated utility; stable but rate-capped, no pricing power",moat-research agent 2026-06-07
+ELS,yes,"Manufactured-home/RV land, irreplaceable sites, pricing",moat-research agent 2026-06-07
+ELV,yes,"Health insurer scale, regulatory, Blue Cross brands",moat-research agent 2026-06-07
+ENSG,yes,"Skilled nursing operator, operational/local density edge",moat-research agent 2026-06-07
+ENTG,yes,"Semiconductor purity materials, specified-in, switching costs",moat-research agent 2026-06-07
+EOAN.DE,weak,"Regulated grid utility; stable but rate-capped, low pricing power",moat-research agent 2026-06-07
+EQR,weak,"Apartment REIT, good urban portfolio but commodity housing",moat-research agent 2026-06-07
+ERIE,yes,Exclusive management contract with Erie Insurance,moat-research agent 2026-06-07
+ESI,weak,"Specialty chemicals, formulation know-how but competitive",moat-research agent 2026-06-07
+ESS,yes,"West Coast apartment REIT, supply-constrained coastal land",moat-research agent 2026-06-07
+ETN,yes,"electrification scale, spec-in switching costs, backlog",moat-research agent 2026-06-07
+EVR,weak,"Top advisory brand but talent-dependent, cyclical",moat-research agent 2026-06-07
+EXEL,weak,"Cabometyx franchise, patent cliff and pipeline risk",moat-research agent 2026-06-07
+EXPE,weak,OTA scale but Booking/Google competitive pressure,moat-research agent 2026-06-07
+FER,yes,"Toll-road/airport concessions, long-life infrastructure",moat-research agent 2026-06-07
+FER.MC,yes,"Toll roads/airports; concessions, infrastructure monopolies",moat-research agent 2026-06-07
+FICO,yes,"FICO score industry-standard credit utility, pricing power",moat-research agent 2026-06-07
+FMS,weak,Dialysis scale but reimbursement and GLP-1 risk,moat-research agent 2026-06-07
+FNF,yes,"Title insurance oligopoly, regulated, data and scale",moat-research agent 2026-06-07
+FOX,weak,Sports/news rights valuable but cord-cutting erodes durability,moat-research agent 2026-06-07
+FOXA,weak,"Live sports/news brands, cord-cutting pressure",moat-research agent 2026-06-07
+FRT,yes,Irreplaceable high-barrier retail real estate,moat-research agent 2026-06-07
+FSLR,weak,"Solar manufacturer, tech and policy dependent, cyclical",moat-research agent 2026-06-07
+FTI,no,"Oilfield services/equipment, cyclical, commoditized",moat-research agent 2026-06-07
+FUTU,weak,"Online broker, regulatory risk, fee compression",moat-research agent 2026-06-07
+GD,yes,"Defense contractor, high barriers, sticky government contracts",moat-research agent 2026-06-07
+GDDY,yes,"Domain/hosting scale, brand, recurring small-biz",moat-research agent 2026-06-07
+GEHC,yes,"Imaging duopoly, installed base, recurring service",moat-research agent 2026-06-07
+GFI,no,"Gold miner, price-taker on commodity",moat-research agent 2026-06-07
+GFL,weak,Waste collection density but trails larger peers,moat-research agent 2026-06-07
+GGG,yes,"Fluid-handling pump leader, distribution, pricing power",moat-research agent 2026-06-07
+GIB,weak,"IT consulting, competitive, no pricing power",moat-research agent 2026-06-07
+GIS,weak,Packaged food brands eroding to private label,moat-research agent 2026-06-07
+GMAB,yes,"Antibody platform, Darzalex royalties, patent-protected",moat-research agent 2026-06-07
+GME,no,"Declining physical game retail, no durable advantage",moat-research agent 2026-06-07
+GMED,weak,"Spine/robotics device, competitive vs larger peers",moat-research agent 2026-06-07
 GOOG,yes,"Search/ads dominance, distribution",well-known
-AVGO,yes,"Custom-silicon + IP moat (rejected on PRICE not moat)",Brandon (good company, bad price)
-COST,yes,"Membership model + scale (rejected on PRICE not moat)",well-known
+GOOGL,yes,"Search/ads dominance, distribution",well-known
+GPN,weak,"Payments processing, competitive, fintech margin pressure",moat-research agent 2026-06-07
+HBM,no,"Commodity copper/zinc miner, price taker",moat-research agent 2026-06-07
+HCA,yes,"Hospital scale, local density, payer relationships",moat-research agent 2026-06-07
+HDB,yes,"leading Indian private bank, deposit franchise, scale",moat-research agent 2026-06-07
+HEI,yes,"Aerospace PMA parts; FAA-certified niche, sticky, high margins",moat-research agent 2026-06-07
+HEIA.AS,yes,"Heineken global beer brand; distribution scale, brand pricing power",moat-research agent 2026-06-07
+HEN3.DE,weak,"Adhesives strong but consumer brands lag, mixed",moat-research agent 2026-06-07
+HEXA-B.ST,yes,"Metrology software/hardware, high retention, switching costs",moat-research agent 2026-06-07
+HIG,weak,Solid P&C/group insurer but competitive commodity lines,moat-research agent 2026-06-07
+HIMS,no,Ad-dependent; business collapses when ads dry up,"Brandon (""an obvious no"")"
+HLI,yes,"Leading restructuring/M&A advisory, reputation and talent",moat-research agent 2026-06-07
+HLN,yes,"Consumer health brands (Advil, Sensodyne); trusted, sticky shelf space",moat-research agent 2026-06-07
+HNR1.DE,yes,"Top global reinsurer, scale and underwriting discipline",moat-research agent 2026-06-07
+HO.PA,yes,"Defense/avionics; high barriers, certification, govt contracts",moat-research agent 2026-06-07
+HOLN.SW,yes,"Cement/aggregates; local scale, heavy logistics moat, pricing power",moat-research agent 2026-06-07
+HPQ,no,"PCs and printers, commoditized hardware, secular decline",moat-research agent 2026-06-07
+IBN,yes,"Leading private Indian bank, scale, deposit franchise",moat-research agent 2026-06-07
+ICE,yes,"Exchange/data network effects, regulatory, sticky liquidity",moat-research agent 2026-06-07
+IDXX,yes,"Vet diagnostics; razor-razorblade installed base, switching costs",moat-research agent 2026-06-07
+INCY,weak,"Pharma, Jakafi patent cliff, pipeline-dependent",moat-research agent 2026-06-07
+INTU,yes,"TurboTax/QuickBooks dominance, switching costs, ecosystem",moat-research agent 2026-06-07
+INVH,weak,"Single-family rental REIT, scale but replicable",moat-research agent 2026-06-07
+IQV,yes,"Healthcare data plus CRO scale, deep switching costs",moat-research agent 2026-06-07
+ISRG,yes,"da Vinci installed base, switching costs, recurring instruments",moat-research agent 2026-06-07
+IT,yes,"Gartner research subscriptions, brand, pricing power",moat-research agent 2026-06-07
+JEF,weak,"Investment bank, cyclical, talent-dependent",moat-research agent 2026-06-07
+JKHY,yes,"Sticky core banking software, very high switching costs",moat-research agent 2026-06-07
+JLL,weak,"Commercial real estate services, cyclical, competitive",moat-research agent 2026-06-07
+KDP,yes,"Coffee/soda brands; Keurig pod ecosystem, distribution scale",moat-research agent 2026-06-07
+KEY,no,"Regional bank, commodity deposits/loans, no durable advantage",moat-research agent 2026-06-07
+KGC,no,"Gold miner, commodity price-taker",moat-research agent 2026-06-07
+KMB,weak,"Strong brands but private-label pressure, commodity tissue",moat-research agent 2026-06-07
+KOG.OL,yes,"NATO missiles plus maritime integration, huge backlog",moat-research agent 2026-06-07
+KSPI,yes,"Kazakhstan super-app, network effects, ecosystem lock-in",moat-research agent 2026-06-07
+LDOS,weak,"Government IT services, competitive recompetes",moat-research agent 2026-06-07
+LH,weak,"Lab testing scale but commoditized, reimbursement pressure",moat-research agent 2026-06-07
+LII,yes,"HVAC oligopoly, brand, dealer network, replacement pricing",moat-research agent 2026-06-07
+LISP.SW,yes,"Lindt premium chocolate brand, pricing power and loyalty",moat-research agent 2026-06-07
+LLY,yes,"patent-protected GLP-1 blockbusters, deep R&D pipeline",moat-research agent 2026-06-07
+LOGI,weak,"PC peripherals, commoditizing consumer hardware",moat-research agent 2026-06-07
+LSEG.L,yes,"Exchange/data duopoly; network effects, recurring data revenue",moat-research agent 2026-06-07
+LTM,no,"Airline, commodity, cyclical, capital intensive",moat-research agent 2026-06-07
+LULU,yes,"Strong brand, loyal community, premium athleisure pricing",moat-research agent 2026-06-07
+LVS,yes,"Scarce Macau/Singapore casino licenses, irreplaceable assets",moat-research agent 2026-06-07
+MA,yes,"duopoly payment network, enormous switching costs and scale",moat-research agent 2026-06-07
+MCK,yes,"Drug distribution oligopoly, scale, logistics network",moat-research agent 2026-06-07
+MCO,yes,"Ratings duopoly, regulatory entrenchment, pricing power",moat-research agent 2026-06-07
+MDT,yes,"Medical device scale, switching costs, broad portfolio",moat-research agent 2026-06-07
+MEDP,yes,"Mid-size CRO, full-service model, sticky relationships",moat-research agent 2026-06-07
+MET,no,"Life insurer; commodity products, rate-sensitive, no pricing power",moat-research agent 2026-06-07
+META,yes,Network effects — who is the competition?,"Brandon (""good moat"
+MKC,yes,"Spice brand dominance, shelf space, pricing power",moat-research agent 2026-06-07
+MRK,yes,"Keytruda patent franchise, deep pharma R&D scale",moat-research agent 2026-06-07
+MRK.DE,yes,"Diversified science/pharma/semiconductor materials, IP",moat-research agent 2026-06-07
+MRSH,yes,"Insurance brokerage scale, advisory relationships, data",moat-research agent 2026-06-07
+MSFT,yes,Enterprise lock-in / switching costs,well-known + Brandon scorecard
+MSI,yes,"Land-mobile radio dominance, government switching costs",moat-research agent 2026-06-07
+MT,no,"Steel producer; pure commodity, cyclical, no pricing power",moat-research agent 2026-06-07
+MTD,yes,"Lab balances/instruments leader, installed base, consumables",moat-research agent 2026-06-07
+MUV2.DE,yes,"Top-3 global reinsurer; scale, data, capital, underwriting discipline",moat-research agent 2026-06-07
+NBIX,yes,"Neuro pharma, patent-protected Ingrezza franchise",moat-research agent 2026-06-07
+NCLH,no,"Capital-heavy cruise line, commodity leisure",moat-research agent 2026-06-07
+NFLX,no,No durable moat / pricing power vs streaming competition,"Brandon (""Netflix is a no"")"
+NHY.OL,no,"Aluminum producer, commodity, price-taker",moat-research agent 2026-06-07
+NKE,no,"Declining brand power, no durable moat","Brandon (""Nike is going to be out"")"
+NOC,yes,"Defense prime, classified programs, high barriers",moat-research agent 2026-06-07
+NOW,yes,"workflow platform, deep enterprise switching costs, sticky",moat-research agent 2026-06-07
+NSC,yes,"Railroad duopoly, irreplaceable network, regulatory barriers",moat-research agent 2026-06-07
+NTR,weak,"Crop-nutrient producer, commodity fertilizer pricing",moat-research agent 2026-06-07
+NU,weak,"LatAm neobank; fast growth but fintech competition, low switching",moat-research agent 2026-06-07
+NVDA,yes,"Best chip, best margins, best pricing power","Brandon (""best moat"")"
+NVR,yes,"Land-light homebuilder, capital-efficient, durable cost edge",moat-research agent 2026-06-07
+NWS,weak,"Media mix, Dow Jones/REA strong, rest commoditizing",moat-research agent 2026-06-07
+NWSA,weak,"Media/Dow Jones and REA, mixed legacy",moat-research agent 2026-06-07
+OHI,weak,"Skilled-nursing REIT, tenant/reimbursement risk",moat-research agent 2026-06-07
+ONON,weak,Fast-growing brand but premium-shoe space fickle,moat-research agent 2026-06-07
+OR.PA,yes,"dominant beauty brands, global distribution, pricing power",moat-research agent 2026-06-07
+OTIS,yes,"Huge installed base, recurring high-margin service contracts",moat-research agent 2026-06-07
+OWL,yes,"Alt asset manager, permanent capital, sticky fees",moat-research agent 2026-06-07
+P,no,"Ambiguous ticker, no identifiable durable moat",moat-research agent 2026-06-07
+PANW,yes,"platform breadth, high switching costs in enterprise security",moat-research agent 2026-06-07
+PAYX,yes,"Sticky SMB payroll, high switching costs, scale",moat-research agent 2026-06-07
+PCG,weak,Regulated utility monopoly but wildfire liability overhang,moat-research agent 2026-06-07
+PDD,weak,low-cost marketplace but brutal China e-commerce competition,moat-research agent 2026-06-07
+PEN,yes,"Thrombectomy device leader, clinical specialization, IP",moat-research agent 2026-06-07
+PFE,weak,"strong R&D but post-COVID cliff, patent expirations loom",moat-research agent 2026-06-07
+PFG,weak,"Retirement/asset manager, competitive, fee pressure",moat-research agent 2026-06-07
+PG,yes,"dominant consumer brands, shelf scale, pricing power",moat-research agent 2026-06-07
+PKO.WA,yes,"Largest Polish bank, dominant deposit franchise",moat-research agent 2026-06-07
+PLTR,weak,sticky gov contracts but unproven durability versus AI rivals,moat-research agent 2026-06-07
+PNR,weak,"Water treatment/pool equipment, modest moat",moat-research agent 2026-06-07
+PODD,yes,"Omnipod patent moat, sticky recurring pods",moat-research agent 2026-06-07
+POOL,yes,"Dominant pool-supply distribution, scale and density",moat-research agent 2026-06-07
+PPG,weak,Coatings scale and brands but largely commoditized,moat-research agent 2026-06-07
+PPL,weak,"Regulated utility, stable returns but no pricing power",moat-research agent 2026-06-07
+PRU,weak,"Large life insurer, commoditized, rate-sensitive",moat-research agent 2026-06-07
+PRX.AS,weak,"holding co, value rests on Tencent stake, discount drag",moat-research agent 2026-06-07
+PUB.PA,weak,"Ad agency, disintermediation/in-housing risk",moat-research agent 2026-06-07
+PUK,weak,"Asian life insurer, growth but commoditized product",moat-research agent 2026-06-07
+PYPL,no,"No moat, no pricing power — competition can replicate payments","Brandon (""PayPal has no moat... a no"")"
+RACE,yes,"Ferrari brand; extreme pricing power, scarcity, luxury exclusivity",moat-research agent 2026-06-07
+RBA,yes,"Dominant industrial/auto auction marketplace, network effects",moat-research agent 2026-06-07
+RCI,weak,"Canadian telecom oligopoly but heavy debt, pricing pressure",moat-research agent 2026-06-07
+RCL,weak,"Cruise oligopoly but capital-intensive, demand-cyclical",moat-research agent 2026-06-07
+REG,weak,"Grocery-anchored retail REIT, e-commerce pressure",moat-research agent 2026-06-07
+REGN,yes,"Biologics IP (Eylea/Dupixent), patents, R&D platform",moat-research agent 2026-06-07
+RELX,yes,"Sticky data/analytics, legal/scientific databases, high switching costs",moat-research agent 2026-06-07
+RGA,yes,"Reinsurance scale, mortality data, sticky contracts",moat-research agent 2026-06-07
+RGLD,yes,"Gold royalty/streaming, capital-light, durable cash flows",moat-research agent 2026-06-07
+RJF,weak,"Brokerage/advisory scale but competitive, advisor-driven",moat-research agent 2026-06-07
+ROL,yes,"Pest control (Orkin), recurring contracts, density, brand",moat-research agent 2026-06-07
+ROP,yes,"Niche vertical software roll-up, sticky recurring revenue",moat-research agent 2026-06-07
+RPM,weak,"Specialty coatings brands, modest pricing power",moat-research agent 2026-06-07
+RSG,yes,"Waste collection; landfill permits, route density, local monopolies",moat-research agent 2026-06-07
+RTX,yes,"defense duopoly, regulatory barriers, long program lock-in",moat-research agent 2026-06-07
+RWE.DE,weak,"Power generation/renewables; commodity power, regulated, capital-heavy",moat-research agent 2026-06-07
+SAMPO.HE,yes,"Leading Nordic P&C insurer, scale, brand, underwriting discipline",moat-research agent 2026-06-07
+SAP,yes,"entrenched ERP, massive switching costs, sticky enterprise base",moat-research agent 2026-06-07
+SBAC,yes,"Cell tower REIT, irreplaceable sites, pricing escalators",moat-research agent 2026-06-07
+SBS,weak,Brazil water monopoly but political/regulatory risk,moat-research agent 2026-06-07
+SCHW,yes,"scale custodian, sticky assets, low-cost network effects",moat-research agent 2026-06-07
+SCI,yes,"Largest funeral/cemetery network, prepaid backlog, scale",moat-research agent 2026-06-07
+SDZ.SW,weak,"Generics/biosimilars, low margins, price competition",moat-research agent 2026-06-07
+SE,weak,SEA e-commerce/gaming; Garena strong but Shopee faces fierce rivals,moat-research agent 2026-06-07
+SEIC,yes,"Sticky asset-management/back-office tech, switching costs",moat-research agent 2026-06-07
+SF,weak,"Wealth/investment bank, advisor-dependent",moat-research agent 2026-06-07
+SFD,weak,"Commodity pork processing, scale only, thin margins",moat-research agent 2026-06-07
+SHW,yes,"Paint brand, store distribution network, pricing power",moat-research agent 2026-06-07
+SMCI,no,"Server assembly, low-margin commodity hardware",moat-research agent 2026-06-07
+SN,weak,"SharkNinja appliances, strong brand but replicable",moat-research agent 2026-06-07
+SNN,weak,Med-device scale but trails Stryker/ZB,moat-research agent 2026-06-07
+SNPS,yes,"EDA duopoly, deep switching costs, IP libraries",moat-research agent 2026-06-07
+SNY,yes,"Big pharma scale, patents, global vaccine/drug portfolio",moat-research agent 2026-06-07
+SPG,weak,Premier mall REIT but secular retail/e-commerce headwind,moat-research agent 2026-06-07
+SPGI,yes,"ratings duopoly, regulatory moat, indispensable data",moat-research agent 2026-06-07
+SPXC,weak,"Industrial HVAC/detection niches, not dominant",moat-research agent 2026-06-07
+SREN.SW,yes,"Top global reinsurer; scale, capital, underwriting data",moat-research agent 2026-06-07
+SSNC,yes,"Fund administration software, high switching costs",moat-research agent 2026-06-07
+STZ,yes,"Mexican beer brands (Modelo, Corona) US rights, pricing power",moat-research agent 2026-06-07
+SUZ,weak,"Low-cost pulp producer, commodity price taker",moat-research agent 2026-06-07
+SYF,weak,"Private-label credit cards, partner concentration risk",moat-research agent 2026-06-07
+SYK,yes,"ortho/med-device installed base, surgeon switching costs",moat-research agent 2026-06-07
+T,weak,"wireless oligopoly but commoditized, debt-heavy, weak pricing",moat-research agent 2026-06-07
+TCOM,yes,"Dominant China OTA, network effects, scale",moat-research agent 2026-06-07
+TDG,yes,"Proprietary aerospace parts, sole-source, pricing power",moat-research agent 2026-06-07
+TGT,no,"Mass retailer; thin margins, Amazon/Walmart pressure, no moat",moat-research agent 2026-06-07
+THC,no,"Hospitals, capital intensive, reimbursement pressure",moat-research agent 2026-06-07
+TIGO,weak,"Latin America telecom, competitive, FX risk",moat-research agent 2026-06-07
+TLX.DE,weak,"German insurer, scale but commoditized lines",moat-research agent 2026-06-07
+TM,weak,scale and reliability brand but commoditizing auto competition,moat-research agent 2026-06-07
+TME,weak,"China music streaming leader, regulatory/competitive risk",moat-research agent 2026-06-07
+TMO,yes,"lab tools scale, consumables razor-blade switching costs",moat-research agent 2026-06-07
+TMUS,yes,"US wireless oligopoly, spectrum scale, network effects",moat-research agent 2026-06-07
+TRGP,yes,"Integrated Permian midstream; sour-gas, route density, asset position",moat-research agent 2026-06-07
+TRI,yes,"Entrenched legal/tax data, deep switching costs",moat-research agent 2026-06-07
+TRMB,yes,"Precision positioning, embedded workflow software",moat-research agent 2026-06-07
+TROW,weak,"Active asset manager, passive-fund fee erosion",moat-research agent 2026-06-07
+TRV,weak,"Large P&C insurer; brand/scale but commodity, no pricing power",moat-research agent 2026-06-07
+TSCO,yes,"Rural farm/ranch retail niche, loyal base, low competition",moat-research agent 2026-06-07
+TSCO.L,weak,"UK grocery leader, thin margins, intense discounter pressure",moat-research agent 2026-06-07
+TSM,yes,~90% of advanced chip fabrication,"Brandon (""has a moat"")"
+TT,yes,"HVAC brand, installed base, service revenue, regulatory tailwind",moat-research agent 2026-06-07
+TTD,yes,"Independent ad-buying platform, data and scale network",moat-research agent 2026-06-07
+TU,weak,"Canadian telecom oligopoly, pricing pressure, capital intensive",moat-research agent 2026-06-07
+TW,yes,"Tradeweb electronic fixed-income network, network effects",moat-research agent 2026-06-07
+TXRH,yes,"Strong brand, traffic, value scale, pricing power",moat-research agent 2026-06-07
+TXT,weak,"Aerospace/Cessna/Bell, cyclical, competitive",moat-research agent 2026-06-07
+UBER,yes,"ride/delivery network effects, scale, two-sided liquidity",moat-research agent 2026-06-07
+UHS,weak,"Hospital operator, scale but reimbursement pressure",moat-research agent 2026-06-07
+UL,yes,"global consumer brands, distribution scale, pricing power",moat-research agent 2026-06-07
+UMG.AS,yes,"Dominant music catalog, streaming royalty oligopoly",moat-research agent 2026-06-07
+VEEV,yes,"Dominant life-sciences cloud, deep switching costs",moat-research agent 2026-06-07
+VLTO,yes,"Water analytics and product ID, recurring consumables",moat-research agent 2026-06-07
+VMC,yes,"Aggregates monopoly economics, local pricing power",moat-research agent 2026-06-07
+VMI,weak,"Infrastructure/irrigation scale, cyclical, competitive",moat-research agent 2026-06-07
+VRTX,yes,"cystic fibrosis monopoly franchise, patent-protected",moat-research agent 2026-06-07
+VWS.CO,weak,"Wind turbines, thin margins, intense price competition",moat-research agent 2026-06-07
+VZ,weak,"wireless oligopoly but heavy capex, price competition, debt",moat-research agent 2026-06-07
+WCN,yes,"Waste collection; landfills, route density, rural local monopolies",moat-research agent 2026-06-07
+WDS,no,"Oil and gas (Woodside); commodity price-taker, no pricing power",moat-research agent 2026-06-07
+WELL,yes,"irreplaceable senior-housing real estate, scale, demographics",moat-research agent 2026-06-07
+WIT,no,"Indian IT services, labor arbitrage commodity",moat-research agent 2026-06-07
+WM,yes,"Landfill assets irreplaceable, route density, regulatory barriers",moat-research agent 2026-06-07
+WMS,yes,"Dominant HDPE drainage pipe, scale and recycling edge",moat-research agent 2026-06-07
+WPM,weak,Streaming royalties; clever model but gold-price-dependent,moat-research agent 2026-06-07
+WRT1V.HE,yes,"Marine engines plus lifecycle service network, installed base",moat-research agent 2026-06-07
+WSO,yes,"HVAC distribution leader, scale, supplier ties",moat-research agent 2026-06-07
+WTRG,yes,"Regulated water/gas utility monopoly, pricing power",moat-research agent 2026-06-07
+WTW,yes,"Insurance brokerage oligopoly, sticky relationships",moat-research agent 2026-06-07
+XYL,yes,"Water tech scale, installed base, mission-critical pumps",moat-research agent 2026-06-07
+XYZ,weak,Block payments; Square/Cash App face intense fintech competition,moat-research agent 2026-06-07
+ZBRA,yes,"Barcode/scanning leader, embedded enterprise, switching",moat-research agent 2026-06-07
+ZM,weak,"Video commoditized, Teams bundling pressure",moat-research agent 2026-06-07
+ZTS,yes,"Animal-health leader, patents, brand, R&D scale",moat-research agent 2026-06-07
+ZURN.SW,yes,"Global insurance scale, brand, regulatory capital",moat-research agent 2026-06-07

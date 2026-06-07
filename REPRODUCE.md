@@ -109,5 +109,14 @@ stand-ins for Brandon's hand judgement, not identical to it.
 - Companies with no EPS data on yfinance are dropped — this loses a few real giants whose only
   listing is Korean/Gulf (Samsung, SK Hynix, ADNOC…). Add a second data source to recover them.
 
+## External sources & prerequisites (a fresh machine needs these — same ones I used)
+- **Python packages:** `pip install --user --break-system-packages yfinance lxml pandas` (+ `yt-dlp` only if regenerating the wiki transcripts).
+- **Network data sources (no API keys; the scripts hit these directly):**
+  - Wikipedia "List of S&P 500 companies" and "Nasdaq-100" (constituents, via `pandas.read_html`).
+  - `api.nasdaq.com/api/screener/stocks` (Russell-1000 proxy by market cap; needs a browser User-Agent — already set).
+  - `companiesmarketcap.com/?download=csv` (global top-1000 by market cap).
+  - **yfinance** (Yahoo Finance) for price, EPS history, growth estimates, margins, exchange — ~1,500 tickers, rate-limited, retry/resume built in.
+- A fresh AI/agent reproducing this has the SAME access — these are public and unauthenticated.
+
 ## Dependencies
 `pip3 install --user --break-system-packages yfinance lxml pandas` (already installed on this box).
