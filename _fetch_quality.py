@@ -1,0 +1,21 @@
+import yfinance as yf, json, os, time
+ROOT='/home/john/repos/leaps'
+con=json.load(open(f'{ROOT}/_constituents.json'))
+tickers=sorted(set(con['SPY'])|set(con['QQQ'])|set(con.get('RUSSELL1000',[]))|set(con.get('GLOBAL1000',[])))
+path=f'{ROOT}/_quality.json'
+cache=json.load(open(path)) if os.path.exists(path) else {}
+todo=[t for t in tickers if t not in cache]
+print(f'quality fetch: {len(todo)} to fetch of {len(tickers)}', flush=True)
+for i,t in enumerate(todo):
+    try:
+        info=yf.Ticker(t).info
+        cache[t]={'gross_margin':info.get('grossMargins'),'oper_margin':info.get('operatingMargins'),
+                  'profit_margin':info.get('profitMargins'),'roe':info.get('returnOnEquity'),
+                  'debt_to_equity':info.get('debtToEquity')}
+    except Exception as e:
+        cache[t]={'err':str(e)[:50]}
+    if i%25==0:
+        json.dump(cache,open(path,'w')); print(f'{i}/{len(todo)}',flush=True)
+    time.sleep(0.25)
+json.dump(cache,open(path,'w'))
+print('COMPLETE', len(cache), flush=True)

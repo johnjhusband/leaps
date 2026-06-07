@@ -1,0 +1,10 @@
+{
+ "instrument-selection": 315,
+ "position-sizing-ratios": 587,
+ "expiration-duration": 328,
+ "strike-selection": 437,
+ "assignment-handling": 203,
+ "exit-profit-taking": 7,
+ "entry-timing": 99,
+ "market-regime": 68
+}

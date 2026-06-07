@@ -1,0 +1,195 @@
+{
+ "generated": "2026-06-07",
+ "videos_total": 296,
+ "claims_total": 3488,
+ "categories": {
+  "STRATEGY": 202,
+  "PICKS": 46,
+  "MACRO": 44,
+  "HYPE": 4
+ },
+ "signal_distribution": {
+  "0": 3,
+  "1": 124,
+  "2": 45,
+  "3": 38,
+  "4": 33,
+  "5": 53
+ },
+ "layers": {
+  "L1_spec": "wiki/strategy/STRATEGY_SPEC.md",
+  "L2_decisions": [
+   "RULES.md",
+   "assignment-handling.md",
+   "contradictions.md",
+   "entry-timing.md",
+   "exit-profit-taking.md",
+   "expiration-duration.md",
+   "instrument-selection.md",
+   "market-regime.md",
+   "position-sizing-ratios.md",
+   "scorecard.md",
+   "strike-selection.md",
+   "valuation-method.md"
+  ],
+  "L3_videos_dir": "wiki/videos/",
+  "L4_contradictions": "wiki/strategy/contradictions.md",
+  "L5_meta": [
+   "_meta/claims.jsonl",
+   "_meta/video_categories.json",
+   "_meta/digests/"
+  ]
+ },
+ "top_strategy_videos": [
+  {
+   "id": "VdXGNGvMyKw",
+   "title": "STOCKS & OPTIONS MASTERCLASS (THE SYSTEM THAT ACTUALLY WORKS!)",
+   "claims": 86,
+   "signal": 5
+  },
+  {
+   "id": "oFPaNohPvYo",
+   "title": "10 YEARS TO REALIZE ONLY 1 OPTIONS STRIKE PRICE WORKS",
+   "claims": 75,
+   "signal": 5
+  },
+  {
+   "id": "avyQ2u1cftQ",
+   "title": "WHY SELLING OPTIONS IS 7X MORE PROFITABLE THAN BUYING OPTIONS",
+   "claims": 72,
+   "signal": 5
+  },
+  {
+   "id": "coj3aqbLPrM",
+   "title": "4 STOCK OPTION STRATEGIES THAT MADE ME MILLIONS",
+   "claims": 69,
+   "signal": 5
+  },
+  {
+   "id": "4n0IUuy0_UI",
+   "title": "I SHORTED 99% OF OPTIONS TRADERS (HERE'S WHY)",
+   "claims": 67,
+   "signal": 5
+  },
+  {
+   "id": "VKnGRB016o8",
+   "title": "10 YEARS TO REALIZE OPTION SPREADS ARE A MAJOR TRAP",
+   "claims": 60,
+   "signal": 5
+  },
+  {
+   "id": "XUcvLc32UY4",
+   "title": "THE OPTIONS EXPIRATION DATE WITH \u201cUNIMAGINABLE\u201d UPSIDE IN 2026",
+   "claims": 60,
+   "signal": 5
+  },
+  {
+   "id": "crkkAi-nwzI",
+   "title": "10 YEARS TO REALIZE THE WHEEL STRATEGY IS A BRUTAL TRAP",
+   "claims": 59,
+   "signal": 5
+  },
+  {
+   "id": "5upcZf1sEJ0",
+   "title": "I TESTED THE 5 MOST POPULAR OPTION STRATEGIES FOR 10 YEARS",
+   "claims": 58,
+   "signal": 5
+  },
+  {
+   "id": "5_PbEUZDdEA",
+   "title": "10 YEARS USING OPTIONS GREEKS EXPOSED THE BRUTAL TRAP",
+   "claims": 57,
+   "signal": 5
+  },
+  {
+   "id": "h16Nhdgpuuo",
+   "title": "I TESTED THE 5 MOST POPULAR OPTION STRATEGIES FOR 12 YEARS",
+   "claims": 57,
+   "signal": 5
+  },
+  {
+   "id": "U3je6tIQzYQ",
+   "title": "I MADE 1 CHANGE TO CASH SECURED PUTS & RETIRED AT 31",
+   "claims": 56,
+   "signal": 5
+  },
+  {
+   "id": "CY-vbMx5k4g",
+   "title": "HOW I SOLD OPTIONS FOR 10 YEARS & ONLY GOT ASSIGNED 4 TIMES",
+   "claims": 54,
+   "signal": 5
+  },
+  {
+   "id": "W3mCSTEDSa8",
+   "title": "HOW I RETIRED AT 31 WITH STOCK OPTIONS",
+   "claims": 54,
+   "signal": 5
+  },
+  {
+   "id": "b3R5zuNwI-Q",
+   "title": "URGENT: 96% OF TRADERS GET WIPED OUT WHEN THIS HAPPENS",
+   "claims": 53,
+   "signal": 5
+  },
+  {
+   "id": "7xoiZMwFhdo",
+   "title": "10 YEARS TO REALIZE ONLY 1 OPTIONS EXPIRATION DATE WORKS",
+   "claims": 51,
+   "signal": 5
+  },
+  {
+   "id": "JXdSkRGoiXE",
+   "title": "THE 1 SINGLE TIME IT MAKES SENSE TO TAKE PROFITS",
+   "claims": 51,
+   "signal": 5
+  },
+  {
+   "id": "1Ct_EGrYBZU",
+   "title": "12 YEARS TO REALIZE ONLY 1 OPTIONS STRATEGY WORKS",
+   "claims": 50,
+   "signal": 5
+  },
+  {
+   "id": "56GQISel_iY",
+   "title": "Outperform 99% of Investors With This Strategy",
+   "claims": 50,
+   "signal": 5
+  },
+  {
+   "id": "RxPLOvlPHfE",
+   "title": "HOW I RETIRED AT 31 SELLING STOCK OPTIONS",
+   "claims": 50,
+   "signal": 5
+  },
+  {
+   "id": "eKNHABy0amo",
+   "title": "HOW I RETIRED AT 31 SELLING PORTFOLIO SECURED PUTS",
+   "claims": 50,
+   "signal": 5
+  },
+  {
+   "id": "m9w8T0qW1s8",
+   "title": "THE \"PERFECT\" TIME TO TAKE PROFITS JUST TRIGGERED",
+   "claims": 50,
+   "signal": 5
+  },
+  {
+   "id": "kgfGRlRO25Y",
+   "title": "HOW I RETIRED AT 31 SELLING PUT OPTIONS",
+   "claims": 49,
+   "signal": 5
+  },
+  {
+   "id": "qSMJShRLDv8",
+   "title": "HOW I RETIRED AT 31 WITH CALL OPTIONS",
+   "claims": 49,
+   "signal": 5
+  },
+  {
+   "id": "32pMRko-uHA",
+   "title": "THIS 1 CHART RETIRED ME AT 31 WITH STOCK OPTIONS",
+   "claims": 48,
+   "signal": 5
+  }
+ ]
+}

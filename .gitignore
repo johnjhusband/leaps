@@ -1,0 +1,22 @@
+# Large reproducible data (regenerate with rebuild_universe.sh)
+raw_transcripts/
+transcripts/
+leaps.db
+__pycache__/
+*.pyc
+*.log
+
+# yfinance/data fetch caches (reproducible snapshots of market data)
+_fundamentals.json
+_growth.json
+_quality.json
+_goldenline.json
+_exchange.json
+_nasdaq_screener.json
+_global_raw.json
+_valuation_result.json
+_clean_universe.json
+_constituents.json
+_russell1000_raw.json
+_russell_new.json
+_global_need.json

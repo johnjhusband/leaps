@@ -1,0 +1,1434 @@
+rank_by_mktcap,ticker,name,country,mktcap_B,in_QQQ,in_SPY,in_Russell1000,in_Global1000,verdict,under_over_pct
+1,NVDA,NVIDIA,United States,4967.7,Y,Y,Y,Y,bullish,47.0
+2,AAPL,Apple,United States,4514.0,Y,Y,Y,Y,bearish,-26.0
+3,GOOG,Alphabet (Google),United States,4450.0,Y,Y,Y,Y,bullish,65.0
+4,MSFT,Microsoft,United States,3095.2,Y,Y,Y,Y,bullish,43.0
+5,AMZN,Amazon,United States,2646.6,Y,Y,Y,Y,bullish,2.0
+6,TSM,TSMC,Taiwan,2153.3,,,Y,Y,bullish,30.0
+7,AVGO,Broadcom,United States,1826.3,Y,Y,Y,Y,bearish,-28.0
+8,2222.SR,Saudi Aramco,Saudi Arabia,1750.0,,,,Y,bullish,106.0
+9,META,Meta Platforms (Facebook),United States,1505.3,Y,Y,Y,Y,bullish,3.0
+10,TSLA,Tesla,United States,1468.5,Y,Y,Y,Y,bearish,-91.0
+11,BRK-B,Berkshire Hathaway,United States,1052.8,,Y,,Y,bullish,1.0
+12,LLY,Eli Lilly,United States,1008.9,,Y,Y,Y,bullish,15.0
+13,MU,Micron Technology,United States,974.4,Y,Y,Y,Y,bullish,13.0
+14,WMT,Walmart,United States,946.1,Y,Y,Y,Y,bearish,-45.0
+15,JPM,JPMorgan Chase,United States,837.0,,Y,Y,Y,bullish,54.0
+16,AMD,AMD,United States,760.5,Y,Y,Y,Y,bearish,-70.0
+17,ASML,ASML,Netherlands,632.8,Y,,Y,Y,bearish,-24.0
+18,XOM,Exxon Mobil,United States,621.4,,Y,Y,Y,bearish,-51.0
+19,V,Visa,United States,615.3,,Y,Y,Y,bullish,-14.0
+20,ORCL,Oracle,United States,614.6,,Y,Y,Y,bullish,-8.0
+21,JNJ,Johnson & Johnson,United States,560.3,,Y,Y,Y,bearish,-34.0
+22,TCEHY,Tencent,China,514.0,,,,Y,bullish,41.0
+23,INTC,Intel,United States,498.4,Y,Y,Y,Y,no_earnings,
+24,CSCO,Cisco,United States,479.4,Y,Y,Y,Y,bearish,-45.0
+25,MA,Mastercard,United States,433.9,,Y,Y,Y,bullish,-9.0
+26,COST,Costco,United States,431.0,Y,Y,Y,Y,bearish,-53.0
+27,CAT,Caterpillar,United States,416.5,,Y,Y,Y,bullish,-3.0
+28,ABBV,AbbVie,United States,401.5,,Y,Y,Y,bearish,-78.0
+29,601939.SS,China Construction Bank,China,395.2,,,,Y,bullish,58.0
+30,BAC,Bank of America,United States,382.0,,Y,Y,Y,bullish,106.0
+31,LRCX,Lam Research,United States,379.3,Y,Y,Y,Y,bearish,-20.0
+32,CVX,Chevron,United States,373.0,,Y,Y,Y,bearish,-62.0
+33,ARM,Arm Holdings,United Kingdom,366.3,Y,,Y,Y,bearish,-88.0
+34,UNH,UnitedHealth,United States,362.8,,Y,Y,Y,bearish,-26.0
+35,AMAT,Applied Materials,United States,359.7,Y,Y,Y,Y,bullish,8.0
+36,NFLX,Netflix,United States,346.0,Y,Y,Y,Y,bullish,74.0
+37,GE,General Electric,United States,342.7,,Y,Y,Y,bearish,-39.0
+38,KO,Coca-Cola,United States,342.0,,Y,Y,Y,bearish,-24.0
+39,PG,Procter & Gamble,United States,341.2,,Y,Y,Y,bearish,-34.0
+40,MS,Morgan Stanley,United States,334.3,,Y,Y,Y,bullish,36.0
+41,RO.SW,Roche,Switzerland,331.8,,,,Y,bearish,-17.0
+42,601288.SS,Agricultural Bank of China,China,329.0,,,,Y,bullish,100.0
+43,PLTR,Palantir,United States,324.9,Y,Y,Y,Y,bearish,-70.0
+44,HSBC,HSBC,United Kingdom,311.4,,,Y,Y,bullish,40.0
+45,1398.HK,ICBC,China,310.7,,,,Y,bullish,163.0
+46,HD,Home Depot,United States,309.9,,Y,Y,Y,bearish,-38.0
+47,GS,Goldman Sachs,United States,306.4,,Y,Y,Y,bullish,34.0
+48,MRK,Merck,United States,298.3,,Y,Y,Y,bullish,36.0
+49,BABA,Alibaba,China,290.4,,,Y,Y,bullish,148.0
+50,AZN,AstraZeneca,United Kingdom,288.4,,,Y,Y,bullish,-2.0
+51,601988.SS,Bank of China,China,287.8,,,,Y,bullish,52.0
+52,NVS,Novartis,Switzerland,284.6,,,Y,Y,bearish,-42.0
+53,PM,Philip Morris International,United States,277.9,,Y,Y,Y,bearish,-25.0
+54,300750.SZ,CATL,China,275.6,,,,Y,bullish,101.0
+55,MC.PA,LVMH,France,272.8,,,,Y,bearish,-39.0
+56,RY,Royal Bank Of Canada,Canada,269.7,,,Y,Y,bullish,22.0
+57,IBM,IBM,United States,267.7,,Y,Y,Y,bearish,-27.0
+58,285A.T,KIOXIA Holdings Corporation,Japan,266.2,,,,Y,bearish,-40.0
+59,9984.T,SoftBank Group Corp.,Japan,264.0,,,,Y,bullish,442.0
+60,TXN,Texas Instruments,United States,259.4,Y,Y,Y,Y,bullish,-6.0
+61,DELL,Dell,United States,256.2,,Y,Y,Y,bullish,47.0
+62,KLAC,KLA,United States,252.0,Y,Y,Y,Y,bearish,-60.0
+63,GEV,GE Vernova,United States,250.9,,Y,Y,Y,bullish,69.0
+64,WFC,Wells Fargo,United States,250.8,,Y,Y,Y,bullish,79.0
+65,NESN.SW,Nestlé,Switzerland,248.5,,,,Y,bearish,-43.0
+66,0857.HK,PetroChina,China,246.4,,,,Y,bullish,29.0
+67,RTX,RTX,United States,243.7,,Y,Y,Y,bearish,-42.0
+68,SHEL,Shell,United Kingdom,237.2,,,Y,Y,bullish,204.0
+69,SIE.DE,Siemens,Germany,236.3,,,,Y,bearish,-55.0
+70,600519.SS,Kweichow Moutai,China,235.2,,,,Y,bearish,-30.0
+71,LIN,Linde,United Kingdom,234.8,Y,Y,Y,Y,bearish,-41.0
+72,OR.PA,L'Oréal,France,231.0,,,,Y,bearish,-46.0
+73,SNDK,Sandisk,United States,230.9,Y,Y,Y,Y,bullish,-13.0
+74,TM,Toyota,Japan,230.9,,,Y,Y,bullish,267.0
+75,MRVL,Marvell Technology,United States,230.7,Y,,Y,Y,bearish,-49.0
+76,0941.HK,China Mobile,China,227.6,,,,Y,bullish,28.0
+77,QCOM,QUALCOMM,United States,227.6,Y,Y,Y,Y,bearish,-46.0
+78,C,Citigroup,United States,225.9,,Y,Y,Y,bullish,182.0
+79,MUFG,Mitsubishi UFJ Financial,Japan,224.5,,,Y,Y,bullish,-17.0
+80,PANW,Palo Alto Networks,United States,221.7,Y,Y,Y,Y,bearish,-91.0
+81,SAP,SAP,Germany,217.8,,,Y,Y,bullish,-7.0
+82,2454.TW,MediaTek,Taiwan,217.5,,,,Y,bearish,-80.0
+83,601138.SS,Foxconn Industrial Internet,China,217.2,,,,Y,bullish,28.0
+84,AXP,American Express,United States,212.0,,Y,Y,Y,bullish,26.0
+85,BHP,BHP Group,Australia,210.1,,,Y,Y,bullish,76.0
+86,PRX.AS,Prosus,Netherlands,202.2,,,,Y,bullish,471.0
+87,MCD,McDonald,United States,198.8,,Y,Y,Y,bearish,-25.0
+88,ITX.MC,Inditex,Spain,197.4,,,,Y,bearish,-30.0
+89,TTE,TotalEnergies,France,197.0,,,Y,Y,bullish,250.0
+90,RMS.PA,Hermès,France,195.5,,,,Y,bearish,-60.0
+91,ADI,Analog Devices,United States,195.5,Y,Y,Y,Y,bearish,-23.0
+92,300308.SZ,Zhongji Innolight,China,194.5,,,,Y,bearish,-47.0
+93,ANET,Arista Networks,United States,194.3,,Y,Y,Y,bearish,-35.0
+94,PEP,Pepsico,United States,194.0,Y,Y,Y,Y,bearish,-24.0
+95,TMUS,T-Mobile US,United States,192.7,Y,Y,Y,Y,bullish,-14.0
+96,NVO,Novo Nordisk,Denmark,190.3,,,Y,Y,bullish,23.0
+97,STX,Seagate Technology,Ireland,190.0,Y,Y,Y,Y,bearish,-43.0
+98,CBA.AX,Commonwealth Bank,Australia,189.8,,,,Y,bearish,-40.0
+99,VZ,Verizon,United States,189.4,,Y,Y,Y,bullish,47.0
+100,ABBN.SW,ABB,Switzerland,189.4,,,,Y,bearish,-19.0
+101,2308.TW,Delta Electronics,Taiwan,189.3,,,,Y,bearish,-54.0
+102,AMGN,Amgen,United States,188.7,Y,Y,Y,Y,bearish,-37.0
+103,APP,AppLovin,United States,187.2,Y,Y,Y,Y,bullish,-5.0
+104,TD,Toronto Dominion Bank,Canada,186.9,,,Y,Y,bullish,14.0
+105,RELIANCE.NS,Reliance Industries,India,184.0,,,,Y,bearish,-22.0
+106,NEE,Nextera Energy,United States,179.0,,Y,Y,Y,bullish,-11.0
+107,TJX,TJX Companies,United States,177.5,,Y,Y,Y,bearish,-35.0
+108,WDC,Western Digital,United States,176.4,Y,Y,Y,Y,bullish,51.0
+109,TMO,Thermo Fisher Scientific,United States,175.7,,Y,Y,Y,bearish,-24.0
+110,SAN,Santander,Spain,175.0,,,Y,Y,bullish,120.0
+111,SU.PA,Schneider Electric,France,174.5,,,,Y,bearish,-26.0
+112,DIS,Walt Disney,United States,173.1,,Y,Y,Y,bullish,24.0
+113,CRWD,CrowdStrike,United States,170.8,Y,Y,Y,Y,no_earnings,
+114,APH,Amphenol,United States,170.8,,Y,Y,Y,bullish,-8.0
+115,BA,Boeing,United States,169.8,,Y,Y,Y,bearish,-46.0
+116,8035.T,Tokyo Electron,Japan,169.4,,,,Y,bullish,-3.0
+117,RIO,Rio Tinto,United Kingdom,163.7,,,Y,Y,bullish,-2.0
+118,ALV.DE,Allianz SE,Germany,163.0,,,,Y,bullish,59.0
+119,AIR.PA,Airbus,Netherlands,162.4,,,,Y,bearish,-46.0
+120,BLK,BlackRock,United States,162.1,,Y,Y,Y,bullish,-4.0
+121,UNP,Union Pacific Corporation,United States,161.7,,Y,Y,Y,bullish,-19.0
+122,0883.HK,CNOOC,China,161.0,,,,Y,bullish,91.0
+123,GILD,Gilead Sciences,United States,160.4,Y,Y,Y,Y,bullish,162.0
+124,ABT,Abbott Laboratories,United States,158.6,,Y,Y,Y,bearish,-33.0
+125,T,AT&T,United States,158.1,,Y,Y,Y,bullish,158.0
+126,DE,Deere &amp; Company (John Deere),United States,157.6,,Y,Y,Y,bearish,-62.0
+127,601088.SS,China Shenhua Energy,China,155.6,,,,Y,bearish,-34.0
+128,3968.HK,CM Bank,China,155.1,,,,Y,bullish,107.0
+129,IBE.MC,Iberdrola,Spain,154.6,,,,Y,bearish,-32.0
+130,SCHW,Charles Schwab,United States,154.5,,Y,Y,Y,bullish,126.0
+131,DTE.DE,Deutsche Telekom,Germany,154.2,,,,Y,bullish,40.0
+132,UBS,UBS,Switzerland,154.1,,,Y,Y,bullish,127.0
+133,ETN,Eaton,Ireland,153.7,,Y,Y,Y,bearish,-47.0
+134,GLW,Corning,United States,152.8,,Y,Y,Y,bearish,-46.0
+135,CRM,Salesforce,United States,152.1,,Y,Y,Y,bullish,6.0
+136,BUD,Anheuser-Busch Inbev,Belgium,151.9,,,Y,Y,bullish,30.0
+137,ENR.F,Siemens Energy,Germany,151.7,,,,Y,bearish,-24.0
+138,9983.T,Fast Retailing,Japan,150.6,,,,Y,bullish,-9.0
+139,ISRG,Intuitive Surgical,United States,149.5,Y,Y,Y,Y,bearish,-48.0
+140,6501.T,Hitachi,Japan,148.9,,,,Y,bearish,-59.0
+141,PFE,Pfizer,United States,148.4,,Y,Y,Y,bearish,-38.0
+142,SMFG,Sumitomo Mitsui Financial Group,Japan,147.1,,,Y,Y,bullish,-17.0
+143,WELL,Welltower,United States,146.1,,Y,Y,Y,bearish,-54.0
+144,SCCO,Southern Copper,United States,144.3,,,Y,Y,bullish,57.0
+145,UBER,Uber,United States,143.9,,Y,Y,Y,bullish,163.0
+146,IBKR,Interactive Brokers,United States,143.2,,Y,Y,Y,bearish,-33.0
+147,601318.SS,Ping An Insurance,China,143.1,,,,Y,bullish,68.0
+148,SAF.PA,Safran,France,142.9,,,,Y,bullish,139.0
+149,COP,ConocoPhillips,United States,142.7,,Y,Y,Y,bearish,-38.0
+150,SHOP,Shopify,Canada,142.1,Y,,Y,Y,bearish,-61.0
+151,BX,Blackstone Group,United States,141.0,,Y,Y,Y,bearish,-42.0
+152,D05.SI,DBS Group,Singapore,140.2,,,,Y,bullish,-10.0
+153,RR.L,Rolls-Royce Holdings,United Kingdom,139.4,,,,Y,bearish,-98.0
+154,601628.SS,China Life Insurance,China,137.1,,,,Y,bullish,94.0
+155,HON,Honeywell,United States,135.6,Y,Y,Y,Y,bearish,-48.0
+156,PLD,Prologis,United States,135.4,,Y,Y,Y,bearish,-21.0
+157,DELTA.BK,Delta Electronics (Thailand),Thailand,130.4,,,,Y,bearish,-70.0
+158,DHR,Danaher,United States,130.4,,Y,Y,Y,bearish,-48.0
+159,BTI,British American Tobacco,United Kingdom,129.1,,,Y,Y,bullish,25.0
+160,SONY,Sony,Japan,128.9,,,Y,Y,bearish,-39.0
+161,BKNG,Booking Holdings (Booking.com),United States,128.5,Y,Y,Y,Y,bullish,28.0
+162,CB,Chubb,Switzerland,126.5,,Y,Y,Y,bullish,68.0
+163,UCG.MI,UniCredit,Italy,126.3,,,,Y,bullish,128.0
+164,2317.TW,Foxconn (Hon Hai Precision Industry),Taiwan,126.2,,,,Y,bullish,59.0
+165,SPGI,S&P Global,United States,125.6,,Y,Y,Y,bullish,-14.0
+166,002594.SZ,BYD,China,125.3,,,,Y,bearish,-13.0
+167,BBVA,Banco Bilbao Vizcaya Argentaria,Spain,123.7,,,Y,Y,bullish,70.0
+168,ENB,Enbridge,Canada,123.0,,,Y,Y,bearish,-53.0
+169,INVE-B.ST,Investor AB,Sweden,122.9,,,,Y,bullish,103.0
+170,UL,Unilever,United Kingdom,122.8,,,Y,Y,bullish,-18.0
+171,CVS,CVS Health,United States,122.4,,Y,Y,Y,bearish,-46.0
+172,AI.PA,Air Liquide,France,122.0,,,,Y,bearish,-33.0
+173,CFR.SW,Compagnie Financière Richemont,Switzerland,121.5,,,,Y,bearish,-21.0
+174,6857.T,Advantest,Japan,121.1,,,,Y,bullish,-12.0
+175,PDD,PDD Holdings (Pinduoduo),China,121.1,Y,,Y,Y,bullish,39.0
+176,LMT,Lockheed Martin,United States,120.8,,Y,Y,Y,bearish,-30.0
+177,688256.SS,Cambricon Technologies,China,120.7,,,,Y,bearish,-85.0
+178,MO,Altria Group,United States,120.5,,Y,Y,Y,bullish,4.0
+179,HDB,HDFC Bank,India,120.1,,,Y,Y,bullish,7.0
+180,PGR,Progressive,United States,119.0,,Y,Y,Y,bullish,20.0
+181,BNP.PA,BNP Paribas,France,118.9,,,,Y,bullish,148.0
+182,LOW,Lowe's Companies,United States,118.2,,Y,Y,Y,bearish,-24.0
+183,6861.T,Keyence,Japan,118.1,,,,Y,bullish,-10.0
+184,SYK,Stryker Corporation,United States,117.2,,Y,Y,Y,bearish,-39.0
+185,BMY,Bristol-Myers Squibb,United States,116.9,,Y,Y,Y,bullish,-12.0
+186,601899.SS,Zijin Mining,China,116.5,,,,Y,bullish,253.0
+187,MFG,Mizuho Financial Group,Japan,116.0,,,Y,Y,bullish,205.0
+188,NOW,ServiceNow,United States,116.0,,Y,Y,Y,bearish,-58.0
+189,IFX.DE,Infineon,Germany,115.8,,,,Y,bearish,-51.0
+190,VRT,Vertiv Holdings,United States,115.4,,Y,Y,Y,bearish,-39.0
+191,BHARTIARTL.NS,Bharti Airtel,India,115.4,,,,Y,bullish,14.0
+192,BMO,Bank of Montreal,Canada,115.1,,,Y,Y,bullish,71.0
+193,PBR,Petrobras,Brazil,114.4,,,Y,Y,bullish,124.0
+194,ISP.MI,Intesa Sanpaolo,Italy,113.9,,,,Y,bullish,79.0
+195,VRTX,Vertex Pharmaceuticals,United States,113.4,Y,Y,Y,Y,bullish,-17.0
+196,COF,Capital One,United States,112.4,,Y,Y,Y,bearish,-77.0
+197,PH,Parker-Hannifin,United States,111.3,,Y,Y,Y,bearish,-41.0
+198,8058.T,Mitsubishi Corporation,Japan,111.0,,,,Y,bullish,99.0
+199,BP,BP,United Kingdom,110.7,,,Y,Y,bullish,33.0
+200,ENEL.MI,Enel,Italy,110.2,,,,Y,bearish,-40.0
+201,300502.SZ,Eoptolink Technology,China,110.1,,,,Y,bearish,-37.0
+202,6981.T,Murata Manufacturing (Murata Seisakusho),Japan,110.1,,,,Y,bearish,-39.0
+203,ACN,Accenture,Ireland,109.7,,Y,Y,Y,bullish,20.0
+204,SBUX,Starbucks,United States,108.6,Y,Y,Y,Y,bearish,-45.0
+205,SNY,Sanofi,France,107.8,,,Y,Y,bullish,-14.0
+206,EQIX,Equinix,United States,106.6,,Y,Y,Y,bearish,-59.0
+207,1120.SR,Al Rajhi Bank,Saudi Arabia,106.5,,,,Y,bullish,35.0
+208,NEM,Newmont,United States,106.4,,Y,Y,Y,bullish,256.0
+209,FTNT,Fortinet,United States,106.0,Y,Y,Y,Y,bearish,-57.0
+210,MDT,Medtronic,Ireland,104.9,,Y,Y,Y,bullish,-17.0
+211,SO,Southern Company,United States,104.4,,Y,Y,Y,bearish,-29.0
+212,PWR,Quanta Services,United States,104.3,,Y,Y,Y,bearish,-52.0
+213,CDNS,Cadence Design Systems,United States,103.8,Y,Y,Y,Y,bearish,-68.0
+214,MAR,Marriott International,United States,103.5,Y,Y,Y,Y,bearish,-45.0
+215,GSK,GSK plc,United Kingdom,103.3,,,Y,Y,bullish,36.0
+216,ZURN.SW,Zurich Insurance Group,Switzerland,103.2,,,,Y,bullish,68.0
+217,SPOT,Spotify,Sweden,102.2,,,Y,Y,bullish,9.0
+218,ADBE,Adobe,United States,101.6,Y,Y,Y,Y,bullish,50.0
+219,TT,Trane Technologies,Ireland,101.0,,Y,Y,Y,bearish,-31.0
+220,HWM,Howmet Aerospace,United States,100.8,,Y,Y,Y,bearish,-21.0
+221,600900.SS,China Yangtze Power,China,99.9,,,,Y,bullish,146.0
+222,BN,Brookfield Corporation,Canada,99.6,,,Y,Y,bearish,-47.0
+223,CM,CIBC (Canadian Imperial Bank of Commerce,Canada,99.6,,,Y,Y,bullish,101.0
+224,BNS,Scotiabank,Canada,98.8,,,Y,Y,bullish,73.0
+225,1299.HK,AIA,Hong Kong,97.6,,,,Y,bullish,37.0
+226,DUK,Duke Energy,United States,96.8,,Y,Y,Y,bullish,-9.0
+227,CNQ,Canadian Natural Resources,Canada,95.3,,,Y,Y,bullish,5.0
+228,SBIN.NS,State Bank of India,India,95.1,,,,Y,bullish,16.0
+229,SBER.ME,Sberbank,Russia,94.4,,,,Y,bullish,912.0
+230,GLCNF,Glencore,Switzerland,94.4,,,,Y,bearish,-93.0
+231,BK,BNY Mellon (Bank of New York Mellon),United States,94.1,,,,Y,bullish,63.0
+232,GD,General Dynamics,United States,93.7,,Y,Y,Y,bullish,-12.0
+233,MCK,McKesson,United States,93.2,,Y,Y,Y,bullish,17.0
+234,CDI.PA,Dior,France,93.1,,,,Y,bearish,-30.0
+235,IBN,ICICI Bank,India,93.0,,,Y,Y,bullish,36.0
+236,CME,CME Group,United States,93.0,,Y,Y,Y,bullish,-11.0
+237,ADP,Automatic Data Processing,United States,92.7,Y,Y,Y,Y,bullish,-5.0
+238,CS.PA,AXA,France,92.7,,,,Y,bullish,59.0
+239,UPS,United Parcel Service,United States,92.3,,Y,Y,Y,bearish,-29.0
+240,CABK.MC,CaixaBank,Spain,92.2,,,,Y,bullish,35.0
+241,EL.PA,EssilorLuxottica,France,92.1,,,,Y,bearish,-47.0
+242,EQNR,Equinor,Norway,92.0,,,Y,Y,bullish,168.0
+243,6098.T,Recruit,Japan,92.0,,,,Y,bullish,51.0
+244,000333.SZ,Midea,China,91.9,,,,Y,bullish,41.0
+245,GMBXF,Grupo México,Mexico,91.7,,,,Y,bullish,180.0
+246,PNC,PNC Financial Services,United States,91.7,,Y,Y,Y,bullish,81.0
+247,FCX,Freeport-McMoRan,United States,91.1,,Y,Y,Y,bullish,38.0
+248,CEG,Constellation Energy,United States,91.0,Y,Y,Y,Y,bullish,72.0
+249,AMT,American Tower,United States,90.4,,Y,Y,Y,bullish,6.0
+250,ELV,Elevance Health,United States,90.2,,Y,Y,Y,bearish,-30.0
+251,XIACF,Xiaomi,China,90.2,,,,Y,bearish,-19.0
+252,CMI,Cummins,United States,89.9,,Y,Y,Y,bearish,-25.0
+253,601328.SS,Bank of Communications,China,89.2,,,,Y,bullish,89.0
+254,8031.T,Mitsui Bussan,Japan,89.1,,,,Y,bearish,-28.0
+255,SNPS,Synopsys,United States,89.0,Y,Y,Y,Y,bearish,-77.0
+256,WM,Waste Management,United States,88.5,,Y,Y,Y,bearish,-29.0
+257,NET,Cloudflare,United States,88.4,,,Y,Y,no_earnings,
+258,601658.SS,Postal Savings Bank of China,China,88.1,,,,Y,bullish,83.0
+259,WMB,Williams Companies,United States,88.0,,Y,Y,Y,bearish,-26.0
+260,JCI,Johnson Controls,Ireland,87.6,,Y,Y,Y,bullish,4.0
+261,MNST,Monster Beverage,United States,87.6,Y,Y,Y,Y,bearish,-42.0
+262,600028.SS,Sinopec,China,87.4,,,,Y,bullish,134.0
+263,CSX,CSX Corporation,United States,87.3,Y,Y,Y,Y,bullish,1.0
+264,KKR,KKR & Co.,United States,87.1,,Y,Y,Y,bullish,11.0
+265,USB,U.S. Bancorp,United States,86.4,,Y,Y,Y,bullish,77.0
+266,4063.T,Shin-Etsu Chemical,Japan,85.1,,,,Y,bearish,-57.0
+267,CMCSA,Comcast,United States,85.1,Y,Y,Y,Y,bullish,166.0
+268,ING,ING,Netherlands,85.1,,,Y,Y,bullish,95.0
+269,8766.T,Tokio Marine,Japan,83.9,,,,Y,bullish,-8.0
+270,WBC.AX,Westpac Banking,Australia,83.8,,,,Y,bullish,-6.0
+271,TCS.NS,Tata Consultancy Services,India,83.8,,,,Y,bullish,10.0
+272,DDOG,Datadog,United States,83.3,Y,Y,Y,Y,bearish,-95.0
+273,O39.SI,OCBC Bank,Singapore,83.3,,,,Y,bullish,9.0
+274,ITUB,Itaú Unibanco,Brazil,83.1,,,Y,Y,bullish,129.0
+275,SNOW,Snowflake,United States,82.6,,,Y,Y,no_earnings,
+276,HCA,HCA Healthcare,United States,82.6,,Y,Y,Y,bullish,55.0
+277,ATCO-B.ST,Atlas Copco,Sweden,82.3,,,,Y,bearish,-58.0
+278,BCS,Barclays,United Kingdom,82.2,,,Y,Y,bullish,193.0
+279,SLB,SLB (Schlumberger),United States,82.0,,Y,Y,Y,bearish,-49.0
+280,AEM,Agnico Eagle Mines,Canada,81.8,,,Y,Y,bullish,199.0
+281,EPD,Enterprise Products,United States,81.8,,,Y,Y,bullish,32.0
+282,8001.T,Itōchū Shōji,Japan,81.7,,,,Y,bearish,-15.0
+283,MELI,MercadoLibre,Argentina,81.5,Y,,Y,Y,bearish,-64.0
+284,NGG,National Grid,United Kingdom,81.5,,,Y,Y,bullish,31.0
+285,INTU,Intuit,United States,81.2,Y,Y,Y,Y,bullish,36.0
+286,NOK,Nokia,Finland,80.3,,,Y,Y,bearish,-67.0
+287,MMM,3M,United States,80.2,,Y,Y,Y,bearish,-39.0
+288,ICE,Intercontinental Exchange,United States,80.0,,Y,Y,Y,bullish,33.0
+289,SPG,Simon Property Group,United States,79.9,,Y,Y,Y,bullish,31.0
+290,CP,CPKC (Canadian Pacific Kansas City),Canada,79.8,,,Y,Y,bearish,-24.0
+291,MRSH,Marsh & McLennan Companies,United States,79.7,,Y,Y,Y,bullish,-17.0
+292,MDLZ,Mondelez International,United States,79.6,Y,Y,Y,Y,bearish,-32.0
+293,7011.T,Mitsubishi Heavy Industries,Japan,79.4,,,,Y,bullish,27.0
+294,ABNB,Airbnb,United States,79.3,Y,Y,Y,Y,bullish,-7.0
+295,NAB.AX,National Australia Bank,Australia,79.0,,,,Y,bearish,-16.0
+296,FDX,FedEx,United States,79.0,,Y,Y,Y,bullish,19.0
+297,E,ENI,Italy,78.9,,,Y,Y,bearish,-44.0
+298,ENGI.PA,ENGIE,France,78.9,,,,Y,bearish,-26.0
+299,DG.PA,Vinci,France,78.9,,,,Y,bullish,20.0
+300,MCO,Moody's,United States,78.8,,Y,Y,Y,bearish,-34.0
+301,HLT,Hilton Worldwide,United States,78.1,,Y,Y,Y,bearish,-51.0
+302,4519.T,Chugai Pharmaceutical,Japan,77.5,,,,Y,bullish,2.0
+303,0981.HK,SMIC,China,77.4,,,,Y,bearish,-57.0
+304,EMR,Emerson,United States,77.4,,Y,Y,Y,bearish,-37.0
+305,LYG,Lloyds Banking Group,United Kingdom,77.3,,,Y,Y,bullish,256.0
+306,NOC,Northrop Grumman,United States,77.3,,Y,Y,Y,bullish,6.0
+307,6503.T,Mitsubishi Electric,Japan,76.8,,,,Y,bearish,-59.0
+308,CI,The Cigna Group,United States,76.6,,Y,Y,Y,bullish,688.0
+309,NTES,NetEase,China,76.6,,,Y,Y,bullish,33.0
+310,MPC,Marathon Petroleum,United States,76.5,,Y,Y,Y,bullish,168.0
+311,VLO,Valero Energy,United States,76.0,,Y,Y,Y,bullish,147.0
+312,BA.L,BAE Systems,United Kingdom,75.6,,,,Y,bearish,-99.0
+313,SHW,Sherwin-Williams,United States,75.3,,Y,Y,Y,bearish,-39.0
+314,RCL,Royal Caribbean Group,United States,75.1,,Y,Y,Y,bullish,50.0
+315,BE,Bloom Energy,United States,75.0,,,Y,Y,no_earnings,
+316,ORLY,O'Reilly Automotive,United States,74.9,Y,Y,Y,Y,bearish,-29.0
+317,NXPI,NXP Semiconductors,Netherlands,74.7,Y,Y,Y,Y,bullish,34.0
+318,ASX,ASE Group,Taiwan,74.7,,,Y,Y,bullish,-12.0
+319,AMX,America Movil,Mexico,74.6,,,Y,Y,bullish,73.0
+320,HOOD,Robinhood,United States,74.3,,Y,Y,Y,bearish,-65.0
+321,9432.T,NTT (Nippon Telegraph &amp; Telephone),Japan,74.2,,,,Y,bullish,7.0
+322,002475.SZ,Luxshare Precision,China,74.1,,,,Y,bullish,1.0
+323,GM,General Motors,United States,74.0,,Y,Y,Y,bearish,-35.0
+324,ROST,Ross Stores,United States,73.9,Y,Y,Y,Y,bullish,-13.0
+325,APO,Apollo Global Management,United States,73.8,,Y,Y,Y,bearish,-72.0
+326,COHR,Coherent Corp.,United States,73.8,,Y,Y,Y,bearish,-74.0
+327,BAM,Brookfield Asset Management,Canada,73.7,,,Y,Y,bearish,-28.0
+328,SU,Suncor Energy,Canada,73.5,,,Y,Y,bullish,179.0
+329,PSX,Phillips 66,United States,73.4,,Y,Y,Y,bearish,-31.0
+330,EOG,EOG Resources,United States,73.4,,Y,Y,Y,bullish,240.0
+331,CNI,Canadian National Railway,Canada,73.0,,,Y,Y,bearish,-35.0
+332,CVNA,Carvana,United States,73.0,,Y,Y,Y,bearish,-43.0
+333,MPWR,Monolithic Power Systems,United States,72.8,Y,Y,Y,Y,bearish,-57.0
+334,ITW,Illinois Tool Works,United States,72.7,,Y,Y,Y,bearish,-22.0
+335,ECL,Ecolab,United States,72.6,,Y,Y,Y,bearish,-39.0
+336,ANZ.AX,ANZ Bank,Australia,72.5,,,,Y,bearish,-17.0
+337,BSX,Boston Scientific,United States,72.2,,Y,Y,Y,bullish,2.0
+338,CTAS,Cintas,United States,72.0,Y,Y,Y,Y,bearish,-45.0
+339,TRP,TC Energy,Canada,71.5,,,Y,Y,bearish,-47.0
+340,CL,Colgate-Palmolive,United States,70.9,,Y,Y,Y,bearish,-58.0
+341,KMI,Kinder Morgan,United States,70.5,,Y,Y,Y,bullish,11.0
+342,NSC,Norfolk Southern,United States,70.4,,Y,Y,Y,bearish,-53.0
+343,AEP,American Electric Power,United States,70.3,Y,Y,Y,Y,bullish,-10.0
+344,7182.T,Japan Post Bank,Japan,70.2,,,,Y,bullish,114.0
+345,CRH,Cement Roadstone Holding,Ireland,70.2,,Y,Y,Y,bullish,-1.0
+346,AON,Aon,United Kingdom,70.2,,Y,Y,Y,bullish,22.0
+347,TDG,TransDigm Group,United States,69.3,,Y,Y,Y,bearish,-45.0
+348,VOLV-A.ST,Volvo Group,Sweden,69.2,,,,Y,bearish,-38.0
+349,CIEN,Ciena,United States,69.1,,Y,Y,Y,bearish,-72.0
+350,RKLB,Rocket Lab,United States,68.8,,,Y,Y,no_earnings,
+351,MRK.DE,Merck KGaA,Germany,68.6,,,,Y,bearish,-47.0
+352,DASH,DoorDash,United States,68.3,Y,Y,Y,Y,bearish,-73.0
+353,MSI,Motorola Solutions,United States,68.1,,Y,Y,Y,bearish,-42.0
+354,DHL.DE,DHL Group (Deutsche Post),Germany,67.3,,,,Y,bullish,13.0
+355,LITE,Lumentum,United States,67.2,Y,Y,Y,Y,bearish,-70.0
+356,G.MI,Generali,Italy,66.9,,,,Y,bullish,33.0
+357,URI,United Rentals,United States,66.9,,Y,Y,Y,bearish,-22.0
+358,DLR,Digital Realty,United States,66.8,,Y,Y,Y,bullish,-7.0
+359,ET,Energy Transfer LP,United States,66.7,,,Y,Y,bearish,-21.0
+360,REGN,Regeneron Pharmaceuticals,United States,66.6,Y,Y,Y,Y,bullish,-1.0
+361,B,Barrick Gold,Canada,66.3,,,Y,Y,bullish,323.0
+362,2914.T,Japan Tobacco,Japan,66.1,,,,Y,bullish,79.0
+363,MUV2.DE,Munich RE (Münchener Rück),Germany,66.1,,,,Y,bullish,98.0
+364,WBD,Warner Bros. Discovery,United States,65.8,Y,Y,Y,Y,no_earnings,
+365,1211.SR,Ma'aden,Saudi Arabia,65.2,,,,Y,bearish,-41.0
+366,HPE,Hewlett Packard Enterprise,United States,65.2,,Y,Y,Y,bullish,0.0
+367,VALE,Vale,Brazil,64.9,,,Y,Y,bullish,8.0
+368,FIX,Comfort Systems USA,United States,64.9,,Y,Y,Y,bullish,-13.0
+369,002371.SZ,NAURA Technology Group,China,64.6,,,,Y,bearish,-41.0
+370,RSG,Republic Services,United States,64.6,,Y,Y,Y,bearish,-41.0
+371,MFC,Manulife Financial,Canada,64.6,,,Y,Y,bullish,32.0
+372,TRV,The Travelers Companies,United States,64.5,,Y,Y,Y,bullish,50.0
+373,RHM.F,Rheinmetall,Germany,64.2,,,,Y,bearish,-14.0
+374,0388.HK,Hong Kong Exchanges & Clearing,Hong Kong,64.0,,,,Y,bearish,-33.0
+375,2388.HK,Bank of China (Hong Kong),Hong Kong,63.9,,,,Y,bullish,20.0
+376,NKE,Nike,United States,63.6,,Y,Y,Y,bearish,-56.0
+377,MQG.AX,Macquarie Group Limited,Australia,63.6,,,,Y,bearish,-32.0
+378,5802.T,Sumitomo Denki Kōgyō,Japan,63.3,,,,Y,bullish,68.0
+379,WES.AX,Wesfarmers,Australia,63.2,,,,Y,bearish,-34.0
+380,9434.T,SoftBank Corp.,Japan,63.1,,,,Y,bearish,-24.0
+381,NDA-FI.HE,Nordea Bank,Finland,63.1,,,,Y,bullish,22.0
+382,3690.HK,Meituan,China,63.0,,,,Y,no_earnings,
+383,9433.T,KDDI,Japan,63.0,,,,Y,bullish,219.0
+384,APD,Air Products and Chemicals,United States,62.9,,Y,Y,Y,bearish,-36.0
+385,NWG,NatWest Group,United Kingdom,62.9,,,Y,Y,bullish,176.0
+386,STM,STMicroelectronics,Switzerland,62.9,,,Y,Y,bearish,-90.0
+387,BKR,Baker Hughes,United States,62.1,Y,Y,Y,Y,bullish,59.0
+388,TEL,TE Connectivity,Switzerland,62.1,,Y,Y,Y,bullish,98.0
+389,RELX,RELX,United Kingdom,61.9,,,Y,Y,bullish,-5.0
+390,1180.SR,The Saudi National Bank,Saudi Arabia,61.9,,,,Y,bullish,96.0
+391,PCAR,Paccar,United States,61.4,Y,Y,Y,Y,bullish,20.0
+392,GWW,W. W. Grainger,United States,61.4,,Y,Y,Y,bearish,-27.0
+393,TFC,Truist Financial Corporation,United States,61.3,,Y,Y,Y,bullish,91.0
+394,LSEG.L,London Stock Exchange,United Kingdom,61.1,,,,Y,bearish,-99.0
+395,RACE,Ferrari,Italy,61.1,,,Y,Y,bearish,-44.0
+396,601998.SS,CITIC Bank,China,60.6,,,,Y,bullish,102.0
+397,9633.HK,Nongfu Spring,China,60.5,,,,Y,bearish,-12.0
+398,IMO,Imperial Oil,Canada,60.5,,,Y,Y,bearish,-57.0
+399,DB,Deutsche Bank,Germany,60.3,,,Y,Y,bullish,200.0
+400,AFL,Aflac,United States,60.2,,Y,Y,Y,bullish,35.0
+401,MDLN,Medline,United States,59.9,,,Y,Y,bearish,-58.0
+402,SRE,Sempra,United States,59.8,,Y,Y,Y,bearish,-38.0
+403,F,Ford,United States,59.4,,Y,Y,Y,no_earnings,
+404,DSV.VI,DSV,Denmark,59.2,,,,Y,bearish,-73.0
+405,GLE.PA,Société Générale,France,59.1,,,,Y,bullish,141.0
+406,VIC.VN,Vingroup Company,Vietnam,59.1,,,,Y,bearish,-92.0
+407,D,Dominion Energy,United States,58.8,,Y,Y,Y,bearish,-20.0
+408,0728.HK,China Telecom,China,58.3,,,,Y,bullish,11.0
+409,BAJFINANCE.NS,Bajaj Finance,India,58.3,,,,Y,bullish,23.0
+410,NU,Nu Holdings,Brazil,58.2,,,Y,Y,bullish,150.0
+411,601166.SS,Industrial Bank,China,58.2,,,,Y,bullish,114.0
+412,7010.SR,Saudi Telecom Company,Saudi Arabia,58.1,,,,Y,bullish,-8.0
+413,NUE,Nucor,United States,57.9,,Y,Y,Y,bullish,82.0
+414,NBIS,Nebius Group,Netherlands,57.8,,,Y,Y,bearish,-47.0
+415,UCB.VI,UCB,Belgium,57.7,,,,Y,bullish,22.0
+416,ACA.PA,Crédit Agricole,France,57.6,,,,Y,bullish,72.0
+417,LHX,L3Harris Technologies,United States,57.3,,Y,Y,Y,bearish,-43.0
+418,MPLX,MPLX,United States,57.3,,,Y,Y,bullish,34.0
+419,LT.NS,Larsen &amp; Toubro,India,57.3,,,,Y,bullish,-6.0
+420,ALL,Allstate,United States,56.9,,Y,Y,Y,bullish,154.0
+421,O,Realty Income,United States,56.7,,Y,Y,Y,bearish,-43.0
+422,TRGP,Targa Resources,United States,56.7,,Y,Y,Y,bullish,48.0
+423,OXY,Occidental Petroleum,United States,56.6,,Y,Y,Y,bearish,-40.0
+424,NA.TO,National Bank of Canada,Canada,56.4,,,,Y,bullish,32.0
+425,KEYS,Keysight,United States,56.3,,Y,Y,Y,bullish,-13.0
+426,STAN.L,Standard Chartered,United Kingdom,56.3,,,,Y,bearish,-97.0
+427,600030.SS,CITIC Securities,China,56.2,,,,Y,bullish,295.0
+428,TER,Teradyne,United States,56.0,,Y,Y,Y,bearish,-30.0
+429,ROSN.ME,Rosneft,Russia,55.9,,,,Y,bullish,229.0
+430,CPG.L,Compass Group,United Kingdom,55.8,,,,Y,bearish,-19.0
+431,CARR,Carrier Global,United States,55.8,,Y,Y,Y,bearish,-59.0
+432,ARGX,Argenx,Netherlands,55.7,,,Y,Y,bullish,17.0
+433,TGT,Target,United States,55.7,,Y,Y,Y,bullish,6.0
+434,FLEX,Flex,Singapore,55.7,,,Y,Y,bearish,-30.0
+435,OKE,Oneok,United States,55.6,,Y,Y,Y,bullish,15.0
+436,AJG,Arthur J. Gallagher & Co.,United States,55.5,,Y,Y,Y,bearish,-25.0
+437,AAL.L,Anglo American,United Kingdom,55.1,,,,Y,no_earnings,
+438,EOAN.DE,E.ON,Germany,55.0,,,,Y,bullish,75.0
+439,HO.PA,Thales,France,55.0,,,,Y,bearish,-15.0
+440,7741.T,Hoya,Japan,55.0,,,,Y,bearish,-50.0
+441,7974.T,Nintendo,Japan,54.8,,,,Y,bullish,123.0
+442,CRWV,CoreWeave,United States,54.8,,,Y,Y,no_earnings,
+443,L.TO,Loblaw Companies,Canada,54.7,,,,Y,bearish,-29.0
+444,6752.T,Panasonic,Japan,54.7,,,,Y,bearish,-73.0
+445,Z74.SI,Singtel,Singapore,54.5,,,,Y,bullish,82.0
+446,ATD.TO,Alimentation Couche-Tard,Canada,54.4,,,,Y,bullish,-6.0
+447,MET,MetLife,United States,54.4,,Y,Y,Y,bullish,34.0
+448,PSA,Public Storage,United States,54.4,,Y,Y,Y,bearish,-51.0
+449,ALAB,Astera Labs,United States,54.3,,,Y,Y,bearish,-78.0
+450,FANG,Diamondback Energy,United States,54.2,Y,Y,Y,Y,bearish,-94.0
+451,FAST,Fastenal,United States,53.7,Y,Y,Y,Y,bearish,-43.0
+452,COR,Cencora,United States,53.5,,Y,Y,Y,bullish,1.0
+453,ORA.PA,Orange,France,53.4,,,,Y,bearish,-81.0
+454,SE,Sea Limited,Singapore,53.0,,,Y,Y,bullish,6.0
+455,MBG.DE,Mercedes-Benz,Germany,53.0,,,,Y,bullish,32.0
+456,WPM,Wheaton Precious Metals,Canada,52.8,,,Y,Y,bullish,57.0
+457,WMMVF,Walmex,Mexico,52.8,,,,Y,bearish,-22.0
+458,GWO.TO,Great-West Lifeco,Canada,52.7,,,,Y,bullish,18.0
+459,300394.SZ,Suzhou TFC Optical Communication,China,52.6,,,,Y,bearish,-72.0
+460,CVE,Cenovus Energy,Canada,52.6,,,Y,Y,bullish,196.0
+461,HINDUNILVR.NS,Hindustan Unilever,India,52.5,,,,Y,bearish,-54.0
+462,ANTO.L,Antofagasta,United Kingdom,52.2,,,,Y,bearish,-99.0
+463,DAL,Delta Air Lines,United States,52.2,,Y,Y,Y,bullish,169.0
+464,BAS.DE,BASF,Germany,52.0,,,,Y,bullish,-11.0
+465,AME,Ametek,United States,51.9,,Y,Y,Y,bearish,-43.0
+466,6723.T,Renesas Electronics,Japan,51.7,,,,Y,no_earnings,
+467,HOLN.SW,Holcim Group,Switzerland,51.7,,,,Y,bearish,-77.0
+468,DB1.DE,Deutsche Börse,Germany,51.6,,,,Y,bullish,1.0
+469,CTVA,Corteva,United States,51.5,,Y,Y,Y,bearish,-48.0
+470,8002.T,Marubeni,Japan,51.4,,,,Y,bullish,202.0
+471,MT,ArcelorMittal,Luxembourg,51.1,,,Y,Y,bullish,147.0
+472,2881.TW,Fubon Financial,Taiwan,51.1,,,,Y,bullish,43.0
+473,DVN,Devon Energy,United States,51.1,,Y,Y,Y,bullish,1.0
+474,AZO,AutoZone,United States,51.0,,Y,Y,Y,bullish,-16.0
+475,8053.T,Sumitomo,Japan,51.0,,,,Y,bullish,236.0
+476,EA,Electronic Arts,United States,50.9,Y,Y,Y,Y,bearish,-61.0
+477,VOW3.DE,Volkswagen,Germany,50.7,,,,Y,bullish,424.0
+478,ETR,Entergy,United States,50.7,,Y,Y,Y,bearish,-21.0
+479,KBCSF,KBC,Belgium,50.7,,,,Y,bullish,-0.0
+480,603986.SS,GigaDevice Semiconductor,China,50.6,,,,Y,bearish,-60.0
+481,0267.HK,CITIC limited,China,50.6,,,,Y,bullish,168.0
+482,ODFL,Old Dominion Freight Line,United States,50.4,Y,Y,Y,Y,bearish,-58.0
+483,SAND.ST,Sandvik,Sweden,50.3,,,,Y,bearish,-38.0
+484,INFY,Infosys,India,50.2,,,Y,Y,bullish,2.0
+485,2327.TW,Yageo,Taiwan,50.2,,,,Y,bearish,-24.0
+486,VST,Vistra,United States,50.2,,Y,Y,Y,bullish,85.0
+487,BPAC3.SA,BTG Pactual,Brazil,50.1,,,,Y,bullish,213.0
+488,LNG,Cheniere Energy,United States,50.0,,,Y,Y,bullish,14.0
+489,ROK,Rockwell Automation,United States,49.7,,Y,Y,Y,bearish,-24.0
+490,EW,Edwards Lifesciences,United States,49.5,,Y,Y,Y,bearish,-53.0
+491,UMC,United Microelectronics,Taiwan,49.4,,,Y,Y,bullish,45.0
+492,3993.HK,CMOC,China,49.4,,,,Y,bullish,180.0
+493,NDAQ,Nasdaq,United States,49.4,,Y,Y,Y,bullish,-13.0
+494,U11.SI,UOB,Singapore,49.4,,,,Y,bullish,77.0
+495,XEL,Xcel Energy,United States,49.3,Y,Y,Y,Y,bullish,-19.0
+496,600183.SS,Shengyi Technology (SYTECH),China,49.3,,,,Y,bearish,-46.0
+497,TAK,Takeda Pharmaceutical,Japan,49.3,,,Y,Y,bullish,9.0
+498,BMW.DE,BMW,Germany,49.2,,,,Y,bullish,119.0
+499,300476.SZ,Victory Giant Technology,China,49.2,,,,Y,bearish,-26.0
+500,P911.DE,Porsche,Germany,49.2,,,,Y,bearish,-54.0
+501,6146.T,Disco Corp.,Japan,49.1,,,,Y,bearish,-67.0
+502,5803.T,Fujikura,Japan,49.0,,,,Y,bullish,-8.0
+503,PRY.MI,Prysmian Group,Italy,49.0,,,,Y,bullish,49.0
+504,ASM.AS,ASM International,Netherlands,48.8,,,,Y,bullish,7.0
+505,6762.T,TDK,Japan,48.7,,,,Y,bullish,15.0
+506,ABEV,Ambev,Brazil,48.6,,,Y,Y,bullish,32.0
+507,ADSK,Autodesk,United States,48.6,Y,Y,Y,Y,bullish,-4.0
+508,EBAY,eBay,United States,48.6,,Y,Y,Y,bearish,-20.0
+509,FER.MC,Ferrovial,Spain,48.2,,,,Y,bearish,-60.0
+510,CAH,Cardinal Health,United States,48.2,,Y,Y,Y,bearish,-33.0
+511,MCHP,Microchip Technology,United States,47.9,Y,Y,Y,Y,bearish,-88.0
+512,2382.TW,Quanta Computer,Taiwan,47.7,,,,Y,bullish,50.0
+513,BN.PA,Danone,France,47.6,,,,Y,bearish,-38.0
+514,GALD.SW,Galderma Group,Switzerland,47.6,,,,Y,bearish,-42.0
+515,2359.HK,WuXi AppTec,China,47.4,,,,Y,bullish,98.0
+516,ADANIPOWER.NS,Adani Power,India,47.2,,,,Y,bullish,-6.0
+517,FITB,Fifth Third Bank,United States,47.1,,Y,Y,Y,bullish,31.0
+518,300274.SZ,Sungrow Power Supply,China,47.1,,,,Y,bullish,-6.0
+519,CBK.F,Commerzbank,Germany,47.0,,,,Y,bullish,46.0
+520,EXC,Exelon Corporation,United States,46.8,Y,Y,Y,Y,bullish,-14.0
+521,KFH.KW,Kuwait Finance House,Kuwait,46.8,,,,Y,bearish,-100.0
+522,3037.TW,Unimicron,Taiwan,46.5,,,,Y,bearish,-78.0
+523,000858.SZ,Wuliangye Yibin,China,46.5,,,,Y,bullish,84.0
+524,2882.TW,Cathay Financial Holding,Taiwan,46.5,,,,Y,bullish,34.0
+525,HEI,HEICO,United States,46.3,,,Y,Y,bearish,-39.0
+526,EMIRATESNBD.AE,Emirates NBD Bank PJSC,United Arab Emirates,46.2,,,,Y,bullish,105.0
+527,600276.SS,Jiangsu Hengrui Medicine,China,46.2,,,,Y,bearish,-40.0
+528,RWE.DE,RWE,Germany,46.1,,,,Y,bullish,16.0
+529,600000.SS,Shanghai Pudong Development Bank,China,46.0,,,,Y,bullish,89.0
+530,GRMN,Garmin,Switzerland,45.6,,Y,Y,Y,bullish,-17.0
+531,ON,ON Semiconductor,United States,45.6,,Y,Y,Y,bearish,-46.0
+532,NVTK.ME,Novatek,Russia,45.6,,,,Y,bullish,280.0
+533,LKOH.ME,Lukoil,Russia,45.3,,,,Y,bullish,258.0
+534,EBO.F,Erste Group Bank,Austria,45.3,,,,Y,bullish,144.0
+535,J36.SI,Jardine Matheson,Hong Kong,45.2,,,,Y,bullish,-11.0
+536,CSU.TO,Constellation Software,Canada,45.1,,,,Y,bearish,-24.0
+537,PKN.WA,ORLEN,Poland,45.1,,,,Y,bullish,79.0
+538,CCJ,Cameco,Canada,45.1,,,Y,Y,bearish,-52.0
+539,SUNPHARMA.NS,Sun Pharmaceutical,India,45.0,,,,Y,bearish,-26.0
+540,SHL.DE,Siemens Healthineers,Germany,44.9,,,,Y,bearish,-33.0
+541,GMG.AX,Goodman Group,Australia,44.9,,,,Y,bearish,-47.0
+542,STT,State Street Corporation,United States,44.8,,Y,Y,Y,bullish,26.0
+543,MSCI,MSCI,United States,44.8,,Y,Y,Y,bearish,-30.0
+544,0016.HK,Sun Hung Kai Properties,Hong Kong,44.7,,,,Y,bullish,18.0
+545,DEO,Diageo,United Kingdom,44.7,,,Y,Y,bearish,-33.0
+546,2010.SR,SABIC,Saudi Arabia,44.7,,,,Y,no_earnings,
+547,FMG.AX,Fortescue,Australia,44.6,,,,Y,bullish,87.0
+548,FERG,Ferguson Enterprises,United Kingdom,44.5,,,Y,Y,bullish,-7.0
+549,6954.T,Fanuc,Japan,44.5,,,,Y,bearish,-51.0
+550,IDXX,IDEXX Laboratories,United States,44.3,Y,Y,Y,Y,bearish,-45.0
+551,ADANIPORTS.NS,Adani Ports & SEZ,India,44.3,,,,Y,bearish,-36.0
+552,WAB,Wabtec,United States,44.2,,Y,Y,Y,bearish,-34.0
+553,CBRS,Cerebras Systems,United States,44.1,,,Y,Y,bearish,-96.0
+554,2345.TW,Accton Technology,Taiwan,44.1,,,,Y,bearish,-13.0
+555,601601.SS,China Pacific Insurance,China,44.1,,,,Y,bullish,119.0
+556,ADANIENT.NS,Adani Enterprises,India,44.1,,,,Y,bullish,11.0
+557,688795.SS,Moore Threads,China,44.0,,,,Y,no_earnings,
+558,FMX,Fomento Económico Mexicano (FEMSA),Mexico,44.0,,,Y,Y,bullish,72.0
+559,SREN.SW,Swiss Re,Switzerland,43.7,,,,Y,bullish,50.0
+560,ELE.MC,Endesa,Spain,43.5,,,,Y,bullish,9.0
+561,LR.PA,Legrand,France,43.4,,,,Y,bearish,-20.0
+562,SGO.PA,Compagnie de Saint-Gobain,France,43.3,,,,Y,bullish,30.0
+563,300059.SZ,East Money Information,China,43.3,,,,Y,bullish,97.0
+564,QNBK.QA,QNB (Qatar National Bank),Qatar,43.3,,,,Y,bullish,70.0
+565,6367.T,Daikin,Japan,43.3,,,,Y,bearish,-45.0
+566,DNB.OL,DNB,Norway,43.2,,,,Y,bullish,22.0
+567,MARUTI.NS,Maruti Suzuki India,India,43.2,,,,Y,bearish,-18.0
+568,AENA.MC,Aena,Spain,43.1,,,,Y,bullish,11.0
+569,601319.SS,The People's Insurance Company (PICC),China,42.9,,,,Y,bullish,89.0
+570,HEIA.AS,Heineken,Netherlands,42.9,,,,Y,bullish,-10.0
+571,CLS,Celestica,Canada,42.7,,,Y,Y,bullish,2.0
+572,HOT.F,Hochtief,Germany,42.7,,,,Y,bearish,-22.0
+573,LONN.SW,Lonza,Switzerland,42.6,,,,Y,bearish,-16.0
+574,AU,AngloGold Ashanti,South Africa,42.5,,,Y,Y,bullish,273.0
+575,8015.T,Toyota Tsusho,Japan,42.5,,,,Y,bearish,-32.0
+576,MSTR,"Strategy 
+ (MicroStrategy)",United States,42.4,Y,,Y,Y,no_earnings,
+577,002415.SZ,Hikvision,China,42.4,,,,Y,bullish,140.0
+578,601211.SS,Guotai Junan Securities,China,42.3,,,,Y,bearish,-28.0
+579,SCMN.SW,Swisscom,Switzerland,42.2,,,,Y,bearish,-31.0
+580,FNV,Franco-Nevada,Canada,42.2,,,Y,Y,bullish,50.0
+581,HUM,Humana,United States,42.0,,Y,Y,Y,bearish,-67.0
+582,2338.HK,Weichai Power,China,42.0,,,,Y,bullish,40.0
+583,CCEP,Coca-Cola European Partners,United Kingdom,41.9,Y,,Y,Y,bullish,1.0
+584,ERIC,Ericsson,Sweden,41.7,,,Y,Y,bearish,-21.0
+585,AXISBANK.BO,Axis Bank,India,41.7,,,,Y,bullish,96.0
+586,BDX,Becton Dickinson,United States,41.7,,Y,Y,Y,bearish,-53.0
+587,YUM,Yum! Brands,United States,41.6,,Y,Y,Y,bullish,-11.0
+588,KDP,Keurig Dr Pepper,United States,41.5,Y,Y,Y,Y,bullish,-10.0
+589,2891.TW,CTBC Financial Holding,Taiwan,41.5,,,,Y,bullish,8.0
+590,ARES,Ares Management,United States,41.4,,Y,Y,Y,bearish,-35.0
+591,GFS,GlobalFoundries,United States,41.4,,,Y,Y,bearish,-59.0
+592,BIDU,Baidu,China,41.4,,,Y,Y,no_earnings,
+593,DHI,D. R. Horton,United States,41.3,,Y,Y,Y,bullish,-9.0
+594,CCI,Crown Castle,United States,41.2,,Y,Y,Y,bearish,-51.0
+595,DANS.VI,Danske Bank,Denmark,41.1,,,,Y,bullish,13.0
+596,BAYN.DE,Bayer,Germany,40.9,,,,Y,no_earnings,
+597,AMP,Ameriprise Financial,United States,40.9,,Y,Y,Y,bullish,97.0
+598,SLF,Sun Life Financial,Canada,40.9,,,Y,Y,bullish,-16.0
+599,IX,ORIX,Japan,40.6,,,Y,Y,bullish,-18.0
+600,XYZ,Block,United States,40.6,,Y,Y,Y,bullish,-13.0
+601,WDS,Woodside Energy,Australia,40.6,,,Y,Y,bullish,-17.0
+602,2328.HK,PICC Property and Casualty Company Limit,China,40.5,,,,Y,bullish,194.0
+603,ALNY,Alnylam Pharmaceuticals,United States,40.5,Y,,Y,Y,bearish,-40.0
+604,HLN,Haleon,United Kingdom,40.3,,,Y,Y,bullish,8.0
+605,COIN,Coinbase,United States,40.2,,Y,Y,Y,bullish,-18.0
+606,VIK,Viking Holdings,Bermuda,40.1,,,Y,Y,bullish,32.0
+607,2259.HK,Zijin Gold International Company Limited,Hong Kong,40.1,,,,Y,bullish,153.0
+608,AIG,American International Group,United States,40.0,,Y,Y,Y,bullish,74.0
+609,600150.SS,China State Shipbuilding Corporation (CS,China,40.0,,,,Y,bullish,112.0
+610,VTR,Ventas,United States,39.9,,Y,Y,Y,bearish,-80.0
+611,SWED-A.ST,Swedbank,Sweden,39.9,,,,Y,bullish,4.0
+612,TEVA,Teva Pharmaceutical Industries,Israel,39.8,,,Y,Y,bullish,81.0
+613,TITAN.NS,Titan Company,India,39.8,,,,Y,bearish,-54.0
+614,TTWO,Take-Two Interactive,United States,39.8,Y,Y,Y,Y,no_earnings,
+615,MAERSK-B.CO,Maersk,Denmark,39.6,,,,Y,bearish,-52.0
+616,PEG,PSEG,United States,39.6,,Y,Y,Y,bullish,4.0
+617,KOTAKBANK.NS,Kotak Mahindra Bank,India,39.5,,,,Y,bullish,39.0
+618,NPSNY,Naspers,South Africa,39.5,,,,Y,bullish,493.0
+619,WCN,Waste Connections,United States,39.4,,,Y,Y,bearish,-54.0
+620,0992.HK,Lenovo,Hong Kong,39.4,,,,Y,bullish,49.0
+621,BSBR,Banco Santander Brasil,Brazil,39.2,,,Y,Y,bullish,11.0
+622,TLS.AX,Telstra,Australia,39.2,,,,Y,bearish,-29.0
+623,KR,Kroger,United States,39.2,,Y,Y,Y,bearish,-56.0
+624,AXON,Axon Enterprise,United States,39.2,Y,Y,Y,Y,bearish,-76.0
+625,ED,Consolidated Edison,United States,39.2,,Y,Y,Y,bullish,-2.0
+626,8725.T,MS&amp;AD Insurance,Japan,39.1,,,,Y,bullish,464.0
+627,JD,JD.com,China,39.0,,,Y,Y,bullish,84.0
+628,ADM,Archer Daniels Midland (ADM),United States,39.0,,Y,Y,Y,bearish,-43.0
+629,TKO,TKO Group Holdings,United States,38.9,,Y,Y,Y,bearish,-39.0
+630,6702.T,Fujitsu,Japan,38.9,,,,Y,bearish,-40.0
+631,STLD,Steel Dynamics,United States,38.7,,Y,Y,Y,bullish,60.0
+632,2082.SR,ACWA POWER Company,Saudi Arabia,38.7,,,,Y,bearish,-83.0
+633,RKT.L,Reckitt Benckiser,United Kingdom,38.6,,,,Y,bearish,-99.0
+634,SSE.L,SSE,United Kingdom,38.6,,,,Y,bearish,-99.0
+635,ACS.MC,Grupo ACS,Spain,38.6,,,,Y,bullish,-11.0
+636,0019.HK,Swire Pacific,Hong Kong,38.6,,,,Y,bearish,-38.0
+637,ESLT,Elbit Systems,Israel,38.6,,,Y,Y,bearish,-49.0
+638,PLZL.ME,Polyus,Russia,38.5,,,,Y,bullish,130.0
+639,M&M.NS,Mahindra &amp; Mahindra,India,38.5,,,,Y,bullish,16.0
+640,PST.MI,Poste Italiane,Italy,38.4,,,,Y,bullish,21.0
+641,UMG.AS,Universal Music Group,Netherlands,38.4,,,,Y,bearish,-36.0
+642,CBRE,CBRE Group,United States,38.3,,Y,Y,Y,bullish,5.0
+643,6201.T,Toyota Industries,Japan,38.3,,,,Y,bullish,68.0
+644,ASSA-B.ST,Assa Abloy,Sweden,38.3,,,,Y,bullish,-7.0
+645,KB,KB Financial Group,South Korea,38.3,,,Y,Y,bullish,111.0
+646,A,Agilent Technologies,United States,38.3,,Y,Y,Y,bearish,-30.0
+647,688012.SS,AMEC,China,38.2,,,,Y,bearish,-52.0
+648,300408.SZ,Chaozhou Three-Circle,China,38.2,,,,Y,bearish,-49.0
+649,SEB-A.ST,Skandinaviska Enskilda Banken,Sweden,38.2,,,,Y,bullish,14.0
+650,CRDO,Credo Technology,United States,38.2,,,Y,Y,bearish,-59.0
+651,TSCO.L,Tesco,United Kingdom,38.1,,,,Y,bearish,-99.0
+652,CCL,Carnival Corporation,United States,38.0,,Y,Y,Y,bullish,51.0
+653,POW.TO,Power Corporation of Canada,Canada,38.0,,,,Y,bullish,18.0
+654,6301.T,Komatsu,Japan,37.9,,,,Y,bearish,-24.0
+655,PCG,PG&amp;E Corporation,United States,37.7,,Y,Y,Y,bullish,49.0
+656,CMG,Chipotle Mexican Grill,United States,37.6,,Y,Y,Y,bearish,-54.0
+657,TRI,Thomson Reuters,Canada,37.6,Y,,Y,Y,bullish,-14.0
+658,HSY,The Hershey Company,United States,37.4,,Y,Y,Y,bullish,34.0
+659,8750.T,Dai-ichi Life Holdings,Japan,37.3,,,,Y,bullish,-10.0
+660,GAZP.ME,Gazprom,Russia,37.3,,,,Y,bullish,455.0
+661,JBL,Jabil,United States,37.3,,Y,Y,Y,bullish,-15.0
+662,LYV,Live Nation,United States,37.3,,Y,Y,Y,no_earnings,
+663,600188.SS,Yankuang Energy (Yanzhou Coal Mining),China,37.2,,,,Y,bullish,75.0
+664,6178.T,Japan Post Holdings,Japan,37.2,,,,Y,bullish,72.0
+665,IRM,Iron Mountain,United States,37.1,,Y,Y,Y,bearish,-82.0
+666,ITC.NS,ITC,India,37.0,,,,Y,bearish,-27.0
+667,NTPC.NS,NTPC Limited,India,36.9,,,,Y,bullish,5.0
+668,WEC,WEC Energy Group,United States,36.8,,Y,Y,Y,bearish,-22.0
+669,VMC,Vulcan Materials,United States,36.5,,Y,Y,Y,bearish,-20.0
+670,SYY,Sysco,United States,36.5,,Y,Y,Y,bearish,-33.0
+671,HEI.DE,HeidelbergCement,Germany,36.4,,,,Y,bullish,31.0
+672,PYPL,PayPal,United States,36.4,Y,Y,Y,Y,bullish,60.0
+673,EME,Emcor,United States,36.4,,Y,Y,Y,bullish,-16.0
+674,AD.AS,Ahold Delhaize,Netherlands,36.4,,,,Y,bullish,8.0
+675,PRU,Prudential Financial,United States,36.3,,Y,Y,Y,bullish,15.0
+676,ASTS,AST SpaceMobile,United States,36.3,,,Y,Y,no_earnings,
+677,EQT.ST,EQT,Sweden,36.3,,,,Y,bearish,-55.0
+678,HIG,The Hartford,United States,36.2,,Y,Y,Y,bullish,116.0
+679,PAYX,Paychex,United States,36.0,Y,Y,Y,Y,bullish,-14.0
+680,ASELS.IS,Aselsan,Turkey,35.9,,,,Y,bullish,-10.0
+681,DTG.F,Daimler Truck,Germany,35.9,,,,Y,bearish,-37.0
+682,WAT,Waters Corporation,United States,35.9,,Y,Y,Y,bearish,-53.0
+683,RKT,Rocket Companies,United States,35.8,,,Y,Y,no_earnings,
+684,WDAY,Workday,United States,35.6,Y,Y,Y,Y,bearish,-38.0
+685,300433.SZ,Lens Technology,China,35.6,,,,Y,bearish,-31.0
+686,DEWA.AE,Dubai Electricity and Water Authority (D,United Arab Emirates,35.5,,,,Y,bullish,18.0
+687,BBD,Banco Bradesco,Brazil,35.5,,,Y,Y,bullish,160.0
+688,DOL.TO,Dollarama,Canada,35.4,,,,Y,bearish,-50.0
+689,2408.TW,Nanya Technology,Taiwan,35.3,,,,Y,bearish,-73.0
+690,KER.PA,Kering,France,35.3,,,,Y,no_earnings,
+691,6701.T,NEC Corp,Japan,35.2,,,,Y,bullish,120.0
+692,000725.SZ,BOE Technology,China,35.2,,,,Y,bullish,0.0
+693,ONGC.NS,Oil &amp; Natural Gas,India,35.1,,,,Y,bullish,474.0
+694,600487.SS,HENGTONG Optic-Electric,China,35.0,,,,Y,bearish,-36.0
+695,IFC.TO,Intact Financial,Canada,35.0,,,,Y,bullish,6.0
+696,SDZ.SW,Sandoz Group,Switzerland,35.0,,,,Y,bearish,-38.0
+697,EPI-A.ST,Epiroc,Sweden,34.9,,,,Y,bearish,-39.0
+698,SCHN.SW,Schindler Group,Switzerland,34.8,,,,Y,bearish,-36.0
+699,4578.T,Otsuka Holdings,Japan,34.8,,,,Y,bullish,80.0
+700,HMC,Honda,Japan,34.6,,,Y,Y,no_earnings,
+701,WEGE3.SA,WEG ON,Brazil,34.6,,,,Y,bearish,-56.0
+702,BBCA.JK,Bank Central Asia,Indonesia,34.6,,,,Y,bullish,41.0
+703,MLM,Martin Marietta Materials,United States,34.6,,Y,Y,Y,bearish,-20.0
+704,CHT,Chunghwa Telecom,Taiwan,34.6,,,Y,Y,bearish,-46.0
+705,LDO.MI,Leonardo,Italy,34.5,,,,Y,bullish,28.0
+706,2360.TW,Chroma ATE Inc.,Taiwan,34.4,,,,Y,bearish,-51.0
+707,MLYBY,Maybank,Malaysia,34.4,,,,Y,bullish,-3.0
+708,UI,Ubiquiti,United States,34.3,,,Y,Y,bullish,24.0
+709,UAL,United Airlines Holdings,United States,34.3,,Y,Y,Y,bullish,388.0
+710,TWLO,Twilio,United States,34.3,,,Y,Y,bearish,-92.0
+711,KVUE,Kenvue,United States,34.0,,Y,Y,Y,bullish,-5.0
+712,601919.SS,COSCO Shipping,China,34.0,,,,Y,bullish,64.0
+713,VOD,Vodafone,United Kingdom,33.8,,,Y,Y,no_earnings,
+714,ULTRACEMCO.NS,UltraTech Cement,India,33.8,,,,Y,bullish,-4.0
+715,OTP.BD,OTP Bank,Hungary,33.7,,,,Y,bullish,48.0
+716,SATS,EchoStar,United States,33.7,,Y,Y,Y,no_earnings,
+717,LUMI.TA,Bank Leumi,Israel,33.7,,,,Y,bearish,-99.0
+718,EQT,EQT Corporation,United States,33.6,,Y,Y,Y,bullish,352.0
+719,600309.SS,Wanhua Chemical,China,33.5,,,,Y,bullish,90.0
+720,ROP,Roper Technologies,United States,33.5,Y,Y,Y,Y,bullish,-5.0
+721,HBAN,Huntington Bancshares,United States,33.5,,Y,Y,Y,bullish,62.0
+722,RDDT,Reddit,United States,33.4,,,Y,Y,bullish,-7.0
+723,PKO.WA,PKO Bank Polski,Poland,33.4,,,,Y,bullish,20.0
+724,0001.HK,CK Hutchison Holdings,Hong Kong,33.3,,,,Y,bullish,11.0
+725,6669.TW,Wiwynn,Taiwan,33.3,,,,Y,bullish,116.0
+726,ZTS,Zoetis,United States,33.3,,Y,Y,Y,bullish,37.0
+727,LVS,Las Vegas Sands,United States,33.3,,Y,Y,Y,bullish,16.0
+728,GIVN.SW,Givaudan,Switzerland,33.2,,,,Y,bearish,-39.0
+729,TCL.AX,Transurban,Australia,33.2,,,,Y,bearish,-54.0
+730,QSR,Restaurant Brands International,Canada,33.2,,,Y,Y,bullish,-15.0
+731,NTAP,NetApp,United States,33.1,,Y,Y,Y,bearish,-21.0
+732,CSL.AX,CSL,Australia,33.1,,,,Y,bullish,10.0
+733,JSWSTEEL.NS,JSW Steel,India,33.0,,,,Y,bullish,228.0
+734,ADS.DE,Adidas,Germany,33.0,,,,Y,bullish,71.0
+735,601898.SS,China Coal Energy Company Limited,China,33.0,,,,Y,bearish,-20.0
+736,HCLTECH.NS,HCL Technologies,India,32.9,,,,Y,bullish,3.0
+737,KMB,Kimberly-Clark,United States,32.9,,Y,Y,Y,bearish,-34.0
+738,FFH.TO,Fairfax Financial,Canada,32.8,,,,Y,bullish,68.0
+739,8630.T,Sompo Holdings,Japan,32.8,,,,Y,bullish,448.0
+740,GFI,Gold Fields,South Africa,32.8,,,Y,Y,bullish,396.0
+741,ADVANC.BK,Advanced Info Service (AIS),Thailand,32.7,,,,Y,bullish,13.0
+742,HAL,Halliburton,United States,32.7,,Y,Y,Y,bullish,63.0
+743,1109.HK,China Resources Land,Hong Kong,32.7,,,,Y,bullish,73.0
+744,4062.T,Ibiden,Japan,32.7,,,,Y,bearish,-47.0
+745,ORSTED.CO,Ørsted,Denmark,32.7,,,,Y,no_earnings,
+746,ALC,Alcon,Switzerland,32.6,,,Y,Y,bearish,-43.0
+747,MTB,M&T Bank,United States,32.6,,Y,Y,Y,bullish,71.0
+748,003816.SZ,China General Nuclear Power Group (CGN),China,32.3,,,,Y,bearish,-18.0
+749,NTR,Nutrien,Canada,32.3,,,Y,Y,bullish,225.0
+750,1347.HK,Hua Hong Semiconductor Limited,China,32.2,,,,Y,bearish,-92.0
+751,RPRX,Royalty Pharma,United Kingdom,32.2,,,Y,Y,bearish,-33.0
+752,CEZ.PR,ČEZ Group,Czech Republic,32.1,,,,Y,bearish,-29.0
+753,EXR,Extra Space Storage,United States,32.1,,Y,Y,Y,bearish,-62.0
+754,PUK,Prudential,United Kingdom,31.9,,,Y,Y,bullish,50.0
+755,ACGL,Arch Capital,Bermuda,31.9,,Y,Y,Y,bullish,146.0
+756,000651.SZ,Gree Electric Appliances,China,31.8,,,,Y,bullish,92.0
+757,VG,Venture Global,United States,31.8,,,Y,Y,bullish,204.0
+758,ABN.AS,ABN AMRO,Netherlands,31.8,,,,Y,bullish,98.0
+759,PTT-R.BK,PTT PCL,Thailand,31.7,,,,Y,bullish,91.0
+760,RVMD,Revolution Medicines,United States,31.7,,,Y,Y,no_earnings,
+761,6902.T,Denso,Japan,31.7,,,,Y,bullish,298.0
+762,SHG,Shinhan Financial Group,South Korea,31.6,,,Y,Y,bullish,138.0
+763,HNR1.DE,Hannover Rück,Germany,31.6,,,,Y,bullish,70.0
+764,NTRS,Northern Trust,United States,31.5,,Y,Y,Y,bullish,102.0
+765,000001.SZ,Ping An Bank,China,31.5,,,,Y,bullish,183.0
+766,HEN3.DE,Henkel,Germany,31.5,,,,Y,bullish,6.0
+767,BEL.NS,Bharat Electronics,India,31.4,,,,Y,bearish,-47.0
+768,BMPS.MI,Banca Monte dei Paschi di Siena,Italy,31.3,,,,Y,bullish,92.0
+769,KGC,Kinross Gold,Canada,31.3,,,Y,Y,bullish,313.0
+770,CQP,"Cheniere Energy
+Partners",United States,31.2,,,Y,Y,bullish,-18.0
+771,EC,Ecopetrol,Colombia,31.1,,,Y,Y,bullish,13.0
+772,TS,Tenaris,Luxembourg,31.0,,,Y,Y,bullish,7.0
+773,NTGY.MC,Naturgy,Spain,30.9,,,,Y,bullish,-5.0
+774,600919.SS,Bank of Jiangsu,China,30.9,,,,Y,bullish,210.0
+775,NTRA,Natera,United States,30.8,,,Y,Y,no_earnings,
+776,CNC,Centene,United States,30.8,,Y,Y,Y,no_earnings,
+777,WOW.AX,Woolworths Group,Australia,30.8,,,,Y,bearish,-70.0
+778,FSR.JO,FirstRand,South Africa,30.7,,,,Y,bearish,-98.0
+779,COALINDIA.NS,Coal India,India,30.7,,,,Y,bullish,100.0
+780,IQV,IQVIA,United States,30.6,,Y,Y,Y,bullish,-9.0
+781,BIP,Brookfield Infrastructure Partners,Bermuda,30.6,,,Y,Y,bearish,-31.0
+782,6971.T,Kyocera,Japan,30.6,,,,Y,bullish,27.0
+783,GULF.BK,Gulf Development Public Company,Thailand,30.5,,,,Y,bearish,-37.0
+784,POLI.TA,Bank Hapoalim,Israel,30.5,,,,Y,bearish,-99.0
+785,CPI.JO,Capitec Bank,South Africa,30.5,,,,Y,bearish,-99.0
+786,BAJAJ-AUTO.NS,Bajaj Auto,India,30.4,,,,Y,bullish,-11.0
+787,DTE,DTE Energy,United States,30.3,,Y,Y,Y,bearish,-35.0
+788,AEE,Ameren,United States,30.2,,Y,Y,Y,bullish,-7.0
+789,TECK,Teck Resources,Canada,30.2,,,Y,Y,bullish,103.0
+790,EL,Estee Lauder,United States,30.2,,Y,Y,Y,no_earnings,
+791,EXPGF,Experian,Ireland,30.1,,,,Y,bullish,70.0
+792,SBK.JO,Standard Bank Group,South Africa,30.1,,,,Y,bearish,-98.0
+793,SAAB-B.ST,SAAB AB,Sweden,30.1,,,,Y,bearish,-25.0
+794,SIKA.SW,Sika,Switzerland,30.1,,,,Y,bullish,-10.0
+795,KNEBV.HE,KONE,Finland,30.1,,,,Y,bearish,-20.0
+796,300124.SZ,Shenzhen Inovance,China,30.0,,,,Y,bearish,-31.0
+797,TCOM,Trip.com,China,30.0,,,Y,Y,bullish,251.0
+798,VICI,VICI Properties,United States,30.0,,Y,Y,Y,bullish,115.0
+799,FSLR,First Solar,United States,30.0,,Y,Y,Y,bullish,156.0
+800,8802.T,Mitsubishi Estate,Japan,30.0,,,,Y,bearish,-43.0
+801,RBLX,Roblox,United States,29.9,,,Y,Y,no_earnings,
+802,002714.SZ,Muyuan Foods,China,29.9,,,,Y,bullish,137.0
+803,III.L,3i Group,United Kingdom,29.9,,,,Y,bearish,-97.0
+804,DSY.PA,Dassault Systèmes,France,29.8,,,,Y,bearish,-23.0
+805,002142.SZ,Bank of Ningbo,China,29.8,,,,Y,bullish,224.0
+806,CPRT,Copart,United States,29.8,Y,Y,Y,Y,bearish,-28.0
+807,ZM,Zoom,United States,29.8,,,Y,Y,bullish,-1.0
+808,Q,Qnity Electronics,United States,29.7,,Y,Y,Y,bearish,-42.0
+809,9992.HK,Pop Mart International Group,China,29.7,,,,Y,bullish,117.0
+810,ADYEN.AS,Adyen,Netherlands,29.7,,,,Y,bullish,4.0
+811,HAL.NS,Hindustan Aeronautics,India,29.7,,,,Y,bearish,-42.0
+812,8308.T,Resona Holdings,Japan,29.7,,,,Y,bearish,-33.0
+813,FNLPF,Fresnillo,Mexico,29.7,,,,Y,bullish,115.0
+814,RYAAY,Ryanair,Ireland,29.7,,,Y,Y,bullish,42.0
+815,AMRZ,Amrize,Switzerland,29.7,,,Y,Y,bullish,-1.0
+816,002050.SZ,Zhejiang Sanhua Intelligent Controls Co.,China,29.6,,,,Y,bearish,-53.0
+817,RJF,Raymond James Financial,United States,29.5,,Y,Y,Y,bullish,58.0
+818,SLHN.SW,Swiss Life,Switzerland,29.5,,,,Y,bullish,-2.0
+819,CBOE,Cboe Global Markets,United States,29.5,,Y,Y,Y,bullish,83.0
+820,2802.T,Ajinomoto,Japan,29.5,,,,Y,bullish,29.0
+821,ICTEF,International Container Terminal Service,Philippines,29.5,,,,Y,bullish,33.0
+822,603288.SS,Foshan Haitian Flavouring and Food,China,29.4,,,,Y,bearish,-42.0
+823,VIE.PA,Veolia,France,29.4,,,,Y,bearish,-12.0
+824,GEHC,GE HealthCare Technologies,United States,29.4,Y,Y,Y,Y,bullish,8.0
+825,TLX.DE,Talanx,Germany,29.4,,,,Y,bullish,134.0
+826,REP.MC,Repsol,Spain,29.2,,,,Y,bullish,328.0
+827,KOG.OL,Kongsberg Gruppen,Norway,29.0,,,,Y,bearish,-78.0
+828,DOV,Dover Corporation,United States,28.9,,Y,Y,Y,bearish,-30.0
+829,BIIB,Biogen,United States,28.8,,Y,Y,Y,bullish,76.0
+830,601668.SS,China State Construction Engineering,China,28.8,,,,Y,bullish,139.0
+831,0762.HK,China Unicom,Hong Kong,28.8,,,,Y,bullish,38.0
+832,MTZ,MasTec,United States,28.8,,,Y,Y,bearish,-28.0
+833,BAJAJFINSV.NS,Bajaj Finserv,India,28.7,,,,Y,bullish,-2.0
+834,KNIN.SW,Kühne + Nagel,Switzerland,28.6,,,,Y,bearish,-37.0
+835,SHB-A.ST,Svenska Handelsbanken,Sweden,28.5,,,,Y,bullish,15.0
+836,DMART.NS,DMart,India,28.5,,,,Y,bearish,-67.0
+837,FTS,Fortis,Canada,28.5,,,Y,Y,bearish,-40.0
+838,RMD,ResMed,United States,28.4,,Y,Y,Y,bullish,8.0
+839,ATO,Atmos Energy,United States,28.4,,Y,Y,Y,bullish,8.0
+840,PBA,Pembina Pipeline,Canada,28.4,,,Y,Y,bearish,-48.0
+841,IMB.L,Imperial Brands,United Kingdom,28.4,,,,Y,bearish,-99.0
+842,TPR,Tapestry,United States,28.3,,Y,Y,Y,bullish,8.0
+843,IR,Ingersoll Rand,Ireland,28.3,,Y,Y,Y,bearish,-65.0
+844,4568.T,Daiichi Sankyō,Japan,28.3,,,,Y,bearish,-30.0
+845,CASY,Casey's General Stores,United States,28.2,,Y,Y,Y,bullish,-18.0
+846,EIX,Edison International,United States,28.2,,Y,Y,Y,bullish,56.0
+847,MDB,MongoDB,United States,28.2,,,Y,Y,no_earnings,
+848,GFNORTEO.MX,Banorte,Mexico,28.2,,,,Y,bullish,67.0
+849,VEEV,Veeva Systems,United States,28.2,,Y,Y,Y,bearish,-29.0
+850,NESTLEIND.NS,Nestlé India,India,28.2,,,,Y,bearish,-66.0
+851,601066.SS,China Securities (CSC Financial),China,28.1,,,,Y,bullish,150.0
+852,DXCM,DexCom,United States,28.1,Y,Y,Y,Y,bullish,17.0
+853,HM-B.ST,H&amp;M,Sweden,28.0,,,,Y,bearish,-14.0
+854,ONC,BeOne Medicines,United States,28.0,,,Y,Y,bearish,-24.0
+855,TSEM,Tower Semiconductor,Israel,28.0,,,Y,Y,bearish,-58.0
+856,BPE.MI,BPER Banca,Italy,28.0,,,,Y,bullish,12.0
+857,POWERGRID.NS,Powergrid Corporation of India,India,28.0,,,,Y,bullish,29.0
+858,WN.TO,George Weston,Canada,28.0,,,,Y,bearish,-44.0
+859,CNP,CenterPoint Energy,United States,27.9,,Y,Y,Y,bearish,-29.0
+860,TDY,Teledyne Technologies,United States,27.9,,Y,Y,Y,bearish,-35.0
+861,ITSA3.SA,Itaúsa,Brazil,27.7,,,,Y,bullish,152.0
+862,000063.SZ,ZTE,China,27.7,,,,Y,bearish,-59.0
+863,2885.TW,Yuanta Financial Holding,Taiwan,27.6,,,,Y,bullish,94.0
+864,GMKN.ME,Nornickel,Russia,27.5,,,,Y,bullish,622.0
+865,EXPE,Expedia Group,United States,27.5,,Y,Y,Y,bullish,58.0
+866,600690.SS,Haier Smart Home,China,27.3,,,,Y,bullish,23.0
+867,601818.SS,China Everbright Bank,China,27.3,,,,Y,bullish,122.0
+868,601985.SS,China National Nuclear Power,China,27.3,,,,Y,bearish,-45.0
+869,0669.HK,Techtronic Industries,Hong Kong,27.3,,,,Y,bullish,10.0
+870,EMAAR.AE,Emaar Properties,United Arab Emirates,27.3,,,,Y,bullish,406.0
+871,NRG,NRG Energy,United States,27.3,,Y,Y,Y,bearish,-85.0
+872,CPNG,Coupang,United States,27.2,,,Y,Y,no_earnings,
+873,TATASTEEL.NS,Tata Steel,India,27.2,,,,Y,bullish,93.0
+874,ASIANPAINT.NS,Asian Paints,India,27.1,,,,Y,bearish,-60.0
+875,SAMPO.HE,Sampo,Finland,27.1,,,,Y,bullish,41.0
+876,CW,Curtiss-Wright,United States,27.1,,,Y,Y,bearish,-54.0
+877,601600.SS,Aluminum Corporation of China,China,27.1,,,,Y,bullish,271.0
+878,STRL,Sterling Infrastructure,United States,27.1,,,Y,Y,bearish,-41.0
+879,CFG,Citizens Financial Group,United States,27.1,,Y,Y,Y,bullish,204.0
+880,OTIS,Otis Worldwide,United States,27.0,,Y,Y,Y,bullish,18.0
+881,AVB,AvalonBay Communities,United States,26.9,,Y,Y,Y,bearish,-24.0
+882,PPL,PPL,United States,26.9,,Y,Y,Y,bullish,-18.0
+883,TPL,Texas Pacific Land Corporation,United States,26.9,,Y,Y,Y,bearish,-46.0
+884,3382.T,7-Eleven,Japan,26.9,,,,Y,bearish,-21.0
+885,JBHT,J. B. Hunt,United States,26.9,,Y,Y,Y,bullish,-15.0
+886,FE,FirstEnergy,United States,26.9,,Y,Y,Y,bearish,-28.0
+887,VRSN,VeriSign,United States,26.8,,Y,Y,Y,bearish,-38.0
+888,LISP.SW,Chocoladefabriken Lindt &amp; Sprüngli,Switzerland,26.8,,,,Y,bearish,-40.0
+889,KHC,Kraft Heinz,United States,26.8,Y,Y,Y,Y,no_earnings,
+890,1605.T,Inpex,Japan,26.7,,,,Y,bullish,11.0
+891,AMS.MC,Amadeus IT Group,Spain,26.7,,,,Y,bullish,1.0
+892,LICI.NS,Life Insurance Corporation of India (LIC,India,26.6,,,,Y,bullish,170.0
+893,FTI,TechnipFMC,United Kingdom,26.6,,,Y,Y,bullish,25.0
+894,AM.PA,Dassault Aviation,France,26.6,,,,Y,bullish,21.0
+895,SYM,Symbotic,United States,26.6,,,Y,Y,no_earnings,
+896,ES,Eversource Energy,United States,26.6,,Y,Y,Y,bullish,12.0
+897,600111.SS,China Northern Rare Earth (CNREHT),China,26.5,,,,Y,bearish,-29.0
+898,ADANIGREEN.NS,Adani Green Energy,India,26.5,,,,Y,bearish,-71.0
+899,5108.T,Bridgestone,Japan,26.5,,,,Y,bullish,62.0
+900,EBK.DE,EnBW Energie,Germany,26.4,,,,Y,bearish,-88.0
+901,FICO,Fair Isaac (FICO),United States,26.4,,Y,Y,Y,bullish,28.0
+902,NZYM.VI,Novonesis,Denmark,26.4,,,,Y,bearish,-54.0
+903,MTSI,MACOM Technology Solutions,United States,26.4,,,Y,Y,bearish,-69.0
+904,EQR,Equity Residential,United States,26.3,,Y,Y,Y,bearish,-54.0
+905,4901.T,Fujifilm,Japan,26.3,,,,Y,bullish,-0.0
+906,NVT,nVent Electric,United Kingdom,26.3,,,Y,Y,bearish,-40.0
+907,S63.SI,ST Engineering,Singapore,26.3,,,,Y,bearish,-65.0
+908,1303.TW,Nan Ya Plastics,Taiwan,26.3,,,,Y,bearish,-75.0
+909,QNBTR.IS,QNB Finansbank,Turkey,26.3,,,,Y,bullish,83.0
+910,VWS.CO,Vestas Wind Systems,Denmark,26.3,,,,Y,bullish,69.0
+911,2020.HK,Anta Sports,China,26.2,,,,Y,bullish,55.0
+912,BT-A.L,BT Group,United Kingdom,26.2,,,,Y,bearish,-99.0
+913,XYL,Xylem,United States,26.1,,Y,Y,Y,bearish,-26.0
+914,601336.SS,New China Life Insurance,China,26.0,,,,Y,bullish,321.0
+915,002352.SZ,S.F. Express,China,26.0,,,,Y,bullish,54.0
+916,1024.HK,Kuaishou Technology,China,25.9,,,,Y,bullish,30.0
+917,300760.SZ,Mindray,China,25.9,,,,Y,bearish,-28.0
+918,BABWF,International Consolidated Airlines,Spain,25.8,,,,Y,bullish,568.0
+919,HINDALCO.NS,Hindalco Industries,India,25.7,,,,Y,bearish,-20.0
+920,XPO,XPO Logistics,United States,25.7,,,Y,Y,bearish,-39.0
+921,6273.T,SMC corp,Japan,25.7,,,,Y,bullish,74.0
+922,BAP,Credicorp,Bermuda,25.6,,,Y,Y,bullish,94.0
+923,CINF,Cincinnati Financial,United States,25.6,,Y,Y,Y,bullish,89.0
+924,WRB,W. R. Berkley,United States,25.5,,Y,Y,Y,bullish,25.0
+925,8801.T,Mitsui Fudosan,Japan,25.4,,,,Y,bearish,-16.0
+926,PHG,Philips,Netherlands,25.4,,,Y,Y,bullish,-1.0
+927,PPG,PPG Industries,United States,25.4,,Y,Y,Y,bullish,-6.0
+928,NESTE.HE,Neste,Finland,25.3,,,,Y,bullish,50.0
+929,600031.SS,Sany Heavy Industry,China,25.3,,,,Y,bearish,-36.0
+930,0175.HK,Geely,China,25.3,,,,Y,bullish,197.0
+931,8309.T,Sumitomo Mitsui Trust Holdings,Japan,25.3,,,,Y,bullish,257.0
+932,AOT.BK,Airports of Thailand,Thailand,25.3,,,,Y,bearish,-50.0
+933,TEAM,Atlassian,Australia,25.2,,,Y,Y,no_earnings,
+934,HINDZINC.NS,Hindustan Zinc,India,25.2,,,,Y,bullish,166.0
+935,TEF.MC,Telefónica,Spain,25.2,,,,Y,no_earnings,
+936,HUBB,Hubbell,United States,25.2,,Y,Y,Y,bearish,-29.0
+937,CTSH,Cognizant Technology Solutions,United States,25.2,Y,Y,Y,Y,bullish,56.0
+938,FOX,Fox Corporation,United States,25.2,,Y,Y,Y,bearish,-21.0
+939,601688.SS,Huatai Securities,China,25.2,,,,Y,bullish,355.0
+940,SMCI,Supermicro,United States,25.0,,Y,Y,Y,bullish,80.0
+941,PUB.PA,Publicis Groupe,France,25.0,,,,Y,bullish,25.0
+942,0066.HK,MTR Corporation,Hong Kong,25.0,,,,Y,bullish,-7.0
+943,WTW,Willis Towers Watson,United Kingdom,24.9,,Y,Y,Y,bullish,56.0
+944,EXO.AS,Exor,Netherlands,24.9,,,,Y,no_earnings,
+945,ETERNAL.NS,Eternal (Zomato),India,24.8,,,,Y,bearish,-93.0
+946,NBK.KW,National Bank of Kuwait,Kuwait,24.8,,,,Y,bearish,-100.0
+947,BESI.AS,BE Semiconductor,Netherlands,24.8,,,,Y,bearish,-68.0
+948,A5G.IR,AIB Group (Allied Irish Banks),Ireland,24.7,,,,Y,bullish,67.0
+949,CTRA,Coterra Energy,United States,24.7,,,,Y,bearish,-16.0
+950,HBAN.SW,Helvetia Baloise Holding AG,Switzerland,24.6,,,,Y,bearish,-27.0
+951,NMR,Nomura Holdings,Japan,24.6,,,Y,Y,bullish,36.0
+952,ILMN,Illumina,United States,24.6,,,Y,Y,bearish,-38.0
+953,BG,Bunge Global SA,United States,24.5,,Y,Y,Y,bearish,-24.0
+954,H.TO,Hydro One,Canada,24.5,,,,Y,bearish,-40.0
+955,DOW,Dow,United States,24.5,,Y,Y,Y,no_earnings,
+956,RF,Regions Financial,United States,24.4,,Y,Y,Y,bullish,86.0
+957,SRG.MI,Snam,Italy,24.3,,,,Y,bearish,-21.0
+958,AWK,American Water,United States,24.3,,Y,Y,Y,bullish,-18.0
+959,STZ,Constellation Brands,United States,24.3,,Y,Y,Y,bullish,-3.0
+960,ATI,ATI Inc.,United States,24.2,,,Y,Y,bearish,-30.0
+961,HEXA-B.ST,Hexagon AB,Sweden,24.2,,,,Y,bullish,103.0
+962,FRE.DE,Fresenius,Germany,24.2,,,,Y,bullish,36.0
+963,WRT1V.HE,Wärtsilä,Finland,24.2,,,,Y,bearish,-31.0
+964,OMV.F,OMV,Austria,24.2,,,,Y,bullish,155.0
+965,4503.T,Astellas Pharma,Japan,24.1,,,,Y,bullish,-7.0
+966,WSM,Williams-Sonoma,United States,24.1,,Y,Y,Y,bearish,-28.0
+967,NHY.OL,Norsk Hydro,Norway,24.1,,,,Y,bearish,-52.0
+968,AV.L,Aviva,United Kingdom,24.1,,,,Y,bearish,-99.0
+969,IHG,InterContinental Hotels Group,United Kingdom,24.1,,,Y,Y,bearish,-25.0
+970,FCNCA,First Citizens BancShares,United States,24.0,,,Y,Y,bullish,91.0
+971,CRS,Carpenter Technology,United States,24.0,,,Y,Y,bullish,-10.0
+972,FTAI,FTAI Aviation,United States,24.0,,,Y,Y,bullish,-1.0
+973,SYF,Synchrony Financial,United States,23.8,,Y,Y,,bullish,214.0
+974,VRSK,Verisk Analytics,United States,23.8,Y,Y,Y,,bearish,-38.0
+975,KEY,KeyCorp (KeyBank),United States,23.6,,Y,Y,,bullish,148.0
+976,BEP,Brookfield Renewable Partners,Bermuda,23.5,,,Y,,no_earnings,
+977,HPQ,HP,United States,23.4,,Y,Y,,bullish,31.0
+978,UTHR,United Therapeutics,United States,23.3,,,Y,,bearish,-39.0
+979,MTD,Mettler Toledo,United States,23.3,,Y,Y,,bearish,-29.0
+980,LPLA,LPL Financial,United States,23.1,,,Y,,bullish,-2.0
+981,CHD,Church & Dwight,United States,22.9,,Y,Y,,bearish,-48.0
+982,DG,Dollar General,United States,22.9,,Y,Y,,bullish,28.0
+983,BCE,BCE Inc.,Canada,22.8,,,Y,,bullish,148.0
+984,MKL,Markel Group,United States,22.8,,,Y,,bullish,16.0
+985,PFG,Principal Financial Group,United States,22.7,,Y,Y,,bullish,49.0
+986,TROW,T. Rowe Price,United States,22.7,,Y,Y,,bullish,14.0
+987,CPAY,Corpay,United States,22.7,,Y,Y,,bullish,84.0
+988,DRI,Darden Restaurants,United States,22.7,,Y,Y,,bullish,-16.0
+989,ROL,Rollins,United States,22.7,,Y,Y,,bearish,-51.0
+990,YPF,YPF S.A.,Argentina,22.6,,,Y,,no_earnings,
+991,PHM,PulteGroup,United States,22.6,,Y,Y,,bullish,8.0
+992,TW,Tradeweb,United States,22.4,,,Y,,bullish,6.0
+993,NI,NiSource,United States,22.3,,Y,Y,,bearish,-20.0
+994,LEN,Lennar,United States,22.3,,Y,Y,,bullish,-5.0
+995,BNTX,BioNTech,Germany,22.3,,,Y,,no_earnings,
+996,FN,Fabrinet,Cayman Islands,22.3,,,Y,,bullish,-14.0
+997,CMS,CMS Energy,United States,22.3,,Y,Y,,bullish,-10.0
+998,WST,West Pharmaceutical Services,United States,22.2,,Y,Y,,bearish,-32.0
+999,FFIV,F5,United States,22.2,,Y,Y,,bearish,-52.0
+1000,DGX,Quest Diagnostics,United States,22.2,,Y,Y,,bullish,-12.0
+1001,L,Loews Corporation,United States,22.1,,Y,Y,,bullish,-9.0
+1002,SBAC,SBA Communications,United States,22.1,,Y,Y,,bearish,-43.0
+1003,WIT,Wipro,India,22.0,,,Y,,bullish,6.0
+1004,EXE,Expand Energy,United States,22.0,,Y,Y,,bullish,502.0
+1005,FWONK,Formula One Group,United States,22.0,,,Y,,bearish,-68.0
+1006,RIVN,Rivian,United States,22.0,,,Y,,no_earnings,
+1007,RL,Ralph Lauren,United States,21.8,,Y,Y,,bullish,-14.0
+1008,LH,LabCorp,United States,21.7,,Y,Y,,bullish,-16.0
+1009,AKAM,Akamai,United States,21.7,,Y,Y,,bearish,-75.0
+1010,CHRW,C. H. Robinson,United States,21.7,,Y,Y,,bearish,-19.0
+1011,SNX,TD Synnex,United States,21.7,,,Y,,bullish,92.0
+1012,SW,Smurfit Westrock,Ireland,21.6,,Y,Y,,bearish,-65.0
+1013,AER,AerCap,Ireland,21.6,,,Y,,bullish,262.0
+1014,SQM,Sociedad Química y Minera,Chile,21.5,,,Y,,bullish,75.0
+1015,OMC,Omnicom Group,United States,21.5,,Y,Y,,no_earnings,
+1016,CRCL,Circle Internet Group,United States,21.5,,,Y,,no_earnings,
+1017,WWD,Woodward,United States,21.3,,,Y,,bullish,-18.0
+1018,AFRM,Affirm,United States,21.3,,,Y,,bearish,-20.0
+1019,IONQ,IonQ,United States,21.2,,,Y,,bearish,-92.0
+1020,FIS,Fidelity National Information Services,United States,21.2,,Y,Y,,bullish,142.0
+1021,ZS,Zscaler,United States,21.1,Y,,Y,,no_earnings,
+1022,VLTO,Veralto,United States,21.1,,Y,Y,,bullish,-12.0
+1023,EXPD,Expeditors International,United States,21.0,,Y,Y,,bullish,-10.0
+1024,DLTR,Dollar Tree,United States,20.9,,Y,Y,,bullish,15.0
+1025,LYB,LyondellBasell,United States,20.8,,Y,Y,,no_earnings,
+1026,OKTA,Okta,United States,20.8,,,Y,,bearish,-75.0
+1027,EFX,Equifax,United States,20.8,,Y,Y,,bullish,-0.0
+1028,STE,Steris,Ireland,20.7,,Y,Y,,bearish,-26.0
+1029,CHTR,Charter Communications,United States,20.7,Y,Y,Y,,bullish,432.0
+1030,TSN,Tyson Foods,United States,20.7,,Y,Y,,bearish,-53.0
+1031,STLA,Stellantis,Netherlands,20.6,,,Y,,no_earnings,
+1032,SOFI,SoFi,United States,20.6,,,Y,,bullish,29.0
+1033,ROIV,Roivant Sciences,United Kingdom,20.6,,,Y,,no_earnings,
+1034,VIV,Telefonica Brasil,Brazil,20.5,,,Y,,bullish,74.0
+1035,INCY,Incyte,United States,20.5,,Y,Y,,bullish,96.0
+1036,INSM,Insmed,United States,20.4,Y,,Y,,no_earnings,
+1037,MKSI,MKS Instruments,United States,20.4,,,Y,,bearish,-27.0
+1038,RCI,Rogers Communications,Canada,20.3,,,Y,,bullish,279.0
+1039,LUV,Southwest Airlines,United States,20.3,,Y,Y,,bullish,66.0
+1040,IOT,Samsara,United States,20.3,,,Y,,bearish,-88.0
+1041,RS,Reliance,United States,20.1,,,Y,,bullish,79.0
+1042,MAIR,Madison Air Solutions,United States,20.1,,,Y,,bearish,-72.0
+1043,ULTA,ULTA Beauty,United States,20.1,,Y,Y,,bullish,26.0
+1044,PAAS,Pan American Silver,Canada,20.0,,,Y,,bullish,207.0
+1045,NXT,Nextpower,United States,20.0,,,Y,,bearish,-51.0
+1046,BRO,Brown &amp; Brown,United States,20.0,,Y,Y,,bullish,-15.0
+1047,BURL,Burlington Stores,United States,19.9,,,Y,,bullish,-18.0
+1048,PKG,Packaging Corporation of America,United States,19.9,,Y,Y,,bearish,-40.0
+1049,AS,Amer Sports,Finland,19.8,,,Y,,bullish,-10.0
+1050,ESS,Essex Property Trust,United States,19.7,,Y,Y,,bearish,-59.0
+1051,SNA,Snap-on,United States,19.7,,Y,Y,,bullish,-19.0
+1052,ULS,UL Solutions,United States,19.5,,,Y,,bearish,-54.0
+1053,RBA,RB Global,Canada,19.5,,,Y,,bearish,-58.0
+1054,IREN,IREN (Iris Energy),Australia,19.4,,,Y,,bearish,-82.0
+1055,TU,Telus,Canada,19.2,,,Y,,bearish,-56.0
+1056,DKS,Dick's Sporting Goods,United States,19.2,,,Y,,bullish,-7.0
+1057,EVRG,Evergy,United States,19.2,,Y,Y,,bullish,-6.0
+1058,ENTG,Entegris,United States,19.1,,,Y,,bearish,-36.0
+1059,DD,Dupont De Nemours,United States,19.0,,Y,Y,,bearish,-68.0
+1060,AA,Alcoa,United States,19.0,,,Y,,bearish,-33.0
+1061,FPS,Forgent Power Solutions,United States,18.9,,,Y,,bearish,-98.0
+1062,MRNA,Moderna,United States,18.8,,Y,Y,,no_earnings,
+1063,LNT,Alliant Energy,United States,18.8,,Y,Y,,bearish,-26.0
+1064,SBS,Sabesp,Brazil,18.8,,,Y,,bullish,138.0
+1065,FTV,Fortive,United States,18.7,,Y,Y,,bearish,-51.0
+1066,RBC,RBC Bearings,United States,18.7,,,Y,,bearish,-60.0
+1067,IFF,International Flavors & Fragrances,United States,18.6,,Y,Y,,bearish,-23.0
+1068,USFD,US Foods,United States,18.6,,,Y,,bullish,-4.0
+1069,PKX,POSCO,South Korea,18.6,,,Y,,bullish,38.0
+1070,LSCC,Lattice Semiconductor,United States,18.6,,,Y,,bearish,-95.0
+1071,VTRS,Viatris,United States,18.5,,Y,Y,,no_earnings,
+1072,BCH,Banco de Chile,Chile,18.4,,,Y,,bullish,-14.0
+1073,ALB,Albemarle,United States,18.3,,Y,Y,,no_earnings,
+1074,APG,APi Group,United States,18.2,,,Y,,no_earnings,
+1075,H,Hyatt Hotels,United States,18.2,,,Y,,no_earnings,
+1076,GPN,Global Payments,United States,18.1,,Y,Y,,bullish,3.0
+1077,ROKU,Roku,United States,18.1,,,Y,,bearish,-50.0
+1078,CX,Cemex,Mexico,18.0,,,Y,,bearish,-39.0
+1079,MGA,Magna International,Canada,18.0,,,Y,,bullish,-9.0
+1080,BEKE,KE Holdings,China,17.9,,,Y,,bullish,26.0
+1081,INVH,Invitation Homes,United States,17.8,,Y,Y,,bearish,-61.0
+1082,IP,International Paper,United States,17.8,,Y,Y,,no_earnings,
+1083,DOCN,DigitalOcean,United States,17.7,,,Y,,bearish,-83.0
+1084,LII,Lennox,United States,17.7,,Y,Y,,bearish,-30.0
+1085,GIS,General Mills,United States,17.7,,Y,Y,,bullish,53.0
+1086,WY,Weyerhaeuser,United States,17.7,,Y,Y,,bullish,6.0
+1087,AMCR,Amcor,Switzerland,17.6,,Y,Y,,bearish,-41.0
+1088,BR,Broadridge Financial Solutions,United States,17.5,,Y,Y,,bullish,33.0
+1089,RGLD,Royal Gold,United States,17.5,,,Y,,bullish,85.0
+1090,WES,Western Midstream,United States,17.5,,,Y,,bullish,23.0
+1091,CF,CF Industries,United States,17.4,,Y,Y,,bullish,351.0
+1092,FLUT,Flutter Entertainment,Ireland,17.4,,,Y,,no_earnings,
+1093,TTMI,TTM Technologies,United States,17.4,,,Y,,bearish,-49.0
+1094,WCC,WESCO International,United States,17.3,,,Y,,bullish,47.0
+1095,EWBC,East West Bancorp,United States,17.3,,,Y,,bullish,76.0
+1096,ITT,ITT,United States,17.2,,,Y,,bearish,-20.0
+1097,HST,Host Hotels & Resorts,United States,17.1,,Y,Y,,bullish,110.0
+1098,ZTO,ZTO Express,China,17.1,,,Y,,bullish,61.0
+1099,BWXT,BWX Technologies,United States,17.0,,,Y,,bearish,-44.0
+1100,NWS,News Corp,United States,17.0,,Y,Y,,bearish,-24.0
+1101,CDW,CDW Corporation,United States,17.0,,Y,Y,,bullish,11.0
+1102,SN,SharkNinja,United States,17.0,,,Y,,bullish,-0.0
+1103,ZBH,Zimmer Biomet,United States,16.9,,Y,Y,,bearish,-26.0
+1104,CDE,Coeur Mining,United States,16.9,,,Y,,bullish,249.0
+1105,SSNC,SS&C Technologies,United States,16.8,,,Y,,bullish,-13.0
+1106,NVR,NVR,United States,16.7,,Y,Y,,bullish,-18.0
+1107,TLN,Talen Energy,United States,16.7,,,Y,,no_earnings,
+1108,GH,Guardant Health,United States,16.7,,,Y,,no_earnings,
+1109,WPC,W. P. Carey,United States,16.6,,,Y,,bullish,-15.0
+1110,SITM,SiTime,United States,16.5,,,Y,,no_earnings,
+1111,PR,Permian Resources,United States,16.5,,,Y,,bullish,-11.0
+1112,NBIX,Neurocrine Biosciences,United States,16.5,,,Y,,bullish,83.0
+1113,MAA,Mid-America Apartment Communities,United States,16.4,,Y,Y,,bearish,-70.0
+1114,KIM,Kimco Realty,United States,16.3,,Y,Y,,bearish,-29.0
+1115,VNOM,Viper Energy,United States,16.3,,,Y,,no_earnings,
+1116,BEN,Franklin Resources,United States,16.3,,Y,Y,,bullish,50.0
+1117,LOGI,Logitech,Switzerland,16.2,,,Y,,bearish,-38.0
+1118,ARXS,"Arxis, Inc.",United States,16.2,,,Y,,bearish,-98.0
+1119,AMKR,Amkor Technology,United States,16.1,,,Y,,bullish,24.0
+1120,PAA,Plains All American Pipeline,United States,15.9,,,Y,,bullish,1.0
+1121,IEX,IDEX,United States,15.9,,Y,Y,,bearish,-41.0
+1122,OVV,Ovintiv,United States,15.9,,,Y,,bullish,147.0
+1123,KEP,Korea Electric Power,South Korea,15.9,,,Y,,bullish,468.0
+1124,TXT,Textron,United States,15.8,,Y,Y,,bullish,18.0
+1125,GEN,Gen Digital,United States,15.8,,Y,Y,,bullish,40.0
+1126,TPG,TPG Inc.,United States,15.8,,,Y,,bearish,-82.0
+1127,PTC,PTC,United States,15.8,,Y,Y,,bullish,35.0
+1128,SUI,Sun Communities,United States,15.8,,,Y,,no_earnings,
+1129,NDSN,Nordson,United States,15.8,,Y,Y,,bearish,-38.0
+1130,RMBS,Rambus,United States,15.7,,,Y,,bearish,-55.0
+1131,CG,Carlyle Group,United States,15.7,,,Y,,bullish,-17.0
+1132,LDOS,Leidos,United States,15.7,,Y,Y,,bullish,25.0
+1133,TSCO,Tractor Supply,United States,15.6,,Y,Y,,bullish,-1.0
+1134,WMG,Warner Music Group,United States,15.6,,,Y,,bullish,29.0
+1135,NLY,Annaly Capital Management,United States,15.5,,,Y,,bullish,110.0
+1136,GMAB,Genmab,Denmark,15.4,,,Y,,bearish,-35.0
+1137,GNRC,Generac,United States,15.4,,Y,Y,,bearish,-44.0
+1138,LAMR,Lamar Advertising,United States,15.4,,,Y,,bearish,-42.0
+1139,TLK,Telkom Indonesia,Indonesia,15.3,,,Y,,bearish,-27.0
+1140,OWL,Blue Owl Capital,United States,15.3,,,Y,,bearish,-74.0
+1141,PFGC,Performance Food Group,United States,15.3,,,Y,,bearish,-69.0
+1142,XPEV,XPeng,China,15.2,,,Y,,no_earnings,
+1143,NVMI,Nova Ltd.,Israel,15.1,,,Y,,bearish,-45.0
+1144,RBRK,Rubrik,United States,15.1,,,Y,,no_earnings,
+1145,WSO,Watsco,United States,15.1,,,Y,,bearish,-51.0
+1146,BBY,Best Buy,United States,15.1,,Y,Y,,bullish,37.0
+1147,YUMC,Yum China,China,15.1,,,Y,,bullish,34.0
+1148,DECK,Deckers Brands,United States,15.0,,Y,Y,,bullish,10.0
+1149,JAZZ,Jazz Pharmaceuticals,Ireland,15.0,,,Y,,bearish,-98.0
+1150,CLH,Clean Harbors,United States,15.0,,,Y,,bearish,-47.0
+1151,AGI,Alamos Gold,Canada,14.9,,,Y,,bullish,226.0
+1152,BWA,BorgWarner,United States,14.9,,,Y,,bearish,-46.0
+1153,TME,Tencent Music Entertainment,China,14.9,,,Y,,bullish,47.0
+1154,WF,Woori Financial Group,South Korea,14.7,,,Y,,bullish,161.0
+1155,MLI,Mueller Industries,United States,14.7,,,Y,,bullish,165.0
+1156,MOD,Modine Manufacturing,United States,14.6,,,Y,,bearish,-62.0
+1157,PNFP,Pinnacle Financial Partners,United States,14.6,,,Y,,bullish,85.0
+1158,DTM,DT Midstream,United States,14.5,,,Y,,bearish,-33.0
+1159,REG,Regency Centers,United States,14.5,,Y,Y,,bearish,-45.0
+1160,UDR,UDR Apartments,United States,14.5,,Y,Y,,bullish,73.0
+1161,APTV,Aptiv,Ireland,14.5,,Y,Y,,bearish,-70.0
+1162,NTNX,Nutanix,United States,14.5,,,Y,,bearish,-51.0
+1163,J,Jacobs Engineering,United States,14.5,,Y,Y,,bearish,-27.0
+1164,LI,Li Auto,China,14.4,,,Y,,no_earnings,
+1165,SKM,SK Telecom,South Korea,14.4,,,Y,,bearish,-78.0
+1166,LECO,Lincoln Electric,United States,14.4,,,Y,,bearish,-24.0
+1167,IESC,IES Holdings,United States,14.4,,,Y,,bullish,20.0
+1168,SGI,Somnigroup International,United States,14.3,,,Y,,bullish,15.0
+1169,PS,Pershing Square Inc.,United States,14.3,,,Y,,no_earnings,
+1170,TOST,Toast,United States,14.3,,,Y,,bullish,25.0
+1171,AAOI,Applied Optoelectronics,United States,14.2,,,Y,,no_earnings,
+1172,LTM,LATAM Airlines,Chile,14.1,,,Y,,bullish,452.0
+1173,BSAC,Banco Santander-Chile,Chile,14.1,,,Y,,bullish,72.0
+1174,CHKP,Check Point Software,Israel,14.1,,,Y,,bullish,18.0
+1175,GIB,CGI,Canada,14.1,,,Y,,bullish,55.0
+1176,BALL,Ball Corporation,United States,14.1,,Y,Y,,bullish,49.0
+1177,SMTC,Semtech,United States,14.1,,,Y,,no_earnings,
+1178,ARMK,Aramark,United States,14.0,,,Y,,bullish,-10.0
+1179,SOLV,Solventum,United States,14.0,,Y,Y,,bullish,78.0
+1180,MAS,Masco,United States,14.0,,Y,Y,,bullish,17.0
+1181,CSL,Carlisle Companies,United States,14.0,,,Y,,bullish,-10.0
+1182,DY,Dycom Industries,United States,14.0,,,Y,,bullish,4.0
+1183,THC,Tenet Healthcare,United States,14.0,,,Y,,bullish,98.0
+1184,UNM,Unum,United States,13.9,,,Y,,bullish,12.0
+1185,OHI,Omega Healthcare Investors,United States,13.9,,,Y,,bearish,-33.0
+1186,TIGO,Millicom,Luxembourg,13.8,,,Y,,bullish,240.0
+1187,CSGP,CoStar Group,United States,13.8,,Y,Y,,bearish,-90.0
+1188,HTHT,H World Group Limited,China,13.8,,,Y,,bullish,33.0
+1189,JLL,Jones Lang LaSalle,United States,13.7,,,Y,,bullish,114.0
+1190,AMH,AMH (American Homes 4 Rent),United States,13.7,,,Y,,bearish,-54.0
+1191,GRAB,Grab Holdings,Singapore,13.7,,,Y,,bearish,-45.0
+1192,LULU,lululemon athletica,Canada,13.7,,Y,Y,,bullish,34.0
+1193,GPC,Genuine Parts Company,United States,13.7,,Y,Y,,bearish,-93.0
+1194,DOC,Healthpeak Properties,United States,13.6,,Y,Y,,bearish,-25.0
+1195,TRU,TransUnion,United States,13.6,,,Y,,bullish,38.0
+1196,PAC,Grupo Aeroportuario del Pacífico,Mexico,13.6,,,Y,,bullish,29.0
+1197,RRX,Regal Rexnord,United States,13.6,,,Y,,bearish,-55.0
+1198,SANM,Sanmina,United States,13.5,,,Y,,bullish,-14.0
+1199,ARCC,Ares Capital,United States,13.5,,,Y,,bullish,8.0
+1200,RPM,RPM International,United States,13.4,,,Y,,bearish,-27.0
+1201,NIO,NIO,China,13.4,,,Y,,no_earnings,
+1202,RGA,Reinsurance Group of America,United States,13.4,,,Y,,bullish,140.0
+1203,GLPI,Gaming and Leisure Properties,United States,13.4,,,Y,,bullish,109.0
+1204,CNH,CNH Industrial,United Kingdom,13.3,,,Y,,bearish,-63.0
+1205,EXEL,Exelixis,United States,13.2,,,Y,,bullish,49.0
+1206,BBIO,BridgeBio Pharma,United States,13.2,,,Y,,no_earnings,
+1207,EG,Everest Group,Bermuda,13.2,,Y,Y,,bullish,296.0
+1208,JHX,James Hardie Industries,Ireland,13.1,,,Y,,bearish,-69.0
+1209,COO,Cooper Companies,United States,13.1,,Y,Y,,bearish,-40.0
+1210,EVR,Evercore,United States,13.1,,,Y,,bullish,142.0
+1211,ALLY,Ally Financial,United States,13.1,,,Y,,bullish,344.0
+1212,TFII,TFI International,Canada,13.1,,,Y,,bearish,-28.0
+1213,JBS,JBS N.V.,Brazil,13.1,,,Y,,bullish,64.0
+1214,SNN,Smith & Nephew,United Kingdom,13.0,,,Y,,bullish,3.0
+1215,ASND,Ascendis Pharma,Denmark,13.0,,,Y,,bearish,-48.0
+1216,HRL,Hormel Foods,United States,13.0,,Y,Y,,bearish,-43.0
+1217,MEDP,Medpace,United States,13.0,,,Y,,bearish,-24.0
+1218,FUTU,Futu Holdings,Hong Kong,12.9,,,Y,,bullish,22.0
+1219,APA,APA Corporation,United States,12.9,,Y,Y,,bullish,441.0
+1220,TOL,Toll Brothers,United States,12.9,,,Y,,bullish,18.0
+1221,DINO,HF Sinclair,United States,12.9,,,Y,,bullish,330.0
+1222,SOLS,Solstice Advanced Materials,United States,12.9,,,Y,,bearish,-57.0
+1223,TYL,Tyler Technologies,United States,12.8,,Y,Y,,bearish,-50.0
+1224,GFL,GFL Environmental,Canada,12.8,,,Y,,bearish,-55.0
+1225,KNX,Knight-Swift Transportation,United States,12.8,,,Y,,bearish,-88.0
+1226,FNF,Fidelity National Financial,United States,12.8,,,Y,,bullish,32.0
+1227,AIZ,Assurant,United States,12.8,,Y,Y,,bullish,31.0
+1228,U,Unity Software,United States,12.7,,,Y,,no_earnings,
+1229,MKC,McCormick & Company,United States,12.7,,Y,Y,,bullish,133.0
+1230,ENLT,Enlight Renewable Energy,Israel,12.7,,,Y,,bearish,-79.0
+1231,HUT,Hut 8,Canada,12.6,,,Y,,no_earnings,
+1232,TRMB,Trimble,United States,12.6,,Y,Y,,bullish,-13.0
+1233,PEN,Penumbra,United States,12.6,,,Y,,bearish,-44.0
+1234,ONTO,Onto Innovation,United States,12.6,,,Y,,bearish,-61.0
+1235,ELS,Equity LifeStyle Properties,United States,12.5,,,Y,,bearish,-55.0
+1236,PNW,Pinnacle West Capital,United States,12.5,,Y,Y,,bullish,-15.0
+1237,SUN,Sunoco,United States,12.5,,,Y,,bullish,116.0
+1238,AEG,AEGON,Netherlands,12.5,,,Y,,bullish,6.0
+1239,NYT,New York Times,United States,12.4,,,Y,,bullish,-19.0
+1240,SAIA,Saia,United States,12.4,,,Y,,bearish,-28.0
+1241,AUR,Aurora Innovation,United States,12.4,,,Y,,no_earnings,
+1242,DKNG,DraftKings,United States,12.4,,,Y,,bearish,-83.0
+1243,ONON,On Holding,Switzerland,12.4,,,Y,,bullish,18.0
+1244,GL,Globe Life,United States,12.4,,Y,Y,,bullish,63.0
+1245,VICR,Vicor,United States,12.4,,,Y,,bearish,-49.0
+1246,GGG,Graco,United States,12.3,,,Y,,bearish,-34.0
+1247,DVA,DaVita,United States,12.3,,Y,Y,,bullish,149.0
+1248,DRS,Leonardo DRS,United States,12.3,,,Y,,bearish,-47.0
+1249,IONS,Ionis Pharmaceuticals,United States,12.3,,,Y,,no_earnings,
+1250,RNR,RenaissanceRe,Bermuda,12.3,,,Y,,bullish,214.0
+1251,DT,Dynatrace,United States,12.3,,,Y,,bearish,-69.0
+1252,CRBG,Corebridge Financial,United States,12.3,,,Y,,bearish,-63.0
+1253,SWK,Stanley Black &amp; Decker,United States,12.2,,Y,Y,,bearish,-22.0
+1254,MGM,MGM Resorts,United States,12.2,,Y,Y,,bearish,-81.0
+1255,IVZ,Invesco,United States,12.1,,Y,Y,,no_earnings,
+1256,ALGN,Align Technology,United States,12.0,,Y,Y,,bearish,-32.0
+1257,PINS,Pinterest,United States,12.0,,,Y,,bearish,-35.0
+1258,COKE,Coca-Cola Consolidated,United States,12.0,,,Y,,bullish,87.0
+1259,AXSM,Axsome Therapeutics,United States,12.0,,,Y,,no_earnings,
+1260,HAS,Hasbro,United States,11.9,,Y,Y,,no_earnings,
+1261,WULF,TeraWulf,United States,11.9,,,Y,,no_earnings,
+1262,ERIE,Erie Indemnity,United States,11.9,,Y,Y,,bearish,-20.0
+1263,AVY,Avery Dennison,United States,11.9,,Y,Y,,bullish,-8.0
+1264,FMS,Fresenius Medical Care,Germany,11.8,,,Y,,bullish,115.0
+1265,PNR,Pentair,United Kingdom,11.8,,Y,Y,,bullish,3.0
+1266,CNA,CNA Financial,United States,11.8,,,Y,,bullish,27.0
+1267,ELAN,Elanco,United States,11.8,,,Y,,no_earnings,
+1268,AEIS,Advanced Energy,United States,11.8,,,Y,,bearish,-25.0
+1269,CACI,CACI International Inc,United States,11.7,,,Y,,bullish,-6.0
+1270,VIAV,VIAVI Solutions,United States,11.7,,,Y,,no_earnings,
+1271,WBS,Webster Financial,United States,11.7,,,Y,,bullish,82.0
+1272,AGNC,AGNC Investment,United States,11.7,,,Y,,bullish,58.0
+1273,AIT,Applied Industrial Technologies,United States,11.7,,,Y,,bearish,-45.0
+1274,GWRE,Guidewire Software,United States,11.6,,,Y,,bearish,-60.0
+1275,LFUS,Littelfuse,United States,11.6,,,Y,,no_earnings,
+1276,HII,Huntington Ingalls Industries,United States,11.5,,Y,Y,,bullish,20.0
+1277,FIG,Figma,United States,11.5,,,Y,,no_earnings,
+1278,EQH,Equitable Holdings,United States,11.5,,,Y,,no_earnings,
+1279,PL,Planet Labs,United States,11.5,,,Y,,no_earnings,
+1280,FHN,First Horizon Corporation,United States,11.5,,,Y,,bullish,95.0
+1281,SMMT,Summit Therapeutics,United Kingdom,11.5,,,Y,,no_earnings,
+1282,ICLR,ICON plc,Ireland,11.4,,,Y,,bearish,-76.0
+1283,PSKY,Paramount Skydance,United States,11.4,,Y,Y,,bearish,-90.0
+1284,QXO,"QXO, Inc.",United States,11.4,,,Y,,no_earnings,
+1285,SPXC,SPX Technologies,United States,11.4,,,Y,,bearish,-48.0
+1286,BJ,BJ's Wholesale Club,United States,11.4,,,Y,,bearish,-31.0
+1287,JEF,Jefferies Financial Group,United States,11.4,,,Y,,bullish,99.0
+1288,CLX,Clorox,United States,11.4,,Y,Y,,bullish,-7.0
+1289,BTSG,BrightSpring Health Services,United States,11.3,,,Y,,bearish,-38.0
+1290,APLD,Applied Digital,United States,11.3,,,Y,,no_earnings,
+1291,BLD,TopBuild,United States,11.3,,,Y,,bearish,-45.0
+1292,PAG,Penske Automotive Group,United States,11.2,,,Y,,bullish,6.0
+1293,MDGL,Madrigal Pharmaceuticals,United States,11.2,,,Y,,no_earnings,
+1294,TXRH,Texas Roadhouse,United States,11.2,,,Y,,bearish,-26.0
+1295,ARW,Arrow Electronics,United States,11.2,,,Y,,bullish,194.0
+1296,ALLE,Allegion,Ireland,11.2,,Y,Y,,bullish,1.0
+1297,GDDY,GoDaddy,United States,11.2,,Y,Y,,bullish,85.0
+1298,CPT,Camden Property Trust,United States,11.2,,Y,Y,,bearish,-30.0
+1299,BXP,"BXP, Inc.",United States,11.1,,Y,Y,,bullish,47.0
+1300,SWKS,Skyworks Solutions,United States,11.1,,Y,Y,,bearish,-60.0
+1301,ZBRA,Zebra Technologies,United States,11.1,,Y,Y,,bearish,-23.0
+1302,SJM,J.M. Smucker Company,United States,11.0,,Y,Y,,no_earnings,
+1303,RDY,Dr. Reddy's Laboratories,India,11.0,,,Y,,bearish,-50.0
+1304,AR,Antero Resources,United States,11.0,,,Y,,bullish,301.0
+1305,AFG,American Financial Group,United States,11.0,,,Y,,bullish,81.0
+1306,IT,Gartner,United States,11.0,,Y,Y,,bullish,35.0
+1307,RVTY,Revvity,United States,11.0,,Y,Y,,bearish,-69.0
+1308,KTOS,Kratos Defense &amp; Security Solutions,United States,11.0,,,Y,,bearish,-87.0
+1309,BMRN,BioMarin Pharmaceutical,United States,11.0,,,Y,,bullish,13.0
+1310,FRVO,Fervo Energy Company,United States,10.9,,,Y,,no_earnings,
+1311,CR,Crane Company,United States,10.9,,,Y,,bearish,-37.0
+1312,HUBS,HubSpot,United States,10.9,,,Y,,bearish,-63.0
+1313,AAON,Aaon,United States,10.9,,,Y,,bearish,-51.0
+1314,GMED,Globus Medical,United States,10.9,,,Y,,bullish,60.0
+1315,SF,Stifel,United States,10.8,,,Y,,bullish,234.0
+1316,WLK,Westlake Corporation,United States,10.8,,,Y,,no_earnings,
+1317,WYNN,Wynn Resorts,United States,10.8,,Y,Y,,bullish,-18.0
+1318,SEIC,SEI Investments,United States,10.8,,,Y,,bullish,46.0
+1319,BPYPP,Brookfield Property Partners,Bermuda,10.7,,,Y,,bullish,160.0
+1320,LINE,Lineage,United States,10.7,,,Y,,no_earnings,
+1321,GIL,Gildan,Canada,10.7,,,Y,,bullish,7.0
+1322,FRT,Federal Realty Investment Trust,United States,10.7,,Y,Y,,bearish,-42.0
+1323,PODD,Insulet,United States,10.6,,Y,Y,,bullish,29.0
+1324,WTRG,Essential Utilities,United States,10.6,,,Y,,bearish,-30.0
+1325,SFD,Smithfield Foods,United States,10.6,,,Y,,bullish,50.0
+1326,MP,MP Materials,United States,10.5,,,Y,,no_earnings,
+1327,FIVE,Five Below,United States,10.5,,,Y,,bullish,92.0
+1328,GSAT,Globalstar,United States,10.5,,,Y,,no_earnings,
+1329,WTS,Watts Water Technologies,United States,10.5,,,Y,,bearish,-21.0
+1330,AES,AES,United States,10.5,,Y,Y,,bullish,276.0
+1331,MICC,The Magnum Ice Cream Company,Netherlands,10.5,,,Y,,bearish,-41.0
+1332,DPZ,Domino's Pizza,United States,10.4,,Y,Y,,bullish,6.0
+1333,CCK,Crown Holdings,United States,10.4,,,Y,,bullish,2.0
+1334,POWL,Powell Industries,United States,10.4,,,Y,,bearish,-62.0
+1335,VMI,Valmont Industries,United States,10.4,,,Y,,bullish,2.0
+1336,SAIL,SailPoint,United States,10.3,,,Y,,no_earnings,
+1337,EHC,Encompass Health,United States,10.3,,,Y,,bullish,13.0
+1338,WTFC,Wintrust Financial,United States,10.3,,,Y,,bullish,67.0
+1339,TIMB,TIM S.A.,Brazil,10.3,,,Y,,bullish,39.0
+1340,ARWR,Arrowhead Pharmaceuticals,United States,10.3,,,Y,,no_earnings,
+1341,R,Ryder,United States,10.3,,,Y,,bullish,4.0
+1342,AM,Antero Midstream,United States,10.2,,,Y,,bullish,-2.0
+1343,PAYP,PayPay Corporation,Japan,10.2,,,Y,,bullish,110.0
+1344,HBM,Hudbay Minerals,Canada,10.2,,,Y,,bullish,200.0
+1345,FROG,JFrog,United States,10.2,,,Y,,no_earnings,
+1346,CGNX,Cognex,United States,10.1,,,Y,,bearish,-36.0
+1347,CNM,Core &amp; Main,United States,10.1,,,Y,,bullish,-15.0
+1348,SUZ,Suzano,Brazil,10.1,,,Y,,bullish,175.0
+1349,OKLO,Oklo,United States,10.1,,,Y,,no_earnings,
+1350,MUSA,Murphy USA,United States,10.1,,,Y,,bullish,129.0
+1351,EMBJ,Embraer,Brazil,10.1,,,Y,,bullish,39.0
+1352,BAX,Baxter,United States,10.0,,Y,Y,,no_earnings,
+1353,BSY,Bentley Systems,United States,10.0,,,Y,,bearish,-37.0
+1354,WMS,Advanced Drainage Systems,United States,10.0,,,Y,,bearish,-48.0
+1355,ENSG,The Ensign Group,United States,10.0,,,Y,,bullish,-10.0
+1356,MOH,Molina Healthcare,United States,9.9,,,Y,,bearish,-76.0
+1357,GTLS,Chart Industries,United States,9.9,,,Y,,no_earnings,
+1358,HMY,Harmony Gold,South Africa,9.9,,,Y,,bullish,245.0
+1359,HL,Hecla Mining,United States,9.9,,,Y,,bullish,115.0
+1360,RGC,Regencell Bioscience,Hong Kong,9.9,,,Y,,no_earnings,
+1361,FCFS,FirstCash,United States,9.9,,,Y,,bullish,32.0
+1362,BPOP,"Popular, Inc. (Banco Popular de Puerto R",United States,9.9,,,Y,,bullish,189.0
+1363,UMBF,UMB Financial,United States,9.9,,,Y,,bullish,105.0
+1364,OGE,OGE Energy,United States,9.9,,,Y,,bearish,-27.0
+1365,GME,GameStop,United States,9.8,,,Y,,bullish,183.0
+1366,ESI,Element Solutions,United States,9.7,,,Y,,bearish,-59.0
+1367,AGX,Argan,United States,9.7,,,Y,,bearish,-30.0
+1368,BROS,Dutch Bros,United States,9.7,,,Y,,bearish,-58.0
+1369,CART,Instacart (Maplebear Inc.),United States,9.7,,,Y,,bullish,31.0
+1370,DCI,Donaldson Company,United States,9.7,,,Y,,bullish,-13.0
+1371,HLI,Houlihan Lokey,United States,9.6,,,Y,,bullish,-16.0
+1372,SCI,Service Corporation International,United States,9.6,,,Y,,bullish,-4.0
+1373,ALSN,Allison Transmission,United States,9.6,,,Y,,bullish,35.0
+1374,OC,Owens Corning,United States,9.6,,,Y,,no_earnings,
+1375,ALV,Autoliv,Sweden,9.5,,,Y,,bullish,21.0
+1376,SNAP,Snap,United States,9.5,,,Y,,no_earnings,
+1377,BAH,Booz Allen Hamilton,United States,9.5,,,Y,,bullish,70.0
+1378,BRX,Brixmor Property Group,United States,9.5,,,Y,,bullish,60.0
+1379,TTD,The Trade Desk,United States,9.4,,Y,,,bearish,-32.0
+1380,PSO,Pearson,United Kingdom,9.3,,,Y,,bullish,-8.0
+1381,FDS,FactSet,United States,9.3,,Y,,,bullish,-7.0
+1382,JKHY,Jack Henry &amp; Associates,United States,9.2,,Y,,,bullish,9.0
+1383,ARE,Alexandria Real Estate Equities,United States,8.9,,Y,,,no_earnings,
+1384,HSIC,Henry Schein,United States,8.8,,Y,,,bearish,-24.0
+1385,UHS,Universal Health Services,United States,8.8,,Y,,,bullish,206.0
+1386,CRL,Charles River Laboratories,United States,8.7,,Y,,,no_earnings,
+1387,NCLH,Norwegian Cruise Line,United States,8.6,,Y,,,bullish,-17.0
+1388,TECH,Bio-Techne,United States,8.1,,Y,,,bearish,-76.0
+1389,BLDR,Builders FirstSource,United States,7.9,,Y,,,bearish,-56.0
+1390,AOS,A. O. Smith,United States,7.9,,Y,,,neutral,-19.0
+1391,EDU,New Oriental,China,7.6,,,Y,,bullish,105.0
+1392,TAP,Molson Coors,United States,7.3,,Y,,,no_earnings,
+1393,MOS,The Mosaic Company,United States,7.1,,Y,,,bearish,-72.0
+1394,BEPC,Brookfield Renewable,United States,7.1,,,Y,,no_earnings,
+1395,POOL,POOLCORP,United States,6.8,,Y,,,bullish,-15.0
+1396,CPB,Campbell's,United States,6.5,,Y,,,bullish,5.0
+1397,CAG,Conagra Brands,United States,6.2,,Y,,,no_earnings,
+1398,KLAR,Klarna,Sweden,6.2,,,Y,,no_earnings,
+1399,CET,Central Securities,United States,1.6,,,Y,,bullish,704.0
+1400,P,"Everpure, Inc.",US,,,,Y,,bearish,-68.0
+1401,KSPI,Joint Stock Company Kaspi.kz - ,US,,,,Y,,bullish,101.0
+1402,FITBP,Fifth Third Bancorp - Depositar,US,,,,Y,,bullish,84.0
+1403,GOOGL,Alphabet Inc.,US,,Y,Y,Y,,bullish,64.0
+1404,FDXF,,US,,,Y,Y,,bullish,-11.0
+1405,BNT,Brookfield Wealth Solutions Ltd,US,,,,Y,,bullish,12.0
+1406,WSE,Wise Group plc,US,,,,Y,,bearish,-34.0
+1407,AGNCN,AGNC Investment Corp. - Deposit,US,,,,Y,,no_earnings,
+1408,BPYPN,Brookfield Property Partners L.,US,,,,Y,,bullish,194.0
+1409,FITBO,Fifth Third Bancorp - Depositar,US,,,,Y,,bullish,136.0
+1410,FOXA,Fox Corporation,US,,,Y,Y,,bullish,-13.0
+1411,VLYPP,Valley National Bancorp - 6.25%,US,,,,Y,,bullish,104.0
+1412,BBDO,Banco Bradesco Sa,US,,,,Y,,bullish,75.0
+1413,AGNCM,AGNC Investment Corp. - Deposit,US,,,,Y,,no_earnings,
+1414,AXIA,AXIA Energia,US,,,,Y,,bullish,309.0
+1415,AGNCP,AGNC Investment Corp. - Deposit,US,,,,Y,,no_earnings,
+1416,NWSA,News Corporation,US,,,Y,Y,,bullish,-13.0
+1417,SUNB,"Sunbelt Rentals Holdings, Inc.",US,,,,Y,,bearish,-37.0
+1418,ONBPP,Old National Bancorp - Deposita,US,,,,Y,,bullish,66.0
+1419,FITBI,Fifth Third Bancorp - Depositar,US,,,,Y,,bullish,68.0
+1420,EMA,Emera Incorporated,US,,,,Y,,bearish,-43.0
+1421,FWONA,Liberty Media Corporation - Ser,US,,,,Y,,bearish,-65.0
+1422,BF-B,Brown Forman Inc,US,,,Y,,,bearish,-22.0
+1423,HBANP,Huntington Bancshares Incorpora,US,,,,Y,,bearish,-41.0
+1424,BNY,The Bank of New York Mellon Cor,US,,,Y,Y,,bullish,56.0
+1425,AGNCO,AGNC Investment Corp. - Deposit,US,,,,Y,,no_earnings,
+1426,SLMBP,SLM Corporation - Floating Rate,US,,,,Y,,bearish,-42.0
+1427,VLYPO,Valley National Bancorp - 5.5% ,US,,,,Y,,bullish,105.0
+1428,FER,Ferrovial N.V.,US,,Y,,Y,,bearish,-51.0
+1429,HBANM,Huntington Bancshares Incorpora,US,,,,Y,,bearish,-53.0
+1430,BPYPO,Brookfield Property Partners L.,US,,,,Y,,bullish,167.0
+1431,GLXY,Galaxy Digital Inc.,US,,,,Y,,no_earnings,

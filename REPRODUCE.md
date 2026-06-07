@@ -1,0 +1,104 @@
+# REPRODUCE — Rebuild the Investable Universe (periodic task)
+
+This is the runbook for regenerating the "synthetic index with an edge" — the de-duplicated,
+data-complete, IBKR-fractional-tradable universe of companies scored undervalued/overvalued by
+Brandon's method. Run it on a schedule (monthly is sensible) and rebalance from the output.
+
+## One command
+```bash
+bash rebuild_universe.sh
+```
+Runtime ≈ 20–25 min (the yfinance pulls dominate). Caches make re-runs faster; see "Refreshing data".
+
+## What it produces
+| File | What it is |
+|------|------------|
+| **`universe_fractional.csv`** | **THE deliverable** — every company you can buy as a fraction at IBKR, with verdict + market cap. Rebalance from this. |
+| `universe_full.csv` | Audit copy: every company that had data, with `fractional` Y/N + exchange flags. |
+| `QQQ_SPY_valuation_bullish_bearish.md` | Per-index (QQQ/SPY/Russell/Global) bullish vs bearish screen. |
+| **`MARKET_DIRECTION.md`** | The macro deploy-gauge — where the market sits vs intrinsic value (when to deploy). |
+| **`leaps.db`** (SQLite) | The queryable data layer — `companies`, `snapshots` (dated, appended each rebuild → **rebalance history**), `market_gate`, `videos`, `claims`. Query with `sqlite3 leaps.db`. |
+| `master_company_list.csv`, `tradable_master_list.csv` | Earlier intermediate views (superseded by the two above). |
+
+To invest: take the **`bullish`** rows of `universe_fractional.csv` — that is your buy list.
+
+### Why each security got its rating (columns in the CSVs)
+Every row carries the calculation inputs so the verdict is self-explaining:
+| Column | Meaning |
+|--------|---------|
+| `price`, `intrinsic_value` | verdict = bullish if intrinsic ≥ price, else bearish; `under_over_pct` = intrinsic/price−1 |
+| `ttm_eps`, `fwd_eps`, `trailing_pe` | earnings inputs; high P/E needs high growth to stay bullish |
+| `growth_curr_yr`, `growth_next_yr`, `growth_ttm_yoy` | the three growth signals (analyst this yr / next yr / actual TTM YoY) |
+| `g_used` | the median of those three, floored 0 and capped 0.30 — the rate plugged into the formula |
+
+So e.g. AAPL is bearish because P/E 37 with `g_used` 0.17 → intrinsic below price; NVDA is bullish
+because `g_used` caps at 0.30 on a low EPS → intrinsic above price.
+
+## The pipeline (what `rebuild_universe.sh` runs, in order)
+1. **`build_constituents.py`** → `_constituents.json` (+ `_global_raw.json`)
+   - SPY = Wikipedia S&P 500 · QQQ = Wikipedia Nasdaq-100
+   - Russell 1000 proxy = top 1000 US-listed by market cap (NASDAQ screener API)
+   - Global 1000 = top 1000 worldwide by market cap (companiesmarketcap.com CSV)
+2. **`_fetch_all.py`** → `_fundamentals.json`, `_growth.json`
+   - yfinance: price, trailing-12-mo EPS, forward EPS, earnings growth, and analyst growth
+     estimates (current-yr / next-yr / LTG) for every ticker in the union (~1,500). Resumable.
+3. **`_fetch_exchange.py`** → `_exchange.json`
+   - yfinance exchange code for the non-US ADRs, to separate exchange-listed (fractional-eligible)
+     from OTC/pink-sheet (NOT fractional-eligible).
+4. **`_fetch_quality.py`** → `_quality.json`
+   - yfinance gross/operating/profit margins, return-on-equity, debt-to-equity — inputs to the **moat
+     proxy** (see Brandon's full 100-pt scorecard in `wiki/strategy/scorecard.md`). Resumable.
+4b. **`_fetch_goldenline.py`** → `_goldenline.json`
+   - yfinance annual Diluted EPS (4 fiscal years) + ~2-year-ago price — inputs to **Brandon's actual
+     "golden line"** valuation (`goldenline.py`). Resumable.
+5. **`_valuate.py`** → `_valuation_result.json`
+   - Brandon valuation (see `wiki/strategy/valuation-method.md`):
+     `intrinsic = TTM_EPS × (1+g)^5 × 20 ÷ 1.10^5`, where
+     `g = median(analyst current-yr, next-yr, TTM YoY earnings growth)`, floored 0, capped 30%.
+   - Ranks each basket and splits bullish (undervalued) / bearish (overvalued).
+6. **`build_universe.py`** → `universe_full.csv`, `universe_fractional.csv`, `MARKET_DIRECTION.md`
+   - de-dupe the union → drop no-data names → label verdict → compute **moat proxy** (margins+ROE→/20)
+     → keep only IBKR-fractional-tradable → write the **market-direction deploy gauge**.
+7. **`_write_report.py`** → `QQQ_SPY_valuation_bullish_bearish.md`
+8. **`build_db.py "$(date +%F)"`** → `leaps.db` — loads the run into SQLite and **appends a dated
+   snapshot**, building rebalance history. Example queries:
+   ```sql
+   -- this month's clean buy list
+   SELECT c.ticker, c.mktcap_B, s.golden_pct FROM snapshots s JOIN companies c USING(ticker)
+   WHERE s.snapshot_date=(SELECT MAX(snapshot_date) FROM snapshots)
+     AND s.golden_verdict='bullish' AND s.golden_valid='Y' AND c.fractional=1
+   ORDER BY c.mktcap_B DESC;
+   -- names that flipped bullish -> bearish since the prior rebalance
+   SELECT a.ticker FROM snapshots a JOIN snapshots b ON a.ticker=b.ticker
+   WHERE a.snapshot_date=(SELECT MAX(snapshot_date) FROM snapshots)
+     AND b.snapshot_date=(SELECT MAX(snapshot_date) FROM snapshots WHERE snapshot_date<(SELECT MAX(snapshot_date) FROM snapshots))
+     AND a.golden_verdict='bearish' AND b.golden_verdict='bullish';
+   ```
+
+### What's still NOT in the screen (Brandon's full scorecard, `wiki/strategy/scorecard.md`)
+Valuation (20) + Growth (20) are computed; **Moat (20)** is now an approximate proxy; **Execution risk
+(10)** stays qualitative (no clean mechanical proxy); **Economy/macro (30)** is represented by the
+market-direction gauge, not a per-stock score. Treat moat_proxy and the macro gauge as systematic
+stand-ins for Brandon's hand judgement, not identical to it.
+
+## Refreshing data
+- Prices/EPS/growth move. The fetch scripts **reuse caches** if present, so a plain re-run only
+  fetches *new* tickers. **To get fresh prices/valuations, delete the caches first:**
+  ```bash
+  rm -f _fundamentals.json _growth.json _exchange.json
+  bash rebuild_universe.sh
+  ```
+- Constituent lists and `_global_raw.json` are always re-fetched fresh (fast).
+
+## Method caveats (carried into the output)
+- Valuation is an estimate, exactly as Brandon frames his own calculator; the growth input drives
+  it and is capped conservatively at 30%.
+- The 50/50 bullish/bearish split is at the **median**, not at 0% — globally the median runs negative
+  (~−12%), so the "bullish half" is "the more-undervalued half," and `bullish` in the CSV means
+  `intrinsic ≥ price`.
+- Below ~$24B market cap the universe is **US-only** (no foreign mid-caps); above it, it's global.
+- Companies with no EPS data on yfinance are dropped — this loses a few real giants whose only
+  listing is Korean/Gulf (Samsung, SK Hynix, ADNOC…). Add a second data source to recover them.
+
+## Dependencies
+`pip3 install --user --break-system-packages yfinance lxml pandas` (already installed on this box).

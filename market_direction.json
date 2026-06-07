@@ -1,0 +1,23 @@
+{
+ "as_of_note": "higher = cheaper market = more bullish to deploy; track trend across rebalances",
+ "reads": [
+  {
+   "index": "SPY",
+   "median_under_over_pct": -16,
+   "capwtd_under_over_pct": 3,
+   "pct_undervalued_breadth": 37
+  },
+  {
+   "index": "QQQ",
+   "median_under_over_pct": -23,
+   "capwtd_under_over_pct": 3,
+   "pct_undervalued_breadth": 29
+  },
+  {
+   "index": "Global1000",
+   "median_under_over_pct": -8,
+   "capwtd_under_over_pct": 17,
+   "pct_undervalued_breadth": 45
+  }
+ ]
+}
