@@ -15,5 +15,5 @@ Brandon deploys aggressively only when the overall market is favorable (his bull
 - **OK to deploy (market roughly fair).** (Gate trips when the market is >20% overvalued, i.e. price ran >20% ahead of earnings. Uses apples-to-apples valid names only — skewed mega-caps excluded.)
 
 ## Capital allocation (stocks vs bonds)
-- Genuinely undervalued: **269/910 = 30%** of the valued tradable universe.
-- Rule `stock = min(100%, undervalued% ÷ 50%)` -> **59% stocks (the 269 buy-list names) / 41% bonds-short-term.**
+- Genuinely undervalued: **332/910 = 36%** of the valued tradable universe.
+- Rule `stock = min(100%, undervalued% ÷ 50%)` -> **73% stocks (the 332 buy-list names) / 27% bonds-short-term.**

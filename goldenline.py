@@ -12,6 +12,14 @@ If EPS outgrew price, the stock is undervalued (price lagged earnings) and shoul
                  re-rated a lot the line is "skewed" and the read is unreliable.
 
 Exposes load_golden() -> {ticker: {...}} and market_gate(spy_tickers) for the >20% deploy gate.
+
+KNOWN LIMITATION (why the validity check matters): the golden line assumes the *starting* P/E was a
+fair price and projects it forward by EPS growth. That breaks when the multiple re-rates a lot, because
+a P/E change can be price-driven (cheaper/pricier — meaningful) OR earnings-driven (multiple just
+normalizing as earnings swing — not a clean deal signal). E.g. NVDA's P/E fell 104->42 because earnings
+4x'd while price rose 66% (earnings-driven), so the "+148% undervalued" is mostly an artifact of
+anchoring to a bubble starting multiple (104). The `golden_valid='skewed'` flag (|pe_now/pe_then-1|>0.5)
+is the blunt guard: when the multiple moved too much, we can't trust the magnitude, so we sit the name out.
 """
 import json, statistics
 ROOT='/home/john/repos/leaps'

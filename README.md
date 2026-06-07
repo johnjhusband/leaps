@@ -37,7 +37,7 @@ strike depth, duration, profit-taking, assignment sizing) now corrected in the w
 EPS growth vs price growth, with his P/E apples-to-apples validity check. `universe_fractional.csv` now
 leads with `golden_verdict`/`golden_pct`/`golden_valid` (the faithful method); the old proxy columns are
 kept for comparison. The **>20% market deploy gate** (golden line on the S&P, valid names only) writes to
-`MARKET_DIRECTION.md`. **Clean buy list = golden_verdict=bullish AND golden_valid=Y (~269 names).**
+`MARKET_DIRECTION.md`. **Clean buy list = golden_verdict=bullish AND golden_valid=Y (~332 names: 269 valid + 63 forward-confirmed skewed e.g. NVDA).**
 Still not computed: the full company scorecard's qualitative inputs (sentiment, execution risk) → can't hit ">75".
 
 ## Data layer: `leaps.db` (SQLite) + rebalance history

@@ -5,7 +5,9 @@ Each row is one company. Columns explain *why* it got its rating.
 | Column heading | Full name | Definition |
 |----------------|-----------|------------|
 | `rank` | Rank by market cap | Position in the list, largest company = 1. |
-| `golden_verdict` | **Golden-line verdict (Brandon's actual method)** | bullish if the stock is undervalued by the golden line (EPS outgrew price over 2yr), else bearish. **This is the primary, faithful verdict.** |
+| `buy` | **On the buy list?** | `Y` = buy-eligible = golden-bullish AND reliable (valid, OR skewed-but-forward-confirmed). This is the final screen decision. |
+| `golden_verdict` | **Golden-line verdict (Brandon's actual method)** | bullish if the stock is undervalued by the golden line (EPS outgrew price over 2yr), else bearish. |
+| `fwd_pe` | Forward P/E | price ÷ forward EPS. Used to forward-confirm skewed-bullish names (cheap forward P/E vs growth → buy-eligible, e.g. NVDA at ~16). |
 | `golden_pct` | Golden-line under/over % | How far below (+) or above (−) the EPS line the price sits. + = cheap. |
 | `golden_valid` | Golden-line validity | `Y` = start vs end P/E are similar (apples-to-apples, reliable); `skewed` = the P/E re-rated a lot, so the read is unreliable. |
 | `eps_2y` / `eps_now` | EPS 2 years ago / now | Annual diluted EPS at the two endpoints of the window. |

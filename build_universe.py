@@ -43,6 +43,24 @@ try:
 except Exception:
     golden={}; _gl=None
 
+def fwd_pe(t):
+    p=fund.get(t,{}).get('price'); fe=fund.get(t,{}).get('forwardEps')
+    return round(p/fe,1) if (p and fe and fe>0) else ''
+
+def buy_eligible(t):
+    """Brandon's actual screen: golden-bullish AND a reliable read.
+    Reliable = valid (apples-to-apples) OR — when the trailing golden line is SKEWED by a multiple
+    re-rating — forward-confirmed: forward P/E justified by growth (PEG-fwd <= 1.5). This is why
+    quality growers like NVDA (trailing line skewed, but forward P/E ~16) stay on the list, exactly
+    as Brandon holds them. Tesla stays out — it's golden-BEARISH, never eligible."""
+    g=golden.get(t,{})
+    if g.get('golden_verdict')!='bullish': return False
+    if g.get('golden_valid')=='Y': return True
+    fp=fwd_pe(t)                       # skewed -> forward check
+    if fp=='' : return False
+    grow=(vrec.get(t,{}).get('g') or 0)*100
+    return fp <= 1.5*max(grow, 8)
+
 def moat_proxy(t):
     """Approximate Brandon's qualitative Moat (/20) from profitability/quality metrics:
        high margins + high ROE + low debt = pricing power / durable advantage.
@@ -89,8 +107,8 @@ def write(path, tickers, include_flags):
     with open(path,'w',newline='') as f:
         w=csv.writer(f)
         # golden_* columns first = Brandon's ACTUAL method (primary). proxy columns kept for comparison.
-        hdr=['rank','ticker','name','country','mktcap_B',
-             'golden_verdict','golden_pct','golden_valid','eps_2y','eps_now','eps_growth_2y','price_growth_2y','pe_then','pe_now',
+        hdr=['rank','ticker','name','country','mktcap_B','buy',
+             'golden_verdict','golden_pct','golden_valid','fwd_pe','eps_2y','eps_now','eps_growth_2y','price_growth_2y','pe_then','pe_now',
              'proxy_verdict','proxy_pct','price','intrinsic_value','ttm_eps','fwd_eps','trailing_pe',
              'growth_curr_yr','growth_next_yr','growth_ttm_yoy','g_used',
              'moat_proxy_20','gross_margin','oper_margin','roe','debt_to_equity']
@@ -100,8 +118,8 @@ def write(path, tickers, include_flags):
             nm=(raw.get(t,{}).get('Name') or fund.get(t,{}).get('name') or '')[:40]
             p=pct.get(t); pv=round(p,0) if (p is not None and verdict(t)!='no_earnings') else ''
             d=fund.get(t,{}); gd=growth.get(t,{}); vr=vrec.get(t,{}); q=quality.get(t,{}); gl=golden.get(t,{})
-            row=[i,t,nm,country(t),round(mc(t)/1e9,1) if mc(t) else '',
-                 gl.get('golden_verdict',''), gl.get('golden_pct',''), gl.get('golden_valid',''),
+            row=[i,t,nm,country(t),round(mc(t)/1e9,1) if mc(t) else '', 'Y' if buy_eligible(t) else '',
+                 gl.get('golden_verdict',''), gl.get('golden_pct',''), gl.get('golden_valid',''), fwd_pe(t),
                  gl.get('eps_2y',''), gl.get('eps_now',''), gl.get('eps_growth_2y',''), gl.get('price_growth_2y',''),
                  gl.get('pe_then',''), gl.get('pe_now',''),
                  verdict(t), pv,
@@ -158,7 +176,7 @@ with open(f'{ROOT}/MARKET_DIRECTION.md','w') as f:
     # Capital allocation (INDEX_PLAN.md): 50% of universe undervalued = 100% stocks.
     fr=[t for t in frac]
     valued_n=sum(1 for t in fr if golden.get(t,{}).get('golden_verdict'))
-    buy_n=sum(1 for t in fr if golden.get(t,{}).get('golden_verdict')=='bullish' and golden.get(t,{}).get('golden_valid')=='Y')
+    buy_n=sum(1 for t in fr if buy_eligible(t))
     if valued_n:
         uv=buy_n/valued_n
         stock=min(1.0, uv/0.50)
@@ -167,6 +185,17 @@ with open(f'{ROOT}/MARKET_DIRECTION.md','w') as f:
         f.write(f"- Rule `stock = min(100%, undervalued% ÷ 50%)` -> **{stock*100:.0f}% stocks (the {buy_n} buy-list "
                 f"names) / {(1-stock)*100:.0f}% bonds-short-term.**\n")
         print(f'  ALLOCATION: {uv*100:.0f}% undervalued -> {stock*100:.0f}% stocks / {(1-stock)*100:.0f}% bonds')
+# buy_list.csv = the fractional, buy-eligible names (valid OR forward-confirmed skewed)
+buy=sorted([t for t in frac if buy_eligible(t)], key=lambda t:-mc(t))
+with open(f'{ROOT}/buy_list.csv','w',newline='') as f:
+    w=csv.writer(f); w.writerow(['rank','ticker','name','country','mktcap_B','golden_pct','golden_valid','fwd_pe','reason'])
+    for i,t in enumerate(buy,1):
+        gl=golden.get(t,{}); reason='valid' if gl.get('golden_valid')=='Y' else 'fwd-confirmed'
+        w.writerow([i,t,(raw.get(t,{}).get('Name') or fund.get(t,{}).get('name') or '')[:40],country(t),
+                    round(mc(t)/1e9,1) if mc(t) else '', gl.get('golden_pct',''), gl.get('golden_valid',''), fwd_pe(t), reason])
+print(f'  buy_list.csv: {len(buy)} names ('
+      f"{sum(1 for t in buy if golden.get(t,{}).get('golden_valid')=='Y')} valid + "
+      f"{sum(1 for t in buy if golden.get(t,{}).get('golden_valid')=='skewed')} fwd-confirmed)")
 print(f'  market direction: SPY median {md[0]["median_under_over_pct"]:+d}% breadth {md[0]["pct_undervalued_breadth"]}%  -> MARKET_DIRECTION.md')
 if _gl and golden:
     g2=_gl.market_gate(golden, con['SPY'], {t:mc(t) for t in con['SPY']})

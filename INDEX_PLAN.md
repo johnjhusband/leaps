@@ -45,17 +45,27 @@ where `undervalued_share = (# genuinely undervalued) ÷ (# valued tradable names
 This is essentially **capital allocation**: the richer the market, the fewer names qualify, the more of
 the portfolio sits in bonds/short-term — automatic de-risking (mirrors Brandon's bond rotation).
 
-**Current reading (2026-06-07):** 269 undervalued ÷ 910 valued = **29.6% undervalued → ≈59% stocks /
-≈41% bonds.** (Computed by `build_universe.py`, written to `MARKET_DIRECTION.md` each rebuild.)
+**Current reading (2026-06-07):** 332 buy-eligible ÷ 910 valued = **36% undervalued → ≈73% stocks /
+≈27% bonds.** (Computed by `build_universe.py`, written to `MARKET_DIRECTION.md` each rebuild.)
 
 **Invariant that never changes:** no money in overvalued names — bonds, never least-bad stocks.
 
+## The buy rule (CORRECTED 2026-06-07 — forward-confirmation)
+A name is **buy-eligible** if it is **golden-bullish AND a reliable read**, where reliable =
+- `valid` (apples-to-apples trailing golden line), **OR**
+- `skewed` BUT **forward-confirmed**: forward P/E is justified by growth (PEG-forward ≤ 1.5).
+
+**Why the second path exists:** the trailing golden line breaks when a multiple re-rates (skewed). A hard
+exclude was *stricter than Brandon* — it threw out NVDA, which **Brandon actually holds**. NVDA's trailing
+line is skewed (P/E compressed 104→42 as earnings 4x'd), but its **forward P/E is ~16** — cheap for the
+growth — so Brandon buys it and so do we. Tesla stays out: it's golden-*bearish* (forward P/E 156), never
+eligible. This recovered 63 quality growers (incl. NVDA, LLY) that the blunt skewed-exclude wrongly dropped.
+
 ## Within the stock sleeve
-- Hold the undervalued names (`buy_list.csv`), broadly diversified (index-like).
+- Hold the buy-eligible names (`buy_list.csv`), broadly diversified (index-like). Each row tags the
+  `reason` (valid vs fwd-confirmed).
 - Globally represented but IBKR-fractional-tradable only (US/Canada/Europe + listed ADRs).
 - Weighting is a separate choice (equal-weight vs market-cap-weight) — TBD by John.
-- The `skewed` names (bullish but P/E re-rated, read unreliable) are excluded from the buy list — when in
-  doubt, don't buy (Brandon: 95% of candidates are a "no").
 
 ## Rebalance cadence
 - Re-run `rebuild_universe.sh` periodically (monthly is sensible). Each run appends a dated snapshot to
