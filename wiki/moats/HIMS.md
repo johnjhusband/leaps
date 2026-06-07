@@ -8,4 +8,4 @@ updated: 2026-06-07
 **What the moat is (simply put):** Ad-dependent; business collapses when ads dry up
 
 **Verdict:** `no` — REMOVED from the buy list by the moat gate (gate removes `no`/`weak`).
-Source: Brandon ("an obvious no")
+Source: Brandon — no moat

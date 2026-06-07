@@ -8,4 +8,4 @@ updated: 2026-06-07
 **What the moat is (simply put):** ~90% of advanced chip fabrication
 
 **Verdict:** `yes` — kept (gate removes `no`/`weak`).
-Source: Brandon ("has a moat")
+Source: Brandon — has a moat

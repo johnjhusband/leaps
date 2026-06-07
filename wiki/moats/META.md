@@ -8,4 +8,4 @@ updated: 2026-06-07
 **What the moat is (simply put):** Network effects — who is the competition?
 
 **Verdict:** `yes` — kept (gate removes `no`/`weak`).
-Source: Brandon ("good moat
+Source: Brandon — good moat/pricing power
