@@ -69,8 +69,9 @@ use different numbers:
 | → the **73% stock sleeve is spread across the 185** moat-quality names | ~$73k/185 ≈ $395 each on $100k |
 
 > The moat gate is now backed by per-company research (`moat_verdicts.csv` + `wiki/moats/`): 189 `yes`,
-> 118 `weak`, 30 `no`. Removing the no/weak names cut the buy list 328 → 185 and the stock weight 72% → 41%
-> (more bonds — Brandon-level selectivity). Earlier counts (269/328/332) predate full moat research.
+> 118 `weak`, 30 `no`. Removing the no/weak names cut the *holdings* from 332 → 185 (Brandon-level
+> selectivity) — but **NOT** the stock/bond split: sizing stays on the pre-moat 332 (=73% stocks) per §C.
+> Earlier counts (269/328) predate full moat research.
 > `build_universe.py` prints these every run and writes the allocation to `MARKET_DIRECTION.md`.
 > Remaining back-test gap: ~4 names Brandon avoids on PRICE (WM, PANW, AMZN, COST) — they have moats but
 > are expensive; that's the still-open absolute-valuation-ceiling gate, not a moat issue.

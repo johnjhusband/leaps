@@ -19,8 +19,9 @@ ranking.** Being the least-overvalued of a rich bunch is still overvalued; it do
 
 **Consequence — the holdings count floats with the market:**
 - It is NOT fixed at 50%. If 75% of the market is overvalued, only ~25% qualifies and we hold ~25%.
-- Right now (2026-06-07): of 910 valued tradable names, **328 make the buy list** — that is the entire
-  stock buy list. The other names are not bought. (See `BUY_DECISION.md` for the exact rule + reconciled counts.)
+- Right now (2026-06-07): of 910 valued tradable names, **332 are undervalued (pre-moat — this sizes the
+  stock/bond split)**, and after the moat gate **185 make the buy list** (the actual holdings). The 73%
+  stock sleeve is spread across those 185. (See `BUY_DECISION.md` for the exact rule + reconciled counts.)
 
 **Where the rest of the money goes:** the capital we do NOT put into undervalued stocks goes into
 **bonds / short-term securities (e.g. SGOV)** — exactly as Brandon parks in bonds when the market is rich.
