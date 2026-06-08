@@ -1,0 +1,187 @@
+ticker,name,dollars,moat,golden_pct,note
+NVDA,NVIDIA,394.59,yes,148,fwd-confirmed
+MSFT,Microsoft,394.59,yes,49,valid
+AMZN,Amazon,394.59,yes,94,valid
+META,Meta Platforms (Facebook),394.59,yes,33,valid
+LLY,Eli Lilly,394.59,yes,212,fwd-confirmed
+MA,Mastercard,394.59,yes,24,valid
+COST,Costco,394.59,yes,11,valid
+ARM,Arm Holdings,394.59,yes,40,valid
+PG,Procter & Gamble,394.59,yes,18,valid
+MRK,Merck,394.59,yes,4895,fwd-confirmed
+AZN,AstraZeneca,394.59,yes,39,valid
+RTX,RTX,394.59,yes,19,valid
+OR.PA,L'Oréal,394.59,yes,4,valid
+PANW,Palo Alto Networks,394.59,yes,56,valid
+SAP,SAP,394.59,yes,25,valid
+AXP,American Express,394.59,yes,0,valid
+TMUS,T-Mobile US,394.59,yes,34,valid
+TMO,Thermo Fisher Scientific,394.59,yes,33,valid
+DIS,Walt Disney,394.59,yes,418,fwd-confirmed
+APH,Amphenol,394.59,yes,3,valid
+ABT,Abbott Laboratories,394.59,yes,25,valid
+SCHW,Charles Schwab,394.59,yes,48,valid
+ETN,Eaton,394.59,yes,1,valid
+ISRG,Intuitive Surgical,394.59,yes,65,valid
+WELL,Welltower,394.59,yes,2,valid
+UBER,Uber,394.59,yes,459,fwd-confirmed
+DHR,Danaher,394.59,yes,6,valid
+BKNG,Booking Holdings (Booking.com),394.59,yes,32,valid
+SPGI,S&P Global,394.59,yes,84,valid
+UL,Unilever,394.59,yes,53,valid
+CFR.SW,Compagnie Financière Richemont,394.59,yes,18,valid
+HDB,HDFC Bank,394.59,yes,36,valid
+SYK,Stryker Corporation,394.59,yes,11,valid
+NOW,ServiceNow,394.59,yes,39,valid
+VRTX,Vertex Pharmaceuticals,394.59,yes,16,valid
+SNY,Sanofi,394.59,yes,45,valid
+MDT,Medtronic,394.59,yes,16,valid
+ZURN.SW,Zurich Insurance Group,394.59,yes,24,valid
+ADBE,Adobe,394.59,yes,212,fwd-confirmed
+TT,Trane Technologies,394.59,yes,5,valid
+DUK,Duke Energy,394.59,yes,34,valid
+GD,General Dynamics,394.59,yes,4,valid
+MCK,McKesson,394.59,yes,28,valid
+CDI.PA,Dior,394.59,yes,2,valid
+IBN,ICICI Bank,394.59,yes,32,valid
+ADP,Automatic Data Processing,394.59,yes,19,valid
+EL.PA,EssilorLuxottica,394.59,yes,9,valid
+AMT,American Tower,394.59,yes,59,valid
+ELV,Elevance Health,394.59,yes,26,valid
+CMI,Cummins,394.59,yes,63,valid
+SNPS,Synopsys,394.59,yes,30,valid
+WM,Waste Management,394.59,yes,11,valid
+HCA,HCA Healthcare,394.59,yes,27,valid
+INTU,Intuit,394.59,yes,254,fwd-confirmed
+ICE,Intercontinental Exchange,394.59,yes,30,valid
+MRSH,Marsh & McLennan Companies,394.59,yes,38,valid
+MCO,Moody's,394.59,yes,44,valid
+NOC,Northrop Grumman,394.59,yes,67,valid
+CI,The Cigna Group,394.59,yes,39,valid
+SHW,Sherwin-Williams,394.59,yes,7,valid
+BAM,Brookfield Asset Management,394.59,yes,4,valid
+ECL,Ecolab,394.59,yes,37,valid
+BSX,Boston Scientific,394.59,yes,188,fwd-confirmed
+CTAS,Cintas,394.59,yes,30,valid
+NSC,Norfolk Southern,394.59,yes,5,valid
+AON,Aon,394.59,yes,20,valid
+TDG,TransDigm Group,394.59,yes,33,valid
+MRK.DE,Merck KGaA,394.59,yes,1,valid
+MSI,Motorola Solutions,394.59,yes,18,valid
+REGN,Regeneron Pharmaceuticals,394.59,yes,96,valid
+MUV2.DE,Munich RE (Münchener Rück),394.59,yes,34,valid
+RSG,Republic Services,394.59,yes,13,valid
+RELX,RELX,394.59,yes,50,valid
+LSEG.L,London Stock Exchange,394.59,yes,72,valid
+RACE,Ferrari,394.59,yes,50,valid
+TRGP,Targa Resources,394.59,yes,10,valid
+AJG,Arthur J. Gallagher & Co.,394.59,yes,52,valid
+HO.PA,Thales,394.59,yes,3,valid
+HOLN.SW,Holcim Group,394.59,yes,350,fwd-confirmed
+AZO,AutoZone,394.59,yes,4,valid
+ADSK,Autodesk,394.59,yes,34,valid
+FER.MC,Ferrovial,394.59,yes,61,valid
+HEI,HEICO,394.59,yes,13,valid
+CSU.TO,Constellation Software,394.59,yes,20,valid
+IDXX,IDEXX Laboratories,394.59,yes,13,valid
+SREN.SW,Swiss Re,394.59,yes,31,valid
+HEIA.AS,Heineken,394.59,yes,8,valid
+BDX,Becton Dickinson,394.59,yes,38,valid
+KDP,Keurig Dr Pepper,394.59,yes,2,valid
+HLN,Haleon,394.59,yes,43,valid
+WCN,Waste Connections,394.59,yes,58,valid
+BSBR,Banco Santander Brasil,394.59,yes,15,valid
+UMG.AS,Universal Music Group,394.59,yes,79,valid
+A,Agilent Technologies,394.59,yes,3,valid
+TRI,Thomson Reuters,394.59,yes,7,valid
+VMC,Vulcan Materials,394.59,yes,1,valid
+PAYX,Paychex,394.59,yes,17,valid
+ROP,Roper Technologies,394.59,yes,84,valid
+PKO.WA,PKO Bank Polski,394.59,yes,10,valid
+ZTS,Zoetis,394.59,yes,152,fwd-confirmed
+LVS,Las Vegas Sands,394.59,yes,23,valid
+ALC,Alcon,394.59,yes,34,valid
+ACGL,Arch Capital,394.59,yes,5,valid
+HNR1.DE,Hannover Rück,394.59,yes,39,valid
+IQV,IQVIA,394.59,yes,24,valid
+BIP,Brookfield Infrastructure Partners,394.59,yes,317,fwd-confirmed
+TCOM,Trip.com,394.59,yes,216,fwd-confirmed
+DSY.PA,Dassault Systèmes,394.59,yes,100,valid
+ADYEN.AS,Adyen,394.59,yes,104,fwd-confirmed
+AMRZ,Amrize,394.59,yes,17,valid
+GEHC,GE HealthCare Technologies,394.59,yes,80,valid
+KOG.OL,Kongsberg Gruppen,394.59,yes,16,valid
+VEEV,Veeva Systems,394.59,yes,79,valid
+DXCM,DexCom,394.59,yes,150,fwd-confirmed
+SAMPO.HE,Sampo,394.59,yes,18,valid
+OTIS,Otis Worldwide,394.59,yes,36,valid
+LISP.SW,Chocoladefabriken Lindt &amp; Sprüngli,394.59,yes,21,valid
+AMS.MC,Amadeus IT Group,394.59,yes,38,valid
+FICO,Fair Isaac (FICO),394.59,yes,105,fwd-confirmed
+XYL,Xylem,394.59,yes,69,valid
+WTW,Willis Towers Watson,394.59,yes,59,valid
+AWK,American Water,394.59,yes,15,valid
+STZ,Constellation Brands,394.59,yes,78,valid
+HEXA-B.ST,Hexagon AB,394.59,yes,1,valid
+WRT1V.HE,Wärtsilä,394.59,yes,16,valid
+MTD,Mettler Toledo,394.59,yes,42,valid
+CHD,Church & Dwight,394.59,yes,4,valid
+ROL,Rollins,394.59,yes,24,valid
+TW,Tradeweb,394.59,yes,127,fwd-confirmed
+SBAC,SBA Communications,394.59,yes,92,valid
+VLTO,Veralto,394.59,yes,22,valid
+EFX,Equifax,394.59,yes,67,valid
+BRO,Brown &amp; Brown,394.59,yes,55,valid
+ESS,Essex Property Trust,394.59,yes,46,valid
+RBA,RB Global,394.59,yes,41,valid
+ENTG,Entegris,394.59,yes,38,valid
+LII,Lennox,394.59,yes,42,valid
+BR,Broadridge Financial Solutions,394.59,yes,69,valid
+RGLD,Royal Gold,394.59,yes,10,valid
+SSNC,SS&C Technologies,394.59,yes,15,valid
+NVR,NVR,394.59,yes,16,valid
+NBIX,Neurocrine Biosciences,394.59,yes,59,valid
+TSCO,Tractor Supply,394.59,yes,78,valid
+GMAB,Genmab,394.59,yes,60,valid
+OWL,Blue Owl Capital,394.59,yes,63,valid
+WSO,Watsco,394.59,yes,7,valid
+CSL,Carlisle Companies,394.59,yes,29,valid
+LULU,lululemon athletica,394.59,yes,184,fwd-confirmed
+RGA,Reinsurance Group of America,394.59,yes,27,valid
+COO,Cooper Companies,394.59,yes,64,valid
+MEDP,Medpace,394.59,yes,56,valid
+FNF,Fidelity National Financial,394.59,yes,8,valid
+MKC,McCormick & Company,394.59,yes,66,valid
+TRMB,Trimble,394.59,yes,45,valid
+PEN,Penumbra,394.59,yes,9,valid
+ELS,Equity LifeStyle Properties,394.59,yes,16,valid
+GGG,Graco,394.59,yes,9,valid
+DT,Dynatrace,394.59,yes,10,valid
+ALGN,Align Technology,394.59,yes,40,valid
+ERIE,Erie Indemnity,394.59,yes,94,valid
+TXRH,Texas Roadhouse,394.59,yes,31,valid
+ALLE,Allegion,394.59,yes,8,valid
+GDDY,GoDaddy,394.59,yes,12,valid
+ZBRA,Zebra Technologies,394.59,yes,90,valid
+IT,Gartner,394.59,yes,138,fwd-confirmed
+BMRN,BioMarin Pharmaceutical,394.59,yes,200,fwd-confirmed
+SEIC,SEI Investments,394.59,yes,15,valid
+FRT,Federal Realty Investment Trust,394.59,yes,26,valid
+PODD,Insulet,394.59,yes,56,valid
+WTRG,Essential Utilities,394.59,yes,10,valid
+DPZ,Domino's Pizza,394.59,yes,91,valid
+EHC,Encompass Health,394.59,yes,30,valid
+CNM,Core &amp; Main,394.59,yes,1,valid
+BSY,Bentley Systems,394.59,yes,26,valid
+WMS,Advanced Drainage Systems,394.59,yes,3,valid
+ENSG,The Ensign Group,394.59,yes,16,valid
+HLI,Houlihan Lokey,394.59,yes,42,valid
+SCI,Service Corporation International,394.59,yes,6,valid
+BAH,Booz Allen Hamilton,394.59,yes,180,fwd-confirmed
+TTD,The Trade Desk,394.59,yes,1124,fwd-confirmed
+JKHY,Jack Henry &amp; Associates,394.59,yes,54,valid
+POOL,POOLCORP,394.59,yes,30,valid
+BF-B,Brown Forman Inc,394.59,yes,12,valid
+FER,Ferrovial N.V.,394.59,yes,51,valid
+KSPI,Joint Stock Company Kaspi.kz - ,394.59,yes,93,valid
+SGOV,iShares 0-3mo Treasury (bond/short-term sleeve),27000.0,,,bond sleeve

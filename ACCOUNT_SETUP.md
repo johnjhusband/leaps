@@ -52,8 +52,10 @@ Goal: an IBKR account that can hold the **185-name fractional buy list** (US + C
     "Trade in Fractions"). If it's not on, request it there — it's a toggle.
 
 ## After the account is live (then I take over again)
-- I generate the exact order list: each buy-list name at its dollar weight (73% of capital ÷ 185 ≈ $395
-  each) + the bond sleeve (e.g. SGOV) at 27%.
+- **`build_orders.py` already does the order list** (built/tested ahead of time, doesn't need the account):
+  `python3 build_orders.py 100000 equal` → **`orders.csv`** = each buy-list name at its dollar weight
+  (73% of $100k ÷ 185 ≈ **$395 each**) + **$27,000 into SGOV** (the 27% bond sleeve). Weighting is a
+  parameter (`equal` default, or `mcap`). Verified it sums to the capital.
 - Phase 3 = the automation: a script that reads `buy_list.csv` + the allocation and places fractional
   orders via the IBKR API (`cashQty` = dollar amount per name), with a dry-run preview and guardrails
   before any live order. (API fractional support confirmed 2026.)
