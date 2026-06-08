@@ -14,6 +14,8 @@ Each row is one company. Columns explain *why* it got its rating.
 | `eps_growth_2y` | EPS growth over 2yr | (eps_now/eps_2y − 1). |
 | `price_growth_2y` | Price growth over 2yr | (price_now/price_2y − 1). Undervalued when eps_growth_2y > price_growth_2y. |
 | `pe_then` / `pe_now` | P/E 2yr ago / now | Used for the validity check. |
+| `moat` | **Moat verdict (qualitative)** | `yes` / `weak` / `no` — researched competitive-advantage judgment (`wiki/moats/`). The gate removes `no`/`weak`. Blank = not yet researched. |
+| `moat_description` | What the moat is, plainly | One line: the durable advantage (or why none), e.g. "duopoly payment network, switching costs". |
 | `proxy_verdict` / `proxy_pct` | OLD proxy verdict + under/over % | The earlier formula's call (`bullish`/`bearish`/`no_earnings`) and how far its intrinsic estimate sat above/below price. **Kept for comparison only — superseded by `golden_*`; NOT used in the buy decision.** (These were once called `verdict`/`under_over_pct`; that naming is retired.) |
 | `ticker` | Ticker symbol | The trading symbol (e.g. `NVDA`; foreign suffixes like `.TO` = Toronto, `.L` = London). |
 | `name` | Company name | The company's name. |
