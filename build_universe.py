@@ -49,8 +49,10 @@ def fwd_pe(t):
 
 try:
     import csv as _csv
-    MOAT={r['ticker']:r['moat'].strip().lower() for r in _csv.DictReader(open(f'{ROOT}/moat_verdicts.csv'))}
-except Exception: MOAT={}
+    _mv=list(_csv.DictReader(open(f'{ROOT}/moat_verdicts.csv')))
+    MOAT={r['ticker']:r['moat'].strip().lower() for r in _mv}
+    MOAT_DESC={r['ticker']:r.get('moat_description','') for r in _mv}
+except Exception: MOAT={}; MOAT_DESC={}
 
 def undervalued(t):
     """UNDERVALUED = golden-bullish AND a reliable read (valid, OR skewed-but-forward-confirmed at
@@ -118,6 +120,7 @@ def write(path, tickers, include_flags):
         # golden_* columns first = Brandon's ACTUAL method (primary). proxy columns kept for comparison.
         hdr=['rank','ticker','name','country','mktcap_B','buy',
              'golden_verdict','golden_pct','golden_valid','fwd_pe','eps_2y','eps_now','eps_growth_2y','price_growth_2y','pe_then','pe_now',
+             'moat','moat_description',
              'proxy_verdict','proxy_pct','price','intrinsic_value','ttm_eps','fwd_eps','trailing_pe',
              'growth_curr_yr','growth_next_yr','growth_ttm_yoy','g_used',
              'moat_proxy_20','gross_margin','oper_margin','roe','debt_to_equity']
@@ -131,6 +134,7 @@ def write(path, tickers, include_flags):
                  gl.get('golden_verdict',''), gl.get('golden_pct',''), gl.get('golden_valid',''), fwd_pe(t),
                  gl.get('eps_2y',''), gl.get('eps_now',''), gl.get('eps_growth_2y',''), gl.get('price_growth_2y',''),
                  gl.get('pe_then',''), gl.get('pe_now',''),
+                 MOAT.get(t,''), MOAT_DESC.get(t,''),
                  verdict(t), pv,
                  rnd(d.get('price')), rnd(vr.get('intrinsic')), rnd(d.get('trailingEps')),
                  rnd(d.get('forwardEps')), rnd(d.get('trailingPE'),1),
@@ -202,11 +206,12 @@ with open(f'{ROOT}/MARKET_DIRECTION.md','w') as f:
 # buy_list.csv = the fractional, buy-eligible names (valid OR forward-confirmed skewed)
 buy=sorted([t for t in frac if buy_eligible(t)], key=lambda t:-mc(t))
 with open(f'{ROOT}/buy_list.csv','w',newline='') as f:
-    w=csv.writer(f); w.writerow(['rank','ticker','name','country','mktcap_B','golden_pct','golden_valid','fwd_pe','reason'])
+    w=csv.writer(f); w.writerow(['rank','ticker','name','country','mktcap_B','golden_pct','golden_valid','fwd_pe','reason','moat','moat_description'])
     for i,t in enumerate(buy,1):
         gl=golden.get(t,{}); reason='valid' if gl.get('golden_valid')=='Y' else 'fwd-confirmed'
         w.writerow([i,t,(raw.get(t,{}).get('Name') or fund.get(t,{}).get('name') or '')[:40],country(t),
-                    round(mc(t)/1e9,1) if mc(t) else '', gl.get('golden_pct',''), gl.get('golden_valid',''), fwd_pe(t), reason])
+                    round(mc(t)/1e9,1) if mc(t) else '', gl.get('golden_pct',''), gl.get('golden_valid',''), fwd_pe(t), reason,
+                    MOAT.get(t,''), MOAT_DESC.get(t,'')])
 print(f'  buy_list.csv: {len(buy)} names ('
       f"{sum(1 for t in buy if golden.get(t,{}).get('golden_valid')=='Y')} valid + "
       f"{sum(1 for t in buy if golden.get(t,{}).get('golden_valid')=='skewed')} fwd-confirmed)")
