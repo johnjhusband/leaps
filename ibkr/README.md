@@ -24,7 +24,21 @@ sudo docker compose down      # stop the gateway when done
 ## Prereqs (already done on this box)
 - Docker Engine + compose (installed 2026-06-09).
 - `venv/` with `ib_async` 2.1.0 (`python3 -m venv venv && venv/bin/pip install ib_async`).
-- Image `ghcr.io/gnzsnz/ib-gateway:stable` pulled.
+- Image **pinned to `ghcr.io/gnzsnz/ib-gateway:10.34.1c`** (see gotcha below).
+
+## Gotcha: pin the gateway version
+`:stable` currently ships IB Gateway **10.45.1g**, whose bundled IBC hangs at "Invoking config
+dialog menu" right after login (jxbrowser/IBC mismatch, IbcAlpha/IBC#285) — the API socket never
+opens and connections time out. Pinned to **10.34.1c**, which ships a working IBC and reaches the
+server cleanly. Don't move back to `:stable`/`:latest` without re-testing the full login → API path.
+
+## Gotcha: credentials & auto-retry
+Paper mode logs in with the **live** username + password (the gateway's paper toggle). A bad login
+returns "Connection to server failed: Invalid username or password" and IBC exits — and with
+`restart: unless-stopped` the container relaunches and retries, which can **lock the live account**.
+If credentials are unverified, start with `restart: "no"` or run `up` once and watch the log before
+trusting the restart policy. Note: a fresh account's IBKR-issued password is **temporary**; the first
+browser login forces a reset, after which the temp password is dead — use the reset one.
 
 ## Safety
 - Paper account only — `buy_one_spy.py` exits if the connected account is not `DU…`.

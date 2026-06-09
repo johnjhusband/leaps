@@ -1,6 +1,6 @@
 services:
   ib-gateway:
-    image: ghcr.io/gnzsnz/ib-gateway:stable
+    image: ghcr.io/gnzsnz/ib-gateway:10.34.1c   # pinned: :stable (10.45.1g) hangs on IBC config dialog (IbcAlpha/IBC#285)
     container_name: ib-gateway-paper
     restart: unless-stopped
     environment:
