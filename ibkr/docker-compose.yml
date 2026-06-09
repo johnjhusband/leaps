@@ -1,0 +1,14 @@
+services:
+  ib-gateway:
+    image: ghcr.io/gnzsnz/ib-gateway:stable
+    container_name: ib-gateway-paper
+    restart: unless-stopped
+    environment:
+      TWS_USERID: ${TWS_USERID}
+      TWS_PASSWORD: ${TWS_PASSWORD}
+      TRADING_MODE: paper          # paper = play money, API on port 4002
+      READ_ONLY_API: "no"          # allow order placement
+      TWOFA_TIMEOUT_ACTION: exit    # paper logins don't need 2FA; bail fast if prompted
+      TIME_ZONE: America/New_York
+    ports:
+      - "127.0.0.1:4002:4004"      # paper API, bound to localhost only
