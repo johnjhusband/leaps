@@ -20,12 +20,15 @@ HOST, PORT, CLIENT_ID = "127.0.0.1", 4002, 17
 
 qty = 1
 limit_price = None
+force_market = False
 args = sys.argv[1:]
 i = 0
 while i < len(args):
     a = args[i]
     if a == "--limit":
         limit_price = float(args[i + 1]); i += 2
+    elif a == "--market":          # force a pure MKT order (only fills during regular hours)
+        force_market = True; i += 1
     else:
         qty = int(a); i += 1
 
@@ -53,19 +56,29 @@ ib.qualifyContracts(spy)
 before = next((p for p in ib.positions(acct) if p.contract.symbol == "SPY"), None)
 print("SPY position before:", before.position if before else 0)
 
-# --- a quote, for context ---
+# --- a quote, for context and to size a marketable limit ---
 tick = ib.reqMktData(spy, "", snapshot=True)
-ib.sleep(2)
-quote = tick.last or tick.close or tick.marketPrice()
-print(f"SPY quote ~ ${quote}" if quote == quote and quote else "SPY quote unavailable (market may be closed)")
+ib.sleep(3)
+def _num(x): return x if (x is not None and x == x and x > 0) else None   # drop NaN/None/<=0
+ask  = _num(tick.ask)
+ref  = ask or _num(tick.last) or _num(tick.close) or _num(tick.marketPrice())
+print(f"SPY quote: bid={tick.bid} ask={tick.ask} last={tick.last} close={tick.close}")
 
 # --- place the order ---
-if limit_price:
-    order = LimitOrder("BUY", qty, limit_price, tif="GTC")
-    print(f"Placing LIMIT BUY {qty} SPY @ ${limit_price} GTC ...")
-else:
+# Default = a MARKETABLE LIMIT with outsideRth=True: behaves like market during regular hours (fills at
+# the ask) but ALSO fills in pre/post-market, where a plain MKT order would be rejected/sit. A buffer
+# above the ask guarantees marketability for 1 share of a liquid ETF. --market forces a pure MKT order.
+if force_market:
     order = MarketOrder("BUY", qty)
-    print(f"Placing MARKET BUY {qty} SPY ...")
+    print(f"Placing MARKET BUY {qty} SPY (regular hours only) ...")
+else:
+    if limit_price is None:
+        if ref is None:
+            print("No quote available to size a limit; pass --limit PRICE or --market."); ib.disconnect(); sys.exit(1)
+        limit_price = round(ref * 1.01, 2)      # 1% over reference = marketable for 1 share
+    order = LimitOrder("BUY", qty, limit_price, tif="DAY")
+    order.outsideRth = True
+    print(f"Placing MARKETABLE LIMIT BUY {qty} SPY @ ${limit_price} (outsideRth=True) ...")
 trade = ib.placeOrder(spy, order)
 
 # --- wait for terminal status ---
