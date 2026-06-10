@@ -2,12 +2,32 @@
 
 Buys 1 share of SPY in the IBKR **paper** account end to end, to prove the API path before any real order.
 
+## Where it runs
+Hosted on a dedicated **Hetzner VPS** (not a laptop — hosts come and go; the gateway should be permanent
+and reachable by whatever machine/AI drives it next). Box: `leaps-ibkr`, **167.233.34.83**, cx23 (2 vCPU /
+4 GB, x86 — the gateway image is x86-only), Ubuntu 24.04, SSH-only firewall, key `~/.ssh/leaps-ibkr`.
+Deploy dir on the VPS: `/root/ibkr/` (compose + `.env` + `venv` + `buy_one_spy.py`). The gateway API is
+bound to `127.0.0.1:4002` **on the VPS** and never exposed; the order script runs on the VPS too, so the
+only open port is SSH. Manage: `ssh -i ~/.ssh/leaps-ibkr root@167.233.34.83 'cd /root/ibkr && docker compose ...'`.
+
+Login uses the **live** username + password with the gateway's paper toggle (`TRADING_MODE=paper`); IBKR
+then serves the simulated paper account **`DUQ691670`** ($1,000,000 play money). No 2FA is prompted for the
+paper login.
+
 ## How it works
 - `docker-compose.yml` runs IBKR's IB Gateway headless (gnzsnz image + IBC + Xvfb) in **paper** mode.
   The paper API listens on **127.0.0.1:4002** (localhost only). Paper logins use the `DU…` username and
   do **not** require 2FA, so this runs unattended.
 - `buy_one_spy.py` (ib_async) connects to 4002, refuses unless the account id starts `DU` (live-account
-  guard), shows the play-money balance, places a market BUY for 1 SPY, waits for the fill, prints it.
+  guard), shows the play-money balance, sizes a marketable limit off a delayed quote, places a **GTC**
+  marketable-limit BUY for 1 SPY (`outsideRth=True`), waits for the fill, prints it.
+
+## Gotcha: market data + after-hours fills
+- The paper account has **no live market-data subscription** → `reqMktData` returns NaN. The script calls
+  `reqMarketDataType(4)` (delayed-frozen) first, which returns the last/close price with no subscription.
+- A plain MKT order won't fill outside regular hours. The default is a **GTC marketable limit** (1% over
+  the reference price) with `outsideRth=True`: it fills instantly during RTH and otherwise **rests and
+  fills at the next session open** (pre-market ~4am ET). `--market` forces pure MKT; `--limit P` sets a price.
 
 ## Run it
 ```bash

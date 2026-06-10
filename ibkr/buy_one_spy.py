@@ -57,8 +57,11 @@ before = next((p for p in ib.positions(acct) if p.contract.symbol == "SPY"), Non
 print("SPY position before:", before.position if before else 0)
 
 # --- a quote, for context and to size a marketable limit ---
+# Paper accounts often lack a live data subscription; type 4 = delayed-frozen returns the last
+# available price (incl. the prior close when the market is shut), no subscription required.
+ib.reqMarketDataType(4)
 tick = ib.reqMktData(spy, "", snapshot=True)
-ib.sleep(3)
+ib.sleep(4)
 def _num(x): return x if (x is not None and x == x and x > 0) else None   # drop NaN/None/<=0
 ask  = _num(tick.ask)
 ref  = ask or _num(tick.last) or _num(tick.close) or _num(tick.marketPrice())
@@ -76,7 +79,7 @@ else:
         if ref is None:
             print("No quote available to size a limit; pass --limit PRICE or --market."); ib.disconnect(); sys.exit(1)
         limit_price = round(ref * 1.01, 2)      # 1% over reference = marketable for 1 share
-    order = LimitOrder("BUY", qty, limit_price, tif="DAY")
+    order = LimitOrder("BUY", qty, limit_price, tif="GTC")   # GTC: fills now in RTH, else rests to next session
     order.outsideRth = True
     print(f"Placing MARKETABLE LIMIT BUY {qty} SPY @ ${limit_price} (outsideRth=True) ...")
 trade = ib.placeOrder(spy, order)
