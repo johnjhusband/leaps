@@ -46,6 +46,13 @@ sudo docker compose down      # stop the gateway when done
 - `venv/` with `ib_async` 2.1.0 (`python3 -m venv venv && venv/bin/pip install ib_async`).
 - Image **pinned to `ghcr.io/gnzsnz/ib-gateway:10.34.1c`** (see gotcha below).
 
+## Confirming the fill (after-hours orders)
+`check_fill.py` logs whether the resting order has filled — fill signal is the account **SPY position ≥ 1**
+(reliable no matter which client placed the order; it also calls `reqAllOpenOrders`/`reqExecutions` to see
+orders from other clients). A VPS cron runs it every 15 min from 08:00–15:00 UTC (covers pre-market ~4am ET
+through late-morning RTH), appending to `/root/ibkr/fill_confirmation.log`. Check it:
+`ssh -i ~/.ssh/leaps-ibkr root@167.233.34.83 'cat /root/ibkr/fill_confirmation.log'` — a `FILLED` line = done.
+
 ## Gotcha: pin the gateway version
 `:stable` currently ships IB Gateway **10.45.1g**, whose bundled IBC hangs at "Invoking config
 dialog menu" right after login (jxbrowser/IBC mismatch, IbcAlpha/IBC#285) — the API socket never
