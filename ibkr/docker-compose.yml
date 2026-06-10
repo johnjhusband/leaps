@@ -2,7 +2,7 @@ services:
   ib-gateway:
     image: ghcr.io/gnzsnz/ib-gateway:10.34.1c   # pinned: :stable (10.45.1g) hangs on IBC config dialog (IbcAlpha/IBC#285)
     container_name: ib-gateway-paper
-    restart: "no"   # creds unverified: do NOT auto-retry a bad login (can lock the live account). Flip to unless-stopped once login is confirmed.
+    restart: unless-stopped   # login verified (paper DUQ691670) -> keep the gateway up across reboots
     environment:
       TWS_USERID: ${TWS_USERID}
       TWS_PASSWORD: ${TWS_PASSWORD}
