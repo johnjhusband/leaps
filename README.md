@@ -10,7 +10,7 @@ channel's videos, structured so an LLM can query and **implement** it.
 > **Buy rule vs analysis split:** the 50/50 bullish/bearish split in the per-index screens (the
 > `QQQ_SPY_*` report) is an *analysis ranking only* and uses an OLD proxy formula. The **actual buy
 > decision** — exact thresholds, the moat gate, the allocation formula, and the current reconciled
-> counts — is in **`BUY_DECISION.md`** (ground truth). The current buy list is `buy_list.csv` (328 names).
+> counts — is in **`BUY_DECISION.md`** (ground truth). The current buy list is `buy_list.csv` (185 names).
 
 - `wiki/README.md` — how the wiki is organized and why (5-layer design for LLM utility).
 - `wiki/_meta/BUILD_STATUS.md` — what was built, classification stats, how to rebuild.
@@ -38,9 +38,10 @@ strike depth, duration, profit-taking, assignment sizing) now corrected in the w
 EPS growth vs price growth, with his P/E apples-to-apples validity check. `universe_fractional.csv` now
 leads with `golden_verdict`/`golden_pct`/`golden_valid` (the faithful method); the old proxy columns are
 kept for comparison. The **>20% market deploy gate** (golden line on the S&P, valid names only) writes to
-`MARKET_DIRECTION.md`. **Buy list = `BUY_DECISION.md` rule (golden-bullish + reliable + passes moat gate) = 328 names** (266 valid
-+ 62 forward-confirmed; 4 removed by the moat gate). Still not computed: the scorecard's qualitative inputs
-(sentiment, execution risk) → can't hit ">75"; the moat gate is being filled in by per-company research (`wiki/moats/`).
+`MARKET_DIRECTION.md`. **Buy list = `BUY_DECISION.md` rule (golden-bullish + reliable + passes moat gate) = 185 names** (164 valid
++ 21 forward-confirmed; ~147 removed by the moat gate after full per-company research). The moat gate is
+now backed by `moat_verdicts.csv` + `wiki/moats/` (189 yes / 118 weak / 30 no). Earlier counts (269/328)
+predate that research. Still not computed: the scorecard's qualitative inputs (sentiment, execution risk).
 
 ## Data layer: `leaps.db` (SQLite) + rebalance history
 Decision (2026-06-07): **narrative strategy pages stay markdown** (prose to reason from); **the data layer
@@ -52,7 +53,7 @@ signal). Tables: `companies`, `snapshots`, `market_gate`, `videos`, `claims`. `s
 **`bash rebuild_universe.sh`** regenerates everything end-to-end; see **`REPRODUCE.md`** for the runbook
 and **`BUY_DECISION.md`** for the exact buy/allocation rules and current counts. Primary outputs:
 - **`universe_fractional.csv`** — the 1,150 IBKR-fractional-tradable companies (910 scoreable), every column.
-- **`buy_list.csv`** — the 328 buy-eligible names (the investable "index with an edge").
+- **`buy_list.csv`** — the 185 buy-eligible names (the investable "index with an edge").
 - **`MARKET_DIRECTION.md`** — the deploy gate + the stock/bond allocation (currently 72/28).
 
 ### Other / historical artifacts (superseded by the above — kept for reference)
