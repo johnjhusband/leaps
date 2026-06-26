@@ -1,11 +1,12 @@
-import yfinance as yf, json, os, time
+import yfinance as yf, json, os, time, _cache
 import os as _os; ROOT=_os.path.dirname(_os.path.abspath(__file__))
 con=json.load(open(f'{ROOT}/_constituents.json'))
 tickers=sorted(set(con['SPY'])|set(con['QQQ'])|set(con.get('RUSSELL1000',[]))|set(con.get('GLOBAL1000',[])))
 path=f'{ROOT}/_goldenline.json'
 cache=json.load(open(path)) if os.path.exists(path) else {}
-todo=[t for t in tickers if t not in cache]
-print(f'goldenline fetch: {len(todo)} of {len(tickers)}', flush=True)
+MAXAGE=_cache.price_max_age()                                    # prices go stale daily; refetch if older
+todo=[t for t in tickers if not _cache.is_fresh(cache.get(t), MAXAGE)]
+print(f'goldenline fetch: {len(todo)} of {len(tickers)} (price cache max age {MAXAGE}d)', flush=True)
 for i,tk in enumerate(todo):
     rec={}
     try:
@@ -23,7 +24,7 @@ for i,tk in enumerate(todo):
         rec['price_2y']=round(float(cl[-25]),2) if len(cl)>=25 else (round(float(cl[0]),2) if cl else None)
     except Exception as e:
         rec['err']=str(e)[:50]
-    cache[tk]=rec
+    cache[tk]=_cache.stamp(rec)                                  # record fetch date for freshness
     if i%25==0:
         json.dump(cache,open(path,'w')); print(f'{i}/{len(todo)}',flush=True)
     time.sleep(0.2)

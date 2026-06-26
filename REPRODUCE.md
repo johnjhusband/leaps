@@ -8,7 +8,8 @@ Brandon's method. Run it on a schedule (monthly is sensible) and rebalance from 
 ```bash
 bash rebuild_universe.sh
 ```
-Runtime ≈ 20–25 min (the yfinance pulls dominate). Caches make re-runs faster; see "Refreshing data".
+Runtime ≈ 20–25 min (the yfinance pulls dominate). Caches auto-refresh by age so every run reflects
+current prices with no manual steps; see "Cache freshness".
 
 ## What it produces
 | File | What it is |
@@ -90,14 +91,24 @@ Valuation (20) + Growth (20) are computed; **Moat (20)** is now an approximate p
 market-direction gauge, not a per-stock score. Treat moat_proxy and the macro gauge as systematic
 stand-ins for Brandon's hand judgement, not identical to it.
 
-## Refreshing data
-- Prices/EPS/growth move. The fetch scripts **reuse caches** if present, so a plain re-run only
-  fetches *new* tickers. **To get fresh prices/valuations, delete the caches first:**
-  ```bash
-  rm -f _fundamentals.json _growth.json _exchange.json
-  bash rebuild_universe.sh
-  ```
+## Cache freshness (automatic — no manual deletion)
+The fetch scripts age their caches by date, so a re-run **automatically refetches stale data**. You do
+**not** delete caches by hand (that was a non-reproducible footgun — removed). Each cached entry records
+the date it was fetched (`_fetched`); on every run, `rebuild_universe.sh` refetches anything older than
+its freshness window:
+- **Prices / EPS / growth** (`_goldenline.json`, `_fundamentals.json`, `_growth.json`): max age **1 day**
+  → effectively refetched every rebuild, so the screen always reflects current prices.
+- **Quality** (margins/ROE/debt, `_quality.json`): max age **30 days** (these move ~quarterly).
+- **Exchange codes** (`_exchange.json`): static identifiers, not aged.
 - Constituent lists and `_global_raw.json` are always re-fetched fresh (fast).
+
+Override the windows when needed (e.g. a same-day re-run that should reuse prices):
+```bash
+PRICE_CACHE_MAX_AGE_DAYS=7 QUALITY_CACHE_MAX_AGE_DAYS=90 bash rebuild_universe.sh
+```
+The freshness logic lives in `_cache.py` (`is_fresh`/`stamp`); old caches written before this (no
+`_fetched` stamp) are treated as stale and self-heal on the next run. **Implication: every rebuild pulls
+current market data by default — there is no stale-price trap.**
 
 ## Method caveats (carried into the output)
 - Valuation is an estimate, exactly as Brandon frames his own calculator; the growth input drives

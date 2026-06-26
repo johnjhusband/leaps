@@ -1,12 +1,13 @@
-import yfinance as yf, json, os, time
+import yfinance as yf, json, os, time, _cache
 import os as _os; ROOT=_os.path.dirname(_os.path.abspath(__file__))
 con=json.load(open(f'{ROOT}/_constituents.json'))
 tickers=sorted(set(con['SPY'])|set(con['QQQ']))
 path=f'{ROOT}/_growth.json'
 cache=json.load(open(path)) if os.path.exists(path) else {}
+MAXAGE=_cache.price_max_age()                                    # estimates move; refetch if older
 done=0;fail=0
 for i,tk in enumerate(tickers):
-    if tk in cache and cache[tk].get('have'): continue
+    if _cache.is_fresh(cache.get(tk), MAXAGE): continue
     rec={'have':True,'y0':None,'y1':None,'ltg':None}
     try:
         ge=yf.Ticker(tk).growth_estimates
@@ -21,7 +22,7 @@ for i,tk in enumerate(tickers):
         done+=1
     except Exception as e:
         rec['err']=str(e)[:60]; fail+=1
-    cache[tk]=rec
+    cache[tk]=_cache.stamp(rec)
     if i%25==0:
         json.dump(cache,open(path,'w')); print(f'{i}/{len(tickers)} done={done} fail={fail}',flush=True)
     time.sleep(0.3)
