@@ -16,4 +16,4 @@ Brandon deploys aggressively only when the overall market is favorable (his bull
 
 ## Capital allocation (stocks vs bonds)
 - **Sizing (market hotness, PRE-moat):** 310/907 = **34%** undervalued → rule `stock = min(100%, undervalued% ÷ 50%)` → **68% stocks / 32% bonds.**
-- **Holdings (POST-moat):** that 68% stock sleeve is spread across the **179** moat-quality names in `buy_list.csv` (the moat gate removed 131 undervalued-but-no/weak-moat names).
+- **Holdings (POST-moat):** that 68% stock sleeve is spread across the **178** moat-quality names in `buy_list.csv` (the moat gate removed 132 undervalued-but-no/weak-moat names).

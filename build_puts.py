@@ -28,7 +28,13 @@ def gp(r):
     try: return float(r.get("golden_pct") or 0)
     except: return 0
 PRICE_CEILING = {"WM", "PANW", "COST"}     # Brandon avoids on price (same as build_conviction.py)
+try:                                        # RESTRICTED — never tradable (insider list, e.g. MSFT)
+    RESTRICTED = {l.strip().upper() for l in open(f"{ROOT}/restricted_tickers.txt")
+                  if l.strip() and not l.startswith("#")}
+except Exception:
+    RESTRICTED = set()
 cand = [r for r in rows if r.get("moat") == "yes" and "." not in r["ticker"]
+        and r["ticker"].upper() not in RESTRICTED
         and r["ticker"] not in PRICE_CEILING and gp(r) <= 300]   # = the concentration sleeve, US-listed
 cand.sort(key=mc, reverse=True)
 cand = cand[:8]

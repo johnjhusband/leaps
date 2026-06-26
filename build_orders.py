@@ -18,7 +18,10 @@ BOND_ETF = 'SGOV'                                            # short-term Treasu
 stock_w=None
 mdj=f'{ROOT}/market_direction.json'
 # build_universe prints "stock = min(1, undervalued%/50%)"; recompute from buy_list + a stored value if present
-buy=list(csv.DictReader(open(f'{ROOT}/buy_list.csv')))
+try:                                        # RESTRICTED — never tradable (insider list, e.g. MSFT)
+    _restr={l.strip().upper() for l in open(f'{ROOT}/restricted_tickers.txt') if l.strip() and not l.startswith('#')}
+except Exception: _restr=set()
+buy=[r for r in csv.DictReader(open(f'{ROOT}/buy_list.csv')) if r['ticker'].upper() not in _restr]
 # pull the stock weight from MARKET_DIRECTION.md (the canonical value), fall back to 0.73
 import re
 try:

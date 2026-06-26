@@ -7,6 +7,11 @@ file, this file wins. (Written 2026-06-07 to close the "thresholds only live in 
 ## A. Per-stock buy decision (`buy=Y`)
 A name is on the buy list **iff ALL of these pass**, evaluated in order:
 
+0. **Restricted gate (compliance — checked FIRST).** If the ticker is in `restricted_tickers.txt`, it is
+   **never `buy=Y`** and never tradable in any form (shares, puts, calls). Currently **MSFT** (John is a
+   Microsoft insider). Enforced in `build_universe.py` `buy_eligible()` and every order builder; it also
+   overrides any human "buy everything" instruction. See `ibkr/TRADING_AUTHORIZATION.md`.
+
 1. **Moat gate.** Look up the ticker in `moat_verdicts.csv`. If its `moat` value is **`no`** or **`weak`**,
    it is **rejected**. A ticker not present in that file (not yet researched) **passes** (pending).
    → This gate, not the `moat_proxy_20` column, is what removes value traps (PayPal, Netflix). The

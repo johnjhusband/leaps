@@ -66,10 +66,18 @@ def undervalued(t):
     grow=(vrec.get(t,{}).get('g') or 0)*100
     return fp <= 1.5*max(grow, 8)
 
+# RESTRICTED tickers — NEVER tradable in any way (e.g. MSFT: John is a Microsoft insider). Hard gate.
+try:
+    RESTRICTED={l.strip().upper() for l in open(f'{ROOT}/restricted_tickers.txt')
+               if l.strip() and not l.startswith('#')}
+except Exception: RESTRICTED=set()
+
 def buy_eligible(t):
-    """The actual HOLDINGS = undervalued AND passes the moat gate (moat verdict not 'no'/'weak').
-    The moat gate only PICKS which undervalued names we hold (quality); it does NOT change the
-    stock/bond % (that comes from undervalued()). PayPal/Netflix etc. = cheap but no moat = value traps."""
+    """The actual HOLDINGS = undervalued AND passes the moat gate (moat verdict not 'no'/'weak') AND
+    not RESTRICTED. The moat gate only PICKS which undervalued names we hold (quality); it does NOT change
+    the stock/bond % (that comes from undervalued()). PayPal/Netflix etc. = cheap but no moat = value traps.
+    Restricted tickers (insider list) can NEVER be held — excluded here so they never reach buy_list.csv."""
+    if t.upper() in RESTRICTED: return False
     return undervalued(t) and MOAT.get(t) not in ('no','weak')
 
 def moat_proxy(t):

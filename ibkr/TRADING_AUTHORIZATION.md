@@ -9,6 +9,14 @@ other doc. If anything here conflicts with a script's convenience or another doc
 An order is a state-changing, outward-facing action. The default is to **describe or preview and STOP**,
 never to execute. Execution requires a human instruction that you can quote.
 
+## RESTRICTED tickers — NEVER trade, even WITH authorization (compliance / insider)
+**Tickers in `../restricted_tickers.txt` must never be traded in any form — shares, puts, calls, or any
+derivative.** Currently **MSFT** (John is a Microsoft employee / insider; trading it would be insider
+trading). This is absolute: it overrides even an explicit human order. If asked to "buy the whole list"
+or "place orders.csv," a restricted ticker is silently skipped — and if one ever appears in an actionable
+file (`buy_list.csv`, `orders.csv`, a conviction/put list), treat it as a bug, halt, and remove it before
+trading anything. Enforced in code by every builder; this doc is the why and the backstop.
+
 ## A question is NOT authorization
 These are questions. Answer them in words and **do not trade**:
 - "Can you make a trade?" / "Could you buy X?" / "Are you able to…?"

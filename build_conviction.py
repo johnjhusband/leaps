@@ -23,8 +23,15 @@ HIS_BUYS = {"NVDA", "META", "GOOG", "GOOGL", "MSFT", "AMZN", "ORCL", "MU", "AVGO
 # (BUY_DECISION.md back-test gap; AMZN graduated to a buy in the 2026-06 videos, so it is NOT excluded).
 PRICE_CEILING = {"WM", "PANW", "COST"}
 ARTIFACT_GP = 300   # golden_pct above this is a near-zero-base-EPS artifact, not a real conviction signal
+# RESTRICTED — never tradable (insider list, e.g. MSFT). Defensive: build_universe already drops these
+# from buy_list.csv, but exclude here too so this layer can never surface one.
+try:
+    RESTRICTED = {l.strip().upper() for l in open(f"{ROOT}/restricted_tickers.txt")
+                  if l.strip() and not l.startswith("#")}
+except Exception:
+    RESTRICTED = set()
 
-rows = list(csv.DictReader(open(f"{ROOT}/buy_list.csv")))
+rows = [r for r in csv.DictReader(open(f"{ROOT}/buy_list.csv")) if r["ticker"].upper() not in RESTRICTED]
 def mc(r):
     try: return float(r.get("mktcap_B") or 0)
     except: return 0

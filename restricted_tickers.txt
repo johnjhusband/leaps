@@ -1,0 +1,6 @@
+# RESTRICTED TICKERS — NEVER trade these, in ANY way (no shares, no puts, no calls, nothing).
+# Enforced in code by every builder (build_universe / build_conviction / build_puts / build_orders)
+# AND documented in CLAUDE.md, TRADING_AUTHORIZATION.md, BUY_DECISION.md. One ticker per line.
+#
+# MSFT — John is a Microsoft employee and an insider. Trading MSFT (or its derivatives) is prohibited.
+MSFT

@@ -11,6 +11,13 @@ Read **`ibkr/TRADING_AUTHORIZATION.md`** and obey it. You may **not** place an o
 without explicit, specific human authorization for **that** order. A question ("can you make a trade?")
 is not an instruction — answer it, do not act. This rule outranks everything else in this repo.
 
+## 0a. RESTRICTED tickers — NEVER trade, in any way
+**Never trade any ticker listed in `restricted_tickers.txt` — no shares, no puts, no calls, nothing.**
+Currently: **MSFT** (John is a Microsoft employee / insider — trading it is prohibited). This is enforced
+in code (every builder excludes them) AND is a hard rule here: even on an explicit "buy everything" order,
+a restricted ticker is skipped. If you ever see a restricted ticker in an actionable file, that is a bug —
+stop and fix it. See `ibkr/TRADING_AUTHORIZATION.md`.
+
 ## What this system does (one line, no data)
 Screens a broad global universe of stocks by one fixed valuation rule (the "golden line"), holds the
 undervalued + quality subset, and sizes that stock sleeve against short-term bonds by how cheap the
