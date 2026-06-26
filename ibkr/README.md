@@ -1,5 +1,9 @@
 # Phase 3 — IBKR paper trade (play money)
 
+> ⛔ **READ `TRADING_AUTHORIZATION.md` FIRST.** Never place an order without explicit, specific
+> authorization for that order. A question ("can you make a trade?") is NOT an instruction — answer it,
+> don't act. This rule outranks everything below.
+
 Buys 1 share of SPY in the IBKR **paper** account end to end, to prove the API path before any real order.
 
 ## Result (proven)

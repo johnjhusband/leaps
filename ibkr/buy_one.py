@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """Buy N shares of any TICKER in the IBKR PAPER (play-money) account, end to end.
 
+  ⛔ AUTHORIZATION: do NOT run this unless a human explicitly told you to place THIS order
+     (side + ticker + size). A question like "can you make a trade?" is NOT authorization —
+     answer it, don't run this. See TRADING_AUTHORIZATION.md. Running this places a real order.
+
 Generalized from buy_one_spy.py. Connects to the local IB Gateway (paper, port 4002), shows the
 paper balance and current position, places an order, waits briefly for a fill, prints the result.
 

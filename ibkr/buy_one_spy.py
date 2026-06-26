@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Buy ONE share of SPY in the IBKR PAPER (play-money) account, end to end.
 
+  ⛔ AUTHORIZATION: do NOT run this unless a human explicitly told you to place this order.
+     A question ("can you make a trade?") is NOT authorization. See TRADING_AUTHORIZATION.md.
+
 Connects to the local IB Gateway running in paper mode (port 4002), shows the paper
 balance and any existing SPY position, places a market order for 1 share of SPY, waits
 for the fill, and prints the confirmation. Read-only proof first, then the single trade.
