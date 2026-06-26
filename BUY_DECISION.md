@@ -66,9 +66,12 @@ absolute-valuation-ceiling gate, not a moat issue.
 §A picks **which** names; this section picks **how** to hold each, per Brandon's actual options method.
 Source: `wiki/strategy/STRATEGY_SPEC.md` + the 2026-06-26 video re-investigation (J_KCO3hhf24
 "tested every options strategy 12 yrs", flzw3xQ4_9E, -ayim8zd7BY, O9Xv6w6FbXE, 18WBQZ9JiBM).
-**Status: documented here, NOT yet implemented in code** — `build_orders.py` currently emits shares + SGOV
-only (which IS Brandon's collateral base, so the long-only book is the correct executable foundation; the
-put/call overlay is the next build).
+**Status (partial implementation):** `build_orders.py` emits the **shares + SGOV collateral base** (the
+long-only book — Brandon's foundation). `build_puts.py` now generates the **put-selling overlay** with
+**real LEAPS quotes**: it ranks the table-pounders by market cap, pulls ~2yr put chains (~10% below spot),
+sizes contracts so total assignment value ≤ a regime cap (`ASSIGN_CAP_FRAC` of 7-day liquidity), reports
+premium collected, and the recycle (≈50% shares / 50% barely-OTM ~2yr calls). Still TODO: wiring the
+overlay into live IBKR option orders and a full call-leg builder.
 
 ### E.1 The bullish-only hierarchy (the ONLY instruments used)
 - **Long shares** — the base / collateral; the floor for any qualifying name.
