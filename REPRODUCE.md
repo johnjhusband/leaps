@@ -23,7 +23,7 @@ Runtime ≈ 20–25 min (the yfinance pulls dominate). Caches make re-runs faste
 To invest: use **`buy_list.csv`** (the `buy=Y` names) — NOT simply the "bullish" rows. The buy decision is
 golden-bullish **AND** reliable **AND** passes the moat gate; the exact rule and thresholds are in
 **`BUY_DECISION.md`** (ground truth). `build_universe.py` writes both `universe_fractional.csv` (all data +
-the `buy` column) and `buy_list.csv` (the 328 buy-eligible names).
+the `buy` column) and `buy_list.csv` (the buy-eligible names — count varies each rebuild).
 
 ### Why each security got its rating (columns in the CSVs)
 Every row carries the calculation inputs so the verdict is self-explaining:
@@ -62,7 +62,7 @@ because `g_used` caps at 0.30 on a low EPS → intrinsic above price.
 6. **`build_universe.py`** → `universe_full.csv`, `universe_fractional.csv`, **`buy_list.csv`**, `MARKET_DIRECTION.md`
    - de-dupe the union → drop no-data names → apply the **golden line** (`goldenline.py`) → apply the
      **forward-confirmation** and the **moat gate** (reads `moat_verdicts.csv`) → set the `buy` column →
-     keep only IBKR-fractional-tradable → write `buy_list.csv` (the 328 `buy=Y` names) + the
+     keep only IBKR-fractional-tradable → write `buy_list.csv` (the `buy=Y` names) + the
      market-direction deploy gauge + stock/bond allocation. **This is the step that produces the buy list.**
      Exact rule & thresholds: `BUY_DECISION.md`.
    - `moat_verdicts.csv` is a **hand-maintained research file** (one row per researched company; see
