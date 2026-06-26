@@ -57,3 +57,26 @@ def stamp(entry):
 
 def load(path):
     return json.load(open(path)) if os.path.exists(path) else {}
+
+
+def fetch_retry(fn, is_empty, attempts=4, base_sleep=1.5):
+    """Call fn() and retry while its result is_empty(result) (a transient yfinance miss
+    returns nothing). Retries with linear backoff up to `attempts` times. Returns the last
+    result (which may still be empty if every attempt failed — the caller flags that, loudly).
+
+    THE BUG THIS FIXES: a single empty fetch used to silently drop a ticker from the universe,
+    so the screen's output varied run-to-run and a legitimate holding could vanish unnoticed.
+    """
+    import time
+    res = None
+    for k in range(attempts):
+        try:
+            res = fn()
+        except Exception:
+            res = None
+        if not is_empty(res):
+            return res
+        if k < attempts - 1:
+            time.sleep(base_sleep * (k + 1))
+    return res                                                  # still empty -> caller must flag it
+

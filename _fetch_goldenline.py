@@ -7,7 +7,8 @@ cache=json.load(open(path)) if os.path.exists(path) else {}
 MAXAGE=_cache.price_max_age()                                    # prices go stale daily; refetch if older
 todo=[t for t in tickers if not _cache.is_fresh(cache.get(t), MAXAGE)]
 print(f'goldenline fetch: {len(todo)} of {len(tickers)} (price cache max age {MAXAGE}d)', flush=True)
-for i,tk in enumerate(todo):
+def pull(tk):
+    """One full fetch for a ticker; returns a rec. Empty (no price) -> retried by fetch_retry."""
     rec={}
     try:
         t=yf.Ticker(tk)
@@ -24,9 +25,16 @@ for i,tk in enumerate(todo):
         rec['price_2y']=round(float(cl[-25]),2) if len(cl)>=25 else (round(float(cl[0]),2) if cl else None)
     except Exception as e:
         rec['err']=str(e)[:50]
+    return rec
+_empty=lambda r: not (isinstance(r,dict) and r.get('price_now'))   # no price = failed fetch -> retry
+for i,tk in enumerate(todo):
+    rec=_cache.fetch_retry(lambda: pull(tk), _empty)            # retry transient misses, don't drop silently
     cache[tk]=_cache.stamp(rec)                                  # record fetch date for freshness
     if i%25==0:
         json.dump(cache,open(path,'w')); print(f'{i}/{len(todo)}',flush=True)
     time.sleep(0.2)
 json.dump(cache,open(path,'w'))
-print('COMPLETE', len(cache), flush=True)
+missing=[t for t in tickers if _empty(cache.get(t))]            # names with NO usable price after retries
+print(f'COMPLETE {len(cache)} | NO-DATA after retries: {len(missing)}', flush=True)
+if missing:
+    print('  DROPPED (no price, excluded from screen):', ', '.join(sorted(missing)[:40]), flush=True)

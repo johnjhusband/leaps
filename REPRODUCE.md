@@ -110,6 +110,14 @@ The freshness logic lives in `_cache.py` (`is_fresh`/`stamp`); old caches writte
 `_fetched` stamp) are treated as stale and self-heal on the next run. **Implication: every rebuild pulls
 current market data by default — there is no stale-price trap.**
 
+### Fetch retries (no silent name-drops)
+yfinance intermittently returns nothing for a ticker. A single empty fetch used to **silently drop** that
+name from the universe, so the buy list varied run-to-run (e.g. a real holding vanished one run). Fixed:
+the price fetchers (`_fetch_goldenline.py`, `_fetch_all.py`) wrap each ticker in `_cache.fetch_retry`
+(4 attempts, linear backoff) and, at the end, **loudly print any name still missing data after retries**
+(`NO-DATA after retries: N` + the dropped tickers). A drop can no longer be silent — it's retried first,
+then reported. `fetch_retry` lives in `_cache.py`.
+
 ## Method caveats (carried into the output)
 - Valuation is an estimate, exactly as Brandon frames his own calculator; the growth input drives
   it and is capped conservatively at 30%.
