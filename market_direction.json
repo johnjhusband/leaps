@@ -3,21 +3,21 @@
  "reads": [
   {
    "index": "SPY",
-   "median_under_over_pct": -16,
-   "capwtd_under_over_pct": 3,
+   "median_under_over_pct": -17,
+   "capwtd_under_over_pct": 5,
    "pct_undervalued_breadth": 37
   },
   {
    "index": "QQQ",
-   "median_under_over_pct": -23,
-   "capwtd_under_over_pct": 3,
-   "pct_undervalued_breadth": 29
+   "median_under_over_pct": -26,
+   "capwtd_under_over_pct": 7,
+   "pct_undervalued_breadth": 32
   },
   {
    "index": "Global1000",
-   "median_under_over_pct": -8,
+   "median_under_over_pct": -9,
    "capwtd_under_over_pct": 17,
-   "pct_undervalued_breadth": 45
+   "pct_undervalued_breadth": 46
   }
  ]
 }
