@@ -83,8 +83,8 @@ browser login forces a reset, after which the temp password is dead — use the 
 
 ## Placing an arbitrary trade
 `buy_one.py TICKER [QTY] [--limit P] [--market]` — same logic as the SPY proof but for any symbol.
-Verified 2026-06-26: `buy_one.py NVDA 1` filled immediately @ $193.71 in-hours. Paper account currently
-holds 1 NVDA + 1 SPY.
+(Verified once on 2026-06-26 that an in-hours buy fills immediately.) For current holdings, query the
+account — do not rely on any figure written into this doc.
 ```
 ssh -i ~/.ssh/leaps-ibkr root@167.233.34.83 'cd /root/ibkr && ./venv/bin/python buy_one.py NVDA 1'
 ```
