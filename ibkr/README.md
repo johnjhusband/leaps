@@ -77,6 +77,14 @@ browser login forces a reset, after which the temp password is dead — use the 
 - Paper account only — `buy_one_spy.py` exits if the connected account is not `DU…`.
 - `.env` (credentials) and `venv/` are gitignored; the API port is bound to localhost.
 
+## Placing an arbitrary trade
+`buy_one.py TICKER [QTY] [--limit P] [--market]` — same logic as the SPY proof but for any symbol.
+Verified 2026-06-26: `buy_one.py NVDA 1` filled immediately @ $193.71 in-hours. Paper account currently
+holds 1 NVDA + 1 SPY.
+```
+ssh -i ~/.ssh/leaps-ibkr root@167.233.34.83 'cd /root/ibkr && ./venv/bin/python buy_one.py NVDA 1'
+```
+
 ## Next (Phase 3 proper, after this proof)
-Replace the single hardcoded SPY order with a loop over `../orders.csv`, sending each name's `dollars`
+Replace the single-name order with a loop over `../orders.csv`, sending each name's `dollars`
 as `cashQty` (IBKR fractional), with a dry-run preview and a total-spend guardrail before live orders.
