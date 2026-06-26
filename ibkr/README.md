@@ -89,6 +89,25 @@ account — do not rely on any figure written into this doc.
 ssh -i ~/.ssh/leaps-ibkr root@167.233.34.83 'cd /root/ibkr && ./venv/bin/python buy_one.py NVDA 1'
 ```
 
-## Next (Phase 3 proper, after this proof)
-Replace the single-name order with a loop over `../orders.csv`, sending each name's `dollars`
-as `cashQty` (IBKR fractional), with a dry-run preview and a total-spend guardrail before live orders.
+## Placing the whole portfolio — `place_orders.py`
+`place_orders.py ../orders.csv [--execute] [--probe] [--max N] [--skip N]` — batch executor.
+Reads `orders.csv`, places each name on the **paper** account (refuses any non-`DU` account), reports
+every name (placed / filled / skipped+reason / cash) — **never silently drops a name**.
+
+- **WHOLE-SHARE mode (current):** fractional isn't enabled for the API yet (Error 10243), so it buys the
+  closest number of **whole shares that fit each name's dollar budget** (floor) and routes the unspent
+  remainder — plus any name priced above its budget, plus any name it can't price — to **cash**.
+- **Idempotent:** skips names already held, so it's safe to re-run / resume after an interruption.
+- `--probe` places one test fractional order to detect when fractional finally activates; `--skip N`
+  resumes past the first N rows.
+
+### Gotchas learned placing the real paper book (2026-06-26)
+- **Fractional via API is a separate account permission** (Client Portal → Trading Permissions → Stocks →
+  Global "Trade in Fractions"); until it's on, API fractional orders are rejected (10243). Whole-share is
+  the interim path.
+- **Paper accounts have no foreign market-data** by default → the ~22 EU/CA/Asia listings can't be priced
+  and route to cash. They'd trade on a funded account with the data subscriptions.
+- **Class-share tickers use a space, not a hyphen** (BF-B → `BF B`), else the contract has no conId and
+  `reqMktData` raises — every per-name step is now wrapped so one bad name can't kill the batch.
+- Result of the first real placement: 149 stocks + SGOV filled (~50% / 32%), ~18% cash (foreign +
+  over-budget names). Fractional, once enabled, tightens those from cash into exact weights.
