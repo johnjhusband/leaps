@@ -30,6 +30,7 @@ try:
 except Exception:
     RESTRICTED = set()
 
+PROBE = "--probe" in sys.argv   # place ONE test order to check if fractional is live; cancel it; exit 0 ok / 2 pending
 rows = [r for r in csv.DictReader(open(path))]
 ib = IB()
 print(f"Connecting to paper gateway {HOST}:{PORT} ...")
@@ -39,6 +40,18 @@ paper = [a for a in accts if a.startswith("DU")]
 if not paper:
     print(f"REFUSING: connected account(s) {accts} are not paper (DU...). No orders placed."); ib.disconnect(); sys.exit(1)
 acct = paper[0]
+if PROBE:
+    ib.reqMarketDataType(4)
+    c = Stock("NVDA", "SMART", "USD"); ib.qualifyContracts(c)
+    t = ib.reqMktData(c, "", snapshot=True); ib.sleep(2)
+    px = (t.ask if (t.ask and t.ask == t.ask and t.ask > 0) else (t.close or 200))
+    o = LimitOrder("BUY", 1.5, round(px * 1.02, 2), tif="GTC"); o.outsideRth = True   # fractional 1.5 sh
+    tr = ib.placeOrder(c, o); ib.sleep(1.5)
+    msg = " ".join(l.message for l in tr.log)
+    ib.cancelOrder(o); ib.sleep(0.5)
+    if "10243" in msg or "Fractional" in msg:
+        print("PROBE: fractional STILL PENDING (10243)"); ib.disconnect(); sys.exit(2)
+    print(f"PROBE: FRACTIONAL OK (status {tr.orderStatus.status}) — ready to place"); ib.disconnect(); sys.exit(0)
 print(f"PAPER account {acct} | mode={'EXECUTE' if EXECUTE else 'DRY-RUN'} | {len(rows)} rows\n")
 ib.reqMarketDataType(4)   # delayed-frozen (paper has no live sub)
 
