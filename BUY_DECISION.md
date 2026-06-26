@@ -62,6 +62,17 @@ The moat gate is backed by `moat_verdicts.csv` + `wiki/moats/`. Known back-test 
 avoids purely on PRICE (e.g. WM, PANW, AMZN, COST — moats but expensive) — the still-open
 absolute-valuation-ceiling gate, not a moat issue.
 
+## E0. Two-layer portfolio architecture (index + concentration) — mirrors Brandon
+Brandon runs a broad index base (SPY/QQQ) PLUS concentration on **10–20 high-conviction names**. Ours:
+- **Layer 1 — the index-with-an-edge:** the full `buy_list.csv` (all undervalued + reliable + moat names).
+  This REPLACES a plain SPY/QQQ index — same broad-base role, but valuation-filtered. It is the collateral.
+- **Layer 2 — the concentration sleeve:** the top ~10–20 high-conviction names (`build_conviction.py`),
+  **overweighted** and the **targets of the put/call overlay** (`build_puts.py`).
+- **High conviction =** on the buy list AND `moat=yes` AND largest market cap (liquidity/quality/table-pounder),
+  EXCLUDING (a) price-ceiling names Brandon avoids (WM, PANW, COST) and (b) EPS-base-artifact golden reads
+  (`golden_pct > 300`). Raw `golden_pct` is shown but not the ranker (tiny-base years spike it to artifacts).
+- Top of the current sleeve — NVDA, GOOG, MSFT, AMZN, META — are exactly the names Brandon is buying now.
+
 ## E. Instrument layer — HOW each holding is expressed (puts / shares / calls)
 §A picks **which** names; this section picks **how** to hold each, per Brandon's actual options method.
 Source: `wiki/strategy/STRATEGY_SPEC.md` + the 2026-06-26 video re-investigation (J_KCO3hhf24
