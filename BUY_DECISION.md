@@ -52,7 +52,16 @@ use different numbers:
    - `stock_weight = min(1.0, undervalued_share / 0.50)`;  `bond_weight = 1 − stock_weight`.
    - (50% undervalued = 100% stocks; 25% = 50/50; 0% = all bonds.) The moat gate does not move this.
 2. **SELECTING the holdings = POST-moat buy list** (`buy=Y`, §A in full incl. the moat gate):
-   - The `stock_weight` is spread across these moat-quality names. Bonds = SGOV/short-term.
+   - The `stock_weight` is spread across these moat-quality names. Bonds = SGOV (see §C.3).
+
+3. **The bond sleeve instrument = SGOV (0–3mo US Treasuries). Settled 2026-06-26.**
+   The sleeve is **collateral + dry powder**, not a yield play — it backs the sold puts (assignment ÷
+   7-day liquidity) and is the cash deployed into dips. Its only job is to stay stable & liquid *when
+   stocks crash*. So: **US T-bills (SGOV)**, which are uncorrelated/negatively-correlated with equities in
+   a panic, ~zero duration/credit risk. **NOT corporates** (credit spreads widen with equity crashes — they
+   fall exactly when you need them). **Munis deferred:** at the current curve the after-tax pickup over
+   SGOV is only ~0.2–0.4% for real duration/drawdown risk (taxable, high-bracket assumed); revisit a small
+   short-muni (SUB) tranche on the *parked* portion only after Fed rate cuts widen the muni edge.
 
 > Why split them: the moat gate removing value traps shouldn't fool the portfolio into thinking the market
 > got more expensive and piling into bonds. The market is exactly as hot as the *valuation* says (pre-moat);
