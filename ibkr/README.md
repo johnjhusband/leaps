@@ -2,6 +2,12 @@
 
 Buys 1 share of SPY in the IBKR **paper** account end to end, to prove the API path before any real order.
 
+## Result (proven)
+**Done.** Placed 2026-06-09 ~20:13 ET as a resting GTC marketable limit; **filled 2026-06-10 08:00 UTC
+(pre-market open), 1 share SPY @ $737.00** in paper account `DUQ691670`. The position is held and the VPS
+cron has re-confirmed it every 15 min since (`/root/ibkr/fill_confirmation.log`). The full path —
+API login → order placed → rested overnight → filled at open → position confirmed — works.
+
 ## Where it runs
 Hosted on a dedicated **Hetzner VPS** (not a laptop — hosts come and go; the gateway should be permanent
 and reachable by whatever machine/AI drives it next). Box: `leaps-ibkr`, **167.233.34.83**, cx23 (2 vCPU /
