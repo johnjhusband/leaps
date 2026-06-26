@@ -53,25 +53,57 @@ use different numbers:
 > got more expensive and piling into bonds. The market is exactly as hot as the *valuation* says (pre-moat);
 > we just hold that stock allocation in a smaller, higher-quality set.
 
-## D. Current snapshot (2026-06-07) — the numbers, reconciled
-| Quantity | Value |
-|---|---|
-| Total universe across the 4 baskets (unique) | 1,489 |
-| With usable data (price + EPS) | 1,431 |
-| IBKR-fractional **tradable** | **1,150** |
-| Tradable **with a golden verdict** (the allocation denominator) | **910** |
-| **Undervalued (PRE-moat — sizes the split)** | **332** (332/910 = 36%) |
-| **Allocation sizing:** `min(100%, 36%/50%)` | **73% stocks / 27% bonds** |
-| **Buy list / holdings (POST-moat: + moat gate)** | **185** |
-| └ of which `golden_valid='Y'` | 164 |
-| └ of which skewed-but-forward-confirmed | 21 |
-| Removed by the **moat gate** (moat=`no`/`weak`, ~324 researched) | 147 |
-| → the **73% stock sleeve is spread across the 185** moat-quality names | ~$73k/185 ≈ $395 each on $100k |
+## D. Live numbers (no hardcoded counts — they go stale)
+The per-run counts (universe size, undervalued count, stock/bond split, holdings) are **regenerated every
+build** and written to **`MARKET_DIRECTION.md`** + printed by `build_universe.py`. Do not hardcode them here.
+The durable facts: the allocation denominator is the IBKR-fractional set **with a golden verdict**; the
+split is `stock = min(100%, undervalued% ÷ 50%)`; holdings = the post-moat `buy=Y` names in `buy_list.csv`.
+The moat gate is backed by `moat_verdicts.csv` + `wiki/moats/`. Known back-test gap: a few names Brandon
+avoids purely on PRICE (e.g. WM, PANW, AMZN, COST — moats but expensive) — the still-open
+absolute-valuation-ceiling gate, not a moat issue.
 
-> The moat gate is now backed by per-company research (`moat_verdicts.csv` + `wiki/moats/`): 189 `yes`,
-> 118 `weak`, 30 `no`. Removing the no/weak names cut the *holdings* from 332 → 185 (Brandon-level
-> selectivity) — but **NOT** the stock/bond split: sizing stays on the pre-moat 332 (=73% stocks) per §C.
-> Earlier counts (269/328) predate full moat research.
-> `build_universe.py` prints these every run and writes the allocation to `MARKET_DIRECTION.md`.
-> Remaining back-test gap: ~4 names Brandon avoids on PRICE (WM, PANW, AMZN, COST) — they have moats but
-> are expensive; that's the still-open absolute-valuation-ceiling gate, not a moat issue.
+## E. Instrument layer — HOW each holding is expressed (puts / shares / calls)
+§A picks **which** names; this section picks **how** to hold each, per Brandon's actual options method.
+Source: `wiki/strategy/STRATEGY_SPEC.md` + the 2026-06-26 video re-investigation (J_KCO3hhf24
+"tested every options strategy 12 yrs", flzw3xQ4_9E, -ayim8zd7BY, O9Xv6w6FbXE, 18WBQZ9JiBM).
+**Status: documented here, NOT yet implemented in code** — `build_orders.py` currently emits shares + SGOV
+only (which IS Brandon's collateral base, so the long-only book is the correct executable foundation; the
+put/call overlay is the next build).
+
+### E.1 The bullish-only hierarchy (the ONLY instruments used)
+- **Long shares** — the base / collateral; the floor for any qualifying name.
+- **Short puts (SELL puts)** — bullish; sold into fear/high-IV on undervalued names. **Portfolio-secured, NEVER cash-secured.**
+- **Long calls (BUY calls)** — leverage; only on the deepest-value, highest-conviction names, funded by put premium.
+- **Bonds (SGOV)** — dry powder when the market is rich; the only "hedge."
+- **NEVER:** short stock, buy puts, covered/naked calls (except to exit assigned shares or a name gone extremely overvalued), spreads, the wheel, short-duration (<6mo), active margin, high-beta junk.
+
+### E.2 Expression by conviction depth (a name that already passes §A)
+| Undervaluation (depth below the EPS line) | How to express it |
+|---|---|
+| **Extremely** undervalued + "table-pounder" conviction (beaten down in fear) | shares **+ sell ~2yr put ~10% below spot + buy 1–2 barely-OTM ~2yr calls** |
+| **Good price** (moderately undervalued) | shares **+ sell ~2yr put**; no calls |
+| **Fair value** | shares only (or wait) |
+| **Overvalued / deteriorating** | **avoid** (no bullish exposure); covered call only to exit existing/assigned shares |
+
+### E.3 Options parameters (from his real trades)
+- **Duration ~1–2 yr (LEAPS)**, 6-month floor, never monthly. (NVDA example: puts & calls out to 6/16/2028.)
+- **Put strike ~10% below spot**, deeper below the EPS/intrinsic line; deeper when cheaper.
+- **Calls barely OTM, same long expiry, bought AFTER a dip** (cheaper), capped ~3–5%/name, funded by recycled put premium — not fresh cash.
+- **Worked example (flzw3xQ4_9E, 2026-06):** NVDA — sell 5× $180 put exp 6/16/2028 (~$31/sh ≈ $15k premium, ~10% below ~$204 spot) → recycle into NVDA shares + 1–2× $205 calls same expiry.
+
+### E.4 Sizing & risk (the ratio core)
+- **Portfolio-secured:** base portfolio is collateral. Track **assignment value** = total cash owed if every sold put were assigned at once.
+- **Cap = assignment value ÷ 7-day liquidity**, regime-scaled: **0–50% when lofty, up to ~75% cheap** (≈100% only COVID-cheap). Raise the cap as the market falls. Survives a 50–70% crash.
+- **Never actively on margin** (zero margin interest).
+
+### E.5 Trim / exit order
+- Sold puts: take profit **~70–95%** (by valuation + buying-power need).
+- Shares & calls: **no % rule** — exit only when the story changes / meaningfully overvalued.
+- **Trim order when reducing risk: calls first → puts → shares last.**
+
+### E.6 Hard rules added by the 2026-06-26 re-investigation
+- **NEVER cash-secured puts — ever, even in a retirement account** (J_KCO3hhf24). Portfolio-secured only.
+- **Buy the LEAP call AFTER the dip, not at initiation** — cheaper entry (J_KCO3hhf24).
+- **Calls only on a "table-pounder" buy** (ultra-high conviction AND extremely cheap) (J_KCO3hhf24).
+- **No active margin** (J_KCO3hhf24).
+- He confirmed (does NOT short, does NOT buy puts, rejects covered calls / CSP / spreads / short-duration) across all 5 latest videos — the bullish-only doctrine is reinforced, not changed.
