@@ -20,6 +20,7 @@ HOST, PORT, CID = "127.0.0.1", 4002, 51
 path = sys.argv[1] if len(sys.argv) > 1 and not sys.argv[1].startswith("-") else f"{ROOT}/../orders.csv"
 EXECUTE = "--execute" in sys.argv
 MAX = int(sys.argv[sys.argv.index("--max") + 1]) if "--max" in sys.argv else 10**9
+SKIP = int(sys.argv[sys.argv.index("--skip") + 1]) if "--skip" in sys.argv else 0  # skip first N rows (already placed)
 
 # foreign suffix -> (exchange, currency) for IBKR contract qualification
 FX = {"PA": ("SBF", "EUR"), "SW": ("EBS", "CHF"), "DE": ("IBIS", "EUR"), "MC": ("BM", "EUR"),
@@ -64,32 +65,39 @@ def contract(tk):
 
 def num(x): return x if (x is not None and x == x and x > 0) else None
 
+# WHOLE-SHARE mode: fractional isn't enabled for the API, so buy the closest number of WHOLE shares that
+# fits each name's dollar budget (floor), and the unspent remainder accumulates to CASH. Names whose price
+# exceeds their per-name budget get 0 shares -> their whole budget goes to cash (flagged, not silently dropped).
 placed = filled = skipped = 0
+cash = 0.0
 skips = []
-for r in rows[:MAX]:
+for r in rows[SKIP:][:MAX]:
     tk = r["ticker"]; dollars = float(r["dollars"])
     if tk.upper() in RESTRICTED:
         skipped += 1; skips.append((tk, "RESTRICTED")); print(f"  SKIP {tk}: restricted"); continue
     c = contract(tk)
     if not ib.qualifyContracts(c):
-        skipped += 1; skips.append((tk, "no-qualify")); print(f"  SKIP {tk}: could not qualify ({c.exchange}/{c.currency})"); continue
+        cash += dollars; skipped += 1; skips.append((tk, f"no-qualify -> ${dollars:.0f} to cash")); print(f"  SKIP {tk}: could not qualify -> ${dollars:.0f} cash"); continue
     tick = ib.reqMktData(c, "", snapshot=True); ib.sleep(2)
     px = num(tick.ask) or num(tick.last) or num(tick.close) or num(tick.marketPrice())
     if not px:
-        skipped += 1; skips.append((tk, "no-quote")); print(f"  SKIP {tk}: no quote"); continue
-    shares = round(dollars / px, 4)
+        cash += dollars; skipped += 1; skips.append((tk, f"no-quote -> ${dollars:.0f} to cash")); print(f"  SKIP {tk}: no quote -> ${dollars:.0f} cash"); continue
+    shares = int(dollars // px)            # closest whole shares that FIT the budget
+    cash += dollars - shares * px          # unspent remainder -> cash
+    if shares < 1:
+        skipped += 1; skips.append((tk, f"price ${px:.0f} > ${dollars:.0f} budget -> ${dollars:.0f} to cash")); print(f"  SKIP {tk}: ${px:.0f} > budget -> ${dollars:.0f} cash"); continue
     lmt = round(px * 1.02, 2)
     if not EXECUTE:
-        print(f"  DRY  {tk}: ~{shares} sh @ ~{px:.2f}  (${dollars:.0f})"); placed += 1; continue
+        print(f"  DRY  {tk}: {shares} sh @ ~{px:.2f} = ${shares*px:.0f} (+${dollars-shares*px:.0f} cash)"); placed += 1; continue
     o = LimitOrder("BUY", shares, lmt, tif="GTC"); o.outsideRth = True
     tr = ib.placeOrder(c, o)
-    ib.sleep(1.2)                      # brief: catch instant RTH fills; else it rests as GTC and fills at open
+    ib.sleep(1.0)                          # brief: catch instant RTH fills; else rests as GTC, fills at open
     st = tr.orderStatus.status
     if st == "Filled": filled += 1
     placed += 1
-    print(f"  {st:9} {tk}: {shares} sh @ lmt {lmt}  (${dollars:.0f})")
+    print(f"  {st:9} {tk}: {shares} sh @ lmt {lmt} = ${shares*px:.0f}")
 
-print(f"\n{'PLACED' if EXECUTE else 'WOULD-PLACE'}: {placed} | filled: {filled} | skipped: {skipped}")
+print(f"\n{'PLACED' if EXECUTE else 'WOULD-PLACE'}: {placed} | filled: {filled} | skipped: {skipped} | CASH remainder: ${cash:,.0f}")
 if skips:
     print("SKIPPED (not silently dropped):")
     for tk, why in skips: print(f"  {tk}: {why}")
