@@ -85,7 +85,8 @@ Brandon runs a broad index base (SPY/QQQ) PLUS concentration on **10–20 high-c
 - **High conviction =** on the buy list AND `moat=yes` AND largest market cap (liquidity/quality/table-pounder),
   EXCLUDING (a) price-ceiling names Brandon avoids (WM, PANW, COST) and (b) EPS-base-artifact golden reads
   (`golden_pct > 300`). Raw `golden_pct` is shown but not the ranker (tiny-base years spike it to artifacts).
-- Top of the current sleeve — NVDA, GOOG, MSFT, AMZN, META — are exactly the names Brandon is buying now.
+- Top of the current sleeve — NVDA, GOOG, AMZN, META — are exactly the names Brandon is buying now.
+  (Brandon also names MSFT, but MSFT is **restricted** for us — §A.0 — so it never enters our sleeve.)
 
 ## E. Instrument layer — HOW each holding is expressed (puts / shares / calls)
 §A picks **which** names; this section picks **how** to hold each, per Brandon's actual options method.
