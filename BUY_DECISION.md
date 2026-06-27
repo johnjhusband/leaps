@@ -26,9 +26,11 @@ then buys.** (John, 2026-06-27.) Algorithm:
 5. This makes trading **idempotent toward the target** — re-running converges the book to `orders.csv` from
    any starting state, and does nothing if already aligned.
 
-> Implementation status: `place_orders.py` currently does the **buy side** (idempotent skip of held names).
-> The full sell-side reconciliation (sell overweights/dropped names first) is the documented target behavior
-> and the next executor build.
+> Implementation: **`ibkr/rebalance_orders.py`** does the full reconcile — reads `orders.csv` (ideal) vs the
+> account's live positions, normalizes tickers (e.g. `BF-B`↔`BF B`) so a name isn't double-counted, derives
+> per-name sell/buy deltas (whole shares), places **all sells first then all buys**, and trims/exits anything
+> not in the ideal (Swiss, restricted, dropped names, the SGOV overweight). `place_orders.py` remains the
+> simpler buy-only batch placer for an initial build.
 
 ## A′. Tradable-universe gate (listing & country — applied before §A)
 We only hold names a US retail investor can **cleanly and paper-testably** trade. Enforced in
