@@ -66,14 +66,18 @@ for tk in sorted(names):
     elif delta>0: buys.append((tk,delta,f"{cur}->{tgt_sh}",round(px,2)))
 
 def place(tk,qty,side,px=None):
-    c=contract(tk)
-    if px is None:
-        t=ib.reqMktData(c,"",snapshot=True); ib.sleep(1.2)
-        px=num(t.bid) or num(t.last) or num(t.close) or 1
-    lmt=round(px*(0.98 if side=="SELL" else 1.02),2)
-    o=LimitOrder(side,qty,lmt,tif="GTC"); o.outsideRth=True
-    tr=ib.placeOrder(c,o); ib.sleep(0.8)
-    return tr.orderStatus.status
+    try:
+        c=contract(tk)
+        if not ib.qualifyContracts(c): return "no-qualify"   # must qualify before any market-data call
+        if px is None:
+            t=ib.reqMktData(c,"",snapshot=True); ib.sleep(1.2)
+            px=num(t.bid) or num(t.last) or num(t.close) or 1
+        lmt=round(px*(0.98 if side=="SELL" else 1.02),2)
+        o=LimitOrder(side,qty,lmt,tif="GTC"); o.outsideRth=True
+        tr=ib.placeOrder(c,o); ib.sleep(0.8)
+        return tr.orderStatus.status
+    except Exception as e:
+        return f"ERR {str(e)[:30]}"          # one bad order must never abort the batch
 
 print(f"\nSELLS ({len(sells)}):")
 for tk,q,info in sells: print(f"  SELL {tk} {q} ({info})"+("  -> "+place(tk,q,"SELL") if EXECUTE else ""))
