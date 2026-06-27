@@ -1,180 +1,157 @@
 ticker,name,dollars,moat,golden_pct,note
-NVDA,NVIDIA,764.04,yes,163,fwd-confirmed
-GOOG,Alphabet (Google),764.04,yes,1,valid
-AMZN,Amazon,764.04,yes,110,fwd-confirmed
-META,Meta Platforms (Facebook),764.04,yes,45,valid
-LLY,Eli Lilly,764.04,yes,203,fwd-confirmed
-MA,Mastercard,764.04,yes,22,valid
-ORCL,Oracle,764.04,,42,valid
-COST,Costco,764.04,yes,13,valid
-ARM,Arm Holdings,764.04,yes,43,valid
-PG,Procter & Gamble,764.04,yes,15,valid
-MRK,Merck,764.04,yes,4622,fwd-confirmed
-AZN,AstraZeneca,764.04,yes,39,valid
-RTX,RTX,764.04,yes,14,valid
-PANW,Palo Alto Networks,764.04,yes,43,valid
-OR.PA,L'Oréal,764.04,yes,1,valid
-BABA,Alibaba,764.04,,3,valid
-TMUS,T-Mobile US,764.04,yes,31,valid
-TMO,Thermo Fisher Scientific,764.04,yes,23,valid
-SAP,SAP,764.04,yes,51,valid
-DIS,Walt Disney,764.04,yes,424,fwd-confirmed
-ABT,Abbott Laboratories,764.04,yes,21,valid
-SCHW,Charles Schwab,764.04,yes,48,valid
-UBER,Uber,764.04,yes,447,fwd-confirmed
-ISRG,Intuitive Surgical,764.04,yes,72,valid
-BKNG,Booking Holdings (Booking.com),764.04,yes,23,valid
-DHR,Danaher,764.04,yes,1,valid
-CFR.SW,Compagnie Financière Richemont,764.04,yes,4,valid
-HDB,HDFC Bank,764.04,yes,24,valid
-UL,Unilever,764.04,yes,43,valid
-VRTX,Vertex Pharmaceuticals,764.04,yes,5,valid
-SYK,Stryker Corporation,764.04,yes,4,valid
-AI.PA,Air Liquide,764.04,,3,valid
-SPGI,S&P Global,764.04,yes,96,valid
-ZURN.SW,Zurich Insurance Group,764.04,yes,17,valid
-IBN,ICICI Bank,764.04,yes,17,valid
-SNY,Sanofi,764.04,yes,54,valid
-NOW,ServiceNow,764.04,yes,64,valid
-DUK,Duke Energy,764.04,yes,30,valid
-CMI,Cummins,764.04,yes,53,valid
-GD,General Dynamics,764.04,yes,3,valid
-CDI.PA,Dior,764.04,yes,1,valid
-MCK,McKesson,764.04,yes,28,valid
-WM,Waste Management,764.04,yes,8,valid
-ADP,Automatic Data Processing,764.04,yes,26,valid
-EL.PA,EssilorLuxottica,764.04,yes,14,valid
-HCA,HCA Healthcare,764.04,yes,20,valid
-SNPS,Synopsys,764.04,yes,34,valid
-ELV,Elevance Health,764.04,yes,34,valid
-AMT,American Tower,764.04,yes,77,valid
-CME,CME Group,764.04,,1,valid
-ADBE,Adobe,764.04,yes,295,fwd-confirmed
-MRSH,Marsh & McLennan Companies,764.04,yes,39,valid
-ECL,Ecolab,764.04,yes,25,valid
-MCO,Moody's,764.04,yes,47,valid
-CI,The Cigna Group,764.04,yes,41,valid
-TDG,TransDigm Group,764.04,yes,24,valid
-INTU,Intuit,764.04,yes,296,fwd-confirmed
-BAM,Brookfield Asset Management,764.04,yes,8,valid
-NOC,Northrop Grumman,764.04,yes,80,valid
-ICE,Intercontinental Exchange,764.04,yes,44,valid
-NSC,Norfolk Southern,764.04,yes,5,valid
-MUV2.DE,Munich RE (Münchener Rück),764.04,yes,26,valid
-CTAS,Cintas,764.04,yes,37,valid
-AON,Aon,764.04,yes,23,valid
-BSX,Boston Scientific,764.04,yes,213,fwd-confirmed
-REGN,Regeneron Pharmaceuticals,764.04,yes,96,valid
-MSI,Motorola Solutions,764.04,yes,22,valid
-RSG,Republic Services,764.04,yes,10,valid
-RACE,Ferrari,764.04,yes,45,valid
-TRGP,Targa Resources,764.04,yes,6,valid
-AJG,Arthur J. Gallagher & Co.,764.04,yes,49,valid
-RELX,RELX,764.04,yes,71,valid
-AZO,AutoZone,764.04,yes,4,valid
-HOLN.SW,Holcim Group,764.04,yes,348,fwd-confirmed
-HO.PA,Thales,764.04,yes,12,valid
-FER.MC,Ferrovial,764.04,yes,55,valid
-HEI,HEICO,764.04,yes,11,valid
-SREN.SW,Swiss Re,764.04,yes,22,valid
-NDAQ,Nasdaq,764.04,,10,valid
-IDXX,IDEXX Laboratories,764.04,yes,13,valid
-BDX,Becton Dickinson,764.04,yes,34,valid
-WCN,Waste Connections,764.04,yes,44,valid
-CSU.TO,Constellation Software,764.04,yes,27,valid
-RKT.L,Reckitt Benckiser,764.04,,86,valid
-ADSK,Autodesk,764.04,yes,59,valid
-HLN,Haleon,764.04,yes,40,valid
-BSBR,Banco Santander Brasil,764.04,yes,18,valid
-UMG.AS,Universal Music Group,764.04,yes,78,valid
-A,Agilent Technologies,764.04,yes,2,valid
-TRI,Thomson Reuters,764.04,yes,9,valid
-IFC.TO,Intact Financial,764.04,,98,valid
-PAYX,Paychex,764.04,yes,17,valid
-ROP,Roper Technologies,764.04,yes,80,valid
-PKO.WA,PKO Bank Polski,764.04,yes,5,valid
-ACGL,Arch Capital,764.04,yes,1,valid
-ALC,Alcon,764.04,yes,31,valid
-HNR1.DE,Hannover Rück,764.04,yes,33,valid
-ZTS,Zoetis,764.04,yes,159,fwd-confirmed
-IQV,IQVIA,764.04,yes,20,valid
-LVS,Las Vegas Sands,764.04,yes,31,valid
-AMRZ,Amrize,764.04,yes,14,valid
-GEHC,GE HealthCare Technologies,764.04,yes,78,valid
-ADYEN.AS,Adyen,764.04,yes,106,fwd-confirmed
-NTAP,NetApp,764.04,,11,valid
-INIO,INNIO N.V.,764.04,,86,valid
-BIP,Brookfield Infrastructure Partners,764.04,yes,340,fwd-confirmed
-OTIS,Otis Worldwide,764.04,yes,31,valid
-XYL,Xylem,764.04,yes,60,valid
-FICO,Fair Isaac (FICO),764.04,yes,100,valid
-VEEV,Veeva Systems,764.04,yes,85,valid
-SAMPO.HE,Sampo,764.04,yes,16,valid
-LISP.SW,Chocoladefabriken Lindt &amp; Sprüngli,764.04,yes,17,valid
-DXCM,DexCom,764.04,yes,164,fwd-confirmed
-VG,Venture Global,764.04,,13,valid
-NMR,Nomura Holdings,764.04,,39,valid
-AWK,American Water,764.04,yes,9,valid
-AMS.MC,Amadeus IT Group,764.04,yes,45,valid
-MTD,Mettler Toledo,764.04,yes,31,valid
-TCOM,Trip.com,764.04,yes,283,fwd-confirmed
-STZ,Constellation Brands,764.04,yes,71,valid
-KOG.OL,Kongsberg Gruppen,764.04,yes,31,valid
-WTW,Willis Towers Watson,764.04,yes,61,valid
-ENTG,Entegris,764.04,yes,6,valid
-CHD,Church & Dwight,764.04,yes,1,valid
-VLTO,Veralto,764.04,yes,16,valid
-RBA,RB Global,764.04,yes,28,valid
-BRO,Brown &amp; Brown,764.04,yes,47,valid
-ROL,Rollins,764.04,yes,36,valid
-TW,Tradeweb,764.04,yes,150,fwd-confirmed
-ESS,Essex Property Trust,764.04,yes,43,valid
-LII,Lennox,764.04,yes,27,valid
-EFX,Equifax,764.04,yes,86,valid
-NVR,NVR,764.04,yes,4,valid
-RGLD,Royal Gold,764.04,yes,8,valid
-NBIX,Neurocrine Biosciences,764.04,yes,56,valid
-TSCO,Tractor Supply,764.04,yes,69,valid
-BR,Broadridge Financial Solutions,764.04,yes,83,valid
-GMAB,Genmab,764.04,yes,57,valid
-CSL,Carlisle Companies,764.04,yes,16,valid
-SSNC,SS&C Technologies,764.04,yes,26,valid
-MEDP,Medpace,764.04,yes,36,valid
-COO,Cooper Companies,764.04,yes,55,valid
-RGA,Reinsurance Group of America,764.04,yes,24,valid
-MKC,McCormick & Company,764.04,yes,57,valid
-OWL,Blue Owl Capital,764.04,yes,86,valid
-LULU,lululemon athletica,764.04,yes,185,fwd-confirmed
-TXRH,Texas Roadhouse,764.04,yes,16,valid
-ALGN,Align Technology,764.04,yes,34,valid
-GGG,Graco,764.04,yes,7,valid
-ELS,Equity LifeStyle Properties,764.04,yes,16,valid
-FNF,Fidelity National Financial,764.04,yes,10,valid
-PEN,Penumbra,764.04,yes,10,valid
-ERIE,Erie Indemnity,764.04,yes,89,valid
-DT,Dynatrace,764.04,yes,13,valid
-TYL,Tyler Technologies,764.04,,219,fwd-confirmed
-ALLE,Allegion,764.04,yes,2,valid
-TRMB,Trimble,764.04,yes,55,valid
-ZBRA,Zebra Technologies,764.04,yes,79,valid
-BMRN,BioMarin Pharmaceutical,764.04,yes,196,fwd-confirmed
-NYT,New York Times,764.04,,9,valid
-PODD,Insulet,764.04,yes,50,valid
-GDDY,GoDaddy,764.04,yes,17,valid
-WTRG,Essential Utilities,764.04,yes,8,valid
-FRT,Federal Realty Investment Trust,764.04,yes,24,valid
-SEIC,SEI Investments,764.04,yes,17,valid
-SCI,Service Corporation International,764.04,yes,1,valid
-EHC,Encompass Health,764.04,yes,34,valid
-ORI,Old Republic International,764.04,,13,valid
-RYAN,Ryan Specialty,764.04,,36,valid
-DPZ,Domino's Pizza,764.04,yes,105,fwd-confirmed
-JKHY,Jack Henry &amp; Associates,764.04,yes,51,valid
-IT,Gartner,764.04,yes,195,fwd-confirmed
-TTD,The Trade Desk,764.04,yes,1254,fwd-confirmed
-FDS,FactSet,764.04,,137,fwd-confirmed
-BF-B,Brown Forman Inc,764.04,yes,5,valid
-FER,Ferrovial N.V.,764.04,yes,45,valid
-KSPI,Joint Stock Company Kaspi.kz - ,764.04,yes,80,valid
-WSE,Wise Group plc,764.04,,263,fwd-confirmed
-SGOV,iShares 0-3mo Treasury (bond/short-term sleeve),64000.0,,,bond sleeve
+NVDA,NVIDIA,929.03,yes,163,fwd-confirmed
+GOOG,Alphabet (Google),929.03,yes,1,valid
+AMZN,Amazon,929.03,yes,110,fwd-confirmed
+META,Meta Platforms (Facebook),929.03,yes,45,valid
+LLY,Eli Lilly,929.03,yes,203,fwd-confirmed
+MA,Mastercard,929.03,yes,22,valid
+ORCL,Oracle,929.03,,42,valid
+COST,Costco,929.03,yes,13,valid
+ARM,Arm Holdings,929.03,yes,43,valid
+PG,Procter & Gamble,929.03,yes,15,valid
+MRK,Merck,929.03,yes,4622,fwd-confirmed
+AZN,AstraZeneca,929.03,yes,39,valid
+RTX,RTX,929.03,yes,14,valid
+PANW,Palo Alto Networks,929.03,yes,43,valid
+BABA,Alibaba,929.03,,3,valid
+TMUS,T-Mobile US,929.03,yes,31,valid
+TMO,Thermo Fisher Scientific,929.03,yes,23,valid
+SAP,SAP,929.03,yes,51,valid
+DIS,Walt Disney,929.03,yes,424,fwd-confirmed
+ABT,Abbott Laboratories,929.03,yes,21,valid
+SCHW,Charles Schwab,929.03,yes,48,valid
+UBER,Uber,929.03,yes,447,fwd-confirmed
+ISRG,Intuitive Surgical,929.03,yes,72,valid
+BKNG,Booking Holdings (Booking.com),929.03,yes,23,valid
+DHR,Danaher,929.03,yes,1,valid
+HDB,HDFC Bank,929.03,yes,24,valid
+UL,Unilever,929.03,yes,43,valid
+VRTX,Vertex Pharmaceuticals,929.03,yes,5,valid
+SYK,Stryker Corporation,929.03,yes,4,valid
+SPGI,S&P Global,929.03,yes,96,valid
+IBN,ICICI Bank,929.03,yes,17,valid
+SNY,Sanofi,929.03,yes,54,valid
+NOW,ServiceNow,929.03,yes,64,valid
+DUK,Duke Energy,929.03,yes,30,valid
+CMI,Cummins,929.03,yes,53,valid
+GD,General Dynamics,929.03,yes,3,valid
+MCK,McKesson,929.03,yes,28,valid
+WM,Waste Management,929.03,yes,8,valid
+ADP,Automatic Data Processing,929.03,yes,26,valid
+HCA,HCA Healthcare,929.03,yes,20,valid
+SNPS,Synopsys,929.03,yes,34,valid
+ELV,Elevance Health,929.03,yes,34,valid
+AMT,American Tower,929.03,yes,77,valid
+CME,CME Group,929.03,,1,valid
+ADBE,Adobe,929.03,yes,295,fwd-confirmed
+MRSH,Marsh & McLennan Companies,929.03,yes,39,valid
+ECL,Ecolab,929.03,yes,25,valid
+MCO,Moody's,929.03,yes,47,valid
+CI,The Cigna Group,929.03,yes,41,valid
+TDG,TransDigm Group,929.03,yes,24,valid
+INTU,Intuit,929.03,yes,296,fwd-confirmed
+BAM,Brookfield Asset Management,929.03,yes,8,valid
+NOC,Northrop Grumman,929.03,yes,80,valid
+ICE,Intercontinental Exchange,929.03,yes,44,valid
+NSC,Norfolk Southern,929.03,yes,5,valid
+CTAS,Cintas,929.03,yes,37,valid
+AON,Aon,929.03,yes,23,valid
+BSX,Boston Scientific,929.03,yes,213,fwd-confirmed
+REGN,Regeneron Pharmaceuticals,929.03,yes,96,valid
+MSI,Motorola Solutions,929.03,yes,22,valid
+RSG,Republic Services,929.03,yes,10,valid
+RACE,Ferrari,929.03,yes,45,valid
+TRGP,Targa Resources,929.03,yes,6,valid
+AJG,Arthur J. Gallagher & Co.,929.03,yes,49,valid
+RELX,RELX,929.03,yes,71,valid
+AZO,AutoZone,929.03,yes,4,valid
+FER,Ferrovial,929.03,yes,55,valid
+HEI,HEICO,929.03,yes,11,valid
+NDAQ,Nasdaq,929.03,,10,valid
+IDXX,IDEXX Laboratories,929.03,yes,13,valid
+BDX,Becton Dickinson,929.03,yes,34,valid
+WCN,Waste Connections,929.03,yes,44,valid
+ADSK,Autodesk,929.03,yes,59,valid
+HLN,Haleon,929.03,yes,40,valid
+BSBR,Banco Santander Brasil,929.03,yes,18,valid
+A,Agilent Technologies,929.03,yes,2,valid
+TRI,Thomson Reuters,929.03,yes,9,valid
+PAYX,Paychex,929.03,yes,17,valid
+ROP,Roper Technologies,929.03,yes,80,valid
+ACGL,Arch Capital,929.03,yes,1,valid
+ZTS,Zoetis,929.03,yes,159,fwd-confirmed
+IQV,IQVIA,929.03,yes,20,valid
+LVS,Las Vegas Sands,929.03,yes,31,valid
+GEHC,GE HealthCare Technologies,929.03,yes,78,valid
+NTAP,NetApp,929.03,,11,valid
+INIO,INNIO N.V.,929.03,,86,valid
+BIP,Brookfield Infrastructure Partners,929.03,yes,340,fwd-confirmed
+OTIS,Otis Worldwide,929.03,yes,31,valid
+XYL,Xylem,929.03,yes,60,valid
+FICO,Fair Isaac (FICO),929.03,yes,100,valid
+VEEV,Veeva Systems,929.03,yes,85,valid
+DXCM,DexCom,929.03,yes,164,fwd-confirmed
+VG,Venture Global,929.03,,13,valid
+NMR,Nomura Holdings,929.03,,39,valid
+AWK,American Water,929.03,yes,9,valid
+MTD,Mettler Toledo,929.03,yes,31,valid
+TCOM,Trip.com,929.03,yes,283,fwd-confirmed
+STZ,Constellation Brands,929.03,yes,71,valid
+WTW,Willis Towers Watson,929.03,yes,61,valid
+ENTG,Entegris,929.03,yes,6,valid
+CHD,Church & Dwight,929.03,yes,1,valid
+VLTO,Veralto,929.03,yes,16,valid
+RBA,RB Global,929.03,yes,28,valid
+BRO,Brown &amp; Brown,929.03,yes,47,valid
+ROL,Rollins,929.03,yes,36,valid
+TW,Tradeweb,929.03,yes,150,fwd-confirmed
+ESS,Essex Property Trust,929.03,yes,43,valid
+LII,Lennox,929.03,yes,27,valid
+EFX,Equifax,929.03,yes,86,valid
+NVR,NVR,929.03,yes,4,valid
+RGLD,Royal Gold,929.03,yes,8,valid
+NBIX,Neurocrine Biosciences,929.03,yes,56,valid
+TSCO,Tractor Supply,929.03,yes,69,valid
+BR,Broadridge Financial Solutions,929.03,yes,83,valid
+GMAB,Genmab,929.03,yes,57,valid
+CSL,Carlisle Companies,929.03,yes,16,valid
+SSNC,SS&C Technologies,929.03,yes,26,valid
+MEDP,Medpace,929.03,yes,36,valid
+COO,Cooper Companies,929.03,yes,55,valid
+RGA,Reinsurance Group of America,929.03,yes,24,valid
+MKC,McCormick & Company,929.03,yes,57,valid
+OWL,Blue Owl Capital,929.03,yes,86,valid
+LULU,lululemon athletica,929.03,yes,185,fwd-confirmed
+TXRH,Texas Roadhouse,929.03,yes,16,valid
+ALGN,Align Technology,929.03,yes,34,valid
+GGG,Graco,929.03,yes,7,valid
+ELS,Equity LifeStyle Properties,929.03,yes,16,valid
+FNF,Fidelity National Financial,929.03,yes,10,valid
+PEN,Penumbra,929.03,yes,10,valid
+ERIE,Erie Indemnity,929.03,yes,89,valid
+DT,Dynatrace,929.03,yes,13,valid
+TYL,Tyler Technologies,929.03,,219,fwd-confirmed
+ALLE,Allegion,929.03,yes,2,valid
+TRMB,Trimble,929.03,yes,55,valid
+ZBRA,Zebra Technologies,929.03,yes,79,valid
+BMRN,BioMarin Pharmaceutical,929.03,yes,196,fwd-confirmed
+NYT,New York Times,929.03,,9,valid
+PODD,Insulet,929.03,yes,50,valid
+GDDY,GoDaddy,929.03,yes,17,valid
+WTRG,Essential Utilities,929.03,yes,8,valid
+FRT,Federal Realty Investment Trust,929.03,yes,24,valid
+SEIC,SEI Investments,929.03,yes,17,valid
+SCI,Service Corporation International,929.03,yes,1,valid
+EHC,Encompass Health,929.03,yes,34,valid
+ORI,Old Republic International,929.03,,13,valid
+RYAN,Ryan Specialty,929.03,,36,valid
+DPZ,Domino's Pizza,929.03,yes,105,fwd-confirmed
+JKHY,Jack Henry &amp; Associates,929.03,yes,51,valid
+IT,Gartner,929.03,yes,195,fwd-confirmed
+TTD,The Trade Desk,929.03,yes,1254,fwd-confirmed
+FDS,FactSet,929.03,,137,fwd-confirmed
+BF-B,Brown Forman Inc,929.03,yes,5,valid
+FER,Ferrovial N.V.,929.03,yes,45,valid
+KSPI,Joint Stock Company Kaspi.kz - ,929.03,yes,80,valid
+WSE,Wise Group plc,929.03,,263,fwd-confirmed
+SGOV,iShares 0-3mo Treasury (bond/short-term sleeve),56000.0,,,bond sleeve

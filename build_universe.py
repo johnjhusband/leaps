@@ -24,6 +24,12 @@ union=sorted(spy|qqq|rus|glb)
 
 EU_CA={'TO','V','NE','CN','L','PA','DE','F','SW','AS','BR','MI','MC','MA','ST','HE','CO','OL','LS','VI','IR','WA','PR','AT','SG'}
 OTC_CODES={'PNK','OQX','OID','OTC','PINK','OOTC','OTCMKTS',None}   # not IBKR-fractional-eligible
+# TRADABILITY POLICY (John, 2026-06-27): only US-listed names + foreign names with a CLEAN exchange-listed
+# US ADR. Foreign LOCAL listings are dropped (not paper-testable, withholding/data friction) UNLESS the
+# company has a liquid exchange-listed ADR — those are swapped to the ADR ticker below. Switzerland is
+# excluded ENTIRELY (portfolio too small to justify the 35% withholding / reclaim complexity).
+EXCLUDE_COUNTRIES={'Switzerland'}
+ADR_MAP={'FER.MC':'FER'}   # foreign-local -> clean NYSE/Nasdaq-listed ADR (verified 2026-06-27; only Ferrovial qualifies)
 
 pct={}; flagv={}; vrec={}
 for key in ('russell','global','spy','qqq'):
@@ -106,11 +112,12 @@ def verdict(t):
     if d.get('trailingEps') is not None and d['trailingEps']<=0: return 'no_earnings'
     return flagv.get(t) or ('bullish' if (pct.get(t) or -1)>=0 else 'bearish')
 def fractional(t):
-    """True if buyable as a fraction at IBKR."""
-    if '.' in t:                              # foreign local listing
-        return t.rsplit('.',1)[1].upper() in EU_CA
+    """True if cleanly tradable for US: US-listed OR has a clean exchange-listed ADR; never Switzerland."""
+    if country(t) in EXCLUDE_COUNTRIES: return False   # Switzerland excluded entirely (tax complexity)
+    if '.' in t:                              # foreign local listing -> only if a clean exchange-listed ADR exists
+        return t in ADR_MAP
     if country(t)=='United States': return True   # US domestic, exchange-listed
-    return exch.get(t) not in OTC_CODES           # ADR: must be exchange-listed, not OTC/pink
+    return exch.get(t) not in OTC_CODES           # US-listed ADR: must be exchange-listed, not OTC/pink
 
 withdata=[t for t in union if has_data(t)]
 frac=[t for t in withdata if fractional(t)]
@@ -217,7 +224,8 @@ with open(f'{ROOT}/buy_list.csv','w',newline='') as f:
     w=csv.writer(f); w.writerow(['rank','ticker','name','country','mktcap_B','golden_pct','golden_valid','fwd_pe','reason','moat','moat_description'])
     for i,t in enumerate(buy,1):
         gl=golden.get(t,{}); reason='valid' if gl.get('golden_valid')=='Y' else 'fwd-confirmed'
-        w.writerow([i,t,(raw.get(t,{}).get('Name') or fund.get(t,{}).get('name') or '')[:40],country(t),
+        tk=ADR_MAP.get(t,t)                  # emit the tradable ADR ticker (FER.MC -> FER), not the local listing
+        w.writerow([i,tk,(raw.get(t,{}).get('Name') or fund.get(t,{}).get('name') or '')[:40],country(t),
                     round(mc(t)/1e9,1) if mc(t) else '', gl.get('golden_pct',''), gl.get('golden_valid',''), fwd_pe(t), reason,
                     MOAT.get(t,''), MOAT_DESC.get(t,'')])
 print(f'  buy_list.csv: {len(buy)} names ('

@@ -4,6 +4,21 @@ This is the single authoritative definition of how a stock gets `buy=Y` and how 
 Every threshold here matches `build_universe.py` / `goldenline.py` exactly. If a doc disagrees with this
 file, this file wins. (Written 2026-06-07 to close the "thresholds only live in code" gaps.)
 
+## A′. Tradable-universe gate (listing & country — applied before §A)
+We only hold names a US retail investor can **cleanly and paper-testably** trade. Enforced in
+`build_universe.py` `fractional()`:
+- **US-listed names** (NYSE/Nasdaq, incl. ADRs that trade as a plain US ticker like TSM/ASML) → tradable.
+- **Foreign LOCAL listings** (ticker has an exchange suffix, e.g. `.PA`/`.DE`/`.SW`) → **dropped**, UNLESS
+  the company has a **clean exchange-listed US ADR** (NYSE/Nasdaq, not OTC/pink). Those are swapped to the
+  ADR ticker via `ADR_MAP`. Verified 2026-06-27: of 22 foreign names only **Ferrovial** qualifies
+  (`FER.MC`→`FER`); the other 21 have OTC-only ADRs → dropped. OTC/pink ADRs are excluded (illiquid,
+  not paper-testable, withholding/data friction).
+- **Switzerland is excluded ENTIRELY** (`EXCLUDE_COUNTRIES`), regardless of listing — even Swiss-domiciled
+  US-listed names (ALC, AMRZ). Rationale: the portfolio is too small to justify the 35% Swiss dividend
+  withholding + manual reclaim complexity. (John, 2026-06-27.)
+- To re-enable foreign breadth later: add the foreign market-data subscriptions (so they're paper-testable),
+  extend `ADR_MAP`, or relax `EXCLUDE_COUNTRIES`.
+
 ## A. Per-stock buy decision (`buy=Y`)
 A name is on the buy list **iff ALL of these pass**, evaluated in order:
 
