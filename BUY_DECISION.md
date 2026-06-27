@@ -4,6 +4,32 @@ This is the single authoritative definition of how a stock gets `buy=Y` and how 
 Every threshold here matches `build_universe.py` / `goldenline.py` exactly. If a doc disagrees with this
 file, this file wins. (Written 2026-06-07 to close the "thresholds only live in code" gaps.)
 
+## REBALANCING — never place fresh; reconcile HOLDINGS to TARGET (sell first, then buy)
+Trading is **never** "buy the whole list from scratch." Every time we trade, we **compare what's in the
+portfolio to the ideal target state, then sell what's overbought and buy what's underbought — sells first,
+then buys.** (John, 2026-06-27.) Algorithm:
+
+1. **Target state** = the freshly regenerated `orders.csv` — each buy-list name at its target dollar weight,
+   plus the SGOV/cash sleeve. Regenerate from current prices first (§ Cache freshness) so the target is live.
+2. **Current state** = the account's **actual positions** (shares × current price = current $ per name) + cash.
+   Read it from the broker, never assume it.
+3. **Per-name diff** `delta = target_$ − current_$`:
+   - **Held but NOT in target** (a name that left the buy list, or is now excluded — Swiss, restricted, a
+     dropped foreign name) → **SELL the entire position.**
+   - **delta < 0** (overweight) → **SELL** the excess.
+   - **delta > 0** (underweight) → **BUY** the shortfall.
+   - **In target but not held** → **BUY**.
+   - Whole-share rounding + cash-remainder policy applies to each leg.
+4. **ORDER OF OPERATIONS (hard rule): execute ALL SELLS first, let them fill, THEN do the BUYS.** Why: the
+   sale proceeds fund the buys (no extra cash or margin needed), and you never attempt a buy before the cash
+   exists. Selling first also realizes the exits cleanly before re-deploying.
+5. This makes trading **idempotent toward the target** — re-running converges the book to `orders.csv` from
+   any starting state, and does nothing if already aligned.
+
+> Implementation status: `place_orders.py` currently does the **buy side** (idempotent skip of held names).
+> The full sell-side reconciliation (sell overweights/dropped names first) is the documented target behavior
+> and the next executor build.
+
 ## A′. Tradable-universe gate (listing & country — applied before §A)
 We only hold names a US retail investor can **cleanly and paper-testably** trade. Enforced in
 `build_universe.py` `fractional()`:
