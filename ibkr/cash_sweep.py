@@ -6,7 +6,7 @@ on IBKR fractional. Never touches restricted tickers. Paper-guarded. --execute t
 Underweight rank each pass = target$ - held_market_value (largest positive = most underweight).
 """
 import sys, os, csv
-from ib_async import IB, Stock, LimitOrder
+from ib_async import IB, Stock, MarketOrder
 ROOT = os.path.dirname(os.path.abspath(__file__))
 HOST, PORT, CID = "127.0.0.1", 4002, 101
 path = sys.argv[1] if len(sys.argv) > 1 and not sys.argv[1].startswith("-") else f"{ROOT}/../orders.csv"
@@ -69,9 +69,8 @@ while True:
     _, tk = cands[0]
     px = prices[tk]
     c = contract(tk)
-    lmt = round(px*1.02, 2)
     if EXECUTE:
-        o = LimitOrder("BUY", 1, lmt, tif="GTC"); o.outsideRth=True
+        o = MarketOrder("BUY", 1, tif="GTC")   # market order per John's directive
         tr = ib.placeOrder(c, o); ib.sleep(0.5)
         status = tr.orderStatus.status
     else:

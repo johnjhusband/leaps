@@ -13,7 +13,7 @@ Usage: place_orders.py ORDERS_CSV [--execute] [--max N]
        default = DRY RUN (qualify+quote, place nothing). --execute actually places. --max N limits count (testing).
 """
 import sys, os, csv, time
-from ib_async import IB, Stock, LimitOrder
+from ib_async import IB, Stock, MarketOrder, LimitOrder
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 HOST, PORT, CID = "127.0.0.1", 4002, 51
@@ -94,7 +94,7 @@ for r in rows[SKIP:][:MAX]:
         lmt = round(px * 1.02, 2)
         if not EXECUTE:
             print(f"  DRY  {tk}: {shares} sh @ ~{px:.2f} = ${shares*px:.0f} (+${dollars-shares*px:.0f} cash)"); placed += 1; continue
-        o = LimitOrder("BUY", shares, lmt, tif="GTC"); o.outsideRth = True
+        o = MarketOrder("BUY", shares, tif="GTC")   # market order per John's directive; GTC queues if placed outside RTH
         tr = ib.placeOrder(c, o)
         ib.sleep(1.0)                          # brief: catch instant RTH fills; else rests as GTC, fills at open
         st = tr.orderStatus.status

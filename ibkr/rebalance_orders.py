@@ -11,7 +11,7 @@ Whole shares only (fractional not enabled). Paper-guarded; restricted tickers ne
 Usage: rebalance_orders.py ORDERS_CSV [--execute]   (default = DRY RUN / preview)
 """
 import sys, os, csv
-from ib_async import IB, Stock, LimitOrder
+from ib_async import IB, Stock, MarketOrder
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 HOST, PORT, CID = "127.0.0.1", 4002, 81
@@ -68,12 +68,11 @@ for tk in sorted(names):
 def place(tk,qty,side,px=None):
     try:
         c=contract(tk)
-        if not ib.qualifyContracts(c): return "no-qualify"   # must qualify before any market-data call
-        if px is None:
-            t=ib.reqMktData(c,"",snapshot=True); ib.sleep(1.2)
-            px=num(t.bid) or num(t.last) or num(t.close) or 1
-        lmt=round(px*(0.98 if side=="SELL" else 1.02),2)
-        o=LimitOrder(side,qty,lmt,tif="GTC"); o.outsideRth=True
+        if not ib.qualifyContracts(c): return "no-qualify"
+        # market order (John's directive). CAVEAT: on IBKR PAPER accounts, MKT orders may sit at
+        # PreSubmitted because SMART can't route through delayed quotes. On a funded LIVE account
+        # with real market-data subscriptions, MKT fills instantly during RTH. GTC queues if outside RTH.
+        o=MarketOrder(side,qty,tif="GTC")
         tr=ib.placeOrder(c,o); ib.sleep(0.8)
         return tr.orderStatus.status
     except Exception as e:
