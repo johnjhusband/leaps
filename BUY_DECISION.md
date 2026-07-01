@@ -26,6 +26,10 @@ then buys.** (John, 2026-06-27.) Algorithm:
 5. This makes trading **idempotent toward the target** — re-running converges the book to `orders.csv` from
    any starting state, and does nothing if already aligned.
 
+> **Whole-share cash-sweep:** after the main rebalance, `ibkr/cash_sweep.py` closes the whole-share ceiling —
+> keeps buying 1 share of the most-underweight buy-list name until cash can't afford any more (excludes
+> price-ceiling names WM/PANW/COST + restricted tickers). Run without waiting for fractional API access.
+>
 > Implementation: **`ibkr/rebalance_orders.py`** does the full reconcile — reads `orders.csv` (ideal) vs the
 > account's live positions, normalizes tickers (e.g. `BF-B`↔`BF B`) so a name isn't double-counted, derives
 > per-name sell/buy deltas (whole shares), places **all sells first then all buys**, and trims/exits anything
