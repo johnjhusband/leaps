@@ -94,7 +94,13 @@ for r in rows[SKIP:][:MAX]:
         lmt = round(px * 1.02, 2)
         if not EXECUTE:
             print(f"  DRY  {tk}: {shares} sh @ ~{px:.2f} = ${shares*px:.0f} (+${dollars-shares*px:.0f} cash)"); placed += 1; continue
-        o = MarketOrder("BUY", shares, tif="GTC")   # market order per John's directive; GTC queues if placed outside RTH
+        # John's directive: use MARKET orders on live. But IBKR paper accounts can't route MKT
+        # (SMART won't fill on delayed data), so on paper (DU...) fall back to marketable-limit @ +2%
+        # so the paper testing loop keeps working. Live accounts get the true market order.
+        if acct.startswith("DU"):
+            o = LimitOrder("BUY", shares, round(px * 1.02, 2), tif="GTC"); o.outsideRth = True
+        else:
+            o = MarketOrder("BUY", shares, tif="GTC")
         tr = ib.placeOrder(c, o)
         ib.sleep(1.0)                          # brief: catch instant RTH fills; else rests as GTC, fills at open
         st = tr.orderStatus.status

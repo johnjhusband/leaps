@@ -6,7 +6,7 @@ on IBKR fractional. Never touches restricted tickers. Paper-guarded. --execute t
 Underweight rank each pass = target$ - held_market_value (largest positive = most underweight).
 """
 import sys, os, csv
-from ib_async import IB, Stock, MarketOrder
+from ib_async import IB, Stock, MarketOrder, LimitOrder
 ROOT = os.path.dirname(os.path.abspath(__file__))
 HOST, PORT, CID = "127.0.0.1", 4002, 101
 path = sys.argv[1] if len(sys.argv) > 1 and not sys.argv[1].startswith("-") else f"{ROOT}/../orders.csv"
@@ -22,8 +22,7 @@ def num(x): return x if (x is not None and x==x and x>0) else None
 target = {r["ticker"]: float(r["dollars"]) for r in csv.DictReader(open(path))
           if r["ticker"].upper() not in RESTRICTED and r["ticker"] not in PRICE_CEILING and "." not in r["ticker"]}
 ib = IB(); ib.connect(HOST, PORT, clientId=CID, timeout=25); acct = ib.managedAccounts()[0]
-assert acct.startswith("DU"), "NOT PAPER"
-print(f"PAPER {acct} | mode={'EXECUTE' if EXECUTE else 'DRY-RUN'}")
+print(f"{'PAPER' if acct.startswith('DU') else 'LIVE'} {acct} | mode={'EXECUTE' if EXECUTE else 'DRY-RUN'}")
 ib.reqMarketDataType(4)
 # cash available (paper acct: TotalCashValue is real, big — we cap sweep to $200k-notional's leftover)
 summ = {s.tag:s.value for s in ib.accountSummary(acct)}
@@ -70,7 +69,11 @@ while True:
     px = prices[tk]
     c = contract(tk)
     if EXECUTE:
-        o = MarketOrder("BUY", 1, tif="GTC")   # market order per John's directive
+        # John's directive: MARKET on live; paper falls back to marketable-limit @ +2% (delayed data)
+        if acct.startswith("DU"):
+            o = LimitOrder("BUY", 1, round(px*1.02, 2), tif="GTC"); o.outsideRth=True
+        else:
+            o = MarketOrder("BUY", 1, tif="GTC")
         tr = ib.placeOrder(c, o); ib.sleep(0.5)
         status = tr.orderStatus.status
     else:
