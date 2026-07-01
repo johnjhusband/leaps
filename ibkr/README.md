@@ -101,6 +101,13 @@ every name (placed / filled / skipped+reason / cash) — **never silently drops 
 - `--probe` places one test fractional order to detect when fractional finally activates; `--skip N`
   resumes past the first N rows.
 
+### Gotcha: paper-account phantom positions
+Paper accounts can hold **synthetic "phantom" positions** with `$0 avgCost` that were never traded
+(0 executions in history). They come from broker-side resets or corporate-action reconciliation
+glitches. API sells against them get silently rejected (`Cancelled` with an empty log). Example seen:
+`MBGL 2 sh @ $0.00`. They are not real (no P&L impact) but cause reconciliation noise. The only cure is
+a paper-account reset via Client Portal or an IBKR support ticket — the API cannot close them.
+
 ### Gotchas learned placing the real paper book (2026-06-26)
 - **Fractional via API is a separate account permission** (Client Portal → Trading Permissions → Stocks →
   Global "Trade in Fractions"); until it's on, API fractional orders are rejected (10243). Whole-share is
